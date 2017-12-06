@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html>
+<body bgcolor="#77c2e6">
+
+<style type="text/css">
+.tg  {text-align:left;border-collapse:collapse;border-spacing:0;border-color:#ccc;width:90%;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#0053a0;}
+.tg .tg-toptable{font-family:"Trebuchet MS", Helvetica, sans-serif !important;;vertical-align:top}
+.tg .tg-innertable{vertical-align:top;}
+</style>
+
+<table class="tg" align="center">
+  <tr>
+    <th class="tg-toptable" colspan="3">
+<input size="25" placeholder="Enter VIN" id="VIN" type="text">
+</th>
+  </tr>
+  <tr>
+    <td class="tg-innertable" width=33%>
+	<p><span style="font-size: 14px;"><strong>Optioning Help</strong></span></p>
+	<p><button id="chrbutton" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chrysler()">Dodge/Chrysler/Jeep Window Sticker</button><br>
+	<button id="chrlistbutton" button id="chrbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chryslerlist()">Dodge/Chrysler/Jeep Equipment Listing</button><br>
+	<button id="decoderzbutton" title="Data is pulled from different resources. Use Caution!" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="decoderz()">Vin Decoderz, Use Caution (MB, Toyota etc)</button><br>
+	<button id="fordbutton" title="You may have to start a new vehicle search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="ford()">Ford Equipment Listing</button> <br>
+	<button id="fordbutton" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordsticker()">Ford Window Stickers</button><br>
+	<a href="http://bimmer.work" target="_blank"><button title="You will have to enter last 7 digits of VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >BMW VIN Decoder</button></a><br>
+	<a href="http://www.motortrend.com/cars/" target="_blank"><button title="Great resource for BMW or MINI packages" style="cursor:pointer;border-style:none;background:#ffffff;"  >Motor Trend for Packages</button></a><br>
+	<a href="http://www.auto-brochures.com" target="_blank"><button title="Factory Brochures" style="cursor:pointer;border-style:none;background:#ffffff;"  >Auto Brochures</button></a><br>
+	
+	</td>
+    <td class="tg-innertable" width=34%>
+	<p><span style="font-size: 14px;"><strong>Trim Level Help</strong></span></p>
+	<p><button id="nissanbutton" title="This will pull recall page showing Trim level. Use caution how we option these in store." style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissan()">Nissan Trim Level</button><br>
+	<button id="kiabutton" title="Data is pulled from recall page. Read where mdoel is noted" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="kia()">Kia Trim Level</button><br>
+	<a href="https://autoservice.hyundaiusa.com/campaignhome" target="_blank"><button title="Recall page showing trim. Enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;">Hyundai Trim Level</button></a><br>
+	
+	</td>
+    <td class="tg-innertable" width=33%>
+	<p><span style="font-size: 14px;"><strong>Auction Links</strong></span></p>
+	<button id="mmrbutton" title="MMR Search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimmmr()">MMR Search</button><br>
+	<button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Manheim Inventory &amp; CR </button><br>
+	<a href="http://www.bscamerica.com/bel-air-auction/run-list/#/" target="_blank"><button title="Bel Air Auction Run List" style="cursor:pointer;border-style:none;background:#ffffff;"  >Bel Air Auto Auction Run List</button></a><br>
+	<a href="https://www.manheim.com/members/marketreport/control/MarketReportMain?auctionID=MAA" target="_blank"><button title="Manheim Sold Data" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim Post Sale Results</button></a><br>
+	</td>
+  </tr>
+  <tr>
+    <td class="tg-innertable">
+	<p><span style="font-size: 14px;"><strong>Tow Hitch Info</strong></span></p>
+	<a href="https://www.etrailer.com/fitguide.htm" target="_blank"><button title="Enter vehicle year/make/model" style="cursor:pointer;border-style:none;background:#ffffff;">e-Trailer</button></a><br>
+	<a href="https://www.uhaul.com/Trailer-Hitches/" target="_blank"><button title="Enter vehicle year/make/model" style="cursor:pointer;border-style:none;background:#ffffff;">UHaul</button></a><br>
+	</td>
+    <td class="tg-innertable">
+	<p><span style="font-size: 14px;"><strong>Additional Links</strong></span></p>
+	<a href="https://mic.mymitchell.com/" target="_blank"><button title="Login and then parts information" style="cursor:pointer;border-style:none;background:#ffffff;"  >Mitchell Repair Guide (PY kmxXXXX ZIPcode)</button></a><br>
+	<a href="http://www.owgonline.com/index.php" target="_blank"><button title="Power train/Factory Warranty" style="cursor:pointer;border-style:none;background:#ffffff;"  >Official Warranty Guide</button></a><br>
+	</td>
+    <td class="tg-innertable">
+	<p><span style="font-size: 14px;"><strong>Manheim Window Stickers (must be logged in to Manheim)</strong></span></p>
+	<p><button id="VWAUDIbtn" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="vwaudilane()">Audi and Volkswagen Lane</button><br>
+	<button id="BMWbtn" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="bmwlane()">BMW Lane</button><br>
+	
+	</td>
+  </tr>
+</table>
+
+
+<script>
+
+<!-- https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpecs/VINNUMBER gives FullUvc, use that to https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpec/FULLUVC get invoice guide also book values by https://obw.carmax.com/api/v1/blackbook/BlackBookVinValues/VINNUMBER-->
+
+function bbdata() {
+		var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+
+<!--	window.open("https://obw.carmax.com/m");-->
+var w1 = window.open("https://obw.carmax.com/api/v1/blackbook/BlackBookVinValues/"+inputvalue,"new1");
+var w2 = window.open("https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpecs/"+inputvalue,"new2", "width=200,height=100");
+}
+}
+}
+
+function blacksearch() {
+		var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+	window.open("http://research.carmax.org/BlackBook/GetBlackBookUsedCarViewByVin?id="+inputvalue+"&X-Requested-With=XMLHttpRequest");
+
+}
+}
+}
+
+function bbpdf() {
+	var FullUvc = document.getElementById("fuvc").value;
+	    if (FullUvc != null){
+	window.open("https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpec/"+FullUvc);
+   }
+}
+
+function carmax() {
+	var inputvalue = document.getElementById("VIN").value;
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+	window.open("https://www.carmax.com/search#Distance=all&ExposedCategories=249+265+250+772&ExposedDimensions=249+265+250+772&Page=1&PerPage=50&SortKey=4&Zip=21162&FreeText="+inputvalue);
+}
+
+function fordsticker() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+	window.open("http://www.windowsticker.forddirect.com/windowsticker.pdf?vin="+inputvalue);
+}
+}
+}
+
+function ford() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+	window.open("https://www.etis.ford.com/selectedVehicleDetails.do#vin="+inputvalue);
+}
+}
+}
+
+function decoderz() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+	window.open("https://www.vindecoderz.com/EN/check-lookup/"+inputvalue);
+}
+}
+}
+
+function manheimmmr() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+	window.open("https://mmr.manheim.com/?WT.svl=m_hdr_mnav_buy_mmr&country=US&popup=true&source=man&vin="+inputvalue);
+}
+}
+}
+
+
+function manheimsearch() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+	window.open("https://www.manheim.com/members/powersearch/keywordSearchResults.do?searchTerms="+inputvalue);
+
+}
+}
+}
+
+function chrysler() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+        window.open(" http://www.chrysler.com/hostc/getWindowStickerPdf.do?vin="+inputvalue);
+}
+}
+}
+
+
+function chryslerlist() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+        window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin="+inputvalue);
+}
+}
+}
+
+function nissan() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1N4BL3APXDN568414" -->
+        window.open(" https://www.nissanusa.com/recalls-vin/#/#/Results/"+inputvalue);
+}
+}
+}
+function kia() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1N4BL3APXDN568414" -->
+        window.open(" http://www.kia.com/us/en/data/owners/recalls/search/"+inputvalue);
+}
+}
+}
+
+function vwaudilane() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "3VWVT7AT7EM640318" -->
+        window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/"+inputvalue+"/4905414");
+}
+}
+}
+
+function bmwlane() {
+	var inputvalue = document.getElementById("VIN").value;
+	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "5UXXW3C50J0T81502" -->
+        window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/BMW/"+inputvalue);
+}
+}
+}
+
+</script>
+</body>
+</html>
