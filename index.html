@@ -26,6 +26,7 @@
 	<a href="http://bimmer.work" target="_blank"><button title="You will have to enter last 7 digits of VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >BMW VIN Decoder</button></a><br>
 	<a href="http://www.motortrend.com/cars/" target="_blank"><button title="Great resource for BMW or MINI packages" style="cursor:pointer;border-style:none;background:#ffffff;"  >Motor Trend for Packages</button></a><br>
 	<a href="http://www.auto-brochures.com" target="_blank"><button title="Factory Brochures" style="cursor:pointer;border-style:none;background:#ffffff;"  >Auto Brochures</button></a><br>
+	<a href="https://dodgeforum.com/forum/vindecoder.php" target="_blank"><button title="You will have to enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >Generic VIN Decoder for Standard Options</button></a><br>
 	<button id="fordbutton" title="You may have to start a new vehicle search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="ford()">Ford Equipment Listing (Select New Vehicle to search)</button> <br>
 	<button id="fordbutton" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordsticker()">Ford Window Stickers (Mostly Unavailable)</button><br>
 	</td>
@@ -233,60 +234,7 @@
 
 <!-- https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpecs/VINNUMBER gives FullUvc, use that to https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpec/FULLUVC get invoice guide also book values by https://obw.carmax.com/api/v1/blackbook/BlackBookVinValues/VINNUMBER-->
 
-function bbdata() {
-		var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
-	
-	if (len <17){
-		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
-	}
 
-	else {
-			if (len >17){
-		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
-	}
-	else {
-
-<!--	inputvalue = "1C3CCCAB1GN121627" -->
-
-<!--	window.open("https://obw.carmax.com/m");-->
-var w1 = window.open("https://obw.carmax.com/api/v1/blackbook/BlackBookVinValues/"+inputvalue,"new1");
-var w2 = window.open("https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpecs/"+inputvalue,"new2", "width=200,height=100");
-}
-}
-}
-
-function blacksearch() {
-		var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
-	
-	if (len <17){
-		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
-	}
-
-	else {
-			if (len >17){
-		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
-	}
-	else {
-
-<!--	inputvalue = "1C3CCCAB1GN121627" -->
-	window.open("http://research.carmax.org/BlackBook/GetBlackBookUsedCarViewByVin?id="+inputvalue+"&X-Requested-With=XMLHttpRequest");
-
-}
-}
-}
-
-function bbpdf() {
-	var FullUvc = document.getElementById("fuvc").value;
-	    if (FullUvc != null){
-	window.open("https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpec/"+FullUvc);
-   }
-}
 
 function carmax() {
 	var inputvalue = document.getElementById("VIN").value;
@@ -296,17 +244,22 @@ function carmax() {
 
 function fordsticker() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 
@@ -318,17 +271,22 @@ function fordsticker() {
 
 function ford() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
@@ -339,17 +297,22 @@ function ford() {
 
 function decoderz() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
@@ -360,17 +323,22 @@ function decoderz() {
 
 function manheimmmr() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
@@ -382,17 +350,22 @@ function manheimmmr() {
 
 function manheimsearch() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
@@ -404,17 +377,22 @@ function manheimsearch() {
 
 function chrysler() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
@@ -426,17 +404,22 @@ function chrysler() {
 
 function chryslerlist() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
@@ -447,17 +430,22 @@ function chryslerlist() {
 
 function nissan() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "1N4BL3APXDN568414" -->
@@ -467,17 +455,22 @@ function nissan() {
 }
 function kia() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "1N4BL3APXDN568414" -->
@@ -488,17 +481,22 @@ function kia() {
 
 function vwaudilane() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "3VWVT7AT7EM640318" -->
@@ -509,17 +507,22 @@ function vwaudilane() {
 
 function bmwlane() {
 	var inputvalue = document.getElementById("VIN").value;
-	var len = document.getElementById("VIN").value.length;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
-		alert("Entered VIN is missing" + diff + " characters. Please check again.");
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
 
 	else {
 			if (len >17){
 		var diff = len - 17;
-		alert("Entered VIN has" + diff + " too many characters. Please check again.");
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
 <!--	inputvalue = "5UXXW3C50J0T81502" -->
