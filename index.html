@@ -22,10 +22,13 @@
 	<p><span style="font-size: 14px;"><strong>Optioning Help</strong></span></p>
 	<p><button id="chrbutton" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chrysler()">Dodge/Chrysler/Jeep Window Sticker</button><br>
 	<button id="chrlistbutton" button id="chrbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chryslerlist()">Dodge/Chrysler/Jeep Equipment Listing</button><br>
+	<button id="audivwbutton" button id="audivwbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="audivwwiki()">Audi/VW Window Sticker</button><br>
+	<button id="fordwikibutton" button id="fordwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordwiki()">Ford Window Sticker from wikilender</button><br>
 	<button id="decoderzbutton" title="Data is pulled from different resources. Use Caution!" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="decoderz()">Vin Decoderz, Use Caution (MB, Toyota etc)</button><br>
 	<a href="http://bimmer.work" target="_blank"><button title="You will have to enter last 7 digits of VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >BMW VIN Decoder</button></a><br>
 	<a href="http://www.motortrend.com/cars/" target="_blank"><button title="Great resource for BMW or MINI packages" style="cursor:pointer;border-style:none;background:#ffffff;"  >Motor Trend for Packages</button></a><br>
 	<a href="http://www.auto-brochures.com" target="_blank"><button title="Factory Brochures" style="cursor:pointer;border-style:none;background:#ffffff;"  >Auto Brochures</button></a><br>
+	<a href="http://www.wikilender.com/ultimate-window-sticker-vin-decoder-tool/" target="_blank"><button title="You will have to enter VIN" style="cursor:pointer;border-style:none;background:#ffffff;"  >Wikilender window stickers for all</button></a><br>
 	<a href="https://dodgeforum.com/forum/vindecoder.php" target="_blank"><button title="You will have to enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >Generic VIN Decoder for Standard Options</button></a><br>
 	<button id="fordbutton" title="You may have to start a new vehicle search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="ford()">Ford Equipment Listing (Select New Vehicle to search)</button> <br>
 	<button id="fordbutton" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordsticker()">Ford Window Stickers (Mostly Unavailable)</button><br>
@@ -425,6 +428,58 @@ function chryslerlist() {
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
         window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin="+inputvalue);
+}
+}
+}
+
+function audivwwiki() {
+	var inputvalue = document.getElementById("VIN").value;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+        window.open("http://mclaren722.herokuapp.com/VWvindownload?vin="+inputvalue);
+}
+}
+}
+	
+function fordwiki() {
+	var inputvalue = document.getElementById("VIN").value;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+
+	//	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
+	}
+
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+        window.open("http://mclaren722.herokuapp.com/ford?vin="+inputvalue);
 }
 }
 }
