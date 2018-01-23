@@ -1,76 +1,105 @@
 
 <!DOCTYPE html>
-<html>
-<body bgcolor="#77c2e6">
+<html lang="en">
 
-<style type="text/css">
-.tg  {text-align:left;border-collapse:collapse;border-spacing:0;border-color:#ccc;width:90%;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#0053a0;}
-.tg .tg-toptable{font-family:"Trebuchet MS", Helvetica, sans-serif !important;;vertical-align:top}
-.tg .tg-innertable{vertical-align:top;}
-</style>
+<head>
+  <title>Optioning Links</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-<table class="tg" align="center">
-  <tr>
-    <th class="tg-toptable" colspan="3">
-<input size="25" placeholder="Enter VIN" id="VIN" type="text">
-</th>
-  </tr>
-  <tr>
-    <td class="tg-innertable" width=33%>
+<body style="background-color:#77c2e6;">
+
+
+<div class="container-fluid" align="center" "style="background-color:#0053a0;">
+
+
+
+
+  <div class="row" align="left"	 style="background-color:#fff; max-width: 98%;">
+	<p align="left" style="background-color:#0053a0;"><input size="25" placeholder="Enter VIN" id="VIN" type="text"></p>	
+
+<p></p>
+
+    <div class="col-md-4">
 	<p><span style="font-size: 14px;"><strong>Optioning Help</strong></span></p>
-	<p><button id="chrbutton" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chrysler()">Dodge/Chrysler/Jeep Window Sticker</button><br>
-	<button id="chrlistbutton" button id="chrbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chryslerlist()">Dodge/Chrysler/Jeep Equipment Listing</button><br>
+	<p><button id="chrbutton" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chrysler()">Dodge/Chrysler/Jeep/Fiat Window Sticker</button><br>
+	<button id="chrlistbutton" button id="chrbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chryslerlist()">Dodge/Chrysler/Jeep/Fiat Equipment Listing</button><br>
 	<button id="audivwbutton" button id="audivwbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="audivwwiki()">Audi/VW Window Sticker</button><br>
 	<button id="fordwikibutton" button id="fordwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordwiki()">Ford Window Sticker from wikilender</button><br>
-	<button id="decoderzbutton" title="Data is pulled from different resources. Use Caution!" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="decoderz()">Vin Decoderz, Use Caution (MB, Toyota etc)</button><br>
+	<button id="hyunwikibutton" button id="hyunwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="hyunwiki()">Hyundai Window Sticker from wikilender</button><br>
+	<p>_____________________________________</p>
+	<button id="decoderzbutton" title="Data is pulled from different resources. Use Caution!" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="decoderz()">Vin Decoderz, Use Caution (MB,Toyota...)</button><br>
 	<a href="http://bimmer.work" target="_blank"><button title="You will have to enter last 7 digits of VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >BMW VIN Decoder</button></a><br>
 	<a href="http://www.motortrend.com/cars/" target="_blank"><button title="Great resource for BMW or MINI packages" style="cursor:pointer;border-style:none;background:#ffffff;"  >Motor Trend for Packages</button></a><br>
 	<a href="http://www.auto-brochures.com" target="_blank"><button title="Factory Brochures" style="cursor:pointer;border-style:none;background:#ffffff;"  >Auto Brochures</button></a><br>
-	<a href="http://www.wikilender.com/ultimate-window-sticker-vin-decoder-tool/" target="_blank"><button title="You will have to enter VIN" style="cursor:pointer;border-style:none;background:#ffffff;"  >Wikilender window stickers for all</button></a><br>
 	<a href="https://dodgeforum.com/forum/vindecoder.php" target="_blank"><button title="You will have to enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >Generic VIN Decoder for Standard Options</button></a><br>
-	<button id="fordbutton" title="You may have to start a new vehicle search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="ford()">Ford Equipment Listing (Select New Vehicle to search)</button> <br>
-	<button id="fordbutton" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordsticker()">Ford Window Stickers (Mostly Unavailable)</button><br>
-	</td>
-    <td class="tg-innertable" width=34%>
+	<button id="fordbutton" title="You may have to start a new vehicle search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="ford()">Ford Equipment Listing (Select New Vehicle)</button><br>
+	<button id="fordbutton2" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordsticker()">Ford Window Stickers (Mostly Unavailable)</button><br>
+	</div>
+<p></p>
+    <div class="col-md-4">
 	<p><span style="font-size: 14px;"><strong>Trim Level Help</strong></span></p>
 	<p><button id="nissanbutton" title="This will pull recall page showing Trim level. Use caution how we option these in store." style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissan()">Nissan Trim Level</button><br>
 	<button id="kiabutton" title="Data is pulled from recall page. Read where mdoel is noted" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="kia()">Kia Trim Level</button><br>
 	<a href="https://autoservice.hyundaiusa.com/campaignhome" target="_blank"><button title="Recall page showing trim. Enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;">Hyundai Trim Level</button></a><br>
 	<button id="mmrbutton" title="MMR Search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimmmr()">MMR Search (Toyota, etc)</button><br>
-	
-	</td>
-    <td class="tg-innertable" width=33%>
+	</div>
+<p></p>
+    <div class="col-md-4" >
 	<p><span style="font-size: 14px;"><strong>Auction Links</strong></span></p>
 	<button id="mmrbutton" title="MMR Search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimmmr()">MMR Search</button><br>
 	<button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Manheim Inventory &amp; CR </button><br>
 	<a href="http://www.bscamerica.com/bel-air-auction/run-list/#/" target="_blank"><button title="Bel Air Auction Run List" style="cursor:pointer;border-style:none;background:#ffffff;"  >Bel Air Auto Auction Run List</button></a><br>
 	<a href="https://www.manheim.com/members/marketreport/control/MarketReportMain?auctionID=MAA" target="_blank"><button title="Manheim Sold Data" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim Post Sale Results</button></a><br>
-	</td>
-  </tr>
-  <tr>
-    <td class="tg-innertable">
+	</div>
+  </div>
+	
+<p></p>
+
+  <div class="row" align="left"	style="background-color:#fff; max-width: 98%;">
+    <div class="col-md-4">
 	<p><span style="font-size: 14px;"><strong>Tow Hitch Info</strong></span></p>
 	<a href="https://www.etrailer.com/fitguide.htm" target="_blank"><button title="Enter vehicle year/make/model" style="cursor:pointer;border-style:none;background:#ffffff;">e-Trailer</button></a><br>
 	<a href="https://www.uhaul.com/Trailer-Hitches/" target="_blank"><button title="Enter vehicle year/make/model" style="cursor:pointer;border-style:none;background:#ffffff;">UHaul</button></a><br>
-	</td>
-    <td class="tg-innertable">
+	</div>
+<p></p>
+    <div class="col-md-4">
 	<p><span style="font-size: 14px;"><strong>Additional Links</strong></span></p>
 	<a href="https://mic.mymitchell.com/" target="_blank"><button title="Login and then parts information" style="cursor:pointer;border-style:none;background:#ffffff;"  >Mitchell Repair Guide (PY kmxXXXX)</button></a><br>
 	<a href="http://www.owgonline.com/index.php" target="_blank"><button title="Power train/Factory Warranty" style="cursor:pointer;border-style:none;background:#ffffff;"  >Official Warranty Guide</button></a><br>
-	</td>
-    <td class="tg-innertable">
+	<a href="https://www.dodge.com/hostc/" target="_blank"><button title="You will have to enter VIN" style="cursor:pointer;border-style:none;background:#ffffff;"  >Chrysler/Jeep/Dodge/Fiat window stickers for all</button></a><br>
+	<a href="http://www.wikilender.com/ultimate-window-sticker-vin-decoder-tool/" target="_blank"><button title="You will have to enter VIN" style="cursor:pointer;border-style:none;background:#ffffff;"  >Wikilender window stickers for all</button></a><br>
+	
+	</div>
+<p></p>
+    <div class="col-md-4">
 	<p><span style="font-size: 14px;"><strong>Manheim Window Stickers (must be logged in to Manheim)</strong></span></p>
 	<p><button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Ford (Click on WS) </button><br>
 	<button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Mazda (Click on WS) </button><br>
 	<button id="VWAUDIbtn" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="vwaudilane()">Audi and Volkswagen Lane</button><br>
 	<button id="BMWbtn" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="bmwlane()">BMW Lane</button><br>
-	
-	</td>
-  </tr>
-</table>
-<p align="center">OWNER'S MANUALS </P>
+	</div>
+  </div>
+
+  <div class="row" align="left"	style="background-color:#fff; max-width: 98%;">
+    <div class="col-md-4" >
+	</div>
+    <div class="col-md-4" >
+	</div>
+    <div class="col-md-4" >
+	</div>
+  </div>
+
+<p></p>
+
+  <div class="row" align="center" style="background-color:#fff; max-width: 98%;">
+    <div class="col" >
+
+<p align="center" style="background-color:#0053a0;color:#fff;">OWNER'S MANUALS </P>
 <p><table class="tg" align="center">
   <tr>
 	  <th><font color="white">Manufacturer</font></th>
@@ -233,60 +262,56 @@
     <td valign="top" class="lastCol">1970-current models. (No login needed.) Also includes other materials, such as maintenance schedule and warranty manual.</td>
   </tr>
 </table></p>
+	</div>
+  </div>
+
+</div>
+
+
+
 
 <script>
-
 <!-- https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpecs/VINNUMBER gives FullUvc, use that to https://obw.carmax.com/api/v1/blackbook/BlackBookPdfSpec/FULLUVC get invoice guide also book values by https://obw.carmax.com/api/v1/blackbook/BlackBookVinValues/VINNUMBER-->
-
-
-
 function carmax() {
 	var inputvalue = document.getElementById("VIN").value;
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
 	window.open("https://www.carmax.com/search#Distance=all&ExposedCategories=249+265+250+772&ExposedDimensions=249+265+250+772&Page=1&PerPage=50&SortKey=4&Zip=21162&FreeText="+inputvalue);
 }
-
 function fordsticker() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
 		alert("Entered VIN has " + diff + " too many characters. Please check again.");
 	}
 	else {
-
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
 	window.open("http://www.windowsticker.forddirect.com/windowsticker.pdf?vin="+inputvalue);
 }
 }
 }
-
 function ford() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -298,21 +323,18 @@ function ford() {
 }
 }
 }
-
 function decoderz() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -324,21 +346,18 @@ function decoderz() {
 }
 }
 }
-
 function manheimmmr() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -350,22 +369,18 @@ function manheimmmr() {
 }
 }
 }
-
-
 function manheimsearch() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -374,25 +389,21 @@ function manheimsearch() {
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
 	window.open("https://www.manheim.com/members/powersearch/keywordSearchResults.do?searchTerms="+inputvalue);
-
 }
 }
 }
-
 function chrysler() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -404,22 +415,18 @@ function chrysler() {
 }
 }
 }
-
-
 function chryslerlist() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -431,21 +438,18 @@ function chryslerlist() {
 }
 }
 }
-
 function audivwwiki() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -464,14 +468,12 @@ function fordwiki() {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -484,20 +486,42 @@ function fordwiki() {
 }
 }
 
-function nissan() {
+function hyunwiki() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+        window.open("http://mclaren722.herokuapp.com/hyundai?vin="+inputvalue);
+}
+}
+}
 
+function nissan() {
+	var inputvalue = document.getElementById("VIN").value;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+	//	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
+	}
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -515,14 +539,12 @@ function kia() {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -534,21 +556,18 @@ function kia() {
 }
 }
 }
-
 function vwaudilane() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -560,21 +579,18 @@ function vwaudilane() {
 }
 }
 }
-
 function bmwlane() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
 	var len = inputvalue.length;
-
 	//	var len = document.getElementById("VIN").value.length;
 	
 	if (len <17){
 		var diff = 17 - len;
 		alert("Entered VIN is missing " + diff + " characters. Please check again.");
 	}
-
 	else {
 			if (len >17){
 		var diff = len - 17;
@@ -586,7 +602,6 @@ function bmwlane() {
 }
 }
 }
-
 </script>
 </body>
 </html>
