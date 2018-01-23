@@ -31,6 +31,7 @@
 	<button id="audivwbutton" button id="audivwbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="audivwwiki()">Audi/VW Window Sticker</button><br>
 	<button id="fordwikibutton" button id="fordwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordwiki()">Ford Window Sticker from wikilender</button><br>
 	<button id="hyunwikibutton" button id="hyunwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="hyunwiki()">Hyundai Window Sticker from wikilender</button><br>
+	<button id="porwikibutton" button id="porwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="porwiki()">Porsche Window Sticker from wikilender</button><br>
 	<p>_____________________________________</p>
 	<button id="decoderzbutton" title="Data is pulled from different resources. Use Caution!" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="decoderz()">Vin Decoderz, Use Caution (MB,Toyota...)</button><br>
 	<a href="http://bimmer.work" target="_blank"><button title="You will have to enter last 7 digits of VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >BMW VIN Decoder</button></a><br>
@@ -512,7 +513,31 @@ function hyunwiki() {
 }
 }
 }
-
+								  
+function porwiki() {
+	var inputvalue = document.getElementById("VIN").value;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+	//	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
+	}
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+        window.open("http://mclaren722.herokuapp.com/porsche?vin="+inputvalue);
+}
+}
+}
+								  
 function nissan() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
