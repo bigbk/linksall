@@ -23,9 +23,8 @@
 	<p align="left" style="background-color:#0053a0;"><input size="25" placeholder="Enter VIN" id="VIN" type="text"></p>	
 
 <p></p>
-
     <div class="col-md-4">
-	<p><span style="font-size: 14px;"><strong>Optioning Help</strong></span></p>
+	<p><span style="font-size: 14px;"><strong>Window Stickers</strong></span></p>
 	<p><button id="chrbutton" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chrysler()">Dodge/Chrysler/Jeep/Fiat Window Sticker</button><br>
 	<button id="chrlistbutton" button id="chrbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chryslerlist()">Dodge/Chrysler/Jeep/Fiat Equipment Listing</button><br>
 	<button id="audivwbutton" button id="audivwbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="audivwwiki()">Audi/VW Window Sticker</button><br>
@@ -33,16 +32,27 @@
 	<button id="hyunwikibutton" button id="hyunwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="hyunwiki()">Hyundai Window Sticker from wikilender</button><br>
 	<button id="nissanbutton" button id="nissanbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissanbtn()">Nissan/Infiniti Window Sticker</button><br>
 	<button id="porwikibutton" button id="porwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="porwiki()">Porsche Window Sticker</button><br>
-	<p>_____________________________________</p>
-	<button id="decoderzbutton" title="Data is pulled from different resources. Use Caution!" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="decoderz()">Vin Decoderz, Use Caution (MB,Toyota...)</button><br>
-	<button id="bimmerbutton" title="bimmer.work also has a picture" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="bimmerbtn()">BMW VIN Decoder</button><br>
-	<a href="http://www.motortrend.com/cars/" target="_blank"><button title="Great resource for BMW or MINI packages" style="cursor:pointer;border-style:none;background:#ffffff;"  >Motor Trend for Packages</button></a><br>
-	<a href="http://www.auto-brochures.com" target="_blank"><button title="Factory Brochures" style="cursor:pointer;border-style:none;background:#ffffff;"  >Auto Brochures</button></a><br>
-	<a href="https://dodgeforum.com/forum/vindecoder.php" target="_blank"><button title="You will have to enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >Generic VIN Decoder for Standard Options</button></a><br>
 	<button id="fordbutton" title="You may have to start a new vehicle search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="ford()">Ford Equipment Listing (Select New Vehicle)</button><br>
 	<button id="fordbutton2" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordsticker()">Ford Window Stickers (Dealer Inventory)</button><br>
 	<button id="mazdabtn" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mazdabtn()">Mazda Window Stickers (Dealer Inventory)</button><br>
-	</div>
+	<p>_____________________________________</p>
+	<p><span style="font-size: 14px;"><strong>Manheim Window Stickers (must be logged in to Manheim)</strong></span></p>
+	<p><button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Ford (Click on WS) </button><br>
+	<button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Mazda (Click on WS) </button><br>
+	<button id="VWAUDIbtn" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="vwaudilane()">Audi and Volkswagen Lane</button><br>
+	<button id="BMWbtn" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="bmwlane()">BMW Lane</button><br>
+
+</div>
+<p></p>
+    <div class="col-md-4">
+	<p><span style="font-size: 14px;"><strong>VIN Decoders (must be logged in to Manheim)</strong></span></p>
+	<button id="bimmerbutton" title="bimmer.work also has a picture" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="bimmerbtn()">BMW VIN Decoder</button><br>
+	<button id="decoderzbutton" title="Data is pulled from different resources. Use Caution!" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="decoderz()">Vin Decoderz, Use Caution (MB,Toyota...)</button><br>
+	<a href="http://www.motortrend.com/cars/" target="_blank"><button title="Great resource for BMW or MINI packages" style="cursor:pointer;border-style:none;background:#ffffff;"  >Motor Trend for Packages</button></a><br>
+	<a href="http://www.auto-brochures.com" target="_blank"><button title="Factory Brochures" style="cursor:pointer;border-style:none;background:#ffffff;"  >Auto Brochures</button></a><br>
+	<a href="https://dodgeforum.com/forum/vindecoder.php" target="_blank"><button title="You will have to enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >Generic VIN Decoder for Standard Options</button></a><br>
+
+</div>
 <p></p>
     <div class="col-md-4">
 	<p><span style="font-size: 14px;"><strong>Trim Level Help</strong></span></p>
@@ -50,17 +60,6 @@
 	<button id="kiabutton" title="Data is pulled from recall page. Read where mdoel is noted" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="kia()">Kia Trim Level</button><br>
 	<a href="https://autoservice.hyundaiusa.com/campaignhome" target="_blank"><button title="Recall page showing trim. Enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;">Hyundai Trim Level</button></a><br>
 	<button id="mmrbutton" title="MMR Search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimmmr()">MMR Search (Toyota, etc)</button><br>
-	</div>
-<p></p>
-    <div class="col-md-4" >
-	<p><span style="font-size: 14px;"><strong>Auction Links</strong></span></p>
-	<button id="mmrbutton" title="MMR Search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimmmr()">MMR Search</button><br>
-	<button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Manheim Inventory &amp; CR </button><br>
-	<a href="http://www.bscamerica.com/bel-air-auction/run-list/#/" target="_blank"><button title="Bel Air Auction Run List" style="cursor:pointer;border-style:none;background:#ffffff;"  >Bel Air Auto Auction Run List</button></a><br>
-	<a href="https://www.manheim.com/members/marketreport/control/MarketReportMain?auctionID=MAA" target="_blank"><button title="Manheim Sold Data" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim Post Sale Results</button></a><br>
-	<a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=177" target="_blank"><button title="Manheim NJ" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim NJ Sale</button></a><br>
-	<a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=165" target="_blank"><button title="Manheim PA" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim PA Sale</button></a><br>
-	<a href="https://www.manheim.com/secureredirect?product=Simulcast&WT.svl=m_hdr_mnav_buy_sim" target="_blank"><button title="Manheim Simulcast" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim Simulcast</button></a><br>
 	</div>
   </div>
 	
@@ -82,13 +81,17 @@
 	
 	</div>
 <p></p>
-    <div class="col-md-4">
-	<p><span style="font-size: 14px;"><strong>Manheim Window Stickers (must be logged in to Manheim)</strong></span></p>
-	<p><button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Ford (Click on WS) </button><br>
-	<button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Mazda (Click on WS) </button><br>
-	<button id="VWAUDIbtn" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="vwaudilane()">Audi and Volkswagen Lane</button><br>
-	<button id="BMWbtn" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="bmwlane()">BMW Lane</button><br>
+    <div class="col-md-4" >
+	<p><span style="font-size: 14px;"><strong>Auction Links</strong></span></p>
+	<button id="mmrbutton" title="MMR Search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimmmr()">MMR Search</button><br>
+	<button id="manheimbutton" title="Log in to Manheim to complete inventory search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="manheimsearch()">Manheim Inventory &amp; CR </button><br>
+	<a href="http://www.bscamerica.com/bel-air-auction/run-list/#/" target="_blank"><button title="Bel Air Auction Run List" style="cursor:pointer;border-style:none;background:#ffffff;"  >Bel Air Auto Auction Run List</button></a><br>
+	<a href="https://www.manheim.com/members/marketreport/control/MarketReportMain?auctionID=MAA" target="_blank"><button title="Manheim Sold Data" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim Post Sale Results</button></a><br>
+	<a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=177" target="_blank"><button title="Manheim NJ" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim NJ Sale</button></a><br>
+	<a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=165" target="_blank"><button title="Manheim PA" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim PA Sale</button></a><br>
+	<a href="https://www.manheim.com/secureredirect?product=Simulcast&WT.svl=m_hdr_mnav_buy_sim" target="_blank"><button title="Manheim Simulcast" style="cursor:pointer;border-style:none;background:#ffffff;"  >Manheim Simulcast</button></a><br>
 	</div>
+
   </div>
 
   <div class="row" align="left"	style="background-color:#fff; max-width: 98%;">
