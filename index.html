@@ -41,6 +41,7 @@
 	<a href="https://dodgeforum.com/forum/vindecoder.php" target="_blank"><button title="You will have to enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"  >Generic VIN Decoder for Standard Options</button></a><br>
 	<button id="fordbutton" title="You may have to start a new vehicle search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="ford()">Ford Equipment Listing (Select New Vehicle)</button><br>
 	<button id="fordbutton2" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordsticker()">Ford Window Stickers (Dealer Inventory)</button><br>
+	<button id="mazdabtn" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mazdabtn()">Mazda Window Stickers (Dealer Inventory)</button><br>
 	</div>
 <p></p>
     <div class="col-md-4">
@@ -305,6 +306,29 @@ function fordsticker() {
 }
 }
 }
+function mazdabtn() {
+	var inputvalue = document.getElementById("VIN").value;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+	//	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
+	}
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "JM3KFBCL4H0175167" -->
+	window.open("https://www.mazdausa.com/MusaWeb/displayDealerWindowSticker.action?vin="+inputvalue+"&dealerId=51622");
+}
+}
+}										    
 function ford() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
