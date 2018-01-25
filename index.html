@@ -28,7 +28,7 @@
 	<p><button id="chrbutton" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chrysler()">Dodge/Chrysler/Jeep/Fiat Window Sticker</button><br>
 	<button id="chrlistbutton" button id="chrbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chryslerlist()">Dodge/Chrysler/Jeep/Fiat Equipment Listing</button><br>
 	<button id="audivwbutton" button id="audivwbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="audivwwiki()">Audi/VW Window Sticker from wikilender</button><br>
-	<button id="fordwikibutton" button id="fordwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordwiki()">Ford Window Sticker from wikilender</button><br>
+	<button id="fordwikibutton" button id="fordwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordwiki()">Ford Window Sticker</button><br>
 	<button id="hyunwikibutton" button id="hyunwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="hyunwiki()">Hyundai Window Sticker</button><br>
 	<button id="nissanbutton" button id="nissanbutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissanbtn()">Nissan/Infiniti Window Sticker</button><br>
 	<button id="porwikibutton" button id="porwikibutton" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="porwiki()">Porsche Window Sticker</button><br>
@@ -562,7 +562,7 @@ function fordwiki() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open("http://mclaren722.herokuapp.com/ford?vin="+inputvalue);
+        window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin="+inputvalue+"&pc=SIMULCAST&ari=&lane_num=&run_num=&work_order=");
 }
 }
 }
