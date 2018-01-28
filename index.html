@@ -75,6 +75,7 @@
 <p></p>
     <div class="col-md-4">
 	<p><span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>Trim Level Help</strong></span><br>
+	<a id="hondabutton" class="btn btn-link" title="Requires Honda Owner Account. jasib123 sl.." style="cursor:pointer;border-style:none;background:#ffffff;" onclick="honda()">Honda NAV/RES Specific Trim (login)</a><br>
 	<a id="nissanbutton" class="btn btn-link" title="This will pull recall page showing Trim level. Use caution how we option these in store." style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissan()">Nissan Trim Level</a><br>
 	<a id="kiabutton" class="btn btn-link" title="Data is pulled from recall page. Read where mdoel is noted" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="kia()">Kia Trim Level</a><br>
 	<a href="https://autoservice.hyundaiusa.com/campaignhome" target="_blank" class="btn btn-link" title="Recall page showing trim. Enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;">Hyundai Trim Level</a><br>
@@ -707,6 +708,29 @@ function nissan() {
 	else {
 <!--	inputvalue = "1N4BL3APXDN568414" -->
         window.open(" https://www.nissanusa.com/recalls-vin/#/#/Results/"+inputvalue);
+}
+}
+}
+function honda() {
+	var inputvalue = document.getElementById("VIN").value;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+	//	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
+	}
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "19XFB2F92FE214039" -->
+        window.open(" https://owners.honda.com/validation/validatevin?vin="+inputvalue);
 }
 }
 }
