@@ -76,7 +76,8 @@
 	<a href="http://www.bimmerpost.com/goodiesforyou/2009order.pdf" target="_blank" class="btn btn-link" title="PDF files listed" style="cursor:pointer;border-style:none;background:#ffffff;">2009 BMW Combined PDF</a><br>
 	<a href="http://www.bimmerfile.com/wp-content/uploads/2008/02/2008-online-ordering-guide.pdf" target="_blank" class="btn btn-link" title="PDF files listed" style="cursor:pointer;border-style:none;background:#ffffff;">2008 BMW Combined PDF</a><br>
 	<a href="http://www.autospies.com/images/users/Agent001/CompleteOrderGuide.pdf" target="_blank" class="btn btn-link" title="PDF files listed" style="cursor:pointer;border-style:none;background:#ffffff;">2007 BMW Combined PDF</a><br></p>
-	
+	<a href="https://www.autoevolution.com/mini/" target="_blank" class="btn btn-link" title="MINI Production Models" style="cursor:pointer;border-style:none;background:#ffffff;">MINI Production Models</a><br></p>
+	<p align="left" style="background-color:#003366;"><input size="8" placeholder="Year" id="year" type="text"><input size="15" placeholder="Model" id="model" type="text"><a id="chr" class="btn btn-link" title="This will open Google Search" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="miniog()"><span class="glyphicon glyphicon-edit"></span> MINI Ordering Guide Search</a><br></p>
 </div>
 <p></p>
     <div class="col-md-4">
@@ -320,6 +321,15 @@ function carmax() {
 	var inputvalue = document.getElementById("VIN").value;
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
 	window.open("https://www.carmax.com/search#Distance=all&ExposedCategories=249+265+250+772&ExposedDimensions=249+265+250+772&Page=1&PerPage=50&SortKey=4&Zip=21162&FreeText="+inputvalue);
+}
+function miniog() {
+	var inputvalue = document.getElementById("year").value + "+" + document.getElementById("model").value;
+
+
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+	window.open("https://www.google.com/search?q=" + inputvalue + "+ordering+guide+site%3Aminimedia.iconicweb.com");
+}
+}
 }
 function fordsticker() {
 	var inputvalue = document.getElementById("VIN").value;
