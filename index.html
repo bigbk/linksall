@@ -26,7 +26,6 @@
 	<a id="fordwikibutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordwiki()"><span class="glyphicon glyphicon-edit"></span> Ford/Lincoln </a><br>
 	<a id="hyunwikibutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="hyunwiki()"><span class="glyphicon glyphicon-edit"></span> Hyundai/Genesis</a><br>
 	<a id="mazdabutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mazdabtn2()"><span class="glyphicon glyphicon-edit"></span> Mazda </a><br>
-	<a id="mitsbutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mitsbtn()"><span class="glyphicon glyphicon-edit"></span> Mitsubishi </a><br>
 	<a id="nissanbutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissanbtn()"><span class="glyphicon glyphicon-edit"></span> Nissan/Infiniti </a><br>
 	<a id="porwikibutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="porwiki()"><span class="glyphicon glyphicon-edit"></span> Porsche</a><br>
 	<a id="fordbutton2" class="btn btn-link" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordsticker()"><span class="glyphicon glyphicon-edit"></span> Ford/Lincoln (Dealer Inventory Only)</a><br>
@@ -34,6 +33,7 @@
 	
 	<p><span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>Equipment Listings</strong></span><br>
 	<a id="chrbutton" class="btn btn-link" title="This will open PDF list of equipment listing" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="chryslerlist()"><span class="glyphicon glyphicon-edit"></span> Dodge/Chrysler/Jeep/Fiat/Alfa Romeo</a><br>
+	<a id="mitsbutton" class="btn btn-link" title="This will open PDF build sheet" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mitsbtn()"><span class="glyphicon glyphicon-edit"></span> Mitsubishi </a><br>
 	<a id="bimmerbutton" class="btn btn-link" title="bimmer.work also has a picture" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="bimmerbtn()"><span class="glyphicon glyphicon-edit"></span> BMW/MINI (blocked on intranet)</a><br>
 	<a href="http://bimmer.work" target="_blank" class="btn btn-link" title="You will have to enter VIN and CAPTCHA" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> BMW/MINI from bimmer</a><br>
 	<a href="https://www.bmwvin.com/" target="_blank" class="btn btn-link" title="You will have to enter VIN and CAPTCHA" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> BMW/MINI from bmwvin</a><br>
@@ -396,7 +396,8 @@ function mitsbtn() {
 	}
 	else {
 <!--	inputvalue = "ML32A3HJ6HH006955" -->
-	window.open("http://www.southcoastmitsubishi.com/external-catalog-services/rest/windowsticker/vin?vin="+inputvalue);
+	//window.open("http://www.southcoastmitsubishi.com/external-catalog-services/rest/windowsticker/vin?vin="+inputvalue);
+	window.open("https://www.jerrysmitsubishi.com/api/inventory/GetStickers/?url=https://ws.mmsa.com/buildAndprice/rest/monroney/inventory?vin=" + inputvalue + "https://ws.mmsa.com/buildAndprice/rest/monroney/inventory?vin=" + inputvalue + "&make=MITSUBISHI")													 
 }
 }
 }															  
