@@ -25,6 +25,7 @@
 	<!-- <a id="audivwbutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="audivwwiki()"><span class="glyphicon glyphicon-edit"></span> Audi/VW/Bentley from wikilender</a><br> -->
 	<a id="fordwikibutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordwiki()"><span class="glyphicon glyphicon-edit"></span> Ford/Lincoln </a><br>
 	<a id="hyunwikibutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="hyunwiki()"><span class="glyphicon glyphicon-edit"></span> Hyundai/Genesis</a><br>
+	<a id="mitsbutton" class="btn btn-link" title="This will open PDF build sheet" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mitsbtn2()"><span class="glyphicon glyphicon-edit"></span> Mitsubishi </a><br>
 	<a id="mazdabutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mazdabtn2()"><span class="glyphicon glyphicon-edit"></span> Mazda </a><br>
 	<a id="nissanbutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissanbtn()"><span class="glyphicon glyphicon-edit"></span> Nissan/Infiniti </a><br>
 	<a id="porwikibutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="porwiki()"><span class="glyphicon glyphicon-edit"></span> Porsche</a><br>
@@ -400,7 +401,31 @@ function mitsbtn() {
 	window.open("https://www.jerrysmitsubishi.com/api/inventory/GetStickers/?url=https://ws.mmsa.com/buildAndprice/rest/monroney/inventory?vin=" + inputvalue + "https://ws.mmsa.com/buildAndprice/rest/monroney/inventory?vin=" + inputvalue + "&make=MITSUBISHI")													 
 }
 }
-}															  
+}
+function mitsbtn2() {
+	var inputvalue = document.getElementById("VIN").value;
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+	//	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
+	}
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "ML32A3HJ6HH006955" -->
+	//window.open("http://www.southcoastmitsubishi.com/external-catalog-services/rest/windowsticker/vin?vin="+inputvalue);
+	window.open("https://www.jerrysmitsubishi.com/api/inventory/GetStickers/?url=https://ws.mmsa.com/buildAndprice/rest/monroney/inventory?vin=" + inputvalue + "&make=Mitsubishi)													 
+}
+}
+}
 function ford() {
 	var inputvalue = document.getElementById("VIN").value;
 	if (inputvalue[0] == '{') {
