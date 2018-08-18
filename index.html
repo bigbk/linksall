@@ -37,6 +37,7 @@
 	<a id="bimmerbutton" class="btn btn-link" title="bimmer.work also has a picture" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="bimmerbtn()"><span class="glyphicon glyphicon-edit"></span> BMW/MINI (blocked on intranet)</a><br>
 	<a href="http://bimmer.work" target="_blank" class="btn btn-link" title="You will have to enter VIN and CAPTCHA" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> BMW/MINI from bimmer</a><br>
 	<a href="https://www.bmwvin.com/" target="_blank" class="btn btn-link" title="You will have to enter VIN and CAPTCHA" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> BMW/MINI from bmwvin</a><br>
+	<a href="https://www.carvana.com/research?" target="_blank" class="btn btn-link" title="You will have to enter VIN 422 per day" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> Some GM from Carvana</a><br>
 	<a href="https://www.datamb.com/" target="_blank" class="btn btn-link" title="You will have to enter VIN and CAPTCHA" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> Mercedes</a><br>
 	<a href="http://mb.vin/" target="_blank" class="btn btn-link" title="You will have to enter VIN and CAPTCHA" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> Mercedes#2</a><br>
 	<a id="mitsbutton" class="btn btn-link" title="This will open PDF build sheet" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mitsbtn()"><span class="glyphicon glyphicon-edit"></span> Mitsubishi </a><br>
@@ -726,7 +727,8 @@ function porwiki() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open("http://admin.porschedealer.com/reports/build_sheets/print.php?vin="+inputvalue);
+        //window.open("http://admin.porschedealer.com/reports/build_sheets/print.php?vin="+inputvalue);
+	window.open("https://vinanalytics.com/car/" + inputvalue + "/" + inputvalue +".pdf");
 }
 }
 }
