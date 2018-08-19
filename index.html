@@ -381,6 +381,7 @@ function mazdabtn() {
 }
 function kiabtn2() {
 	var inputvalue = document.getElementById("VIN").value;
+	inputvalue = inputvalue.replace(/ +/g, "");					      
 	if (inputvalue[0] == '{') {
 	inputvalue = inputvalue.slice(1,-1);
 	}
