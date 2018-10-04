@@ -88,6 +88,7 @@
 	<p><span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>Trim Level Help</strong></span><br>
 	<a id="hondabutton" class="btn btn-link" title="Requires Honda Owner Account. jasib123 sl.." style="cursor:pointer;border-style:none;background:#ffffff;" onclick="honda()"><span class="glyphicon glyphicon-edit"></span> Honda NAV/RES Specific Trim (login)</a><br>
 	<a href="https://autoservice.hyundaiusa.com/campaignhome" target="_blank" class="btn btn-link" title="Recall page showing trim. Enter VIN and Captcha verification" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> Hyundai Trim Level</a><br>
+	<a id="infinitibutton" class="btn btn-link" title="This will pull recall page showing Trim level. Use caution how we option these in store." style="cursor:pointer;border-style:none;background:#ffffff;" onclick="infiniti()"><span class="glyphicon glyphicon-edit"></span> Infiniti Trim Level</a><br>
 	<a id="kiabutton" class="btn btn-link" title="Data is pulled from recall page. Read where model is noted" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="kia()"><span class="glyphicon glyphicon-edit"></span> Kia Trim Level</a><br>
 	<a id="nissanbutton" class="btn btn-link" title="This will pull recall page showing Trim level. Use caution how we option these in store." style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissan()"><span class="glyphicon glyphicon-edit"></span> Nissan Trim Level</a><br>
 	<a id="subbutton" class="btn btn-link" title="Data is pulled from Subaru resorces" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="subaru()"><span class="glyphicon glyphicon-edit"></span> Subaru Trim Level</a><br>
@@ -775,7 +776,30 @@ function porwiki() {
 }
 }
 }
-								  
+function infiniti() {
+	var inputvalue = document.getElementById("VIN").value;
+	inputvalue = inputvalue.replace(/ +/g, "");					      
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+	//	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
+	}
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1N4BL3APXDN568414" -->
+        window.open("https://www.infinitiusa.com/recalls-vin/#/#/Results/"+inputvalue);
+}
+}
+}								  
 function nissan() {
 	var inputvalue = document.getElementById("VIN").value;
 	inputvalue = inputvalue.replace(/ +/g, "");					      
@@ -796,7 +820,7 @@ function nissan() {
 	}
 	else {
 <!--	inputvalue = "1N4BL3APXDN568414" -->
-        window.open(" https://www.nissanusa.com/recalls-vin/#/#/Results/"+inputvalue);
+        window.open("https://www.nissanusa.com/recalls-vin/#/#/Results/"+inputvalue);
 }
 }
 }
