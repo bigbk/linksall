@@ -28,7 +28,7 @@
 	<a id="kiabutton2" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="kiabtn2()"><span class="glyphicon glyphicon-edit"></span> Kia </a><br>
 	<a id="mitsbutton2" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mitsbtn2()"><span class="glyphicon glyphicon-edit"></span> Mitsubishi </a><br>
 	<a id="mazdabutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mazdabtn2()"><span class="glyphicon glyphicon-edit"></span> Mazda </a><br>
-	<a id="nissanbutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissanbtn()"><span class="glyphicon glyphicon-edit"></span> Nissan/Infiniti </a><br>
+	<strike> <a id="nissanbutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="nissanbtn()"><span class="glyphicon glyphicon-edit"></span> Nissan/Infiniti </a></strike><br>
 	<a id="porwikibutton" class="btn btn-link" title="This will open PDF window sticker" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="porwiki()"><span class="glyphicon glyphicon-edit"></span> Porsche</a><br>
 	<a id="fordbutton2" class="btn btn-link" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="fordsticker()"><span class="glyphicon glyphicon-edit"></span> Ford/Lincoln (Dealer Inventory Only)</a><br>
 	<a id="mazdabtn" class="btn btn-link" title="This will open PDF window sticker if one was generated" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="mazdabtn()"><span class="glyphicon glyphicon-edit"></span> Mazda (Dealer Inventory Only)</a><br></p>
@@ -334,6 +334,7 @@ function miniog() {
 
 
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://www.google.com/search?q=" + inputvalue + "+ordering+guide+site%3Aminimedia.iconicweb.com");
 }
 														      
@@ -357,6 +358,7 @@ function fordsticker() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
+	inputvalue = inputvalue.toUpperCase();
 	window.open("http://www.windowsticker.forddirect.com/windowsticker.pdf?vin="+inputvalue);
 }
 }
@@ -381,6 +383,7 @@ function mazdabtn() {
 	}
 	else {
 <!--	inputvalue = "JM3KFBCL4H0175167" -->
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://www.mazdausa.com/MusaWeb/displayDealerWindowSticker.action?vin="+inputvalue+"&dealerId=51622");
 }
 }
@@ -405,6 +408,7 @@ function kiabtn2() {
 	}
 	else {
 <!--	inputvalue = "ML32A3HJ6HH006955" -->
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + inputvalue)													 
 }
 }
@@ -430,6 +434,7 @@ function mitsbtn() {
 	else {
 <!--	inputvalue = "ML32A3HJ6HH006955" -->
 	//window.open("http://www.southcoastmitsubishi.com/external-catalog-services/rest/windowsticker/vin?vin="+inputvalue);
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://www.jerrysmitsubishi.com/api/inventory/GetStickers/?url=https://ws.mmsa.com/buildAndprice/rest/monroney/inventory?vin=" + inputvalue + "https://ws.mmsa.com/buildAndprice/rest/monroney/inventory?vin=" + inputvalue + "&make=MITSUBISHI")													 
 }
 }
@@ -455,6 +460,7 @@ function mitsbtn2() {
 	else {
 <!--	inputvalue = "ML32A3HJ6HH006955" -->
 	//window.open("http://www.southcoastmitsubishi.com/external-catalog-services/rest/windowsticker/vin?vin="+inputvalue);
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://www.jerrysmitsubishi.com/api/inventory/GetStickers/?url=https://ws.mmsa.com/buildAndprice/rest/monroney/inventory?vin=" + inputvalue + "&make=Mitsubishi")													 
 }
 }
@@ -479,6 +485,7 @@ function ford() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://www.etis.ford.com/selectedVehicleDetails.do#vin="+inputvalue);
 }
 }
@@ -503,6 +510,7 @@ function decoderz() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://www.vindecoderz.com/EN/check-lookup/"+inputvalue);
 }
 }
@@ -527,7 +535,8 @@ function bimmerbtn() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open("https://www.mdecoder.com/decode/"+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open("https://www.mdecoder.com/decode/"+inputvalue);
 }
 }
 } 
@@ -552,7 +561,8 @@ function nissanbtn() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open("http://cpo.nissanusa.com/nna/?"+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open("http://cpo.nissanusa.com/nna/?"+inputvalue);
 }
 }
 }
@@ -577,6 +587,7 @@ function manheimmmr() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://mmr.manheim.com/?WT.svl=m_hdr_mnav_buy_mmr&country=US&popup=true&source=man&vin="+inputvalue);
 }
 }
@@ -601,6 +612,7 @@ function manheimsearch() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://www.manheim.com/members/powersearch/keywordSearchResults.do?searchTerms="+inputvalue);
 }
 }
@@ -625,7 +637,8 @@ function chrysler() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open(" http://www.chrysler.com/hostc/getWindowStickerPdf.do?vin="+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open(" http://www.chrysler.com/hostc/getWindowStickerPdf.do?vin="+inputvalue);
 }
 }
 }
@@ -649,7 +662,8 @@ function chryslerlist() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin="+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin="+inputvalue);
 }
 }
 }
@@ -673,7 +687,8 @@ function audivwwiki() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open("http://mclaren722.herokuapp.com/VWvindownload?vin="+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open("http://mclaren722.herokuapp.com/VWvindownload?vin="+inputvalue);
 }
 }
 }
@@ -698,7 +713,8 @@ function fordwiki() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin="+inputvalue+"&pc=SIMULCAST&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1");
+        inputvalue = inputvalue.toUpperCase();
+	window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin="+inputvalue+"&pc=SIMULCAST&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1");
 }
 }
 }
@@ -722,7 +738,8 @@ function mazdabtn2() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin="+inputvalue+"&pc=SIMULCAST_MZ&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1");
+        inputvalue = inputvalue.toUpperCase();
+	window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin="+inputvalue+"&pc=SIMULCAST_MZ&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1");
 }
 }
 }
@@ -747,7 +764,8 @@ function hyunwiki() {
 	}
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
-        window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin="+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin="+inputvalue);
 }
 }
 }
@@ -773,6 +791,7 @@ function porwiki() {
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
         //window.open("http://admin.porschedealer.com/reports/build_sheets/print.php?vin="+inputvalue);
+	inputvalue = inputvalue.toUpperCase();
 	window.open("https://vinanalytics.com/car/" + inputvalue + "/" + inputvalue +".pdf");
 }
 }
@@ -797,7 +816,8 @@ function infiniti() {
 	}
 	else {
 <!--	inputvalue = "1N4BL3APXDN568414" -->
-        window.open("https://www.infinitiusa.com/recalls-vin/#/#/Results/"+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open("https://www.infinitiusa.com/recalls-vin/#/#/Results/"+inputvalue);
 }
 }
 }								  
@@ -821,7 +841,8 @@ function nissan() {
 	}
 	else {
 <!--	inputvalue = "1N4BL3APXDN568414" -->
-        window.open("https://www.nissanusa.com/recalls-vin/#/#/Results/"+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open("https://www.nissanusa.com/recalls-vin/#/#/Results/"+inputvalue);
 }
 }
 }
@@ -845,7 +866,8 @@ function honda() {
 	}
 	else {
 <!--	inputvalue = "19XFB2F92FE214039" -->
-        window.open(" https://owners.honda.com/validation/validatevin?vin="+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open(" https://owners.honda.com/validation/validatevin?vin="+inputvalue);
 }
 }
 }
@@ -869,7 +891,8 @@ function kia() {
 	}
 	else {
 <!--	inputvalue = "1N4BL3APXDN568414" -->
-        window.open(" http://www.kia.com/us/en/data/owners/recalls/search/"+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open(" http://www.kia.com/us/en/data/owners/recalls/search/"+inputvalue);
 }
 }
 }
@@ -893,7 +916,8 @@ function subaru() {
 	}
 	else {
 <!--	inputvalue = "1N4BL3APXDN568414" -->
-        window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode="+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode="+inputvalue);
 }
 }
 }
@@ -917,7 +941,8 @@ function vwaudilane() {
 	}
 	else {
 <!--	inputvalue = "3VWVT7AT7EM640318" -->
-        window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/"+inputvalue+"/4905414");
+        inputvalue = inputvalue.toUpperCase();
+	window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/"+inputvalue+"/4905414");
 }
 }
 }
@@ -941,7 +966,8 @@ function bmwlane() {
 	}
 	else {
 <!--	inputvalue = "5UXXW3C50J0T81502" -->
-        window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/BMW/"+inputvalue);
+        inputvalue = inputvalue.toUpperCase();
+	window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/BMW/"+inputvalue);
 }
 }
 }
