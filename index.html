@@ -383,12 +383,12 @@ function fordsticker() {
 	else {
 <!--	inputvalue = "1C3CCCAB1GN121627" -->
 	inputvalue = inputvalue.toUpperCase();
-	myurl = "http://www.windowsticker.forddirect.com/windowsticker.pdf?vin="+inputvalue
+	var myurl = "http://www.windowsticker.forddirect.com/windowsticker.pdf?vin=" + inputvalue
 	
 	fetch([myurl], {[options setting custom http-headers]})
 	.then(r => r.blob())
 	.then(showFile)				
-	//window.open("http://www.windowsticker.forddirect.com/windowsticker.pdf?vin="+inputvalue);
+	// window.open("http://www.windowsticker.forddirect.com/windowsticker.pdf?vin="+inputvalue);
 }
 }
 }
