@@ -38,6 +38,7 @@
 	<a id="bimmerbutton" class="btn btn-link" title="bimmer.work also has a picture" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="bimmerbtn()"><span class="glyphicon glyphicon-edit"></span> BMW/MINI (blocked on intranet)</a><br>
 	<a href="http://bimmer.work" target="_blank" class="btn btn-link" title="You will have to enter VIN and CAPTCHA" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> BMW/MINI from bimmer</a><br>
 	<a href="https://decoder.bvzine.com/" target="_blank" class="btn btn-link" title="You will have to enter VIN and CAPTCHA" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> BMW/MINI from bvzine</a><br>
+	<a id="gmbutton" class="btn btn-link" title="Currently only active auction vehicles" style="cursor:pointer;border-style:none;background:#ffffff;" onclick="gmlink()"><span class="glyphicon glyphicon-edit"></span> GM, Auction Inventory</a><br></p>
 	<a href="https://www.carvana.com/research?" target="_blank" class="btn btn-link" title="You will have to enter VIN 422 per day" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> Some GM from Carvana</a><br>
 	<a href="https://topix.landrover.jlrext.com/topix/vehicle/lookupForm" target="_blank" class="btn btn-link" title="jas...1.. sl- Requires login, free account" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> Land Rover</a><br>
 	<a href="https://drivers.lexus.com/lexusdrivers/resources/vehicle-specs" target="_blank" class="btn btn-link" title="You will have to enter VIN" style="cursor:pointer;border-style:none;background:#ffffff;"><span class="glyphicon glyphicon-share"></span> Lexus</a><br>
@@ -352,7 +353,36 @@ function showFile(blob){
   setTimeout(function(){
     window.URL.revokeObjectURL(data);
   , 100}
-}														      
+}
+function gmlink() {
+	var inputvalue = document.getElementById("VIN").value;
+	inputvalue = inputvalue.replace(/ +/g, "");					      
+	if (inputvalue[0] == '{') {
+	inputvalue = inputvalue.slice(1,-1);
+	}
+	var len = inputvalue.length;
+	//	var len = document.getElementById("VIN").value.length;
+	
+	if (len <17){
+		var diff = 17 - len;
+		alert("Entered VIN is missing " + diff + " characters. Please check again.");
+	}
+	else {
+			if (len >17){
+		var diff = len - 17;
+		alert("Entered VIN has " + diff + " too many characters. Please check again.");
+	}
+	else {
+<!--	inputvalue = "1C3CCCAB1GN121627" -->
+	inputvalue = inputvalue.toUpperCase();
+	var myurl = "https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + inputvalue
+	
+	fetch([myurl], {[options setting custom http-headers]})
+	.then(r => r.blob())
+	.then(showFile)				
+}
+}
+}
 function fordsticker() {
 	var inputvalue = document.getElementById("VIN").value;
 	inputvalue = inputvalue.replace(/ +/g, "");					      
