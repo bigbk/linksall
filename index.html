@@ -141,7 +141,14 @@
 			</div>
 			</div>
 			
-			<div class="card-deck">
+			
+			<!-- <button class="linkbutton" type="submit" id="chr" title="This will open PDF window sticker" onclick="chrysler()"> Window Sticker</button> Available for newer vehicles <br>
+			<button class="linkbutton" type="submit" id="chrbutton" title="This will open PDF window sticker" onclick="chryslerlist()"> Build Sheet</button> Available for most vehicles <br>
+			</p>	-->
+		</div>
+	    
+		<div id="common_div" style="display:none; background-color:#fff;">
+		<div class="card-deck">
 			<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="autobrochures()">
   				<div class="card-body">
     				<h4 class="card-title">Sales Brochures</h4>
@@ -158,11 +165,7 @@
     				<a href="#" class="card-link">Visit</a>
   				</div>
 			</div>	
-			</div>
-			
-			<!-- <button class="linkbutton" type="submit" id="chr" title="This will open PDF window sticker" onclick="chrysler()"> Window Sticker</button> Available for newer vehicles <br>
-			<button class="linkbutton" type="submit" id="chrbutton" title="This will open PDF window sticker" onclick="chryslerlist()"> Build Sheet</button> Available for most vehicles <br>
-			</p>	-->
+			</div>	
 		</div>
 		
 
@@ -362,6 +365,12 @@ function displayNHTSAResults (param_data) {
 };
 	
 function updatedisplay ( ) {
+	if (aMake !== "") {
+		document.getElementById("common_div").style.display = 'block';
+	} else {
+		document.getElementById("common_div").style.display = 'none';
+	}
+	
 	if (aMake == "CHRYSLER") {
 		document.getElementById("chrysler_div").style.display = 'block';
 	} else {
