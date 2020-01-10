@@ -139,7 +139,9 @@
     				<a href="#" class="card-link">Download</a>
   				</div>
 			</div>
-				
+			</div>
+			
+			<div class="card-deck">
 			<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="autobrochures()">
   				<div class="card-body">
     				<h4 class="card-title">Sales Brochures</h4>
@@ -148,7 +150,14 @@
     				<a href="#" class="card-link">Visit</a>
   				</div>
 			</div>
-				
+			<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="manheimmmr()">
+  				<div class="card-body">
+    				<h4 class="card-title">MMR Data/h4>
+    				<h6 class="card-subtitle mb-2 text-muted">Requires Log-in</h6>
+    				<p class="card-text">Manheim MMR search for VIN
+    				<a href="#" class="card-link">Visit</a>
+  				</div>
+			</div>	
 			</div>
 			
 			<!-- <button class="linkbutton" type="submit" id="chr" title="This will open PDF window sticker" onclick="chrysler()"> Window Sticker</button> Available for newer vehicles <br>
@@ -368,6 +377,9 @@ function chryslerlist() {
 };
 function autobrochures() {
 	window.open(" http://www.auto-brochures.com/"+aMake+".html");
+};
+function autobrochures() {
+	window.open("https://mmr.manheim.com/?WT.svl=m_hdr_mnav_buy_mmr&country=US&popup=true&source=man&vin="+vin);
 };
 	
 
