@@ -831,13 +831,14 @@ $('.checkbox').click(function(){
 	-->
 // jquery to check checkboxes
     $(document).ready(function() {
-        document.getElementById("kmxbutton").click(function(){
+        //document.getElementById("kmxbutton").click(function(){
+	document.getElementById("kmxbutton").onclick = function () {
             var favorite = [];
             $.each($("input[name='options']:checked"), function(){            
                 favorite.push($(this).val());
             });
             alert("Checked options are: " + favorite.join(", "));
-        });
+        }; //);
     });	
 	
 	
