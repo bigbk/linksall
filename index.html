@@ -141,7 +141,7 @@
 </div>
 
 	    
-<div id="kmxsearch" style="display:none; background-color:#fff;">
+<div id="kmxsearch" style="display:block; background-color:#fff;">
 <input name="iyear" id="iyear" class="form-control my-0 py-1 amber-border" type="text" placeholder="Year">
 <input name="imake" id="imake" class="form-control my-0 py-1 amber-border" type="text" placeholder="Make">
 <input name="imodel" id="imodel" class="form-control my-0 py-1 amber-border" type="text" placeholder="Model">
@@ -681,10 +681,10 @@ function displayNHTSAResults (param_data) {
 function updatedisplay ( ) {
 	if (aMake !== "") {
 		document.getElementById("common_div").style.display = 'block';
-		document.getElementById("kmxsearch").style.display = 'block';
+		//document.getElementById("kmxsearch").style.display = 'block';
 	} else {
 		document.getElementById("common_div").style.display = 'none';
-		document.getElementById("kmxsearch").style.display = 'none';
+		//document.getElementById("kmxsearch").style.display = 'none';
 	}
 	
 	if (aMake == "CHRYSLER") {
