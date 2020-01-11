@@ -396,7 +396,7 @@ Toyota <br>
 <label><input type="checkbox" value="4d-crew-cab name="options"> 4D Crew Cab</label>
 <label><input type="checkbox" value="4d-extended-crew-cab name="options"> 4D Extended Crew Cab</label>
 </form>
-			<button type="button" class="btn btn-sm btn-primary">Carmax Search</button>
+			<button id="kmxbutton" type="button" class="btn btn-sm btn-primary">Carmax Search</button>
 			
 <!-- Sunroof
 		<!--<div class="o-switch btn-group" data-toggle="buttons" role="group">
@@ -829,6 +829,18 @@ $('.checkbox').click(function(){
   }
 });
 	-->
+// jquery to check checkboxes
+    $(document).ready(function() {
+        document.getElementById("kmxbutton").click(function(){
+            var favorite = [];
+            $.each($("input[name='options']:checked"), function(){            
+                favorite.push($(this).val());
+            });
+            alert("Checked options are: " + favorite.join(", "));
+        });
+    });	
+	
+	
 	
 var input13 = document.getElementById("VINbar");
 	
