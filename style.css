@@ -148,7 +148,7 @@ border: 1px solid #ffca28;
 /*tristate */
 
 
-  
+/*  3 state checkbox
 #container {
   display: block;
   margin: 80px auto 0;
@@ -160,7 +160,7 @@ border: 1px solid #ffca28;
 }
 
 p {
-  //color: #e2e5ea;
+  color: #e2e5ea;
   text-align: center;
 }
 
@@ -229,3 +229,4 @@ p {
   font-weight: bold;
   vertical-align: middle;
 }
+*/
