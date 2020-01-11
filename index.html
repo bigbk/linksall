@@ -840,7 +840,7 @@ $('.checkbox').click(function(){
             $.each($("input[name='options']:checked"), function(){            
                 favorite.push($(this).val());
             });
-		if (document.getElementById("icyl").value !=== "") {
+		if (document.getElementById("icyl").value !== "") {
 			document.getElementById("icyl").value = "cylinders-" + document.getElementById("icyl").value;
 			alert (document.getElementById("icyl").value);
 		};
