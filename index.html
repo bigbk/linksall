@@ -285,6 +285,8 @@ $( document ).ajaxStop(function() {
 	console.log("loaded");
     $( "#loading" ).hide();
 });
+
+
 	
 document.getElementById("btn_submit").onclick = function () {
   //var vin;
@@ -427,19 +429,131 @@ function updatedisplay ( ) {
 	}
 };
 
-function chrysler() {
-	window.open("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin="+vin);
+<!-- MANUFACTURER LINKS  -->
+
+
+function audivwwiki() {
+	window.open("http://mclaren722.herokuapp.com/VWvindownload?vin=" + vin);
 };
-function chryslerlist() {
-	window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin="+vin);
-};
+
 function autobrochures() {
 	window.open(" http://www.auto-brochures.com/"+aMake+".html");
 };
-function manheimmmr() {
-	window.open("https://mmr.manheim.com/?WT.svl=m_hdr_mnav_buy_mmr&country=US&popup=true&source=man&vin="+vin);
+
+function bimmerbtn() {
+	window.open("https://www.mdecoder.com/decode/" + vin);
 };
-	
+
+function bmwlane() {
+	window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/BMW/" + vin);
+};
+
+function chrysler() {
+	window.open("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
+};
+
+function chryslerlist() {
+	window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
+};
+
+function decoderz() {
+	window.open("https://www.vindecoderz.com/EN/check-lookup/" + vin);
+};
+
+function ford() {
+	window.open("https://www.etis.ford.com/selectedVehicleDetails.do#vin=" + vin);
+};
+
+function fordsticker() {
+	window.open("http://www.windowsticker.forddirect.com/windowsticker.pdf?vin=" + vin);
+};
+
+function fordwiki() {
+	window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin=" + vin +"&pc=SIMULCAST&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1");
+};
+
+function gmlink() {
+	window.open("https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
+};
+
+function honda() {
+	window.open(" https://owners.honda.com/validation/validatevin?vin=" + vin);
+};
+
+function hyunwiki() {
+	window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
+};
+
+function infiniti() {
+	window.open("https://www.infinitiusa.com/recalls-vin/#/#/Results/" + vin);
+};
+
+function kia() {
+	window.open(" http://www.kia.com/us/en/data/owners/recalls/search/" + vin);
+};
+
+function kiabtn2() {
+	window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
+};
+
+function lexlist() {
+	window.open(" https://drivers.lexus.com/lexusdrivers/resources/viewSpecifications?vin=" + vin);
+};
+
+function miniog() {
+	var vin = aYear + " +" + aModel;
+	vin = vin.toUpperCase();
+	window.open("https://www.google.com/search?q=" + vin + " +ordering+guide+site%3Aminimedia.iconicweb.com");
+};
+
+function manheimmmr() {
+	window.open("https://mmr.manheim.com/?WT.svl=m_hdr_mnav_buy_mmr&country=US&popup=true&source=man&vin=" + vin);
+};
+
+function manheimsearch() {
+	window.open("https://www.manheim.com/members/powersearch/keywordSearchResults.do?searchTerms=" + vin);
+};
+
+function mazdabtn() {
+	window.open("https://www.mazdausa.com/MusaWeb/displayDealerWindowSticker.action?vin=" + vin +"&dealerId=51622");
+};
+
+function mazdabtn2() {
+	window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin=" + vin+"&pc=SIMULCAST_MZ&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1");
+};
+
+function mitsbtn() {
+	window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);	
+};
+
+function mitsbtn2() {
+	window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
+};
+
+function nissan() {
+	window.open("https://www.nissanusa.com/recalls-vin/#/#/Results/" + vin);
+};
+
+function nissanbtn() {
+	window.open("http://cpo.nissanusa.com/nna/?" + vin);
+};
+
+function porwiki() {
+	window.open("https://vinanalytics.com/car/" + vin + "/" + vin +".pdf");
+};
+
+function subaru() {
+	window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode=" + vin);
+};
+
+function vwaudilane() {
+	window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin+"/4905414");
+};
+
+
+<!--      -------------------------------------------------------------------------------               -->
+
+		
 $('.checkbox').click(function(){
   if ($(this).hasClass('positive')){
     $(this).removeClass('positive');
