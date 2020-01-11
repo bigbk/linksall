@@ -840,6 +840,10 @@ $('.checkbox').click(function(){
             $.each($("input[name='options']:checked"), function(){            
                 favorite.push($(this).val());
             });
+		if (document.getElementById("icyl").value !=== "") {
+			document.getElementById("icyl").value = "cylinders-" + document.getElementById("icyl").value;
+			alert (document.getElementById("icyl").value);
+		};
             //alert("Checked options are: " + document.getElementById("iyear").value + "/" + document.getElementById("imake").value + "/" + document.getElementById("imodel").value + "/" + document.getElementById("icyl").value + "/" + favorite.join("/"));
 		window.open("https://www.carmax.com/cars"  + "/" + document.getElementById("iyear").value + "/" + document.getElementById("imake").value + "/" + document.getElementById("imodel").value + "/" + document.getElementById("icyl").value + "/" + favorite.join("/") + "?zip=21162&sort=4&distance=all");
         }; //);
