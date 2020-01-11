@@ -171,7 +171,7 @@
 	    	<div id="kmxsearch" style="display:none; background-color:#fff;">
 			
 Sunroof
-		<div class="o-switch btn-group" data-toggle="buttons" role="group">
+		<!--<div class="o-switch btn-group" data-toggle="buttons" role="group">
   			<label class="btn btn-secondary active">
     			<input type="radio" name="options" id="option1" autocomplete="off" data-size="mini"> No
   			</label>
@@ -183,8 +183,36 @@ Sunroof
 			<label class="btn btn-secondary">
     			<input type="radio" name="options" id="option3" autocomplete="off" data-size="mini"> Yes
   			</label>
-		</div>
-		
+		</div> -->
+<div id="container">
+  <div class="card">
+    <header>Three State Checkbox</header>
+    <div class="content">
+      <div class="row">
+        <span class="checkbox"></span>
+        <span class="label">Neutral</span>
+      </div>
+      <div class="row">
+        <span class="checkbox positive">
+          <svg id="i-checkmark" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.9375%">
+    <path d="M2 20 L12 28 30 4" />
+          </svg>
+        </span>
+        <span class="label">Positive</span>
+      </div>
+      <div class="row">
+        <span class="checkbox negative">
+          <svg id="i-close" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.9375%">
+    <path d="M2 30 L30 2 M30 30 L2 2" />
+          </svg>
+        </span>
+        <span class="label">Negative</span>
+      </div>
+    </div><!-- /.content -->
+  </div><!-- /.card -->
+  <p><small>Third state cycles back to first</small></p>
+</div><!-- /.container -->
+			
 				<button type="button" class="btn btn-sm btn-primary">Carmax Search</button>
 		</div>
 		
