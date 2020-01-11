@@ -356,7 +356,11 @@ Toyota <br>
 </div>									     
 <!-- -------------------------------------------------- -->									 
  <div id="kmxsearch" style="display:none; background-color:#fff;">
-								 
+<input name="iyear" id="iyear" class="form-control my-0 py-1 amber-border" type="text" placeholder="Year">
+<input name="imake" id="imake" class="form-control my-0 py-1 amber-border" type="text" placeholder="Make">
+<input name="imodel" id="imodel" class="form-control my-0 py-1 amber-border" type="text" placeholder="Model">
+<input name="icyl" id="icyl" class="form-control my-0 py-1 amber-border" type="text" placeholder="Cylinder">
+													 
 <form>
 <label><input type="checkbox" value="navigation-system" name="options"> Navigation</label>
 <label><input type="checkbox" value="no-navigation-system" name="options"> No Navigation</label>
@@ -836,7 +840,7 @@ $('.checkbox').click(function(){
             $.each($("input[name='options']:checked"), function(){            
                 favorite.push($(this).val());
             });
-            alert("Checked options are: " + favorite.join(", "));
+            alert("Checked options are: " + document.getElementById("iyear").value + "/" document.getElementById("imake").value + "/" + document.getElementById("imodel").value + "/" + document.getElementById("icyl").value + favorite.join("/"));
         }; //);
     });	
 	
