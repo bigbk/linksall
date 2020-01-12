@@ -142,10 +142,11 @@
 
 	    
 		<div id="kmxsearch" style="display:block; background-color:#fff;">
-<input name="iyear" id="iyear" class="form-control my-0 py-1 amber-border" type="text" placeholder="Year">
-<input name="imake" id="imake" class="form-control my-0 py-1 amber-border" type="text" placeholder="Make">
-<input name="imodel" id="imodel" class="form-control my-0 py-1 amber-border" type="text" placeholder="Model">
-<input name="icyl" id="icyl" class="form-control my-0 py-1 amber-border" type="text" placeholder="Cylinders (1-12)">
+			<input name="iyear" id="iyear" class="form-control my-0 py-1 amber-border" type="text" placeholder="Year">
+			<input name="imake" id="imake" class="form-control my-0 py-1 amber-border" type="text" placeholder="Make">
+			<input name="imodel" id="imodel" class="form-control my-0 py-1 amber-border" type="text" placeholder="Model">
+			<input name="itrim" id="itrim" class="form-control my-0 py-1 amber-border" type="text" placeholder="Trim">
+			<input name="icyl" id="icyl" class="form-control my-0 py-1 amber-border" type="text" placeholder="Cylinder Count">
 													 
 <form>
 <label><input type="checkbox" value="navigation-system" name="options"> Navigation</label>
@@ -795,7 +796,7 @@ function vwaudilane() {
 			document.getElementById("icyl").value = "cylinders-" + document.getElementById("icyl").value;
 		
 		};
-		window.open("https://www.carmax.com/cars"  + "/" + document.getElementById("iyear").value + "/" + document.getElementById("imake").value + "/" + document.getElementById("imodel").value + "/" + document.getElementById("icyl").value + "/" + favorite.join("/") + "?zip=21162&sort=4&distance=all");
+		window.open("https://www.carmax.com/cars"  + "/" + document.getElementById("iyear").value + "/" + document.getElementById("imake").value + "/" + document.getElementById("imodel").value  + "/" + document.getElementById("itrim").value + "/" + document.getElementById("icyl").value + "/" + favorite.join("/") + "?zip=21162&sort=4&distance=all");
         }; //);
     });	
 	
