@@ -292,21 +292,45 @@ BMW <br>
 				</div>
 			</div>
 			
-			
-
-	    <br>
-	    
-	Chrysler <br>
-	<a id="chrbutton" onclick="chryslerlist()"> Dodge/Chrysler/Jeep/Fiat/Alfa Romeo</a>  <br>
-	<a href="https://dodgeforum.com/forum/vindecoder.php" target="_blank" > Generic VIN Decoder for Standard Options</a>  <br>
-	<a id="chr" onclick="chrysler()"> Dodge/Chrysler/Jeep/Fiat/Alfa Romeo</a>  <br>
 </div>
 
 <div id="ford_div" style="display:none; background-color:#fff;">
-Ford <br>
-<a id="fordbutton" onclick="ford()"> Ford (Select New Vehicles)</a>  <br>
-<a id="fordwikibutton" onclick="fordwiki()"> Ford/Lincoln/Mercury </a>  <br>
-<a id="fordbutton2" onclick="fordsticker()"> Ford/Lincoln (Dealer Inventory Only)</a>  <br>
+	<br><p><span> Links that are listed here will work for Ford, Lincoln, Mercury vehicles.</span><br></p>
+			<div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="fordwiki()">
+  					<div class="card-body">
+    						<h4 class="card-title">Window Sticker</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+						<p class="card-text">Available for most vehicles</p>
+    						<!-- <a href="#" class="card-link">Download</a> -->
+  					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="ford()">
+  					<div class="card-body">
+    						<h4 class="card-title">Window Sticker</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+    						<p class="card-text">Available for select new vehicles</p>
+  					</div>
+				</div>
+			</div>
+			<br><div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="fordsticker()">
+  					<div class="card-body">
+    						<h4 class="card-title">Window Sticker</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+						<p class="card-text">Available for dealer inventory only</p>
+    						<!-- <a href="#" class="card-link">Download</a> -->
+  					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" >
+  					<div class="card-body">
+    						<h4 class="card-title"></h4>
+    						<h6 class="card-subtitle mb-2 text-muted"></h6>
+    						<p class="card-text"></p>
+  					</div>
+				</div>
+			</div>
+
 </div>
 
 <div id="gm_div" style="display:none; background-color:#fff;">
@@ -439,6 +463,7 @@ Toyota <br>
 
 	<div id="visible_div" style="display:block; background-color:#fff;">
 		<div class="dropdown">
+		<br>
 		<button class="btn btn-secondary dropdown-toggle" style="background-color:#ffd51d; color:#003366;" type="button" id="manualsmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">OWNER'S MANUALS</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
  		<a class="dropdown-item" href="http://owners.acura.com/" target="_blank">Acura</a>
@@ -485,9 +510,9 @@ Toyota <br>
 </div>		
 		
 <div id="auction_div" style="display:block; background-color:#fff;">
-		<br><p><span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>IAuction Links</strong></span>
-		<a id="mmrbutton" onclick="manheimmmr()" > MMR Search</a>
-		<a id="manheimbutton" onclick="manheimsearch()"> Manheim Inventory &amp; CR </a>
+		<br><p><span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>Auction Links</strong></span>
+		<a id="mmrbutton" onclick="manheimmmr()" style="background: none; border: none;padding: 0; color: #069;text-decoration: underline; cursor: pointer;"> MMR Search</a>
+		<a id="manheimbutton" onclick="manheimsearch()" style="background: none; border: none;padding: 0; color: #069;text-decoration: underline; cursor: pointer;"> Manheim Inventory &amp; CR </a>
 		<a href="http://www.bscamerica.com/bel-air-auction/run-list/#/" target="_blank" role="button" aria-pressed="true"> Bel Air Auto Auction Run List</a>
 		<a href="https://www.manheim.com/members/marketreport/control/MarketReportMain?auctionID=MAA" target="_blank" role="button" aria-pressed="true"> Manheim Post Sale Results</a>
 		<a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=177" target="_blank" role="button" aria-pressed="true"> Manheim NJ Sale</a>
