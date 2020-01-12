@@ -156,19 +156,31 @@
 			Please wait while VIN details are being pulled from NHTSA. If their server is down or this process takes longer than 10 seconds, you can use the Manual Selection menu on the upper left corner to retrieve manufacturer specific links. 
 		</div>
 
-		<br><p>
+		<br>
+		<!--<p>
 		  <a class="btn btn-primary" data-toggle="collapse" href="#kmxsearch" role="button" aria-expanded="false" aria-controls="kmxsearch">
     	Click here to see CarMax Inventory Search options
   		</a>
 		  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#kmxsearch" aria-expanded="false" aria-controls="kmxsearch">
 		    Click here to see CarMax Inventory Search options
 		  </button>
-		</p>
+		</p>-->
 		
-		
-		
-		<div id="kmxsearch" class="collapse" style="display:block; background-color:#fff;">
-		<div class="card card-body">
+		<div class="accordion" id="accordionsearch">
+  			<div class="card">
+   			 <div class="card-header" id="headingOne">
+      			<h5 class="mb-0">
+        		<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          			Click here to see CarMax Inventory Search options
+        		</button>
+      			</h5>
+    		</div>
+
+    	<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionsearch">
+     	 <div class="card-body">
+        		
+			 <div id="kmxsearch"  style="display:block; background-color:#fff;">
+	
 			<input name="iyear" id="iyear" class="form-control my-0 py-1 amber-border" type="text" placeholder="Year">
 			<input name="imake" id="imake" class="form-control my-0 py-1 amber-border" type="text" placeholder="Make">
 			<input name="imodel" id="imodel" class="form-control my-0 py-1 amber-border" type="text" placeholder="Model">
@@ -217,8 +229,14 @@
 			
 			<button id="kmxbutton" type="button" class="btn btn-sm btn-primary">Carmax Search</button>
 			
+		
 		</div>
-		</div>
+      </div>
+    </div>
+  </div>
+		</div>	
+		
+
     
 		
     	<div id="outputbox" class="shadow p-3 rounded-0" style="display:none; margin-top: 20px; margin-bottom: 20px; background-color:#77c2e6; width: 100%; text-align: center;">
