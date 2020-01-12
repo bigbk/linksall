@@ -55,6 +55,7 @@
 			<div class="dropdown">
   				<button class="btn btn-secondary dropdown-toggle" style="background-color:#ffd51d; color:#003366;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manual Selection</button>
   				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#">OTHERS</a>
     				<a class="dropdown-item" href="#">Audi/Volkswagen/Bentley</a>
 					<a class="dropdown-item" href="#">BMW</a>
 					<a class="dropdown-item" href="#">Chrysler/Jeep/Fiat</a>
@@ -155,56 +156,66 @@
 			Please wait while VIN details are being pulled from NHTSA. If their server is down or this process takes longer than 10 seconds, you can use the Manual Selection menu on the upper left corner to retrieve manufacturer specific links. 
 		</div>
 
-	    
-		<div id="kmxsearch" style="display:block; background-color:#fff;">
+		<br><p>
+		  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#kmxsearch" aria-expanded="false" aria-controls="kmxsearch">
+		    Click here to see CarMax Inventory Search options
+		  </button>
+		</p>
+		
+		
+		
+		<div id="kmxsearch" class="collapse" style="display:block; background-color:#fff;">
+		<div class="card card-body">
 			<input name="iyear" id="iyear" class="form-control my-0 py-1 amber-border" type="text" placeholder="Year">
 			<input name="imake" id="imake" class="form-control my-0 py-1 amber-border" type="text" placeholder="Make">
 			<input name="imodel" id="imodel" class="form-control my-0 py-1 amber-border" type="text" placeholder="Model">
 			<input name="itrim" id="itrim" class="form-control my-0 py-1 amber-border" type="text" placeholder="Trim">
 			<input name="icyl" id="icyl" class="form-control my-0 py-1 amber-border" type="text" placeholder="Cylinder Count">
 													 
-<form>
-<label><input type="checkbox" value="navigation-system" name="options"> Navigation</label>
-<label><input type="checkbox" value="no-navigation-system" name="options"> No Navigation</label>
-<label><input type="checkbox" value="dvd-video-system" name="options"> DVD</label>
-<label><input type="checkbox" value="no-dvd-video-system" name="options"> No DVD</label>
-<label><input type="checkbox" value="blu-ray-video-system" name="options"> Blu-Ray</label>
-<label><input type="checkbox" value="premium-sound" name="options"> Premium Sound</label>
-<br><br>
-<label><input type="checkbox" value="sunroof(s)" name="options"> Sunroof</label>
-<label><input type="checkbox" value="no-sunroof(s)" name="options"> No Sunroof</label>
-<label><input type="checkbox" value="panoramic-sunroof" name="options"> Panoramic Sunroof</label>
-<label><input type="checkbox" value="no-panoramic-sunroof" name="options"> No Panoramic Sunroof</label>
-<label><input type="checkbox" value="skylight(s)" name="options"> Skylight</label>
-<label><input type="checkbox" value="alloy-wheels" name="options"> Alloy Wheels</label>
-<label><input type="checkbox" value="no-alloy-wheels" name="options"> Steel Wheels</label>
-<label><input type="checkbox" value="20-inch-plus-wheels" name="options"> 20"+ Wheels</label>
-<label><input type="checkbox" value="soft-top" name="options"> Soft Top</label>
-<label><input type="checkbox" value="hard-top" name="options"> Hard Top</label>
-<br><br>
-<label><input type="checkbox" value="2wd" name="options"> 2WD</label>
-<label><input type="checkbox" value="4wdawd" name="options"> 4WD/AWD</label>
-<label><input type="checkbox" value="manual-transmission" name="options"> Manual Transmission</label>
-<label><input type="checkbox" value="automatic-transmission" name="options"> Automatic Transmission</label>
-<label><input type="checkbox" value="diesel-engine" name="options"> Diesel Engine</label>
-<label><input type="checkbox" value="turbo-charged-engine" name="options"> Turbo Charged Engine</label>
-<br><br>
-<label><input type="checkbox" value="3rd-rear-seat" name="options"> 3rd Row Seats</label>
-<label><input type="checkbox" value="cloth-seats" name="options"> Cloth Seats</label>
-<label><input type="checkbox" value="leatherette-seats" name="options"> Leatherette Seats</label>
-<label><input type="checkbox" value="leatherette-&-cloth" name="options"> Leatherette & Cloth Seats</label>
-<label><input type="checkbox" value="leather-seats" name="options"> Leather Seats</label>
-<label><input type="checkbox" value="leather-&-suede-seats" name="options"> Leather & Suede Seats</label>
-<br><br>
-<label><input type="checkbox" value="2d-regular-cab" name="options"> 2D Regular Cab</label>
-<label><input type="checkbox" value="2d-extended-cab" name="options"> 2D Extended Cab</label>
-<label><input type="checkbox" value="4d-extended-cab" name="options"> 4D Extended Cab</label>
-<label><input type="checkbox" value="4d-crew-cab" name="options"> 4D Crew Cab</label>
-<label><input type="checkbox" value="4d-extended-crew-cab" name="options"> 4D Extended Crew Cab</label>
-</form>
+			<form>
+			<label><input type="checkbox" value="navigation-system" name="options"> Navigation</label>
+			<label><input type="checkbox" value="no-navigation-system" name="options"> No Navigation</label>
+			<label><input type="checkbox" value="dvd-video-system" name="options"> DVD</label>
+			<label><input type="checkbox" value="no-dvd-video-system" name="options"> No DVD</label>
+			<label><input type="checkbox" value="blu-ray-video-system" name="options"> Blu-Ray</label>
+			<label><input type="checkbox" value="premium-sound" name="options"> Premium Sound</label>
+			<br><br>
+			<label><input type="checkbox" value="sunroof(s)" name="options"> Sunroof</label>
+			<label><input type="checkbox" value="no-sunroof(s)" name="options"> No Sunroof</label>
+			<label><input type="checkbox" value="panoramic-sunroof" name="options"> Panoramic Sunroof</label>
+			<label><input type="checkbox" value="no-panoramic-sunroof" name="options"> No Panoramic Sunroof</label>
+			<label><input type="checkbox" value="skylight(s)" name="options"> Skylight</label>
+			<label><input type="checkbox" value="alloy-wheels" name="options"> Alloy Wheels</label>
+			<label><input type="checkbox" value="no-alloy-wheels" name="options"> Steel Wheels</label>
+			<label><input type="checkbox" value="20-inch-plus-wheels" name="options"> 20"+ Wheels</label>
+			<label><input type="checkbox" value="soft-top" name="options"> Soft Top</label>
+			<label><input type="checkbox" value="hard-top" name="options"> Hard Top</label>
+			<br><br>
+			<label><input type="checkbox" value="2wd" name="options"> 2WD</label>
+			<label><input type="checkbox" value="4wdawd" name="options"> 4WD/AWD</label>
+			<label><input type="checkbox" value="manual-transmission" name="options"> Manual Transmission</label>
+			<label><input type="checkbox" value="automatic-transmission" name="options"> Automatic Transmission</label>
+			<label><input type="checkbox" value="diesel-engine" name="options"> Diesel Engine</label>
+			<label><input type="checkbox" value="turbo-charged-engine" name="options"> Turbo Charged Engine</label>
+			<br><br>
+			<label><input type="checkbox" value="3rd-rear-seat" name="options"> 3rd Row Seats</label>
+			<label><input type="checkbox" value="cloth-seats" name="options"> Cloth Seats</label>
+			<label><input type="checkbox" value="leatherette-seats" name="options"> Leatherette Seats</label>
+			<label><input type="checkbox" value="leatherette-&-cloth" name="options"> Leatherette & Cloth Seats</label>
+			<label><input type="checkbox" value="leather-seats" name="options"> Leather Seats</label>
+			<label><input type="checkbox" value="leather-&-suede-seats" name="options"> Leather & Suede Seats</label>
+			<br><br>
+			<label><input type="checkbox" value="2d-regular-cab" name="options"> 2D Regular Cab</label>
+			<label><input type="checkbox" value="2d-extended-cab" name="options"> 2D Extended Cab</label>
+			<label><input type="checkbox" value="4d-extended-cab" name="options"> 4D Extended Cab</label>
+			<label><input type="checkbox" value="4d-crew-cab" name="options"> 4D Crew Cab</label>
+			<label><input type="checkbox" value="4d-extended-crew-cab" name="options"> 4D Extended Crew Cab</label>
+			</form>
+			
 			<button id="kmxbutton" type="button" class="btn btn-sm btn-primary">Carmax Search</button>
 			
-		</div>		
+		</div>
+		</div>
     
 		
     	<div id="outputbox" class="shadow p-3 rounded-0" style="display:none; margin-top: 20px; margin-bottom: 20px; background-color:#77c2e6; width: 100%; text-align: center;">
