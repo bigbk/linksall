@@ -213,12 +213,12 @@ Auction Links <br>
 <a href="https://www.smartauctioninspections.com/viw/aspx/general/DealerInspectionReport.aspx" target="_blank" > SmartAuction Inspections</a>  <br>
 	</div>
 
-<div id="audi_div" style="display:block; background-color:#fff;">
+<div id="audi_div" style="display:none; background-color:#fff;">
 Audi <br>
 <a id="VWAUDIbtn2" onclick="vwaudilane()"> Audi/Volkswagen/Bentley</a>  <br>
 </div>
 
-<div id="bmw_div" style="display:block; background-color:#fff;">
+<div id="bmw_div" style="display:none; background-color:#fff;">
 BMW <br>
 <a href="https://f30.bimmerpost.com/forums/showthread.php?t=1505215" target="_blank" >2019/2020 BMW ALL Links</a>  <br>
 <a href="http://www.bimmerfest.com/forums/showthread.php?t=983787" target="_blank" >2018 BMW ALL Links</a>  <br>
@@ -241,7 +241,7 @@ BMW <br>
 <a style="cursor:pointer;border-style:none;" onclick="bmwlane()"> BMW Lanes at NADE</a>  <br>
 </div>
 
-<div id="chrysler_div" style="display:block; background-color:#fff;">
+<div id="chrysler_div" style="display:none; background-color:#fff;">
 <br><p><span> Links that are listed here will work for Chrysler, Jeep, RAM, Fiat, Alfa Romeo vehicles.</span><br></p>
 			<div class="card-deck">
 				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="chrysler()">
@@ -290,7 +290,7 @@ BMW <br>
 	<a id="chr" onclick="chrysler()"> Dodge/Chrysler/Jeep/Fiat/Alfa Romeo</a>  <br>
 </div>
 
-<div id="ford_div" style="display:block; background-color:#fff;">
+<div id="ford_div" style="display:none; background-color:#fff;">
 Ford <br>
 <a id="fordbutton" onclick="ford()"> Ford (Select New Vehicles)</a>  <br>
 <a id="fordwikibutton" onclick="fordwiki()"> Ford/Lincoln/Mercury </a>  <br>
@@ -637,10 +637,28 @@ function updatedisplay ( ) {
 		//document.getElementById("kmxsearch").style.display = 'none';
 	}
 	
-	if (aMake == "CHRYSLER") {
+	if (aMake == "AUDI") {
+		document.getElementById("audi_div").style.display = 'block';
+	} else {
+		document.getElementById("audi_div").style.display = 'none';
+	}
+		
+	if (aMake == "BMW") {
+		document.getElementById("bmw_div").style.display = 'block';
+	} else {
+		document.getElementById("bmw_div").style.display = 'none';
+	}
+	
+	if (aMake == "CHRYSLER" || aMake == "DODGE" || aMake == "JEEP" || aMake == "RAM" || aMake == "ALFA ROMEO" || aMake == "FIAT") {
 		document.getElementById("chrysler_div").style.display = 'block';
 	} else {
 		document.getElementById("chrysler_div").style.display = 'none';
+	}
+		
+	if (aMake == "FORD") {
+		document.getElementById("ford_div").style.display = 'block';
+	} else {
+		document.getElementById("ford_div").style.display = 'none';
 	}
 };
 
