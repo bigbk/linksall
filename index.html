@@ -31,25 +31,26 @@
 
 
 <div class="container shadow p-3 rounded-0" style="background-color: #fff;">
-  <div class="row">
-    <div class="col-4">
-      <h1 class="font-weight-bold">
-		<span style="color:#003366">VIN</span> 
-		<span style="color:#003366"> RESEARCH<span style="background-color:#003366;" class="special-decoration">LINKS</span></span>
-		</h1>
-    </div>
-    <div class="col-8" align="right" style="padding-right: 0px;" >
-		<div class="col-12">
-			<br><br>
-		</div>
+  
+	<div class="row">
+    	<div class="col-4">
+      		<h1 class="font-weight-bold">
+			<span style="color:#003366">VIN</span> 
+			<span style="color:#003366"> RESEARCH<span style="background-color:#003366;" class="special-decoration">LINKS</span></span>
+			</h1>
+    	</div>
+    	<div class="col-8" align="right" style="padding-right: 0px;">
+			<div class="col-12">
+				<br><br>
+			</div>
 		<div class="col-12"> 
 			<span style="font-size: 2em; color: #ffd51d; font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', sans-serif;">bigBK;)</span>
 		</div>
       
-    </div>
- 
-  </div>
-	<div class="row" style="padding-left: 0px; background-color:#003366;">
+    	</div>
+ 	</div>
+	
+	<div class="row" style="padding-left: 0px; padding-top: 5px; padding-bottom: 5px; background-color:#003366;">
 		<div class="col-3 order-1 order-sm-1" style="padding-left: 0px;">
 			<div class="dropdown">
   				<button class="btn btn-secondary dropdown-toggle" style="background-color:#ffd51d; color:#003366;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manual Selection</button>
@@ -64,8 +65,6 @@
 		</div>
 		 
 		<div class="col-9 order-2 order-sm-2" align="right" style="padding-right: 0px;">
-			<!-- <input name="name" type="text" id="VINbar" placeholder="VIN - 17 Digits" >
-			<button class="srch button" type="submit" id="btn_submit"><i class="fa fa-search"></i></button> -->
 			<div class="input-group md-form form-sm form-2 pl-0 w-50">
 				<input name="VIN" id="VINbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="VIN - 17 Digits" aria-label="Search">
 				<div class="input-group-append">
@@ -76,11 +75,10 @@
 		
 	</div>
 	
-  <div class="row">
+	<div class="row">
     <div class="col-md-3 order-md-1 order-3 order-sm-3">
 		
-      <br><p><span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>Inventory Research</strong></span>
-		<!-- <a href="#" target="_blank" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Primary link</a> <br> -->
+      	<br><p><span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>Inventory Research</strong></span>
 		  
 		<a href="http://www.nadaguides.com/Cars/Manufacturers" target="_blank" role="button" aria-pressed="true">NADA Guides</a>
 		<a href="https://www.cargurus.com/Cars/inventorylisting/viewDetailsFilterViewInventoryListing.action?sourceContext=forSaleTab_false_0&newSearchFromOverviewPage=true&inventorySearchWidgetType=AUTO&entitySelectingHelper.selectedEntity=&entitySelectingHelper.selectedEntity2=&zip=21162&distance=500&searchChanged=true&modelChanged=true&filtersModified=true" target="_blank" role="button" aria-pressed="true">CarGurus</a>
@@ -93,9 +91,12 @@
 		<a href="https://www.nissanusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Versa%20Sedan&location%5B%5D=%5B39.3949598%2C-76.3984537%5D" target="_blank" role="button" aria-pressed="true">Nissan Search </a>
 		<a href="https://www.truecar.com/" target="_blank"  role="button" aria-pressed="true">TrueCar New Car Search</a>
 	</p>
-	<p><span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>Tow Hitch Info</strong></span>
-	<a href="https://www.etrailer.com/fitguide.htm" target="_blank" role="button" aria-pressed="true"> e-Trailer</a>
-	<a href="https://www.uhaul.com/Trailer-Hitches/" target="_blank" role="button" aria-pressed="true"> UHaul</a><br></p>
+		
+	<p>
+		<span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>Tow Hitch Info</strong></span>
+		<a href="https://www.etrailer.com/fitguide.htm" target="_blank" role="button" aria-pressed="true"> e-Trailer</a>
+		<a href="https://www.uhaul.com/Trailer-Hitches/" target="_blank" role="button" aria-pressed="true"> UHaul</a><br>
+	</p>
 	
 	<!-- ---new links inserted here -->
 	    
@@ -129,19 +130,18 @@
 	</div>
 	
 	<!-- ------------------------------------------------ -->
-
-    </div>
+	</div>
 	
     <div class="col-md-6 order-md-2 order-1 order-sm-1">
-	<div id="loading" class="shadow p-3 rounded-0" style="z-index: 9; position: absolute; opacity: 0.9; top: 100px; margin-top: 20px; margin-bottom: 20px; background-color:#77c2e6; width: 100%text-align: center;">
-		<div class="spinner-grow" style="width: 1rem; height: 1rem;" role="status">
-			<span class="sr-only"></span>
+		<div id="loading" class="shadow p-3 rounded-0" style="z-index: 9; position: absolute; opacity: 0.9; top: 100px; margin-top: 20px; margin-bottom: 20px; background-color:#77c2e6; width: 100%text-align: center;">
+			<div class="spinner-grow" style="width: 1rem; height: 1rem;" role="status">
+				<span class="sr-only"></span>
+			</div>
+			Please wait while VIN details are being pulled from NHTSA. If their server is down or this process takes longer than 10 seconds, you can use the Manual Selection menu on the upper left corner to retrieve manufacturer specific links. 
 		</div>
-		Please wait while VIN details are being pulled from NHTSA. If their server is down or this process takes longer than 10 seconds, you can use the Manual Selection menu on the upper left corner to retrieve manufacturer specific links. 
-</div>
 
 	    
-<div id="kmxsearch" style="display:block; background-color:#fff;">
+		<div id="kmxsearch" style="display:block; background-color:#fff;">
 <input name="iyear" id="iyear" class="form-control my-0 py-1 amber-border" type="text" placeholder="Year">
 <input name="imake" id="imake" class="form-control my-0 py-1 amber-border" type="text" placeholder="Make">
 <input name="imodel" id="imodel" class="form-control my-0 py-1 amber-border" type="text" placeholder="Model">
@@ -188,112 +188,20 @@
 </form>
 			<button id="kmxbutton" type="button" class="btn btn-sm btn-primary">Carmax Search</button>
 			
-<!-- Sunroof
-		<!--<div class="o-switch btn-group" data-toggle="buttons" role="group">
-  			<label class="btn btn-secondary active">
-    			<input type="radio" name="options" id="option1" autocomplete="off" data-size="mini"> No
-  			</label>
-  			
-			<label class="btn btn-secondary">
-    			<input type="radio" name="options" id="option2" autocomplete="off" data-size="mini" Checked > N/A
-  			</label>
-  
-			<label class="btn btn-secondary">
-    			<input type="radio" name="options" id="option3" autocomplete="off" data-size="mini"> Yes
-  			</label>
-		</div> -->
-													   
-<!-- 3 state checkbox 													   
-<div id="container">
-  <div class="card">
-    <header>Three State Checkbox</header>
-    <div class="content">
-      <div class="row">
-        <span class="checkbox"></span>
-        <span class="label">Neutral</span>
-      </div>
-      <div class="row">
-        <span class="checkbox positive">
-          <svg id="i-checkmark" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.9375%">
-    <path d="M2 20 L12 28 30 4" />
-          </svg>
-        </span>
-        <span class="label">Positive</span>
-      </div>
-      <div class="row">
-        <span class="checkbox negative">
-          <svg id="i-close" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.9375%">
-    <path d="M2 30 L30 2 M30 30 L2 2" />
-          </svg>
-        </span>
-        <span class="label">Negative</span>
-      </div>
-    </div>
-  </div>
-  <p><small>Third state cycles back to first</small></p>
-</div>
-	
-
--->
-</div>		
+		</div>		
     
 		
     	<div id="outputbox" class="shadow p-3 rounded-0" style="display:none; margin-top: 20px; margin-bottom: 20px; background-color:#77c2e6; width: 100%; text-align: center;">
 				<output name="output" id="output">
 				
 				</output>
-	</div>
-			
-		<div id="chrysler_div" style="display:none; background-color:#fff;">
-			
-			<br><p><span> Links that are listed here will work for Chrysler, Jeep, RAM, Fiat, Alfa Romeo vehicles.</span><br></p>
-			<div class="card-deck">
-				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="chrysler()">
-  					<div class="card-body">
-    						<h4 class="card-title">Window Sticker</h4>
-    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-    						<p class="card-text">Available for newer vehicles
-    						<!-- <a href="#" class="card-link">Download</a> -->
-  					</div>
-				</div>
-			
-				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="chryslerlist()">
-  					<div class="card-body">
-    						<h4 class="card-title">Build Sheet</h4>
-    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-    						<p class="card-text">Equipment listing available for most vehicles
-  					</div>
-				</div>
-			</div>
-			
-			
-			<!-- <button class="linkbutton" type="submit" id="chr" title="This will open PDF window sticker" onclick="chrysler()"> Window Sticker</button> Available for newer vehicles <br>
-			<button class="linkbutton" type="submit" id="chrbutton" title="This will open PDF window sticker" onclick="chryslerlist()"> Build Sheet</button> Available for most vehicles <br>
-			</p>	-->
 		</div>
-	    <br>
-		<div id="common_div" style="display:none; background-color:#fff;">
-			<div class="card-deck">
-				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="autobrochures()">
-  					<div class="card-body">
-    						<h4 class="card-title">Sales Brochures</h4>
-    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-    						<p class="card-text">Available from AutoBrochures
-  					</div>
-				</div>
-				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="manheimmmr()">
-  					<div class="card-body">
-    						<h4 class="card-title">MMR Data</h4>
-    						<h6 class="card-subtitle mb-2 text-muted">Requires Log-in</h6>
-    						<p class="card-text">Manheim MMR search for VIN
-  					</div>
-				</div>	
-			</div>	
-		</div>
-	    
+			
+		
+			
 <!-- ---new links inserted here -->
 
-<div id="auction_div" style="display:block; background-color:#fff;">
+	<div id="auction_div" style="display:block; background-color:#fff;">
 Auction Links <br>
 <a id="mmrbutton" onclick="manheimmmr()"> MMR Search</a>  <br>
 <a id="manheimbutton" onclick="manheimsearch()"> Manheim Inventory &amp; CR </a>  <br>
@@ -303,7 +211,7 @@ Auction Links <br>
 <a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=165" target="_blank" > Manheim PA Sale</a>  <br>
 <a href="https://www.manheim.com/secureredirect?product=Simulcast&WT.svl=m_hdr_mnav_buy_sim" target="_blank" > Manheim Simulcast</a>  <br>
 <a href="https://www.smartauctioninspections.com/viw/aspx/general/DealerInspectionReport.aspx" target="_blank" > SmartAuction Inspections</a>  <br>
-</div>
+	</div>
 
 <div id="audi_div" style="display:block; background-color:#fff;">
 Audi <br>
@@ -326,17 +234,60 @@ BMW <br>
 <a href="http://www.bimmerfile.com/wp-content/uploads/2008/02/2008-online-ordering-guide.pdf" target="_blank" >2008 BMW Combined PDF</a>  <br>
 <a href="http://www.autospies.com/images/users/Agent001/CompleteOrderGuide.pdf" target="_blank" >2007 BMW Combined PDF</a>  <br>
 <a href="https://www.autoevolution.com/mini/" target="_blank" >MINI Production Models</a>  <br>
-<span> <align="left"><input size="4" placeholder="Year" id="year" type="text"><input size="12" placeholder="Model" id="model" type="text"> </span><a id="chr" style="cursor:pointer;border-style:none;" onclick="miniog()"> MINI Guide Search</a>  <br>
+<span align="left"> <input size="4" placeholder="Year" id="year" type="text"><input size="12" placeholder="Model" id="model" type="text"> </span>
+<a style="cursor:pointer;border-style:none;" onclick="miniog()"> MINI Guide Search</a>  <br>
 <a href="https://bimmercat.com/bmw/en/vin/decoder" target="_blank" > BMW/MINI from bimmercat</a>  <br>
 <a href="https://decoder.bvzine.com/" target="_blank" > BMW/MINI from bvzine</a>  <br>
-<a id="BMWbtn" onclick="bmwlane()"> BMW Lanes at NADE</a>  <br>
+<a style="cursor:pointer;border-style:none;" onclick="bmwlane()"> BMW Lanes at NADE</a>  <br>
 </div>
 
 <div id="chrysler_div" style="display:block; background-color:#fff;">
-Chrysler <br>
-<a id="chrbutton" onclick="chryslerlist()"> Dodge/Chrysler/Jeep/Fiat/Alfa Romeo</a>  <br>
-<a href="https://dodgeforum.com/forum/vindecoder.php" target="_blank" > Generic VIN Decoder for Standard Options</a>  <br>
-<a id="chr" onclick="chrysler()"> Dodge/Chrysler/Jeep/Fiat/Alfa Romeo</a>  <br>
+<br><p><span> Links that are listed here will work for Chrysler, Jeep, RAM, Fiat, Alfa Romeo vehicles.</span><br></p>
+			<div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="chrysler()">
+  					<div class="card-body">
+    						<h4 class="card-title">Window Sticker</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+						<p class="card-text">Available for newer vehicles</p>
+    						<!-- <a href="#" class="card-link">Download</a> -->
+  					</div>
+				</div>
+			
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="chryslerlist()">
+  					<div class="card-body">
+    						<h4 class="card-title">Build Sheet</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+    						<p class="card-text">Equipment listing available for most vehicles</p>
+  					</div>
+				</div>
+			</div>
+			
+			
+
+	    <br>
+		<div id="common_div" style="display:none; background-color:#fff;">
+			<div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="autobrochures()">
+  					<div class="card-body">
+    						<h4 class="card-title">Sales Brochures</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+    						<p class="card-text">Available from AutoBrochures</p>
+  					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="manheimmmr()">
+  					<div class="card-body">
+    						<h4 class="card-title">MMR Data</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">Requires Log-in</h6>
+    						<p class="card-text">Manheim MMR search for VIN</p>
+  					</div>
+				</div>	
+			</div>	
+		</div>
+	    
+	Chrysler <br>
+	<a id="chrbutton" onclick="chryslerlist()"> Dodge/Chrysler/Jeep/Fiat/Alfa Romeo</a>  <br>
+	<a href="https://dodgeforum.com/forum/vindecoder.php" target="_blank" > Generic VIN Decoder for Standard Options</a>  <br>
+	<a id="chr" onclick="chrysler()"> Dodge/Chrysler/Jeep/Fiat/Alfa Romeo</a>  <br>
 </div>
 
 <div id="ford_div" style="display:block; background-color:#fff;">
@@ -407,7 +358,7 @@ Mitsubishi <br>
 <div id="nissan_div" style="display:block; background-color:#fff;">
 Nisan <br>
 <a id="nissanbutton" onclick="nissan()"> Nissan Trim Level</a>  <br>
-<a href="https://www.nissanusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Versa%20Sedan&location%5B%5D=%5B39.3949598%2C-76.3984537%5D"_blank" target="_blank" > Nissan Search</a>  <br>
+<a href="https://www.nissanusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Versa%20Sedan&location%5B%5D=%5B39.3949598%2C-76.3984537%5D" target="_blank" > Nissan Search</a>  <br>
 <a href="https://www.oemstickers.com/" target="_blank"> Nissan/Infiniti You will have to enter VIN twice </a>  <br> <br>
 </div>
 
@@ -456,10 +407,10 @@ Toyota <br>
     <div class="col-md-3 order-md-3 order-2 order-sm-2">
       <p>
 		<br><span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;"><strong>Blackbook and Research</strong></span>
-		<a href="http://www.blackbookportals.com/bb/products/vinpricingxpresshtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true"></span> BlackBook First Values</a>
-		<a href="http://www.blackbookusa.com/bb/products/usedcarhtmlportal.asp?color=d&companyid=cudirect.com" target="_blank" role="button" aria-pressed="true"></span> BlackBook Used Car</a>
-		<a href="http://www.blackbookportals.com/bb/products/newcarhtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true"></span> BlackBook New Car Info </a>
-		<a href="http://www.blackbookportals.com/bb/products/cycleshtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true"></span> BlackBook Recreational</a>
+		<a href="http://www.blackbookportals.com/bb/products/vinpricingxpresshtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true"> BlackBook First Values</a>
+		<a href="http://www.blackbookusa.com/bb/products/usedcarhtmlportal.asp?color=d&companyid=cudirect.com" target="_blank" role="button" aria-pressed="true"> BlackBook Used Car</a>
+		<a href="http://www.blackbookportals.com/bb/products/newcarhtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true"> BlackBook New Car Info </a>
+		<a href="http://www.blackbookportals.com/bb/products/cycleshtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true"> BlackBook Recreational</a>
 		<a href="http://www.auto-brochures.com" target="_blank" role="button" aria-pressed="true"> Auto Brochures</a>
 		<a href="http://www.motortrend.com/cars/" target="_blank" role="button" aria-pressed="true"> Motor Trend for Packages</a>
 		<a href="http://autoweek.com/buyers-guide" target="_blank" role="button" aria-pressed="true"> AutoWeek for Packages</a>
@@ -511,16 +462,9 @@ Toyota <br>
 		
 	</div>
 				  
-</div>
+</div> 
 
-		
-
-
-													       
-
-	
-
-				     
+					     
 		
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -822,27 +766,6 @@ function vwaudilane() {
 };
 
 
-<!--      -------------------------------------------------------------------------------               -->
-
-<!--	3 state checkbox -->
-	<!--
-$('.checkbox').click(function(){
-  if ($(this).hasClass('positive')){
-    $(this).removeClass('positive');
-    $(this).addClass('negative');
-    $(this).html('<svg id="i-close" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.9375%"><path d="M2 30 L30 2 M30 30 L2 2" /></svg>');
-    $(this).next().text('Negative');
-  } else if ($(this).hasClass('negative')){
-    $(this).removeClass('negative');
-    $(this).html('');
-    $(this).next().text('Neutral');
-  } else {
-    $(this).addClass('positive');
-    $(this).html('<svg id="i-checkmark" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.9375%"><path d="M2 20 L12 28 30 4" /></svg>');
-    $(this).next().text('Positive');
-  }
-});
-	-->
 // jquery to check checkboxes
     $(document).ready(function() {
 	document.getElementById("kmxbutton").onclick = function () {
@@ -854,7 +777,6 @@ $('.checkbox').click(function(){
 			document.getElementById("icyl").value = "cylinders-" + document.getElementById("icyl").value;
 		
 		};
-            //alert("Checked options are: " + document.getElementById("iyear").value + "/" + document.getElementById("imake").value + "/" + document.getElementById("imodel").value + "/" + document.getElementById("icyl").value + "/" + favorite.join("/"));
 		window.open("https://www.carmax.com/cars"  + "/" + document.getElementById("iyear").value + "/" + document.getElementById("imake").value + "/" + document.getElementById("imodel").value + "/" + document.getElementById("icyl").value + "/" + favorite.join("/") + "?zip=21162&sort=4&distance=all");
         }; //);
     });	
