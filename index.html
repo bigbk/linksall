@@ -55,10 +55,25 @@
 			<div class="dropdown">
   				<button class="btn btn-secondary dropdown-toggle" style="background-color:#ffd51d; color:#003366;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manual Selection</button>
   				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    				<a class="dropdown-item" href="#">Chrysler/Jeep/Fiat</a>
     				<a class="dropdown-item" href="#">Audi/Volkswagen/Bentley</a>
-    				<a class="dropdown-item" href="#">Ford/Lincoln/Mercury</a>	
-    				<a class="dropdown-item" href="#">Hyundai/Genesis</a>
+					<a class="dropdown-item" href="#">BMW</a>
+					<a class="dropdown-item" href="#">Chrysler/Jeep/Fiat</a>
+    				<a class="dropdown-item" href="#">Ford/Lincoln/Mercury</a>
+					<a class="dropdown-item" href="#">GM</a>
+    				<a class="dropdown-item" href="#">Honda</a>
+					<a class="dropdown-item" href="#">Hyundai/Genesis</a>
+					<a class="dropdown-item" href="#">Infiniti</a>
+					<a class="dropdown-item" href="#">Kia</a>
+					<a class="dropdown-item" href="#">Land Rover</a>
+					<a class="dropdown-item" href="#">Lexus</a>
+					<a class="dropdown-item" href="#">Mazda</a>
+					<a class="dropdown-item" href="#">Mercedes Benz</a>
+					<a class="dropdown-item" href="#">Mitsubishi</a>
+					<a class="dropdown-item" href="#">Nissan</a>
+					<a class="dropdown-item" href="#">Porsche</a>
+					<a class="dropdown-item" href="#">Subaru</a>
+					<a class="dropdown-item" href="#">Tesla</a>
+					<a class="dropdown-item" href="#">Toyota</a>
   				</div>
 			</div>
 
@@ -201,18 +216,24 @@
 		
 			
 <!-- ---new links inserted here -->
-
-	<div id="auction_div" style="display:block; background-color:#fff;">
-Auction Links <br>
-<a id="mmrbutton" onclick="manheimmmr()"> MMR Search</a>  <br>
-<a id="manheimbutton" onclick="manheimsearch()"> Manheim Inventory &amp; CR </a>  <br>
-<a href="http://www.bscamerica.com/bel-air-auction/run-list/#/" target="_blank" > Bel Air Auto Auction Run List</a>  <br>
-<a href="https://www.manheim.com/members/marketreport/control/MarketReportMain?auctionID=MAA" target="_blank" > Manheim Post Sale Results</a>  <br>
-<a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=177" target="_blank" > Manheim NJ Sale</a>  <br>
-<a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=165" target="_blank" > Manheim PA Sale</a>  <br>
-<a href="https://www.manheim.com/secureredirect?product=Simulcast&WT.svl=m_hdr_mnav_buy_sim" target="_blank" > Manheim Simulcast</a>  <br>
-<a href="https://www.smartauctioninspections.com/viw/aspx/general/DealerInspectionReport.aspx" target="_blank" > SmartAuction Inspections</a>  <br>
-	</div>
+<div id="common_div" style="display:none; background-color:#fff;">
+			<div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="autobrochures()">
+  					<div class="card-body">
+    						<h4 class="card-title">Sales Brochures</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+    						<p class="card-text">Available from AutoBrochures</p>
+  					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="manheimmmr()">
+  					<div class="card-body">
+    						<h4 class="card-title">MMR Data</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">Requires Log-in</h6>
+    						<p class="card-text">Manheim MMR search for VIN</p>
+  					</div>
+				</div>	
+			</div>	
+</div>
 
 <div id="audi_div" style="display:none; background-color:#fff;">
 Audi <br>
@@ -266,24 +287,6 @@ BMW <br>
 			
 
 	    <br>
-		<div id="common_div" style="display:none; background-color:#fff;">
-			<div class="card-deck">
-				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="autobrochures()">
-  					<div class="card-body">
-    						<h4 class="card-title">Sales Brochures</h4>
-    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-    						<p class="card-text">Available from AutoBrochures</p>
-  					</div>
-				</div>
-				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="manheimmmr()">
-  					<div class="card-body">
-    						<h4 class="card-title">MMR Data</h4>
-    						<h6 class="card-subtitle mb-2 text-muted">Requires Log-in</h6>
-    						<p class="card-text">Manheim MMR search for VIN</p>
-  					</div>
-				</div>	
-			</div>	
-		</div>
 	    
 	Chrysler <br>
 	<a id="chrbutton" onclick="chryslerlist()"> Dodge/Chrysler/Jeep/Fiat/Alfa Romeo</a>  <br>
@@ -298,82 +301,82 @@ Ford <br>
 <a id="fordbutton2" onclick="fordsticker()"> Ford/Lincoln (Dealer Inventory Only)</a>  <br>
 </div>
 
-<div id="gm_div" style="display:block; background-color:#fff;">
+<div id="gm_div" style="display:none; background-color:#fff;">
 GM <br>
 <a id="gmbutton" onclick="gmlink()"> GM some Bel Air inventory</a>  <br>
 </div>
 
-<div id="honda_div" style="display:block; background-color:#fff;">
+<div id="honda_div" style="display:none; background-color:#fff;">
 honda <br>
 <a id="hondabutton" onclick="honda()"> Honda NAV/RES Specific Trim Requires Honda Owner Account. jasib123 sl..</a>  <br>
 </div>
 
-<div id="hyundai_div" style="display:block; background-color:#fff;">
+<div id="hyundai_div" style="display:none; background-color:#fff;">
 Hyundai <br>
 <a href="https://autoservice.hyundaiusa.com/campaignhome" target="_blank" > Hyundai Trim Level</a>  <br>
 <a id="hyunwikibutton" onclick="hyunwiki()"> Hyundai/Genesis</a>  <br>
 </div>
 
-<div id="infiniti_div" style="display:block; background-color:#fff;">
+<div id="infiniti_div" style="display:none; background-color:#fff;">
 Infiniti <br>
 <a href="https://www.infinitiusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Q60&totalPrice%5B%5D=range%3A50300%2C68575&location%5B%5D=%5B40.1417764%2C-76.38536690000001%5D" target="_blank" > Infiniti Search</a>  <br>
 <a id="infinitibutton" onclick="infiniti()"> Infiniti Trim Level</a>  <br>
 <a href="https://www.oemstickers.com/" target="_blank"> Nissan/Infiniti You will have to enter VIN twice </a>  <br>
 </div>
 
-<div id="kia_div" style="display:block; background-color:#fff;">
+<div id="kia_div" style="display:none; background-color:#fff;">
 Kia <br>
 <a id="kiabutton" onclick="kia()"> Kia Trim Level</a>  <br>
 <a id="kiabutton2" onclick="kiabtn2()"> Kia </a>  <br>
 </div>
 
-<div id="lr_div" style="display:block; background-color:#fff;">
+<div id="lr_div" style="display:none; background-color:#fff;">
 Land Rover <br>
 <a href="https://topix.landrover.jlrext.com/topix/vehicle/lookupForm" target="_blank"  > Land Rover/Jaguar jas...1.. sl-03 Requires login, free account</a>  <br>
 </div>
 
-<div id="lexus_div" style="display:block; background-color:#fff;">
+<div id="lexus_div" style="display:none; background-color:#fff;">
 Lexus <br>
 <a href="https://drivers.lexus.com/lexusdrivers/resources/vehicle-specs" target="_blank" > Lexus</a>  <br>
 </div>
 
-<div id="mazda_div" style="display:block; background-color:#fff;">
+<div id="mazda_div" style="display:none; background-color:#fff;">
 Mazda <br>
 <a id="mazdabutton" onclick="mazdabtn2()"> Mazda </a>  <br>
 <a id="mazdabtn" onclick="mazdabtn()"> Mazda (Dealer Inventory Only)</a>  <br>
 </div>
 
-<div id="mb_div" style="display:block; background-color:#fff;">
+<div id="mb_div" style="display:none; background-color:#fff;">
 Mercedes Benz<br>
 <a id="mbdecoderzbutton" onclick="decoderz()"> Mercedes from Vin Decoderz</a>  <br>
 <a href="https://www.lastvin.com/" target="_blank" > Mercedes #1</a>  <br>
 <a href="http://mb.vin/" target="_blank" > Mercedes #2</a>  <br>
 </div>
 
-<div id="mitsubishi_div" style="display:block; background-color:#fff;">
+<div id="mitsubishi_div" style="display:none; background-color:#fff;">
 Mitsubishi <br>
 <a id="mitsbutton" onclick="mitsbtn()"> Mitsubishi </a>  <br>
 <a id="mitsbutton2" onclick="mitsbtn2()"> Mitsubishi </a>  <br>
 </div>
 
-<div id="nissan_div" style="display:block; background-color:#fff;">
+<div id="nissan_div" style="display:none; background-color:#fff;">
 Nisan <br>
 <a id="nissanbutton" onclick="nissan()"> Nissan Trim Level</a>  <br>
 <a href="https://www.nissanusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Versa%20Sedan&location%5B%5D=%5B39.3949598%2C-76.3984537%5D" target="_blank" > Nissan Search</a>  <br>
 <a href="https://www.oemstickers.com/" target="_blank"> Nissan/Infiniti You will have to enter VIN twice </a>  <br> <br>
 </div>
 
-<div id="porsche_div" style="display:block; background-color:#fff;">
+<div id="porsche_div" style="display:none; background-color:#fff;">
 Porsche <br>
 <a id="porwikibutton" onclick="porwiki()"> Porsche</a>  <br>
 </div>
 
-<div id="subaru_div" style="display:block; background-color:#fff;">
+<div id="subaru_div" style="display:none; background-color:#fff;">
 Subaru <br>
 <a id="subbutton" onclick="subaru()"> Subaru Trim Level (Options with caution) </a>  <br>
 </div>
 
-<div id="tesla_div" style="display:block; background-color:#fff;">
+<div id="tesla_div" style="display:none; background-color:#fff;">
 Tesla <br>
 <a href="https://sites.google.com/site/teslamotorsclubwiki/home/model-s/options-by-year" target="_blank" > Model S Option Changes</a>  <br>
 <a href="https://www.tesla.com/sites/default/files/model_3_owners_manual_north_america_en.pdf" target="_blank" > Model 3 Manual PDF</a>  <br>
@@ -396,11 +399,23 @@ Tesla <br>
 <a href="https://www.cars.com/research/tesla-model_x-2019/trims/" target="_blank" > 2019 Model X Packages by Trim</a>  <br>
 </div>
 
-<div id="toyota_div" style="display:block; background-color:#fff;">
+<div id="toyota_div" style="display:none; background-color:#fff;">
 Toyota <br>
 <a href="https://www.carmax.com/search/new-car-pricing" target="_blank" > New Car Pricing</a>  <br>
 <a href="https://www.toyota.com/owners/vehicle-specification" target="_blank" > Toyota</a>  <br>
-</div>									     
+</div>
+		
+	<div id="auction_div" style="display:block; background-color:#fff;">
+		Auction Links <br>
+<a id="mmrbutton" onclick="manheimmmr()"> MMR Search</a>  <br>
+<a id="manheimbutton" onclick="manheimsearch()"> Manheim Inventory &amp; CR </a>  <br>
+<a href="http://www.bscamerica.com/bel-air-auction/run-list/#/" target="_blank" > Bel Air Auto Auction Run List</a>  <br>
+<a href="https://www.manheim.com/members/marketreport/control/MarketReportMain?auctionID=MAA" target="_blank" > Manheim Post Sale Results</a>  <br>
+<a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=177" target="_blank" > Manheim NJ Sale</a>  <br>
+<a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=165" target="_blank" > Manheim PA Sale</a>  <br>
+<a href="https://www.manheim.com/secureredirect?product=Simulcast&WT.svl=m_hdr_mnav_buy_sim" target="_blank" > Manheim Simulcast</a>  <br>
+<a href="https://www.smartauctioninspections.com/viw/aspx/general/DealerInspectionReport.aspx" target="_blank" > SmartAuction Inspections</a>  <br>
+	</div>
 <!-- -------------------------------------------------- -->									 
  
 </div>
@@ -638,7 +653,7 @@ function updatedisplay ( ) {
 		//document.getElementById("kmxsearch").style.display = 'none';
 	}
 	
-	if (aMake == "AUDI") {
+	if (aMake == "AUDI" || aMake == "VOLKSWAGEN" || aMake == "BENTLEY") {
 		document.getElementById("audi_div").style.display = 'block';
 	} else {
 		document.getElementById("audi_div").style.display = 'none';
@@ -660,6 +675,96 @@ function updatedisplay ( ) {
 		document.getElementById("ford_div").style.display = 'block';
 	} else {
 		document.getElementById("ford_div").style.display = 'none';
+	}
+	
+	if (aMake == "CHEVROLET" || aMake == "BUICK" || aMake == "CADILLAC" || aMake == "GMC") {
+		document.getElementById("gm_div").style.display = 'block';
+	} else {
+		document.getElementById("gm_div").style.display = 'none';
+	}
+	
+	if (aMake == "HONDA") {
+		document.getElementById("honda_div").style.display = 'block';
+	} else {
+		document.getElementById("honda_div").style.display = 'none';
+	}
+	
+	if (aMake == "HYUNDAI"  || aMake == "GENESIS") {
+		document.getElementById("hyundai_div").style.display = 'block';
+	} else {
+		document.getElementById("hyundai_div").style.display = 'none';
+	}
+	
+	if (aMake == "INFINITI") {
+		document.getElementById("infiniti_div").style.display = 'block';
+	} else {
+		document.getElementById("infiniti_div").style.display = 'none';
+	}
+	
+	if (aMake == "KIA") {
+		document.getElementById("kia_div").style.display = 'block';
+	} else {
+		document.getElementById("kia_div").style.display = 'none';
+	}
+
+	if (aMake == "LAND ROVER") {
+		document.getElementById("lr_div").style.display = 'block';
+	} else {
+		document.getElementById("lr_div").style.display = 'none';
+	}
+	
+	if (aMake == "LEXUS") {
+		document.getElementById("lexus_div").style.display = 'block';
+	} else {
+		document.getElementById("lexus_div").style.display = 'none';
+	}
+	
+	if (aMake == "MAZDA") {
+		document.getElementById("mazda_div").style.display = 'block';
+	} else {
+		document.getElementById("mazda_div").style.display = 'none';
+	}
+	
+	if (aMake == "MERCEDES BENZ") {
+		document.getElementById("mb_div").style.display = 'block';
+	} else {
+		document.getElementById("mb_div").style.display = 'none';
+	}
+	
+	if (aMake == "MITSUBISHI") {
+		document.getElementById("mitsubishi_div").style.display = 'block';
+	} else {
+		document.getElementById("mitsubishi_div").style.display = 'none';
+	}
+	
+	if (aMake == "NISSAN") {
+		document.getElementById("missan_div").style.display = 'block';
+	} else {
+		document.getElementById("nissan_div").style.display = 'none';
+	}
+	
+	if (aMake == "PORSCHE") {
+		document.getElementById("porsche_div").style.display = 'block';
+	} else {
+		document.getElementById("porsche_div").style.display = 'none';
+	}
+	
+	if (aMake == "SUBARU") {
+		document.getElementById("subaru_div").style.display = 'block';
+	} else {
+		document.getElementById("subaaru_div").style.display = 'none';
+	}
+	
+	if (aMake == "TESLA") {
+		document.getElementById("tesla_div").style.display = 'block';
+	} else {
+		document.getElementById("tesla_div").style.display = 'none';
+	}
+	
+	if (aMake == "TOYOTA") {
+		document.getElementById("toyota_div").style.display = 'block';
+	} else {
+		document.getElementById("toyota_div").style.display = 'none';
 	}
 };
 
@@ -793,10 +898,10 @@ function vwaudilane() {
                 favorite.push($(this).val());
             });
 		if (document.getElementById("icyl").value !== "") {
-			document.getElementById("icyl").value = "cylinders-" + document.getElementById("icyl").value;
+			var tcyl = "cylinders-" + document.getElementById("icyl").value;
 		
 		};
-		window.open("https://www.carmax.com/cars"  + "/" + document.getElementById("iyear").value + "/" + document.getElementById("imake").value + "/" + document.getElementById("imodel").value  + "/" + document.getElementById("itrim").value + "/" + document.getElementById("icyl").value + "/" + favorite.join("/") + "?zip=21162&sort=4&distance=all");
+		window.open("https://www.carmax.com/cars"  + "/" + document.getElementById("iyear").value + "/" + document.getElementById("imake").value + "/" + document.getElementById("imodel").value  + "/" + document.getElementById("itrim").value + "/" + tcyl + "/" + favorite.join("/") + "?zip=21162&sort=4&distance=all");
         }; //);
     });	
 	
