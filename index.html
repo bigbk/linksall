@@ -602,26 +602,87 @@
 </div>
 
 <div id="mitsubishi_div" style="display:none; background-color:#fff;">
-Mitsubishi <br>
-<a id="mitsbutton" onclick="mitsbtn()"> Mitsubishi </a>  <br>
-<a id="mitsbutton2" onclick="mitsbtn2()"> Mitsubishi </a>  <br>
+			<br><p><span> Links that are listed here will work for Mitsubishi vehicles.</span><br></p>
+				<br><div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="mitsbtn()">
+  					<div class="card-body">
+    						<h4 class="card-title">Window Sticker</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+						<p class="card-text">Available for most vehicles.</p>
+    						<!-- <a href="#" class="card-link">Download</a> -->
+  					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" >
+  					<div class="card-body">
+    						<h4 class="card-title"></h4>
+    						<h6 class="card-subtitle mb-2 text-muted"></h6>
+    						<p class="card-text"></p>
+  					</div>
+				</div>
+			</div>
 </div>
 
 <div id="nissan_div" style="display:none; background-color:#fff;">
-Nisan <br>
-<a id="nissanbutton" onclick="nissan()"> Nissan Trim Level</a>  <br>
-<a href="https://www.nissanusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Versa%20Sedan&location%5B%5D=%5B39.3949598%2C-76.3984537%5D" target="_blank" > Nissan Search</a>  <br>
-<a href="https://www.oemstickers.com/" target="_blank"> Nissan/Infiniti You will have to enter VIN twice </a>  <br> <br>
+			<br><p><span> Links that are listed here will work for Nissan vehicles.</span><br></p>
+				<br><div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="nissan()">
+  					<div class="card-body">
+    						<h4 class="card-title">Window Sticker</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+							<p class="card-text">Available for newer vehicles. You may have to click reload. </p>
+    						<!-- <a href="#" class="card-link">Download</a> -->
+  					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" >
+  					<div class="card-body">
+    						<h4 class="card-title">Window Sticker</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+    						<p class="card-text">You can obtain the window sticker by editing the attribute to replace the existing vin</p>
+							<a href="https://www.nissanusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Versa%20Sedan&location%5B%5D=%5B39.3949598%2C-76.3984537%5D" target="_blank" class="card-link">Visit</a>
+  					</div>
+				</div>
+			</div>
 </div>
 
 <div id="porsche_div" style="display:none; background-color:#fff;">
-Porsche <br>
-<a id="porwikibutton" onclick="porwiki()"> Porsche</a>  <br>
+				<br><p><span> Links that are listed here will work for Porsche vehicles.</span><br></p>
+				<br><div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="porwiki()">
+  					<div class="card-body">
+    						<h4 class="card-title">Window Sticker</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+						<p class="card-text">Available for most vehicles.</p>
+    						<!-- <a href="#" class="card-link">Download</a> -->
+  					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" >
+  					<div class="card-body">
+    						<h4 class="card-title"></h4>
+    						<h6 class="card-subtitle mb-2 text-muted"></h6>
+    						<p class="card-text"></p>
+  					</div>
+				</div>
+			</div>
 </div>
 
 <div id="subaru_div" style="display:none; background-color:#fff;">
-Subaru <br>
-<a id="subbutton" onclick="subaru()"> Subaru Trim Level (Options with caution) </a>  <br>
+		<br><p><span> Links that are listed here will work for Subaru vehicles.</span><br></p>
+				<br><div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="subaru()">
+  					<div class="card-body">
+    						<h4 class="card-title">Trim Level</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">Info</h6>
+							<p class="card-text">Trim level information. Use caution with options</p>
+					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" >
+  					<div class="card-body">
+    						<h4 class="card-title"></h4>
+    						<h6 class="card-subtitle mb-2 text-muted"></h6>
+    						<p class="card-text"></p>
+  					</div>
+				</div>
+			</div>
 </div>
 
 <div id="tesla_div" style="display:none; background-color:#fff;">
@@ -1180,9 +1241,9 @@ function mitsbtn() {
 	window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);	
 };
 
-function mitsbtn2() {
-	window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
-};
+//function mitsbtn2() {
+	//window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
+//};
 
 function nissan() {
 	//window.open("https://www.nissanusa.com/recalls-vin/#/#/Results/" + vin);
