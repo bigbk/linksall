@@ -474,14 +474,46 @@
 </div>
 
 <div id="kia_div" style="display:none; background-color:#fff;">
-Kia <br>
-<a id="kiabutton" onclick="kia()"> Kia Trim Level</a>  <br>
-<a id="kiabutton2" onclick="kiabtn2()"> Kia </a>  <br>
+		<br><p><span> Links that are listed here will work for Kia vehicles.</span><br></p>
+				<br><div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="kiabtn2()">
+  					<div class="card-body">
+    						<h4 class="card-title">Window Sticker</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+							<p class="card-text">Available for most vehicles </p>
+    						<!-- <a href="#" class="card-link">Download</a> -->
+  					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover=""  >
+  					<div class="card-body">
+    						<h4 class="card-title">Trim Level</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">Info</h6>
+    						<p class="card-text">Enter vin for recall information, which also lists trim the level</p>
+							<a href="https://owners.kia.com/content/owners/en/recalls.html/" class="card-link">Visit</a>
+  					</div>
+				</div>
+			</div>
 </div>
 
-<div id="lr_div" style="display:none; background-color:#fff;">
-Land Rover <br>
-<a href="https://topix.landrover.jlrext.com/topix/vehicle/lookupForm" target="_blank"  > Land Rover/Jaguar jas...1.. sl-03 Requires login, free account</a>  <br>
+<div id="lr_div" style="display:none; background-color:#fff;">>
+		<br><p><span> Links that are listed here will work for Land Rover vehicles.</span><br></p>
+				<br><div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="honda()">
+  					<div class="card-body">
+    						<h4 class="card-title">Equipment Listing</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">Info</h6>
+							<p class="card-text">Lists most options. Requires free account.</p>
+							<a href="https://topix.landrover.jlrext.com/topix/vehicle/lookupForm" title="jas...1.. sl-03">Visit</a>
+  					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" >
+  					<div class="card-body">
+    						<h4 class="card-title"></h4>
+    						<h6 class="card-subtitle mb-2 text-muted"></h6>
+    						<p class="card-text"></p>
+  					</div>
+				</div>
+			</div>
 </div>
 
 <div id="lexus_div" style="display:none; background-color:#fff;">
@@ -1043,9 +1075,9 @@ function infiniti() {
 }, 1000);
 };
 
-function kia() {
-	window.open(" http://www.kia.com/us/en/data/owners/recalls/search/" + vin);
-};
+//function kia() {
+	//window.open(" http://www.kia.com/us/en/data/owners/recalls/search/" + vin);
+//};
 
 function kiabtn2() {
 	window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
