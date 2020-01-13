@@ -496,9 +496,9 @@
 </div>
 
 <div id="lr_div" style="display:none; background-color:#fff;">>
-		<br><p><span> Links that are listed here will work for Land Rover vehicles.</span><br></p>
+		<br><p><span> Links that are listed here will work for Land Rover and Jaguar vehicles.</span><br></p>
 				<br><div class="card-deck">
-				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="honda()">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover=""">
   					<div class="card-body">
     						<h4 class="card-title">Equipment Listing</h4>
     						<h6 class="card-subtitle mb-2 text-muted">Info</h6>
@@ -951,7 +951,7 @@ function updatedisplay ( ) {
 		document.getElementById("kia_div").style.display = 'none';
 	}
 
-	if (aMake == "LAND ROVER") {
+	if (aMake == "LAND ROVER" || aMake == "JAGUAR" ) {
 		document.getElementById("lr_div").style.display = 'block';
 	} else {
 		document.getElementById("lr_div").style.display = 'none';
