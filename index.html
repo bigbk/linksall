@@ -1175,7 +1175,7 @@ function displayNHTSAResults (param_data) {
 };
 	
 function updatedisplay ( ) {
-	console.log("updating divs" + aMake);
+	console.log("updating divs " + aMake);
 	if (aMake !== "") {
 		document.getElementById("common_div").style.display = 'block';
 		//document.getElementById("kmxsearch").style.display = 'block';
@@ -1183,6 +1183,31 @@ function updatedisplay ( ) {
 		document.getElementById("common_div").style.display = 'none';
 		//document.getElementById("kmxsearch").style.display = 'none';
 	}
+	
+	if (aMake == "HYUK") {
+		document.getElementById("hyundai_div").style.display = 'block';
+		document.getElementById("kia_div").style.display = 'block';
+	} else {
+		document.getElementById("hyundai_div").style.display = 'none';
+		document.getElementById("kia_div").style.display = 'none';
+	}
+	
+	if (aMake == "INNIS") {
+		document.getElementById("infiniti_div").style.display = 'block';
+		document.getElementById("nissan_div").style.display = 'block';
+	} else {
+		document.getElementById("infiniti_div").style.display = 'none';
+		document.getElementById("nissan_div").style.display = 'none';
+	}
+	
+	if (aMake == "LETOY") {
+		document.getElementById("lexus_div").style.display = 'block';
+		document.getElementById("toyota_div").style.display = 'block';
+	} else {
+		document.getElementById("lexus_div").style.display = 'none';
+		document.getElementById("toyota_div").style.display = 'none';
+	}
+	
 	
 	if (aMake == "AUDI" || aMake == "VOLKSWAGEN" || aMake == "BENTLEY") {
 		document.getElementById("audi_div").style.display = 'block';
@@ -1298,29 +1323,7 @@ function updatedisplay ( ) {
 		document.getElementById("toyota_div").style.display = 'none';
 	}
 	
-		if (aMake == "HYUK") {
-		document.getElementById("hyundai_div").style.display = 'block';
-		document.getElementById("kia_div").style.display = 'block';
-	} else {
-		document.getElementById("hyundai_div").style.display = 'none';
-		document.getElementById("kia_div").style.display = 'none';
-	}
-	
-	if (aMake == "INNIS") {
-		document.getElementById("infiniti_div").style.display = 'block';
-		document.getElementById("nissan_div").style.display = 'block';
-	} else {
-		document.getElementById("infiniti_div").style.display = 'none';
-		document.getElementById("nissan_div").style.display = 'none';
-	}
-	
-	if (aMake == "LETOY") {
-		document.getElementById("lexus_div").style.display = 'block';
-		document.getElementById("toyota_div").style.display = 'block';
-	} else {
-		document.getElementById("lexus_div").style.display = 'none';
-		document.getElementById("toyota_div").style.display = 'none';
-	}
+
 };
 
 <!-- MANUFACTURER LINKS  -->
