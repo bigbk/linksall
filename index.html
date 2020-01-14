@@ -915,14 +915,28 @@ if (vin.length === 17) {
 	console.log(secondmake);
 	console.log(onetwomake);
 	console.log(onethree);
+	
 	if (secondmake == "C") {
-		if (onetwomake == "SC" || onetwomake == "2C") {
+		if (onethree == "SCB" || onetwomake == "2C4") {
 			aMake = "AUDI"
 		} else {
 			aMake = "CHRYSLER"
 		};
 		
 	}
+	
+	if (secondmake == "F" || secondmake == "Z" secondmake == "M") {
+		if (onetwomake == "5F") {
+			aMake = "HONDA"
+		} else if (onetwomake == "JF") {
+			aMake = "SUBARU"
+		} else {
+			aMake = "FORD"
+		};
+	}
+	
+	
+	
 	console.log(aMake);
 	updatedisplay();
 };
