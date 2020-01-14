@@ -686,7 +686,23 @@
 </div>
 
 <div id="tesla_div" style="display:none; background-color:#fff;">
-Tesla <br>
+		<br><p><span> Links that are listed here will work for Tesla vehicles.</span><br></p>
+				<br><div class="card-deck">
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="tesla()">
+  					<div class="card-body">
+    						<h4 class="card-title">Packages</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">Info</h6>
+							<p class="card-text">Available packages listed</p>
+					</div>
+				</div>
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" >
+  					<div class="card-body">
+    						<h4 class="card-title"></h4>
+    						<h6 class="card-subtitle mb-2 text-muted"></h6>
+    						<p class="card-text"></p>
+  					</div>
+				</div>
+			</div><br>
 <a href="https://sites.google.com/site/teslamotorsclubwiki/home/model-s/options-by-year" target="_blank" > Model S Option Changes</a>  <br>
 <a href="https://www.tesla.com/sites/default/files/model_3_owners_manual_north_america_en.pdf" target="_blank" > Model 3 Manual PDF</a>  <br>
 <a href="https://www.cars.com/research/tesla-model_3-2017/trims/" target="_blank" > 2017 Model 3 Packages by Trim</a>  <br>
@@ -1250,7 +1266,7 @@ function nissan() {
 	window.open("https://www.oemstickers.com/WindowSticker.php?vin=" + vin);	
 	setTimeout(function() {
 	window.open("https://www.oemstickers.com/WindowSticker.php?vin=" + vin);
-}, 1000);
+}, 1500);
 };
 
 function nissanbtn() {
@@ -1264,7 +1280,12 @@ function porwiki() {
 function subaru() {
 	window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode=" + vin);
 };
+function tesla() {
+	var mdlad = mModel.replace(/ /g, "_");
+	window.open("https://www.cars.com/research/" + aMake + "-" + mdlad + "-" + aYear + "/trims/");
 
+	//href="https://www.cars.com/research/tesla-model_3-2017/trims/" target="_blank
+};
 function vwaudilane() {
 	window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin+"/4905414");
 };
