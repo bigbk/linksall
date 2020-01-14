@@ -731,7 +731,7 @@ Toyota <br>
 				</div>	
 			</div>
 	
-			<a href="#" id="decoderzbutton" onclick="decoderz()" role="button" aria-pressed="true"> Vin Decoderz, Use Caution</a>
+			<br><a href="#" id="decoderzbutton" onclick="decoderz()" role="button" aria-pressed="true"> Vin Decoderz, Use Caution</a>
 	
 
 
@@ -912,6 +912,7 @@ if (vin.length === 17) {
 	var secondmake = vin.substring(1, 2);
 	var onetwomake = vin.substring(0, 2);
 	var onethree = vin.substring(0, 3);
+	var twothree = vin.substring(1, 3);
 	console.log(secondmake);
 	console.log(onetwomake);
 	console.log(onethree);
@@ -935,7 +936,27 @@ if (vin.length === 17) {
 		};
 	}
 	
+	if (secondmake == "L" || secondmake == "G" || secondmake == "R") {
+		if (onetwomake == "ML" || onetwomake == "JL") {
+			aMake = "MITSUBISHI"
+		} else if (twothree == "LM" || twothree == "LN") {
+			aMake = "FORD"
+		} else {
+			aMake = "CHEVROLET"
+		};
+	}
 	
+	if (secondmake == "H") {
+			aMake = "HONDA"
+	}
+	
+	if (secondmake == "N") {
+		if (onetwomake == "5N" || onetwomake == "KN") {
+			aMake = "HYUK"
+		} else {
+			aMake = "INNIS"
+		};
+	}
 	
 	console.log(aMake);
 	updatedisplay();
@@ -1178,6 +1199,30 @@ function updatedisplay ( ) {
 	if (aMake == "TOYOTA") {
 		document.getElementById("toyota_div").style.display = 'block';
 	} else {
+		document.getElementById("toyota_div").style.display = 'none';
+	}
+	
+		if (aMake == "HYUK") {
+		document.getElementById("hyundai_div").style.display = 'block';
+		document.getElementById("kia_div").style.display = 'block';
+	} else {
+		document.getElementById("hyundai_div").style.display = 'none';
+		document.getElementById("kia_div").style.display = 'none';
+	}
+	
+	if (aMake == "INNIS") {
+		document.getElementById("infiniti_div").style.display = 'block';
+		document.getElementById("nissan_div").style.display = 'block';
+	} else {
+		document.getElementById("infiniti_div").style.display = 'none';
+		document.getElementById("nisan_div").style.display = 'none';
+	}
+	
+	if (aMake == "LETOY") {
+		document.getElementById("lexus_div").style.display = 'block';
+		document.getElementById("toyota_div").style.display = 'block';
+	} else {
+		document.getElementById("lexus_div").style.display = 'none';
 		document.getElementById("toyota_div").style.display = 'none';
 	}
 };
