@@ -93,7 +93,7 @@ button:hover {
 }
 /* Clear floats */
 ::after {
-  //content: "";
+  content: "";
   clear: both;
   display: table;
 	indent-text: 5em;
