@@ -695,33 +695,15 @@
 							<p class="card-text">Available packages listed</p>
 					</div>
 				</div>
-				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" >
+				<div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="teslam()">
   					<div class="card-body">
-    						<h4 class="card-title"></h4>
-    						<h6 class="card-subtitle mb-2 text-muted"></h6>
-    						<p class="card-text"></p>
+    						<h4 class="card-title">Owner's Manual</h4>
+    						<h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+    						<p class="card-text">Retrieve latest owner's manual to see how to access features</p>
   					</div>
 				</div>
 			</div><br>
-<a href="https://sites.google.com/site/teslamotorsclubwiki/home/model-s/options-by-year" target="_blank" > Model S Option Changes</a>  <br>
-<a href="https://www.tesla.com/sites/default/files/model_3_owners_manual_north_america_en.pdf" target="_blank" > Model 3 Manual PDF</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_3-2017/trims/" target="_blank" > 2017 Model 3 Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_3-2018/trims/" target="_blank" > 2018 Model 3 Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_3-2019/trims/" target="_blank" > 2019 Model 3 Packages by Trim</a>  <br>
-<a href="https://www.tesla.com/sites/default/files/model_s_owners_manual_north_america_en_us.pdf" target="_blank" > Model S Manual PDF</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_s-2012/trims/" target="_blank" > 2012 Model S Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_s-2013/trims/" target="_blank" > 2013 Model S Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_s-2014/trims/" target="_blank" > 2014 Model S Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_s-2015/trims/" target="_blank" > 2015 Model S Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_s-2016/trims/" target="_blank" > 2016 Model S Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_s-2017/trims/" target="_blank" > 2017 Model S Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_s-2018/trims/" target="_blank" > 2018 Model S Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_s-2019/trims/" target="_blank" > 2019 Model S Packages by Trim</a>  <br>
-<a href="https://www.tesla.com/sites/default/files/model_x_owners_manual_north_america_en.pdf" target="_blank" > Model X Manual PDF</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_x-2016/trims/" target="_blank" > 2016 Model X Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_x-2017/trims/" target="_blank" > 2017 Model X Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_x-2018/trims/" target="_blank" > 2018 Model X Packages by Trim</a>  <br>
-<a href="https://www.cars.com/research/tesla-model_x-2019/trims/" target="_blank" > 2019 Model X Packages by Trim</a>  <br>
+<a href="https://sites.google.com/site/teslamotorsclubwiki/home/model-s/options-by-year" target="_blank" > Model S Option Changes by year</a>  <br>
 </div>
 
 <div id="toyota_div" style="display:none; background-color:#fff;">
@@ -1286,6 +1268,15 @@ function tesla() {
 
 	//href="https://www.cars.com/research/tesla-model_3-2017/trims/" target="_blank
 };
+function teslam() {
+	var mdlad = aModel.replace(/ /g, "_");
+	window.open("https://www.tesla.com/sites/default/files/" + mdlad + "_owners_manual_north_america_en.pdf");
+
+	//<a href="https://www.tesla.com/sites/default/files/model_3_owners_manual_north_america_en.pdf" target="_blank" > Model 3 Manual PDF</a>  <br>
+};	
+	
+
+	
 function vwaudilane() {
 	window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin+"/4905414");
 };
