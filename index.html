@@ -1350,7 +1350,13 @@ function updatedisplay ( manu ) {
 
 
 function audivwwiki() {
-	window.open("http://mclaren722.herokuapp.com/VWvindownload?vin=" + vin);
+	if (vin.length === 17) {
+		window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin);
+	  	//window.open("http://mclaren722.herokuapp.com/VWvindownload?vin=" + vin);
+  	} else {
+       	alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
+  	};
+	
 };
 
 function autobrochures() {
