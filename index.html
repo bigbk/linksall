@@ -922,8 +922,7 @@ document.getElementById("btn_submit").onclick = function () {
 	}
 	vin = vin.toUpperCase();
 	document.getElementById("VINbar").value = vin;
-	
-	
+		
   if (vin.length === 17) {
 	  getNHTSADataByVIN(vin);
   } else {
@@ -1052,7 +1051,7 @@ if (vin.length >= 3) {
 			aMake = "TESLA"
 	}
 	
-	console.log(aMake);
+	console.log("typed " + aMake);
 	updatedisplay();
 };
 };
@@ -1129,6 +1128,7 @@ function getNHTSADataByVIN (param_vin) {
 		aBody= ""
 	};
 
+	    console.log("pulled " + aMake);
 	document.getElementById("iyear").value = aYear;
 	document.getElementById("imake").value = aMake;
 	document.getElementById("imodel").value = aModel;
@@ -1142,6 +1142,7 @@ function getNHTSADataByVIN (param_vin) {
  	
 	document.getElementById("output").innerText = aYear + " " + aMake + " " + aModel + " " + aSeries + " " + aTrim + ", "+ aDisp + " " + aFuel + ", " + aCyl + " \n " + aDoor + aCab + " " + aBody + ", " + aDrive  + " \r\n ";
 	document.getElementById("outputbox").style.display = 'block';  
+	    
     displayNHTSAResults(result);
 		
     },
