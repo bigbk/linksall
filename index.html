@@ -82,7 +82,7 @@
 		 
 		<div class="col-9 order-2 order-sm-2" align="right" style="padding-right: 0px;">
 			<div class="input-group md-form form-sm form-2 pl-0 w-50">
-				<input name="VIN" id="VINbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="VIN - 17 Digits" aria-label="Search">
+				<input name="VIN" id="VINbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="VIN - 17 Digits" aria-label="Search" onchange="Call()">
 				<div class="input-group-append">
 					<button class="input-group-text amber lighten-3" style="background: #ffd51d;" id="btn_submit"><i class="fa fa-search text-grey" aria-hidden="true"></i></button>
 				</div>
@@ -142,7 +142,7 @@
 	</div>
 	
     <div class="col-md-6 order-md-2 order-1 order-sm-1">
-		<div id="loading" class="shadow p-3 rounded-0" style="z-index: 9; position: absolute; opacity: 0.9; top: 90px; margin-top: 20px; margin-bottom: 20px; background-color:#77c2e6; width: 100%text-align: center;">
+		<div id="loading" class="shadow p-3 rounded-0" style="z-index: 9; position: absolute; opacity: 1; top: 70px; margin-top: 20px; margin-bottom: 20px; background-color: #FFD51D;width: 100%text-align: center;">
 			<div class="spinner-grow" style="width: 1rem; height: 1rem;" role="status">
 				<span class="sr-only"></span>
 			</div>
@@ -888,6 +888,8 @@ document.getElementById("btn_submit").onclick = function () {
 	}
 	vin = vin.toUpperCase();
 	document.getElementById("VINbar").value = vin;
+	
+	
   if (vin.length === 17) {
 	  getNHTSADataByVIN(vin);
   } else {
@@ -896,7 +898,31 @@ document.getElementById("btn_submit").onclick = function () {
 
 };
 
-
+function Call() {
+	vin = document.getElementById("VINbar").value;
+if (vin.length === 17) {
+	  
+  	vin = vin.replace(/ +/g, "");					      
+	if (vin[0] == '{') {
+	vin = vin.slice(1,-1);
+	}
+	vin = vin.toUpperCase();
+	//document.getElementById("VINbar").value = vin;
+	var secondmake = vin.substring(1,1);
+	var onetwomake = vin.substing(0,1);
+	var onethree = vin.sustring(0,2);
+	
+	if (secondmake == "C") {
+		if onetwomake == "SC" || onetwomake == "2C") {
+			aMake = "AUDI";
+		} else {
+			aMake = "CHRYSLER";
+		}
+		}
+	}
+	updatedisplay();
+	
+};
 
 function getNHTSADataByVIN (param_vin) {
   $.ajax({
