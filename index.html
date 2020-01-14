@@ -1142,7 +1142,7 @@ function getNHTSADataByVIN (param_vin) {
 		aBody= ""
 	};
 
-	    console.log("pulled " + aMake);
+	console.log("pulled " + aMake);
 	document.getElementById("iyear").value = aYear;
 	document.getElementById("imake").value = aMake;
 	document.getElementById("imodel").value = aModel;
@@ -1189,7 +1189,7 @@ function displayNHTSAResults (param_data) {
 };
 	
 function updatedisplay ( manu ) {
-	if (manu !== "") {
+	if (manu != "") {
 		aMake = manu;
 		document.getElementById("txt_results").value = "Search VIN to retrieve details";
 		document.getElementById("output").innerText = "Search VIN to retrieve details";
