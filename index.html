@@ -932,6 +932,7 @@ document.getElementById("btn_submit").onclick = function () {
   };
 };
 
+	
 function Call() {
 	vin = document.getElementById("VINbar").value;
 if (vin.length >= 3) {
@@ -940,10 +941,12 @@ if (vin.length >= 3) {
 	
 	if (vin[0] == '{') {
 	vin = vin.slice(1,-1);
+		
 	}
 	
-	vin = vin.toUpperCase ();
-	//document.getElementById("VINbar").value = vin;
+	vin = vin.toUpperCase();
+	document.getElementById("VINbar").value = vin;
+	
 	var secondmake = vin.substring(1, 2);
 	var onetwomake = vin.substring(0, 2);
 	var onethree = vin.substring(0, 3);
