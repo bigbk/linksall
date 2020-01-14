@@ -916,7 +916,7 @@ document.getElementById("btn_submit").onclick = function () {
 
 function Call() {
 	vin = document.getElementById("VINbar").value;
-if (vin.length === 17) {
+if (vin.length >= 3) {
 	  
   	vin = vin.replace(/ +/g, "");					      
 	
@@ -1017,6 +1017,22 @@ if (vin.length === 17) {
 	
 	if (onetwomake == "SA") {
 			aMake = "LAND ROVER"
+	}
+	
+	if (onetwomake == "1Y") {
+			aMake = "MAZDA"
+	}
+	
+	if (onetwomake == "55" || onetwomake == "WD") {
+			aMake = "MERCEDES BENZ"
+	}
+	
+	if (onetwomake == "JF" || onetwomake == "4S") {
+			aMake = "SUBARU"
+	}
+	
+	if (onetwomake == "5Y") {
+			aMake = "TESLA"
 	}
 	
 	console.log(aMake);
