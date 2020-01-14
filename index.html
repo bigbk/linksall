@@ -895,7 +895,6 @@ document.getElementById("btn_submit").onclick = function () {
   } else {
        alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
   };
-
 };
 
 function Call() {
@@ -908,7 +907,7 @@ if (vin.length === 17) {
 	vin = vin.slice(1,-1);
 	}
 	
-	vin = vin.toUpperCase();
+	vin = vin.toUpperCase ();
 	//document.getElementById("VINbar").value = vin;
 	var secondmake = vin.substring(1,1);
 	var onetwomake = vin.substing(0,1);
@@ -923,7 +922,7 @@ if (vin.length === 17) {
 		
 	}
 	updatedisplay();
-	
+};
 };
 
 function getNHTSADataByVIN (param_vin) {
