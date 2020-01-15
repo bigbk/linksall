@@ -1550,6 +1550,7 @@ function tesla() {
 	} else {
 		aYear = prompt("What year is the vehicle?");
 		aModel = prompt("What model is the vehicle? (Enter only X, 3, S, ...");
+		aModel = "MODEL-" + aModel;
 		var mdlad = aModel.replace(/ /g, "_");
 		mdlad = mdlad.toLowerCase();
 		window.open("https://www.cars.com/research/" + "tesla" + "-" + mdlad + "-" + aYear + "/trims/");
@@ -1568,6 +1569,7 @@ function teslam() {
 	};
 	} else {
 		aModel = prompt("What model is the vehicle? (Enter only X, 3, S, ...");
+		aModel = "MODEL-" + aModel;
 		var mdlad = aModel.replace(/ /g, "_");
 		mdlad = mdlad.toLowerCase();
 		window.open("https://www.tesla.com/sites/default/files/" + mdlad + "_owners_manual_north_america_en.pdf");
