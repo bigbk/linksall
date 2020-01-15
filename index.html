@@ -1538,7 +1538,7 @@ function subaru() {
 	};
 };
 function tesla() {
-	if (aModel !== "" && aModel !== null && aMake !== "" && aMake !== null && aYear !== "" && aYear !== null) {
+	if (aModel !== "" && typeof aModel !== 'undefined' && aMake !== "" && typeof aMake !== 'undefined' && aYear !== "" && typeof aYear !== 'undefined') {
 	if (aModel.substring(0, 5) === "MODEL") {
 	//mdlad = mdlad.toLowerCase();
 	var mdlad = aModel.replace(/ /g, "_");
