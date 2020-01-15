@@ -1478,15 +1478,24 @@ function subaru() {
 	window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode=" + vin);
 };
 function tesla() {
+	if (aModel.substring(0, 5) === "MODEL") {
+	//mdlad = mdlad.toLowerCase();
 	var mdlad = aModel.replace(/ /g, "_");
 	window.open("https://www.cars.com/research/" + aMake + "-" + mdlad + "-" + aYear + "/trims/");
+	} else {
+		alert ("Click on search icon to retrieve VIN details first");
+	};
 
 	//href="https://www.cars.com/research/tesla-model_3-2017/trims/" target="_blank
 };
 function teslam() {
+	if (aModel.substring(0, 5) === "MODEL") {
 	var mdlad = aModel.replace(/ /g, "_");
 	mdlad = mdlad.toLowerCase();
 	window.open("https://www.tesla.com/sites/default/files/" + mdlad + "_owners_manual_north_america_en.pdf");
+	} else {
+		alert ("Click on search icon to retrieve VIN details first");
+	};
 
 	//<a href="https://www.tesla.com/sites/default/files/model_3_owners_manual_north_america_en.pdf" target="_blank" > Model 3 Manual PDF</a>  <br>
 };	
@@ -1494,7 +1503,13 @@ function teslam() {
 
 	
 function vwaudilane() {
-	window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin+"/4905414");
+	if (vin.length === 17) {
+		window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin+"/4905414");
+	  	//window.open("http://mclaren722.herokuapp.com/VWvindownload?vin=" + vin);
+  	} else {
+       	alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
+  	};
+	
 };
 
 
