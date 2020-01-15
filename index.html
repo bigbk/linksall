@@ -327,7 +327,7 @@
 <a href="http://www.bimmerfile.com/wp-content/uploads/2008/02/2008-online-ordering-guide.pdf" target="_blank" >2008 BMW Combined PDF</a>
 <a href="http://www.autospies.com/images/users/Agent001/CompleteOrderGuide.pdf" target="_blank" >2007 BMW Combined PDF</a><br>
 <a href="https://www.autoevolution.com/mini/" target="_blank" >MINI Production Models</a><br>
-<span align="left"> <input size="4" placeholder="Year" id="year" type="text"><input size="12" placeholder="Model" id="model" type="text"> </span>
+<span align="left"> <input size="4" placeholder="Year" id="myear" type="text"><input size="12" placeholder="Model" id="mmodel" type="text"> </span>
 <a class="btn " style="background-color:#ffd51d; color:#003366;" onclick="miniog()"> MINI Guide Search</a>
 	
 	<br>
@@ -1467,6 +1467,7 @@ function lexlist() {
 };
 
 function miniog() {
+	if ( myear === null || typeof myear === 'undefined') {
 	if ( aYear !== "" && aModel !== ""  && typeof aModel !== 'undefined'  && typeof aYear !== 'undefined' ) {
 	var srch = aYear + " +" + aModel;
 	window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
@@ -1474,6 +1475,9 @@ function miniog() {
 		aYear = prompt("What year is the vehicle?");
 		aModel = prompt("What model is the vehicle?");
 		var srch = aYear + " +" + aModel;
+		window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
+	} else {
+		var srch = myear + " +" + mmodel;
 		window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
 	};
 };
