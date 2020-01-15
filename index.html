@@ -1468,23 +1468,6 @@ function lexlist() {
 	};
 };
 
-function miniog() {
-	if ( myear === null || typeof myear === 'undefined') {
-	if ( aYear !== "" && aModel !== ""  && typeof aModel !== 'undefined'  && typeof aYear !== 'undefined' ) {
-	var srch = aYear + " +" + aModel;
-	window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
-	} else {
-		aYear = prompt("What year is the vehicle?");
-		aModel = prompt("What model is the vehicle?");
-		var srch = aYear + " +" + aModel;
-		window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
-	}; 
-	} else {
-		var srch = document.getElementById("myear").value + " +" + document.getElementById("mmodel").value;
-		window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
-	};
-};
-
 function manheimmmr() {
 	if (vincheckin()) {
 	window.open("https://mmr.manheim.com/?WT.svl=m_hdr_mnav_buy_mmr&country=US&popup=true&source=man&vin=" + vin);
@@ -1509,6 +1492,23 @@ function mazdabtn2() {
 	};
 };
 
+function miniog() {
+	if (document.getElementById("myear").value === "") {
+	if ( aYear !== "" && aModel !== ""  && typeof aModel !== 'undefined'  && typeof aYear !== 'undefined' ) {
+	var srch = aYear + " +" + aModel;
+	window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
+	} else {
+		aYear = prompt("What year is the vehicle?");
+		aModel = prompt("What model is the vehicle?");
+		var srch = aYear + " +" + aModel;
+		window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
+	}; 
+	} else {
+		var srch = document.getElementById("myear").value + " +" + document.getElementById("mmodel").value;
+		window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
+	};
+};
+	
 function mitsbtn() {
 	if (vincheckin()) {
 	window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
