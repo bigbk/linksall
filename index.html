@@ -1348,14 +1348,20 @@ function updatedisplay ( manu ) {
 };
 
 <!-- MANUFACTURER LINKS  -->
-
+function vincheckin() {
+	if (vin.length === 17) {
+		return true;
+	} else {
+		alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
+		return false;
+	};
+};
+	
 
 function audivwwiki() {
-	if (vin.length === 17) {
+	if (vincheckin()) {
 		window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin);
 	  	//window.open("http://mclaren722.herokuapp.com/VWvindownload?vin=" + vin);
-  	} else {
-       	alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
   	};
 	
 };
