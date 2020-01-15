@@ -1367,7 +1367,7 @@ function vincheckin() {
 //};
 
 function autobrochures() {
-	if (aMake !== "" ) {
+	if (aMake !== ""  && aMake !== null ) {
 	window.open(" http://www.auto-brochures.com/"+aMake+".html");
 	} else {
 	window.open(" http://www.auto-brochures.com/");
@@ -1467,7 +1467,7 @@ function lexlist() {
 };
 
 function miniog() {
-	if ( aYear !== "" && aModel !== "") {
+	if ( aYear !== "" && aModel !== ""  && aModel !== null  && aYear !== null ) {
 	var srch = aYear + " +" + aModel;
 	window.open("https://www.google.com/search?q=" + srch + " +ordering+guide+site%3Aminimedia.iconicweb.com");
 	} else {
@@ -1538,7 +1538,7 @@ function subaru() {
 	};
 };
 function tesla() {
-	if (aModel !== "" ) {
+	if (aModel !== "" && aModel !== null && aMake !== "" && aMake !== null && aYear !== "" && aYear !== null) {
 	if (aModel.substring(0, 5) === "MODEL") {
 	//mdlad = mdlad.toLowerCase();
 	var mdlad = aModel.replace(/ /g, "_");
@@ -1551,7 +1551,7 @@ function tesla() {
 	//href="https://www.cars.com/research/tesla-model_3-2017/trims/" target="_blank
 };
 function teslam() {
-	if (aModel !== "" ) {
+	if (aModel !== "" && aModel !== null  ) {
 	if (aModel.substring(0, 5) === "MODEL") {
 	var mdlad = aModel.replace(/ /g, "_");
 	mdlad = mdlad.toLowerCase();
