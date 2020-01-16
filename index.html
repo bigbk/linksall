@@ -964,7 +964,10 @@ function Call() {
 	
 	if (vin[0] == '{') {
 	vin = vin.slice(1,-1);
-		
+	
+	if (vin.length == 17) {
+		getNHTSADataByVIN(vin);
+	};
 	}
 	
 	vin = vin.toUpperCase();
@@ -978,7 +981,7 @@ function Call() {
 		
 	
 	document.getElementById("txt_results").value = "Click on Search icon to retrieve details";
-	document.getElementById("output").innerText = "Click on Search icon to retrieve details";
+ 	document.getElementById("output").innerText = "Click on Search icon to retrieve details." + Environment.NewLine + "VIN number should be 17 digits long, currently " + vin.length + " digits entered.";
 	
 	var secondmake = vin.substring(1, 2);
 	var onetwomake = vin.substring(0, 2);
