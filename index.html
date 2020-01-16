@@ -153,12 +153,12 @@ body {
 	</div>
 	
     <div class="col-md-6 order-md-2 order-1 order-sm-1">
-		<div id="loading" class="shadow p-3 rounded-0" style="z-index: 9; position: absolute; opacity: 1; top: 70px; margin-top: 20px; margin-bottom: 20px; background-color: #FFD51D;width: 100%text-align: center;">
+		<!--<div id="loading" class="shadow p-3 rounded-0" style="z-index: 9; position: absolute; opacity: 1; top: 70px; margin-top: 20px; margin-bottom: 20px; background-color: #FFD51D;width: 100%text-align: center;">
 			<div class="spinner-grow" style="width: 1rem; height: 1rem;" role="status">
 				<span class="sr-only"></span>
 			</div>
 			Please wait while VIN details are being pulled from NHTSA. If their server is down or this process takes longer than 10 seconds, you can use the Manual Selection menu on the upper left corner to retrieve manufacturer specific links. 
-		</div>
+		</div>  -->
 
 		<br>
 		<!--<p>
@@ -919,16 +919,16 @@ body {
 	var aCyl;
 	var manu = "";
 	
-var $loading = $('#loading').hide();
-$( document ).ajaxStart(function() {
-	console.log("loading");
-    $( "#loading" ).show();
-});
+//var $loading = $('#loading').hide();
+//$( document ).ajaxStart(function() {
+//	console.log("loading");
+//    $( "#loading" ).show();
+//});
 
-$( document ).ajaxStop(function() {
-	console.log("loaded");
-    $( "#loading" ).hide();
-});
+//$( document ).ajaxStop(function() {
+//	console.log("loaded");
+//    $( "#loading" ).hide();
+//});
 
 
 	
