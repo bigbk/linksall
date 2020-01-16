@@ -970,12 +970,7 @@ function Call() {
 	vin = vin.toUpperCase();
 	document.getElementById("VINbar").value = vin;
 		
-	/* copy to clipboard*/
-  	var copyText = document.getElementById("VINbar");
-	copyText.select();
-	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-  	document.execCommand("copy");
-	
+
 	console.log(vin.length);
 		
 	
@@ -1097,6 +1092,11 @@ function Call() {
 	updatedisplay();
 	console.log(vin.length);
 	if (vin.length === 17) {
+		/* copy to clipboard*/
+  		var copyText = document.getElementById("VINbar");
+		copyText.select();
+		copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  		document.execCommand("copy");
 		getNHTSADataByVIN(vin);
 	};
 };
