@@ -979,6 +979,7 @@ function Call() {
 	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   	document.execCommand("copy");
 	copyText.blur();
+	copyText.focus();
 	
 	console.log(vin.length);
 		
