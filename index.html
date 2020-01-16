@@ -941,6 +941,12 @@ document.getElementById("btn_submit").onclick = function () {
 	}
 	vin = vin.toUpperCase();
 	document.getElementById("VINbar").value = vin;
+	
+	/* copy to clipboard*/
+  	var copyText = document.getElementById("VINbar");
+	copyText.select();
+	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  	document.execCommand("copy");
 		
   if (vin.length === 17) {
 	  getNHTSADataByVIN(vin);
@@ -963,6 +969,13 @@ function Call() {
 	
 	vin = vin.toUpperCase();
 	document.getElementById("VINbar").value = vin;
+		
+	/* copy to clipboard*/
+  	var copyText = document.getElementById("VINbar");
+	copyText.select();
+	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  	document.execCommand("copy");
+		
 	
 	document.getElementById("txt_results").value = "Click on Search icon to retrieve details";
 	document.getElementById("output").innerText = "Click on Search icon to retrieve details";
