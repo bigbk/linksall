@@ -965,7 +965,7 @@ function Call() {
 	if (vin[0] == '{') {
 	vin = vin.slice(1,-1);
 	console.log(vin.length);
-	if (vin.length == 17) {
+	if (vin.length === 17) {
 		getNHTSADataByVIN(vin);
 	};
 	}
