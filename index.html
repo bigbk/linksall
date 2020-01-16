@@ -942,14 +942,15 @@ document.getElementById("btn_submit").onclick = function () {
 	vin = vin.toUpperCase();
 	document.getElementById("VINbar").value = vin;
 	
+
+		
+  if (vin.length === 17) {
 	/* copy to clipboard*/
   	var copyText = document.getElementById("VINbar");
 	copyText.select();
 	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   	document.execCommand("copy");
-		
-  if (vin.length === 17) {
-	  getNHTSADataByVIN(vin);
+	getNHTSADataByVIN(vin);
   } else {
        alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
   };
@@ -964,10 +965,6 @@ function Call() {
 	
 	if (vin[0] == '{') {
 	vin = vin.slice(1,-1);
-//	console.log(vin.length);
-//	if (vin.length === 17) {
-//		getNHTSADataByVIN(vin);
-//	};
 	}
 	
 	vin = vin.toUpperCase();
@@ -978,8 +975,6 @@ function Call() {
 	copyText.select();
 	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   	document.execCommand("copy");
-	copyText.blur();
-	copyText.focus();
 	
 	console.log(vin.length);
 		
@@ -1100,6 +1095,10 @@ function Call() {
 	
 	console.log("typed " + aMake);
 	updatedisplay();
+	console.log(vin.length);
+	if (vin.length === 17) {
+		getNHTSADataByVIN(vin);
+	};
 };
 };
 
