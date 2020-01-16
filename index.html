@@ -978,7 +978,8 @@ function Call() {
 	copyText.select();
 	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   	document.execCommand("copy");
-		
+	
+	console.log(vin.length);
 	document.getElementById("VINbar").value = vin;
 		
 	
