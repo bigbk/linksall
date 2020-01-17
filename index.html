@@ -1158,7 +1158,9 @@ function getNHTSADataByVIN (param_vin) {
 		aTrim = ""
 	};
 	if ( result.Results[0].DisplacementL !== "")  { 
-		aDisp = result.Results[0].DisplacementL.toFixed(1) + "L"
+		aDisp = result.Results[0].DisplacementL;
+		aDisp = aDisp.toFixed(1);
+		aDisp = aDisp + "L";
 	} else {
 		aDisp = ""
 	};
