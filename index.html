@@ -782,8 +782,10 @@ body {
 				</div>	
 			</div>
 	
-			<br><a href="#" id="decoderzbutton" onclick="decoderz()" role="button" aria-pressed="true"> Vin Decoderz, Use Caution</a>
-	
+			<br>
+			
+			<a href="#" id="decoderzbutton" onclick="decoderz()" role="button" aria-pressed="true"> Vin Decoderz, Use Caution</a>
+			<a href="#" target="_blank" onclick="hitcher()" role="button" aria-pressed="true"> e-Trailer direct link for tow hitch info</a>
 
 
 </div>
@@ -1633,6 +1635,11 @@ function vwaudilane() {
 	
 };
 
+function hitcher() {
+	if (aModel !== "" && typeof aModel !== 'undefined' ) {
+	window.open("https://www.etrailer.com/hitch-" + aYear + "_" + aMake + "_" + aModel + ".htm");
+	};
+};
 
 // jquery to check checkboxes
     $(document).ready(function() {
