@@ -243,7 +243,9 @@ function bmwlane() {
 
 function chrysler() {
 	if (vincheckin()) {
-	window.open("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
+	//window.open("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
+	var vinlink = "https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin;
+	copyToClipboard(vinlink);
 	};
 };
 
