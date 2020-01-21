@@ -840,7 +840,7 @@ document.getElementById("btn_submit").onclick = function () {
 	
 	copyToClipboard(vin);
 	/* copy to clipboard*/
-  	//var copyText = document.getElementById("VINbar");
+  	var copyText = document.getElementById("VINbar");
 	//copyText.select();
 	//copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   	//document.execCommand("copy");
@@ -849,7 +849,7 @@ document.getElementById("btn_submit").onclick = function () {
 	//outfocus.focus();
 	//outfocus.select();
 	//outfocus.setSelectionRange(0, 99999);
-	//copyText.focus();
+	copyText.focus();
 	 
 	getNHTSADataByVIN(vin);
 	  
@@ -1010,7 +1010,7 @@ function Call() {
 	if (vin.length === 17) {
 		copyToClipboard(vin);
 		/* copy to clipboard*/
-  		//var copyText = document.getElementById("VINbar");
+  		var copyText = document.getElementById("VINbar");
 		//copyText.select();
 		//copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   		//document.execCommand("copy");
@@ -1019,7 +1019,7 @@ function Call() {
 		//outfocus.focus();
 		//outfocus.select();
 		//outfocus.setSelectionRange(0, 99999);
-		//copyText.focus();
+		copyText.focus();
 		
 		getNHTSADataByVIN(vin);
 	};
