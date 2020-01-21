@@ -831,7 +831,14 @@ document.getElementById("btn_submit").onclick = function () {
 	copyText.select();
 	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   	document.execCommand("copy");
+	  
+	var outfocus =document.getElementById("decoderzbutton");
+	outfocus.select();
+	outfocus.setSelectionRange(0, 99999);
+	copyText.focus();
+	 
 	getNHTSADataByVIN(vin);
+	  
   } else {
        alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
   };
@@ -992,6 +999,12 @@ function Call() {
 		copyText.select();
 		copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   		document.execCommand("copy");
+		
+		var outfocus =document.getElementById("decoderzbutton");
+		outfocus.select();
+		outfocus.setSelectionRange(0, 99999);
+		copyText.focus();
+		
 		getNHTSADataByVIN(vin);
 	};
 };
