@@ -37,6 +37,7 @@
       
       <!-- ---new links inserted here -->
         <a href="http://pdfviewer.softgateon.net/" target="_blank" role="button" aria-pressed="true">PDF Viewer</a>
+	    <a href="#" target="_blank" role="button" aria-pressed="true" onclick="chrysler()">Chrysler link</a>
 
       
       <!-- ------------------------------------------------ --> 
@@ -248,7 +249,9 @@ function chrysler() {
 
 function chryslerlist() {
 	if (vincheckin()) {
-	window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
+	//window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
+	var vinlink = "http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin;
+	copyToClipboard(vinlink);
 	};
 };
 
