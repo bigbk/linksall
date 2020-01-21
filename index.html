@@ -833,6 +833,7 @@ document.getElementById("btn_submit").onclick = function () {
   	document.execCommand("copy");
 	  
 	var outfocus =document.getElementById("iyear");
+	outfocus.focus();
 	outfocus.select();
 	outfocus.setSelectionRange(0, 99999);
 	copyText.focus();
@@ -1001,6 +1002,7 @@ function Call() {
   		document.execCommand("copy");
 		
 		var outfocus =document.getElementById("iyear");
+		outfocus.focus();
 		outfocus.select();
 		outfocus.setSelectionRange(0, 99999);
 		copyText.focus();
