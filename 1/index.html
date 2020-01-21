@@ -35,9 +35,11 @@
       
       <!-- ---new links inserted here -->
         <a href="http://pdfviewer.softgateon.net/" target="_blank" role="button" aria-pressed="true">PDF Viewer</a>
-	    <a href="#" target="_blank" role="button" aria-pressed="true" onclick="chrysler()">Chrysler link</a>
-	    <a href="#" target="_blank" role="button" aria-pressed="true" onclick="vwaudilane()">Audi Link</a>
-	    <a href="#" target="_blank" role="button" aria-pressed="true" onclick="fordwiki()">Ford Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="chrysler()">Chrysler link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="vwaudilane()">Audi Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="fordwiki()">Ford Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="hyunwiki()">Hyundai Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="kiabtn2()">Hyundai Link</a>
 
       
       <!-- ------------------------------------------------ --> 
@@ -298,7 +300,9 @@ function honda() {
 
 function hyunwiki() {
 	if (vincheckin()) {
-	window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
+		//window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
+		var vinlink = "http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin;
+		copyToClipboard(vinlink);
 	};
 };
 
@@ -324,7 +328,9 @@ function infinititrm() {
 
 function kiabtn2() {
 	if (vincheckin()) {
-	window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
+		//window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
+		var vinlink = "https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin;
+		copyToClipboard(vinlink);
 	};
 };
 
@@ -354,7 +360,9 @@ function mazdabtn() {
 
 function mazdabtn2() {
 	if (vincheckin()) {
-	window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin=" + vin+"&pc=SIMULCAST_MZ&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1");
+	//window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin=" + vin+"&pc=SIMULCAST_MZ&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1");
+		var vinlink = "https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&pc=SIMULCAST_MZ&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1&vin=" + vin;
+		copyToClipboard(vinlink);
 	};
 };
 
@@ -377,7 +385,9 @@ function miniog() {
 	
 function mitsbtn() {
 	if (vincheckin()) {
-	window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
+		//window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
+		var vinlink = "https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin;
+		copyToClipboard(vinlink);
 	};
 };
 
