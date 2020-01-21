@@ -811,7 +811,18 @@ body {
 //    $( "#loading" ).hide();
 //});
 
-
+function copyToClipboard(text) {
+    var dummy = document.createElement("textarea");
+    // to avoid breaking orgain page when copying more words
+    // cant copy when adding below this code
+    // dummy.style.display = 'none'
+    document.body.appendChild(dummy);
+    //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+}
 	
 document.getElementById("btn_submit").onclick = function () {
   //var vin;
@@ -826,11 +837,13 @@ document.getElementById("btn_submit").onclick = function () {
 
 		
   if (vin.length === 17) {
+	
+	copyToClipboard(vin);
 	/* copy to clipboard*/
-  	var copyText = document.getElementById("VINbar");
-	copyText.select();
-	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-  	document.execCommand("copy");
+  	//var copyText = document.getElementById("VINbar");
+	//copyText.select();
+	//copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  	//document.execCommand("copy");
 	  
 	//var outfocus =document.getElementById("iyear");
 	//outfocus.focus();
@@ -995,11 +1008,12 @@ function Call() {
 	updatedisplay();
 	console.log(vin.length);
 	if (vin.length === 17) {
+		copyToClipboard(vin);
 		/* copy to clipboard*/
-  		var copyText = document.getElementById("VINbar");
-		copyText.select();
-		copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-  		document.execCommand("copy");
+  		//var copyText = document.getElementById("VINbar");
+		//copyText.select();
+		//copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  		//document.execCommand("copy");
 		
 		//var outfocus =document.getElementById("iyear");
 		//outfocus.focus();
