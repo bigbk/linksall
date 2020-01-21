@@ -483,6 +483,22 @@ body {
           </div>
         </div>
         <br>
+        <div class="card-deck">
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="infinititrm()">
+            <div class="card-body">
+              <h4 class="card-title">Trim Level</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+              <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
+              <a href="#" title="Enter vin for recall information, which also lists trim the level" target="_blank" class="card-link">Retrieve</a> </div>
+          </div>
+          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+            </div>
+          </div>
+        </div>
+        <br>
       </div>
 	    
       <div id="kia_div" style="display:none; background-color:#fff;"> <br>
@@ -650,6 +666,22 @@ body {
               <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
               <p class="card-text">You can obtain the window sticker by editing the attribute to replace the existing vin</p>
               <a href="https://www.nissanusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Versa%20Sedan&location%5B%5D=%5B39.3949598%2C-76.3984537%5D" target="_blank" class="card-link">Visit</a> </div>
+          </div>
+        </div>
+        <br>
+        <div class="card-deck">
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="nissantrm()">
+            <div class="card-body">
+              <h4 class="card-title">Trim Level</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+              <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
+              <a href="#" title="Enter vin for recall information, which also lists trim the level" target="_blank" class="card-link">Retrieve</a> </div>
+          </div>
+          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+            </div>
           </div>
         </div>
         <br>
@@ -1419,6 +1451,12 @@ function infiniti() {
 	}, 1500);
 	};
 };
+	
+function infinititrm() {
+	if (vincheckin()) {
+	window.open("https://www.infinitiusa.com/recalls-vin/#/#/Results/" + vin);
+	};
+};
 
 //function kia() {
 	//window.open(" http://www.kia.com/us/en/data/owners/recalls/search/" + vin);
@@ -1493,6 +1531,12 @@ function nissan() {
 	};
 };
 
+function nissantrm() {
+	if (vincheckin()) {
+	window.open("https://www.nissanusa.com/recalls-vin/#/#/Results/" + vin);
+	};
+};
+	
 function porwiki() {
 	if (vincheckin()) {
 	window.open("https://vinanalytics.com/car/" + vin + "/" + vin +".pdf");
