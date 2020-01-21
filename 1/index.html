@@ -453,20 +453,6 @@ function hitcher() {
 	};
 };
 
-// jquery to check checkboxes
-    $(document).ready(function() {
-	document.getElementById("kmxbutton").onclick = function () {
-            var favorite = [];
-            $.each($("input[name='options']:checked"), function(){            
-                favorite.push($(this).val());
-            });
-		if (document.getElementById("icyl").value !== "") {
-			var tcyl = "cylinders-" + document.getElementById("icyl").value;
-		
-		};
-		window.open("https://www.carmax.com/cars"  + "/" + document.getElementById("iyear").value + "/" + document.getElementById("imake").value + "/" + document.getElementById("imodel").value  + "/" + document.getElementById("itrim").value + "/" + tcyl + "/" + favorite.join("/") + "?zip=21162&sort=4&distance=all");
-        }; 
-    });	
 	
 	
 	
@@ -478,11 +464,7 @@ var input13 = document.getElementById("VINbar");
 			document.getElementById("btn_submit").click();
 		}
 	});
-	
-$(document).mousemove(function(e){
-    $("#dancebk").stop().animate({left:e.pageX + 8, top:e.pageY + 15});
-});
-	
+
 </script>
 </body>
 </html>
