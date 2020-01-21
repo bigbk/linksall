@@ -871,9 +871,8 @@ document.getElementById("btn_submit").onclick = function () {
   //var vin;
   vin = document.getElementById("VINbar").value;
 	vin = vin.replace(/ +/g, "");					      
-	if (vin[0] == '{') {
-	vin = vin.slice(1,-1);
-	}
+	vin = vin.replace(/{/g, "");
+	vin = vin.replace(/}/g, "");
 	vin = vin.toUpperCase();
 	document.getElementById("VINbar").value = vin;
 	
@@ -907,10 +906,8 @@ function Call() {
 	if (vin.length >= 3) {
 	  
   	vin = vin.replace(/ +/g, "");					      
-	
-	if (vin[0] == '{') {
-	vin = vin.slice(1,-1);
-	}
+	vin = vin.replace(/{/g, "");
+	vin = vin.replace(/}/g, "");
 	
 	vin = vin.toUpperCase();
 	document.getElementById("VINbar").value = vin;
