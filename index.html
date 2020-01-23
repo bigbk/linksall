@@ -1548,7 +1548,7 @@ function subaru() {
 	if (vincheckin()) {
 
 	  $.ajax({
-    		url: "https://www.subaru.com/services/utility/vindata?vin=",
+    		url: "https://www.subaru.com/services/utility/vindata/",
     		type: "POST",
     		data: { format: "json", data: vin },
     		dataType: "json",
