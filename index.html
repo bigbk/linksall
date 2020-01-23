@@ -728,10 +728,10 @@ body {
           </div>
         </div>
         <br>
-	<div id="subaru_data" style="display:block; background-color:#fff;" align="center"> <br>
+	<!--<div id="subaru_data" style="display:block; background-color:#fff;" align="center"> <br>
         <textarea id="subaru_results" rows="6" cols="60" placeholder="Vehicle Data Presented Here"></textarea>
 	</div>
-	<br>      
+	<br> -->      
       </div>
 	    
       <div id="tesla_div" style="display:none; background-color:#fff;"> <br>
@@ -1547,7 +1547,7 @@ function porwiki() {
 function subaru() {
 	if (vincheckin()) {
 
-	  $.ajax({
+	  /*$.ajax({
     		url: "https://www.subaru.com/services/utility/vindata/",
     		type: "POST",
     		data: { format: "json", data: vin },
@@ -1577,7 +1577,7 @@ function subaru() {
     	}
  	});
 
-	
+	*/
 
 		
 	window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode=" + vin);
