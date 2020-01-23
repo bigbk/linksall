@@ -728,6 +728,10 @@ body {
           </div>
         </div>
         <br>
+	<div id="subaru_data" style="display:block; background-color:#fff;" align="center"> <br>
+        <textarea id="subaru_results" rows="6" cols="60" placeholder="Vehicle Data Presented Here"></textarea>
+	</div>
+	<br>      
       </div>
 	    
       <div id="tesla_div" style="display:none; background-color:#fff;"> <br>
@@ -1542,6 +1546,40 @@ function porwiki() {
 
 function subaru() {
 	if (vincheckin()) {
+
+	  $.ajax({
+    		url: "https://www.subaru.com/services/utility/vindata?vin=",
+    		type: "POST",
+    		data: { format: "json", data: vin },
+    		dataType: "json",
+    		success: function(result)
+    		{
+			console.log(result);
+			console.log("pulled specific " + aMake);
+	    
+    			var subaru_text = "";
+			for (var i = 0; i < result.Results.length; i++) {
+			var resultsub = result.Results[i];
+			for (var prop in resultsub) {
+				if (resultsub.hasOwnProperty(prop) && resultsub[prop] !== "") {
+					subaru_text += prop + ": " + resultsub[prop] + "\n";
+				}
+			}
+		}
+	
+	document.getElementById("subaru_results").value = subaru_text;
+		
+    	},
+    	error: function(xhr, ajaxOptions, thrownError)
+    	{
+        	console.log(xhr.status);
+       		console.log(thrownError);
+    	}
+ 	});
+
+	
+
+		
 	window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode=" + vin);
 	};
 };
