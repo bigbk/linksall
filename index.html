@@ -1032,7 +1032,7 @@ function Call() {
 			aMake = "MAZDA"
 	}
 	
-	if (onetwomake == "55" || onetwomake == "WD") {
+	if (onetwomake == "55" || onetwomake == "WD" || onetwomake == "WD") {
 			aMake = "MERCEDES-BENZ"
 	}
 	
@@ -1301,7 +1301,7 @@ function updatedisplay ( manu ) {
 		document.getElementById("mazda_div").style.display = 'none';
 	}
 	
-	if (aMake == "MERCEDES-BENZ") {
+	if (aMake == "MERCEDES-BENZ" || aMake == "SMART") {
 		document.getElementById("mb_div").style.display = 'block';
 	} else {
 		document.getElementById("mb_div").style.display = 'none';
