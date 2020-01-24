@@ -241,15 +241,15 @@ function getNHTSADataByVIN (param_vin) {
 		aBody= ""
 	};
 
-	    if (aMake="AUDI") {vwaudilane()}
-	    if (aMake="AUDI") {chrysler()}
-	    if (aMake="AUDI") {chryslerlist()}
-	    if (aMake="AUDI") {fordwiki()}
-	    if (aMake="AUDI") {hyunwiki()}
-	    if (aMake="AUDI") {kiabtn2()}
-	    if (aMake="AUDI") { mazdabtn2()}
-	    if (aMake="AUDI") {mitsbtn()}
-	    if (aMake="AUDI") {porwiki()}
+	    if (aMake == "AUDI" || aMake == "VOLKSWAGEN" || aMake == "BENTLEY") {vwaudilane()}
+	    if (aMake == "CHRYSLER" || aMake == "DODGE" || aMake == "JEEP" || aMake == "RAM" || aMake == "ALFA ROMEO" || aMake == "FIAT") {chrysler()}
+	    //if (aMake="AUDI") {chryslerlist()}
+	    if (aMake == "FORD" || aMake == "LINCOLN" || aMake == "MERCURY") {fordwiki()}
+	    if (aMake == "HYUNDAI"  || aMake == "GENESIS") {hyunwiki()}
+	    if (aMake="KIA") {kiabtn2()}
+	    if (aMake="MAZDA") { mazdabtn2()}
+	    if (aMake == "MITSUBISHI" || aMake == "SUZUKI") {mitsbtn()}
+	    if (aMake == "PORSCHE") {porwiki()}
 	    
 	console.log("pulled " + aMake);
 	displayNHTSAResults(result);
