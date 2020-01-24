@@ -35,15 +35,23 @@
       
       <!-- ---new links inserted here -->
         <a href="http://pdfviewer.softgateon.net/" target="_blank" role="button" aria-pressed="true">PDF Viewer</a>
-	    <a href="#" role="button" aria-pressed="true" onclick="chrysler()">Chrysler link</a>
+	    
 	    <a href="#" role="button" aria-pressed="true" onclick="vwaudilane()">Audi Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="chrysler()">Chrysler Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="chryslerlist()">Chrysler Equipment Link</a>
 	    <a href="#" role="button" aria-pressed="true" onclick="fordwiki()">Ford Link</a>
 	    <a href="#" role="button" aria-pressed="true" onclick="hyunwiki()">Hyundai Link</a>
-	    <a href="#" role="button" aria-pressed="true" onclick="kiabtn2()">Hyundai Link</a>
-
+	    <a href="#" role="button" aria-pressed="true" onclick="kiabtn2()">Kia Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick=" mazdabtn2()">Mazda Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="mitsbtn()">Mitsubishi Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="porwiki()">Porsche Link</a>
       
       <!-- ------------------------------------------------ --> 
-    </div>
+    	<br>
+	<div id="nhtsa_data" style="display:none; background-color:#fff;" align="center"> <br>
+        <textarea id="txt_results" rows="6" cols="60" placeholder="Vehicle Data Presented Here"></textarea>
+      	</div>
+	</div>
 </div>
    
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script> 
@@ -190,8 +198,18 @@ function getNHTSADataByVIN (param_vin) {
 		aBody= ""
 	};
 
+	    if (aMake="AUDI") {vwaudilane()}
+	    if (aMake="AUDI") {chrysler()}
+	    if (aMake="AUDI") {chryslerlist()}
+	    if (aMake="AUDI") {fordwiki()}
+	    if (aMake="AUDI") {hyunwiki()}
+	    if (aMake="AUDI") {kiabtn2()}
+	    if (aMake="AUDI") { mazdabtn2()}
+	    if (aMake="AUDI") {mitsbtn()}
+	    if (aMake="AUDI") {porwiki()}
+	    
 	console.log("pulled " + aMake);
-	
+	displayNHTSAResults(result);
   
 		
     },
@@ -203,7 +221,25 @@ function getNHTSADataByVIN (param_vin) {
   });
 };
 
+function displayNHTSAResults (param_data) {
+	var output_text = "";
+	for (var i = 0; i < param_data.Results.length; i++) {
+		var result = param_data.Results[i];
+		for (var prop in result) {
+			if (result.hasOwnProperty(prop) && result[prop] !== "") {
+				output_text += prop + ": " + result[prop] + "\n";
+			}
+		}
+	}
 	
+	document.getElementById("txt_results").value = output_text;
+
+	document.getElementById("nhtsa_data").style.display = 'block';
+	
+	
+	
+
+};	
 
 <!-- MANUFACTURER LINKS  -->
 function vincheckin() {
@@ -409,7 +445,9 @@ function nissantrm() {
 	
 function porwiki() {
 	if (vincheckin()) {
-	window.open("https://vinanalytics.com/car/" + vin + "/" + vin +".pdf");
+	//window.open("https://vinanalytics.com/car/" + vin + "/" + vin +".pdf");
+	var vinlink = "https://vinanalytics.com/car/" + vin + "/" + vin +".pdf";
+	copyToClipboard(vinlink);
 	};
 };
 
