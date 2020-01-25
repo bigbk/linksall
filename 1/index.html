@@ -190,8 +190,8 @@
             Quagga.onDetected(function (result) {
 		    document.getElementById("VINbar").value = result.codeResult.code;
                 console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
-		    Quagga.stop();
-		    document.getElementById("scanner-container").innerHTML = "";
+		    //Quagga.stop();
+		    //document.getElementById("scanner-container").innerHTML = "";
             });
         }
 
