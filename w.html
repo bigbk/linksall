@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+        /* In order to place the tracking correctly */
+        canvas.drawing, canvas.drawingBuffer {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+ </style>
+	
+<title>VIN Research Links</title>
+<style type="text/css"></style>
+<style>
+
+</style>
+<script type="text/javascript"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Chivo:400,700,900|Signika+Negative:300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="prism.css" />	
+	
+</head>
+
+<body style="background-color:#003366;">
+
+
+
+<div id="scanner-container"></div>
+<form>
+<div class="input-field">
+<!-- <label for="isbn_input">EAN:</label>
+<input id="isbn_input" class="isbn" type="text" /> -->
+<input type="button" class="icon-barcode button scan" id="btn" value="Start/Stop the scanner" />
+</div>
+</form>
+	
+<div class="container shadow p-3 rounded-0" style="background-color: #fff; opacity: 0.98;">
+  <div class="row" style="padding-left: 0px; padding-top: 5px; padding-bottom: 5px; background-color:#003366;">
+
+      <div class="input-group md-form form-sm form-2 pl-0 w-50">
+        <input name="VIN" id="VINbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="Stock# - 8 Digits" aria-label="Search" >
+        <div class="input-group-append">
+          <button class="input-group-text amber lighten-3" style="background: #ffd51d;" id="btn_submit"><i class="fa fa-search text-grey" aria-hidden="true"></i></button>
+        </div>
+      </div>
+  </div>
+	
+  <div class="row">
+    <div class="col-md-3 order-md-1 order-3 order-sm-3"> 
+      
+      <!-- ---new links inserted here -->
+
+    
+
+	    <a href="#" role="button" aria-pressed="true" onclick="mitsbtn()">PREVIOUS Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="porwiki()">NEXT Link</a>
+	    <br>
+  
+	    <br>
+
+	    <!-- ----------------------------------------------- -->
+	    
+
+
+
+	    
+	    
+      
+      <!-- ------------------------------------------------ --> 
+    	<br>
+	<div id="nhtsa_data" style="display:none; background-color:#fff;" align="center"> <br>
+        <textarea id="txt_results" rows="6" cols="60" placeholder="Vehicle Data Presented Here"></textarea>
+      	</div>
+	</div>
+</div>
+
+
+	
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+	
+
+<script>	
+	
+var input13 = document.getElementById("VINbar");
+	
+	input13.addEventListener("keyup", function(event) {
+		if (event.keyCode === 13) {
+			event.preventDefault();
+			document.getElementById("btn_submit").click();
+		}
+	});
+	
+function copyToClipboard(text) {
+    var dummy = document.createElement("textarea");
+    // to avoid breaking orgain page when copying more words
+    // cant copy when adding below this code
+    // dummy.style.display = 'none'
+    document.body.appendChild(dummy);
+    //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+}
+
+</script>
+</body>
+</html>
