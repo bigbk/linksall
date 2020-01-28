@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	
-<title>Wholesale Images</title>
+<title>Vehicle Images</title>
 <style type="text/css"></style>
 <style>
 
@@ -21,8 +21,6 @@
 
 <body style="background-color:#003366;">
 
-
-
 	
 <div class="container shadow p-3 rounded-0" style="background-color: #fff; opacity: 0.98;">
   <div class="row" style="padding-left: 0px; padding-top: 5px; padding-bottom: 5px; background-color:#003366;">
@@ -33,6 +31,7 @@
           <button class="input-group-text amber lighten-3" style="background: #ffd51d;" id="btn_submit"><i class="fa fa-search text-grey" aria-hidden="true"></i></button>
         </div>
       </div>
+	  
       <div class="input-group md-form form-sm form-2 pl-0 w-50">
         <input name="LINK" id="LINKbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="Copy image address and paste link here" aria-label="Search" >
         <div class="input-group-append">
@@ -42,35 +41,20 @@
   </div>
 	
   <div class="row">
-    <div class="col-md-3 order-md-1 order-3 order-sm-3"> 
+    <div class="col-md-12"> 
       
-      <!-- ---new links inserted here -->
-
-    
-
 	    <a href="#" role="button" aria-pressed="true" onclick="prvs()">PREVIOUS</a>
 	    <a href="#" role="button" aria-pressed="true" onclick="nxt()">NEXT</a>
 	    <br>
-<img src="1.png" id="dispframe" alt=".">
+		<p> (Images may be slow to load at times.) </p>
+		<br>
+		<img src="1.png" id="dispframe" alt=".">
 	    <br>
-
-	    <!-- ----------------------------------------------- -->
-	    
-
-
-
-	    
-	    
-      
-      <!-- ------------------------------------------------ --> 
-    	<br>
-	<div id="nhtsa_data" style="display:none; background-color:#fff;" align="center"> <br>
-        <textarea id="txt_results" rows="6" cols="60" placeholder="Vehicle Data Presented Here"></textarea>
-      	</div>
+		<p>	In appraisal connect research screen, right click on the thumbnail image of the vehicle you would like to see. Select Copy image address and paste the link in the search box on the right to see all photos. Navigate using Previous and Next buttons. </p>
 	</div>
 </div>
 
-
+</div>
 	
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script> 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
@@ -95,25 +79,16 @@ stocknum = stocknum.replace("https:", "");
 stocknum = stocknum.replace(/\//g, "");
 stocknum = stocknum.replace("connect.carmax.localappraisalonlinesystemsimageapiimgvehicles", "");
 stocknum = stocknum.replace("1.jpg?cs=0&width=135", "");
-//stocknum = stocknum.substring(1, 3);
 countimg = 1;
 prvs();
 };
 	
 
-function prvs() {
-            //var img = document.createElement('img'); 
-	//var img = new Image(); 
-         //   img.src =  
-	//	'https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/' + '18368580' + '/' + '1' + '.jpg'; 
-            //document.getElementById('body').appendChild(img); 
-           // down.innerHTML = "Image Element Added.";  
+function prvs() { 
 	if (countimg > 1) {
 		countimg = countimg - 1;
 	};
 		displayimg();
-
-
 };
 
 function nxt() {
@@ -123,7 +98,7 @@ function nxt() {
 	
 function displayimg()
 {
-//var x = document.createElement("IMG");
+	//var x = document.createElement("IMG");
 	var x = document.getElementById("dispframe");
   	x.setAttribute("src", "https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
  	x.setAttribute("id", "dispframe");
@@ -133,15 +108,6 @@ function displayimg()
   	x.setAttribute("object-fit", "cover"); 
 	//document.body.appendChild(x);
 	
-	
-	
-  //var x = element.getElementsByTagName("img").item(0);
-  //var v = x.getAttribute("src");
-  //if(v == "feed-blue.png")
-  //  v = "feed-orange.png";
-  //else
-  //  v = "feed-blue.png";
- // x.setAttribute("src", v);	
 };
 	
 var input13 = document.getElementById("VINbar");
@@ -153,18 +119,16 @@ var input13 = document.getElementById("VINbar");
 		}
 	});
 	
-function copyToClipboard(text) {
-    var dummy = document.createElement("textarea");
-    // to avoid breaking orgain page when copying more words
-    // cant copy when adding below this code
-    // dummy.style.display = 'none'
-    document.body.appendChild(dummy);
-    //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
-    dummy.value = text;
-    dummy.select();
-    document.execCommand("copy");
-    document.body.removeChild(dummy);
-};
+var input14 = document.getElementById("LINKbar");
+	
+	input14.addEventListener("keyup", function(event) {
+		if (event.keyCode === 13) {
+			event.preventDefault();
+			document.getElementById("btn_submit2").click();
+		}
+	});
+	
+
 
 </script>
 </body>
