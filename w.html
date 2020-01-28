@@ -95,7 +95,7 @@ var x = document.createElement("IMG");
   //x.setAttribute("height", "228");
   x.setAttribute("alt", ".");
   document.body.appendChild(x);
-}
+};
 
 function nxt() {
             var img = document.createElement('img'); 
@@ -103,7 +103,7 @@ function nxt() {
 		'https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/' + '18368580' + '/' + '1' + '.jpg'; 
             document.getElementById('body').appendChild(img); 
             down.innerHTML = "Image Element Added.";  
-}
+};
 	
 function changeImage(element)
 {
@@ -114,7 +114,8 @@ function changeImage(element)
   else
     v = "feed-blue.png");
   x.setAttribute("src", v);	
-}
+};
+	
 var input13 = document.getElementById("VINbar");
 	
 	input13.addEventListener("keyup", function(event) {
@@ -135,7 +136,7 @@ function copyToClipboard(text) {
     dummy.select();
     document.execCommand("copy");
     document.body.removeChild(dummy);
-}
+};
 
 </script>
 </body>
