@@ -45,7 +45,9 @@
 	    <a href="#" role="button" aria-pressed="true" onclick="prvs()">PREVIOUS</a>
 	    <a href="#" role="button" aria-pressed="true" onclick="nxt()">NEXT</a>
 	    <br>
-  
+     	 <p id = "GFG_UP" style =  
+            "font-size: 15px; font-weight: bold;">  
+   	 </p> 
 	    <br>
 
 	    <!-- ----------------------------------------------- -->
@@ -72,6 +74,10 @@
 	
 
 <script>	
+	
+	var up = document.getElementById('GFG_UP');  
+        up.innerHTML = "Click on the button to add image element";  
+        var down = document.getElementById('GFG_DOWN');  
 
 function prvs() {
             var img = document.createElement('img'); 
