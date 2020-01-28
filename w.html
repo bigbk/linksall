@@ -90,15 +90,19 @@
 <script>	
 
 function prvs() {
-	if (vincheckin()) {
-	var vinlink = "https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin;
-	};
+            var img = document.createElement('img'); 
+            img.src =  
+		'https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/' + '18368580' + '/' + '1' + '.jpg'; 
+            document.getElementById('body').appendChild(img); 
+            down.innerHTML = "Image Element Added.";  
 };
 
 function nxt() {
-	if (vincheckin()) {
-	var vinlink = "https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin;
-	};
+            var img = document.createElement('img'); 
+            img.src =  
+		'https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/' + '18368580' + '/' + '1' + '.jpg'; 
+            document.getElementById('body').appendChild(img); 
+            down.innerHTML = "Image Element Added.";  
 };
 	
 
