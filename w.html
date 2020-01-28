@@ -78,15 +78,24 @@
 	var up = document.getElementById('GFG_UP');  
         up.innerHTML = "Click on the button to add image element";  
         var down = document.getElementById('GFG_DOWN');  
+	
+
 
 function prvs() {
             //var img = document.createElement('img'); 
-	var img = new Image(); 
-            img.src =  
-		'https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/' + '18368580' + '/' + '1' + '.jpg'; 
-            document.getElementById('body').appendChild(img); 
-            down.innerHTML = "Image Element Added.";  
-};
+	//var img = new Image(); 
+         //   img.src =  
+	//	'https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/' + '18368580' + '/' + '1' + '.jpg'; 
+            //document.getElementById('body').appendChild(img); 
+           // down.innerHTML = "Image Element Added.";  
+	
+var x = document.createElement("IMG");
+  x.setAttribute("src", "https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/" + "18368580" + "/" + "1" + ".jpg");
+ // x.setAttribute("width", "304");
+  //x.setAttribute("height", "228");
+  x.setAttribute("alt", ".");
+  document.body.appendChild(x);
+}
 
 function nxt() {
             var img = document.createElement('img'); 
@@ -94,9 +103,18 @@ function nxt() {
 		'https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/' + '18368580' + '/' + '1' + '.jpg'; 
             document.getElementById('body').appendChild(img); 
             down.innerHTML = "Image Element Added.";  
-};
+}
 	
-
+function changeImage(element)
+{
+  var x = element.getElementsByTagName("img").item(0);
+  var v = x.getAttribute("src");
+  if(v == "feed-blue.png")
+    v = "feed-orange.png");
+  else
+    v = "feed-blue.png");
+  x.setAttribute("src", v);	
+}
 var input13 = document.getElementById("VINbar");
 	
 	input13.addEventListener("keyup", function(event) {
