@@ -45,9 +45,7 @@
 	    <a href="#" role="button" aria-pressed="true" onclick="prvs()">PREVIOUS</a>
 	    <a href="#" role="button" aria-pressed="true" onclick="nxt()">NEXT</a>
 	    <br>
-     	 <p id = "GFG_UP" style =  
-            "font-size: 15px; font-weight: bold;">  
-   	 </p> 
+<img src="" id="dispframe" alt=".">
 	    <br>
 
 	    <!-- ----------------------------------------------- -->
@@ -88,8 +86,8 @@ function prvs() {
            // down.innerHTML = "Image Element Added.";  
 	if (countimg > 1) {
 		countimg = countimg - 1;
-		displayimg();
 	};
+		displayimg();
 
 
 };
@@ -101,7 +99,8 @@ function nxt() {
 	
 function displayimg()
 {
-var x = document.createElement("IMG");
+//var x = document.createElement("IMG");
+	var x = document.getElementById("dispframe");
   x.setAttribute("src", "https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/" + "18368580" + "/" + countimg + ".jpg");
  x.setAttribute("id", "dispframe");
 	// x.setAttribute("width", "304");
