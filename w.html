@@ -58,8 +58,8 @@
 
     
 
-	    <a href="#" role="button" aria-pressed="true" onclick="mitsbtn()">PREVIOUS Link</a>
-	    <a href="#" role="button" aria-pressed="true" onclick="porwiki()">NEXT Link</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="prvs()">PREVIOUS</a>
+	    <a href="#" role="button" aria-pressed="true" onclick="nxt()">NEXT</a>
 	    <br>
   
 	    <br>
@@ -88,7 +88,20 @@
 	
 
 <script>	
+
+function prvs() {
+	if (vincheckin()) {
+	var vinlink = "https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin;
+	};
+};
+
+function nxt() {
+	if (vincheckin()) {
+	var vinlink = "https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin;
+	};
+};
 	
+
 var input13 = document.getElementById("VINbar");
 	
 	input13.addEventListener("keyup", function(event) {
