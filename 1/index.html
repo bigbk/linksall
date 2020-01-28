@@ -190,6 +190,7 @@
 
             Quagga.onDetected(function (result) {
 		    document.getElementById("VINbar").value = result.codeResult.code;
+				alert("Detected VIN is: " + result.codeResult.code);
                 console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
 		    //Quagga.stop();
 		    //document.getElementById("scanner-container").innerHTML = "";
@@ -379,14 +380,6 @@ function vincheckin() {
 	};
 };
 	
-
-//function audivwwiki() {
-//	if (vincheckin()) {
-//		window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin);
-//	  	//window.open("http://mclaren722.herokuapp.com/VWvindownload?vin=" + vin);
-//	};
-//	
-//};
 
 function autobrochures() {
 	if (aMake !== ""  && typeof aMake !== 'undefined') {
