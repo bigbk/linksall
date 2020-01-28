@@ -80,8 +80,19 @@
 <script>	
 	
 var countimg = 1;
+var stocknum;
 	
+document.getElementById("btn_submit").onclick = function () {
+stocknum = document.getElementById("VINbar").value;
+prvs();
+	
+};
 
+document.getElementById("btn_submit2").onclick = function () {
+stocknum = document.getElementById("LINKbar").value;
+prvs();
+};
+	
 
 function prvs() {
             //var img = document.createElement('img'); 
@@ -111,7 +122,7 @@ function displayimg()
  	x.setAttribute("id", "dispframe");
 	x.setAttribute("width", "800");
   	x.setAttribute("height", "600");
- 	x.setAttribute("alt", ".");
+ 	x.setAttribute("alt", countimg);
   	x.setAttribute("object-fit", "cover"); 
 	//document.body.appendChild(x);
 	
