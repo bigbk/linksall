@@ -92,7 +92,9 @@ document.getElementById("btn_submit2").onclick = function () {
 stocknum = document.getElementById("LINKbar").value;
 stocknum = stocknum.replace("https:", "");
 stocknum = stocknum.replace(/\//g, "");
-stocknum = stocknum.substring(1, 3);
+stocknum = stocknum.replace("connect.carmax.localappraisalonlinesystemsimageapiimgvehicles", "");
+stocknum = stocknum.replace("1.jpg?cs=0&width=135", "");
+//stocknum = stocknum.substring(1, 3);
 prvs();
 };
 	
