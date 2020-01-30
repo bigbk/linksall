@@ -60,7 +60,7 @@
   		</ul>
 	</nav>
 	   
-	    <div id="instructions" class="col-md-12" style="display:none;"> 
+	    <div id="instructions" class="col-md-12" style="display:block;"> 
 	    <p><strong>	In the appraisal connect research screen, right click on the thumbnail image of the vehicle you would like to see. Select "Copy image address" and paste the link in the search box on the right to see all photos. Search works for all stock numbers including sold and 4000 vehicles. Navigate using Previous and Next buttons. </strong></p>
 
 	    </div> 
@@ -182,7 +182,7 @@ function nxt() {
 function displayimg()
 {
 	console.log(countimg);
-	document.getElementById("instructions").style.display = 'block';
+	document.getElementById("instructions").style.display = 'none';
 	
 	//var x = document.createElement("IMG");
 	var x = document.getElementById("dispframe");
