@@ -59,6 +59,11 @@
 			</li>
   		</ul>
 	</nav>
+	   
+	    <div id="instructions" class="col-md-12" style="display:none;"> 
+	    <p><strong>	In the appraisal connect research screen, right click on the thumbnail image of the vehicle you would like to see. Select "Copy image address" and paste the link in the search box on the right to see all photos. Search works for all stock numbers including sold and 4000 vehicles. Navigate using Previous and Next buttons. </strong></p>
+
+	    </div> 
 	    
 	    <br>
 		<!-- <p> (Images may be slow to load at times.) </p>
@@ -98,7 +103,6 @@
 
 </div>
 	  <br>
-<p>	In the appraisal connect research screen, right click on the thumbnail image of the vehicle you would like to see. Select "Copy image address" and paste the link in the search box on the right to see all photos. Search works for all stock numbers including sold and 4000 vehicles. Navigate using Previous and Next buttons. </p>
 
 	
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script> 
@@ -178,6 +182,8 @@ function nxt() {
 function displayimg()
 {
 	console.log(countimg);
+	document.getElementById("instructions").style.display = 'block';
+	
 	//var x = document.createElement("IMG");
 	var x = document.getElementById("dispframe");
 	var x1 = document.getElementById("thumb1");
