@@ -137,6 +137,7 @@ function thumbbtn ( ordern ) {
 }
 	
 function prvs() { 
+	if (stocknum !== "" && typeof stocknum !== 'undefined') {
 	if (countimg > 1) {
 		countimg = countimg - 1;
 		countimg1 = countimg + 1;
@@ -149,9 +150,11 @@ function prvs() {
 		countimg8 = countimg7 + 1;
 	};
 		displayimg();
+	};
 };
 
 function nxt() {
+	if (stocknum !== "" && typeof stocknum !== 'undefined') {
 	countimg = countimg + 1;
 	countimg1 = countimg + 1;
 	countimg2 = countimg1 + 1;
@@ -162,10 +165,12 @@ function nxt() {
 	countimg7 = countimg6 + 1;
 	countimg8 = countimg7 + 1;
 	displayimg();
+	};
 };
 	
 function displayimg()
 {
+	console.log(countimg);
 	//var x = document.createElement("IMG");
 	var x = document.getElementById("dispframe");
 	var x1 = document.getElementById("thumb1");
@@ -178,6 +183,9 @@ function displayimg()
 	var x8 = document.getElementById("thumb8");
   	//x.setAttribute("src", "https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
 	x.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
+	x.setAttribute("alt", countimg);
+  	x.setAttribute("object-fit", "cover"); 
+	x.onload = function() {
 	x1.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg1 + ".jpg");
 	x2.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg2 + ".jpg");
 	x3.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg3 + ".jpg");
@@ -189,9 +197,9 @@ function displayimg()
  	//x.setAttribute("id", "dispframe");
 	//x.setAttribute("width", "1024");
   	//x.setAttribute("height", "768");
- 	x.setAttribute("alt", countimg);
-  	x.setAttribute("object-fit", "cover"); 
+
 	//document.body.appendChild(x);
+	}
 	
 };
 	
