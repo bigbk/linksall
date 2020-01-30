@@ -57,7 +57,7 @@
 	    <br>
 		<!-- <p> (Images may be slow to load at times.) </p> -->
 		<br>
-		<img src="1.png" id="dispframe" alt=".">
+		<img src="1.png" id="dispframe" alt="." class="img-fluid">
 	    <br>
 		<p>	In the appraisal connect research screen, right click on the thumbnail image of the vehicle you would like to see. Select Copy image address and paste the link in the search box on the right to see all photos. Navigate using Previous and Next buttons. </p>
 	</div>
@@ -113,8 +113,8 @@ function displayimg()
   	//x.setAttribute("src", "https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
 	x.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
  	x.setAttribute("id", "dispframe");
-	x.setAttribute("width", "1024");
-  	x.setAttribute("height", "768");
+	//x.setAttribute("width", "1024");
+  	//x.setAttribute("height", "768");
  	x.setAttribute("alt", countimg);
   	x.setAttribute("object-fit", "cover"); 
 	//document.body.appendChild(x);
