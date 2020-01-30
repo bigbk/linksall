@@ -101,6 +101,10 @@ This part is straight out of Bootstrap docs. Just a carousel inside a modal.
 <script>	
 	
 var countimg = 1;
+var countimg1 = countimg + 1;
+var countimg2 = countimg1 + 1;
+var countimg3 = countimg2 + 1;
+var countimg4 = countimg3 + 1;
 var stocknum;
 	
 document.getElementById("btn_submit").onclick = function () {
@@ -125,12 +129,20 @@ prvs();
 function prvs() { 
 	if (countimg > 1) {
 		countimg = countimg - 1;
+		countimg1 = countimg + 1;
+		countimg2 = countimg1 + 1;
+		countimg3 = countimg2 + 1;
+		countimg4 = countimg3 + 1;
 	};
 		displayimg();
 };
 
 function nxt() {
 	countimg = countimg + 1;
+	countimg1 = countimg + 1;
+	countimg2 = countimg1 + 1;
+	countimg3 = countimg2 + 1;
+	countimg4 = countimg3 + 1;
 	displayimg();
 };
 	
@@ -138,9 +150,17 @@ function displayimg()
 {
 	//var x = document.createElement("IMG");
 	var x = document.getElementById("dispframe");
+	var x1 = document.getElementById("thumb1");.
+	var x2 = document.getElementById("thumb2");
+	var x3 = document.getElementById("thumb3");
+	var x4 = document.getElementById("thumb4");
   	//x.setAttribute("src", "https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
 	x.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
- 	x.setAttribute("id", "dispframe");
+	x1.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg1 + ".jpg");
+	x2.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg2 + ".jpg");
+	x3.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg3 + ".jpg");
+	x4.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg4 + ".jpg");
+ 	//x.setAttribute("id", "dispframe");
 	//x.setAttribute("width", "1024");
   	//x.setAttribute("height", "768");
  	x.setAttribute("alt", countimg);
