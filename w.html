@@ -193,7 +193,9 @@ function displayimg()
 	x.setAttribute("alt", countimg);
   	x.setAttribute("object-fit", "cover"); 
 	
-	$('.modal').modal('show');
+	if (!x.complete) {
+		$('.modal').modal('show');
+	}
 	x.onload = function() {
 	
 	setTimeout(function () {
