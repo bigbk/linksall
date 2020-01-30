@@ -62,31 +62,31 @@
 	    
 	    <div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal">
   		<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb1" alt=".">
+    			<img class="w-100" src="1.png" id="thumb1" alt="." onclick="thumbtn(1)">
   		</div>
   		<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb2" alt=".">
+    			<img class="w-100" src="1.png" id="thumb2" alt="." onclick="thumbtn(2)">
   		</div>
   		<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb3" alt=".">
+    			<img class="w-100" src="1.png" id="thumb3" alt="." onclick="thumbtn(3)">
   		</div>
   		<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb4" alt=".">
+    			<img class="w-100" src="1.png" id="thumb4" alt="." onclick="thumbtn(4)">
   		</div>
 	    </div>
-	    
+	    <br>
 	    <div class="row" id="gallery2" data-toggle="modal" data-target="#exampleModal">
   		<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb5" alt=".">
+    			<img class="w-100" src="1.png" id="thumb5" alt="." onclick="thumbtn(5)">
   		</div>
   		<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb6" alt=".">
+    			<img class="w-100" src="1.png" id="thumb6" alt="." onclick="thumbtn(6)">
   		</div>
   		<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb7" alt=".">
+    			<img class="w-100" src="1.png" id="thumb7" alt="." onclick="thumbtn(7)">
   		</div>
   		<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb8" alt=".">
+    			<img class="w-100" src="1.png" id="thumb8" alt="." onclick="thumbtn(8)">
   		</div>
 	    </div>
 
@@ -130,7 +130,11 @@ document.getElementById("VINbar").value = stocknum;
 prvs();
 };
 	
-
+function thumbbtn ( ordern ) { 
+	countimg = countimg + ordern - 1;
+	nxt();
+}
+	
 function prvs() { 
 	if (countimg > 1) {
 		countimg = countimg - 1;
