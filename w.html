@@ -55,11 +55,39 @@
   		</ul>
 	</nav>
 	    <br>
-		<!-- <p> (Images may be slow to load at times.) </p> -->
-		<br>
+		<!-- <p> (Images may be slow to load at times.) </p>
+		<br> -->
 		<img src="1.png" id="dispframe" alt="." class="img-fluid">
 	    <br>
-		<p>	In the appraisal connect research screen, right click on the thumbnail image of the vehicle you would like to see. Select "Copy image address" and paste the link in the search box on the right to see all photos. Navigate using Previous and Next buttons. </p>
+	    
+	    <div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal">
+  		<div class="col-6 col-md-4 col-lg-3">
+    			<img class="w-100" src="1.png" id="thumb1" alt=".">
+  		</div>
+  		<div class="col-6 col-md-4 col-lg-3">
+    			<img class="w-100" src="1.png" id="thumb2" alt=".">
+  		</div>
+  		<div class="col-6 col-md-4 col-lg-3">
+    			<img class="w-100" src="1.png" id="thumb3" alt=".">
+  		</div>
+  		<div class="col-6 col-md-4 col-lg-3">
+    			<img class="w-100" src="1.png" id="thumb4" alt=".">
+  		</div>
+</div>
+
+<!-- Modal -->
+<!-- 
+This part is straight out of Bootstrap docs. Just a carousel inside a modal.
+-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+		<p>	In the appraisal connect research screen, right click on the thumbnail image of the vehicle you would like to see. Select "Copy image address" and paste the link in the search box on the right to see all photos. Search works for all stock numbers including sold and 4000 vehicles. Navigate using Previous and Next buttons. </p>
 	</div>
 </div>
 
