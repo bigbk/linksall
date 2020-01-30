@@ -125,8 +125,12 @@ var stocknum;
 	
 document.getElementById("btn_submit").onclick = function () {
 stocknum = document.getElementById("VINbar").value;
+if (stocknum.length === 8) {
 countimg = 1;
-prvs();
+prvs();	
+  } else {
+       alert("Stock number should be 8 digits long, currently " + stocknum.length + " digits entered.");
+  };
 	
 };
 
