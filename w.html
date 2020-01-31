@@ -55,7 +55,7 @@
 			<li class="page-item">
 	    	<a class="page-link" href="#" onclick="nxt()">NEXT</a>
 			</li>
-			<li class="page-item">
+			<li class="page-item" >
 	    	<a id="kmxlink" class="page-link" href="#" target="_blank">CarMax Page</a>
 			</li>
   		</ul>
@@ -65,7 +65,8 @@
 	    <div id="instructions" class="col-md-12" style="display:block;"> 
 	    	<p><strong> This search tool works for all stock numbers including sold retail and 4000 vehicles.
 			<br><br>
-			In the appraisal connect research screen, right click on the thumbnail image of the vehicle you would like to see. Select "Copy image address" and paste the link in the search box on the upper right to see all photos. Navigate using Previous and Next buttons. </strong></p>
+			In the Appraisal Connect research screen, right click on the thumbnail image of the vehicle you would like to see. Select <mark>"Copy image address"</mark> and paste the link in the search box on the upper right to see all photos for that vehicle. Navigate using Previous and Next buttons or jump to the image in the thumbnails below. </strong></p>
+			
 
 	    </div> 
 	    
@@ -110,6 +111,9 @@
 	</div>
 </div>
 	  <br>
+			<div id="kmxpg" class="embed-responsive embed-responsive-16by9" style="display:none;">
+  				<iframe id="kmxfrm" class="embed-responsive-item" src="" allowfullscreen></iframe>
+			</div>
 </div>
 	
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script> 
@@ -194,6 +198,7 @@ function displayimg()
 {
 	console.log(countimg);
 	document.getElementById("instructions").style.display = 'none';
+	document.getElementById("kmxpg").style.display = 'block';
 	
 	//var x = document.createElement("IMG");
 	var x = document.getElementById("dispframe");
@@ -206,9 +211,11 @@ function displayimg()
 	var x7 = document.getElementById("thumb7");
 	var x8 = document.getElementById("thumb8");
 	var klink = document.getElementById("kmxlink");
+	var klink2 = document.getElementById("kmxfrm");
   	//x.setAttribute("src", "https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
 	
 	klink.setAttribute("href", "https://www.carmax.com/car/"  + stocknum);
+	klink2.setAttribute("src", "https://www.carmax.com/car/"  + stocknum);
 	x.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
 	x.setAttribute("alt", countimg);
   	x.setAttribute("object-fit", "cover"); 
