@@ -47,7 +47,7 @@
 <div class="row">
     <div class="col-md-12"> 
       
-		<nav aria-label="Page navigation example">
+		<nav aria-label="Photo Navigation">
 		<ul class="pagination">
     		<li class="page-item">
 	    	<a class="page-link" href="#" onclick="prvs()">PREVIOUS</a>
@@ -55,8 +55,12 @@
 			<li class="page-item">
 	    	<a class="page-link" href="#" onclick="nxt()">NEXT</a>
 			</li>
+			<li class="page-item">
+	    	<a id="kmxlink" class="page-link" href="#" target="_blank">CarMax Page</a>
+			</li>
   		</ul>
 		</nav>
+		
 	   
 	    <div id="instructions" class="col-md-12" style="display:block;"> 
 	    	<p><strong> This search tool works for all stock numbers including sold retail and 4000 vehicles.
@@ -201,7 +205,10 @@ function displayimg()
 	var x6 = document.getElementById("thumb6");
 	var x7 = document.getElementById("thumb7");
 	var x8 = document.getElementById("thumb8");
+	var klink = document.getElementById("kmxlink");
   	//x.setAttribute("src", "https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
+	
+	klink.setAttribute("src", "https://www.carmax.com/car/"  + stocknum);
 	x.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
 	x.setAttribute("alt", countimg);
   	x.setAttribute("object-fit", "cover"); 
