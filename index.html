@@ -1585,7 +1585,7 @@ function subaru() {
 };
 function tesla() {
 	if (aModel !== "" && typeof aModel !== 'undefined' && aMake !== "" && typeof aMake !== 'undefined' && aYear !== "" && typeof aYear !== 'undefined') {
-	if (aModel.substring(0, 5) === "MODEL") {
+	if (aModel.substring(0, 6) === "MODEL") {
 	
 	var mdlad = aModel.replace(/ /g, "_");
 	mdlad = mdlad.toLowerCase();
@@ -1604,7 +1604,7 @@ function tesla() {
 };
 function teslam() {
 	if (aModel !== "" && typeof aModel !== 'undefined' ) {
-	if (aModel.substring(0, 5) === "MODEL") {
+	if (aModel.substring(0, 6) === "MODEL") {
 	var mdlad = aModel.replace(/ /g, "_");
 	mdlad = mdlad.toLowerCase();
 	window.open("https://www.tesla.com/sites/default/files/" + mdlad + "_owners_manual_north_america_en.pdf");
