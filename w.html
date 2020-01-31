@@ -112,7 +112,7 @@
 </div>
 	  <br>
 			<div id="kmxpg" class="embed-responsive embed-responsive-16by9" style="display:none;">
-  				<iframe id="kmxfrm" class="embed-responsive-item" src="" allowfullscreen></iframe>
+  				<iframe id="kmxfrm" class="embed-responsive-item" src="#" allowfullscreen></iframe>
 			</div>
 </div>
 	
@@ -133,6 +133,7 @@ var countimg6 = countimg5 + 1;
 var countimg7 = countimg6 + 1;
 var countimg8 = countimg7 + 1;
 var stocknum;
+var stocknumchk;
 	
 document.getElementById("btn_submit").onclick = function () {
 stocknum = document.getElementById("VINbar").value;
@@ -215,7 +216,10 @@ function displayimg()
   	//x.setAttribute("src", "https://connect.carmax.local/appraisal/onlinesystemsimageapi/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
 	
 	klink.setAttribute("href", "https://www.carmax.com/car/"  + stocknum);
-	klink2.setAttribute("src", "https://www.carmax.com/car/"  + stocknum);
+	if (stocknumchk !== stocknum) {
+		stocknumchk = stocknum;
+		klink2.setAttribute("src", "https://www.carmax.com/car/"  + stocknum);
+	}
 	x.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
 	x.setAttribute("alt", countimg);
   	x.setAttribute("object-fit", "cover"); 
