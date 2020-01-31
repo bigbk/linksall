@@ -1584,9 +1584,8 @@ function subaru() {
 	};
 };
 function tesla() {
-	console.log(aModel.substring(0, 5));
+	
 	if (aModel !== "" && typeof aModel !== 'undefined' && aMake !== "" && typeof aMake !== 'undefined' && aYear !== "" && typeof aYear !== 'undefined') {
-	console.log(aModel.substring(0, 5));
 		if (aModel.substring(0, 5) === "MODEL" || aModel.substring(0, 5) === "Model") {
 	
 	var mdlad = aModel.replace(/ /g, "_");
@@ -1605,14 +1604,16 @@ function tesla() {
 	};
 };
 function teslam() {
-	console.log(aModel.substring(0, 5));
 	if (aModel !== "" && typeof aModel !== 'undefined' ) {
-		console.log(aModel.substring(0, 5));
 	if (aModel.substring(0, 5) === "MODEL" || aModel.substring(0, 5) === "Model") {
 		
 	var mdlad = aModel.replace(/ /g, "_");
 	mdlad = mdlad.toLowerCase();
-	window.open("https://www.tesla.com/sites/default/files/" + mdlad + "_owners_manual_north_america_en.pdf");
+	if (mdlad === "model_s") {
+		window.open("https://www.tesla.com/sites/default/files/" + mdlad + "_owners_manual_north_america_en_us.pdf");
+	} else {
+		window.open("https://www.tesla.com/sites/default/files/" + mdlad + "_owners_manual_north_america_en.pdf");
+	}
 	} else {
 		alert ("Click on search icon to retrieve VIN details first");
 	};
