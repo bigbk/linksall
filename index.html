@@ -397,7 +397,7 @@ body {
               <!-- <a href="#" class="card-link">Download</a> --> 
             </div>
           </div>
-         <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="fordstickerkey()">
+         <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="fordstickerkey3('1FMCU0F78FUC40853')">
             <div class="card-body">
               <h4 class="card-title">VIN Key Request</h4>
               <h6 class="card-subtitle mb-2 text-muted">JSON</h6>
@@ -1451,6 +1451,34 @@ function fordstickerkey2() {
 		window.open("https://windowsticker.concentrix.com/windowsticker/auction_ws/index.htm?sProgramCode=FORD_VR&loginId=1&quic_param=" + keyme);
 	};
 };
+	
+function fordstickerkey3 (param_vin) {
+  $.ajax({
+    url: "https://imola.adesa.com/auction-engine-web-api/encryptVin.json?cgId=947&sellerOrgId=201721&isRunList=1&vin=",
+    type: "POST",
+    data: { format: "json", data: param_vin },
+    dataType: "json",
+    success: function(result)
+    {
+      console.log(result);
+ 
+
+	if ( result.Results[0].encryptVin !== "")  { 
+		window.open("https://windowsticker.concentrix.com/windowsticker/auction_ws/index.htm?sProgramCode=FORD_VR&loginId=1&quic_param=" + result.Results[0].encryptVin);
+		console.log("pulled " + result.Results[0].encryptVin);
+	};
+	
+	console.log("pulled " + result);
+	
+    },
+    error: function(xhr, ajaxOptions, thrownError)
+    {
+        console.log(xhr.status);
+        console.log(thrownError);
+    }
+  });
+};
+	
 function fordwiki() {
 	if (vincheckin()) {
 	window.open("https://windowsticker.minacs.com/generate/ws_print_caller.cfm?request_type=IP&vin=" + vin +"&pc=SIMULCAST&ari=&lane_num=&run_num=&param2=56cee0f6e93cd16f9aa1d1ca8cfe73e1");
