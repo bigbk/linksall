@@ -1446,7 +1446,7 @@ function fordstickerkey() {
 };
 	
 function fordstickerkey2() {
-	if (document.getElementById("mkey").value === "") {
+	if (document.getElementById("mkey").value !== "") {
 		var keyme = document.getElementById("mkey").value;
 		window.open("https://windowsticker.concentrix.com/windowsticker/auction_ws/index.htm?sProgramCode=FORD_VR&loginId=1&quic_param=" + keyme);
 	};
