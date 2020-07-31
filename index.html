@@ -778,7 +778,24 @@ body {
             </div>
           </div>
         </div>
+	      
         <br>
+	      
+        <div class="card-deck">
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="tesla2()">
+            <div class="card-body">
+              <h4 class="card-title">Listing Info</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+              <p class="card-text">Listing information for some recent sales</p>
+              </div>
+          </div>
+          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+            </div>
+          </div>
+        </div>
         <a href="https://sites.google.com/site/teslamotorsclubwiki/home/model-s/options-by-year" target="_blank" > Model S Option Changes by year</a> <br>
         <a href="https://www.tesla.com/inventory/used/ms?arrangeby=plh&zip=21162" target="_blank" > Tesla Used Inventory</a>
 	<a href="https://teslacpo.io/" target="_blank" > Tesla Certified Pre-Owned Inventory and Sold Data</a> <br>
@@ -1669,6 +1686,11 @@ function tesla() {
 		var mdlad = aModel.replace(/ /g, "_");
 		mdlad = mdlad.toLowerCase();
 		window.open("https://www.cars.com/research/" + "tesla" + "-" + mdlad + "-" + aYear + "/trims/");
+	};
+};
+function tesla2() {
+	if (vincheckin()) {
+	window.open("https://tesla-info.com/car/US-" + vin);
 	};
 };
 function teslam() {
