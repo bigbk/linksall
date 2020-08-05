@@ -745,10 +745,11 @@ body {
               <p class="card-text">Trim level information. Use caution with options</p>
             </div>
           </div>
-          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="subaru2()">
             <div class="card-body">
-              <h4 class="card-title"></h4>
-              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <h4 class="card-title">Trim Level</h4>
+              <h6 class="card-subtitle mb-2 text-muted">JSON</h6>
+              <p class="card-text">Trim level information. Use caution with options</p>
             </div>
           </div>
         </div>
@@ -1666,6 +1667,45 @@ function subaru() {
 
 		
 	window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode=" + vin);
+	};
+};
+function subaru2() {
+	if (vincheckin()) {
+
+	  /*$.ajax({
+    		url: "https://www.subaru.com/services/utility/vindata/",
+    		type: "POST",
+    		data: { format: "json", data: vin },
+    		dataType: "json",
+    		success: function(result)
+    		{
+			console.log(result);
+			console.log("pulled specific " + aMake);
+	    
+    			var subaru_text = "";
+			for (var i = 0; i < result.Results.length; i++) {
+			var resultsub = result.Results[i];
+			for (var prop in resultsub) {
+				if (resultsub.hasOwnProperty(prop) && resultsub[prop] !== "") {
+					subaru_text += prop + ": " + resultsub[prop] + "\n";
+				}
+			}
+		}
+	
+	document.getElementById("subaru_results").value = subaru_text;
+		
+    	},
+    	error: function(xhr, ajaxOptions, thrownError)
+    	{
+        	console.log(xhr.status);
+       		console.log(thrownError);
+    	}
+ 	});
+
+	*/
+
+		
+	window.open("https://www.subaru.com/services/utility/vindata?vin=" + vin);
 	};
 };
 function tesla() {
