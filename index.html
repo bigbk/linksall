@@ -1260,7 +1260,9 @@ $.ajax({
     'Origin': 'http://cpo.nissanusa.com',
     'Connection': 'keep-alive',
     }
-    success: download.bind(true, "windowsticker", "pdf")
+    success: function() {
+	download.bind(true, "windowsticker", "pdf")
+	};
 
 });
 };
