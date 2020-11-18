@@ -499,14 +499,13 @@ body {
               <!-- <a href="#" class="card-link">Download</a> --> 
             </div>
           </div>
-          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker2()">
             <div class="card-body">
-              <h4 class="card-title">Window Sticker</h4>
+              <h4 class="card-title">Window Sticker IP Search</h4>
               <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-              <p class="card-text">You can obtain the window sticker by editing the attribute to replace the existing vin</p>
-              <a href="http://www.cpo.infinitiusa.com/browse-inventory/21162/White-Marsh/Infiniti?view=list&searched=1&_warranty_program=all&modelYear_from=2014&modelYear_to=2020&price_from=17000&price_to=80000&km_from=0&km_to=70000&zip=21162&radius=50000&sort=distance:ASC" target="_blank" class="card-link">Visit</a>
-	      <!-- <a href="https://www.infinitiusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Q60&totalPrice%5B%5D=range%3A50300%2C68575&location%5B%5D=%5B40.1417764%2C-76.38536690000001%5D" target="_blank" class="card-link">Visit</a> -->
-	    </div>
+              <p class="card-text">Available for newer vehicles </p>
+              <!-- <a href="#" class="card-link">Download</a> --> 
+            </div>
           </div>
         </div>
         <br>
@@ -690,14 +689,13 @@ body {
               <!-- <a href="#" class="card-link">Download</a> --> 
             </div>
           </div>
-          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker2()">
             <div class="card-body">
-              <h4 class="card-title">Window Sticker</h4>
+              <h4 class="card-title">Window Sticker IP Search</h4>
               <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-              <p class="card-text">You can obtain the window sticker by editing the attribute to replace the existing vin</p>
-              <!-- <a href="https://www.nissanusa.com/shopping-tools/search-inventory/inventory-results.html#/search!model.name%5B%5D=Versa%20Sedan&location%5B%5D=%5B39.3949598%2C-76.3984537%5D" target="_blank" class="card-link">Visit</a> -->
-	      <a href="http://cpo.nissanusa.com/search-inventory/30157/Dallas/Nissan?view=list&searched=1&modelYear_from=2014&modelYear_to=2020&price_from=6000&price_to=67000&km_from=0&km_to=335000&zip=30157&radius=50000&sort=distance:ASC" target="_blank" class="card-link">Visit</a>
-	    </div>
+              <p class="card-text">Available for newer vehicles </p>
+              <!-- <a href="#" class="card-link">Download</a> --> 
+            </div>
           </div>
         </div>
         <br>
@@ -1248,6 +1246,12 @@ function displayNHTSAResults (param_data) {
 function getnissansticker() {
 	if (vincheckin()) {
 	window.open("http://192.168.43.1:2080/nissan?vin=" + vin);
+	};
+};
+
+function getnissansticker2() {
+	if (vincheckin()) {
+	window.open("http://100.123.109.202:2080//nissan?vin=" + vin);
 	};
 };
 
