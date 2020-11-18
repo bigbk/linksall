@@ -518,10 +518,12 @@ body {
               <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
               <a href="#" title="Enter vin for recall information, which also lists trim the level" class="card-link">Retrieve</a> </div>
           </div>
-          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker()">
             <div class="card-body">
-              <h4 class="card-title"></h4>
-              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <h4 class="card-title">Window Sticker Local Search</h4>
+              <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+              <p class="card-text">Available for newer vehicles </p>
+              <!-- <a href="#" class="card-link">Download</a> --> 
             </div>
           </div>
         </div>
@@ -709,7 +711,7 @@ body {
           </div>
           <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker()">
             <div class="card-body">
-              <h4 class="card-title">Window Sticker</h4>
+              <h4 class="card-title">Window Sticker Local Search</h4>
               <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
               <p class="card-text">Available for newer vehicles </p>
               <!-- <a href="#" class="card-link">Download</a> --> 
@@ -1244,28 +1246,9 @@ function displayNHTSAResults (param_data) {
 };
 
 function getnissansticker() {
-if (vincheckin()) {
-$.ajax({
-    url: 'http://cpo.nissanusa.com/nna/?'+vin,
-    type: 'GET',
-    headers: {
-    'Host': 'cpo.nissanusa.com',
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0',
-    'Accept': '*/*',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'Accept-Encoding': 'gzip, deflate',
-    'Referer': 'http://cpo.nissanusa.com/nna/?'+vin,
-    'Content-Type': 'text/plain;charset=UTF-8',
-    'Content-Length': '1996',
-    'Origin': 'http://cpo.nissanusa.com',
-    'Connection': 'keep-alive',
-    },
-    success: function() {
-	download.bind(true, "windowsticker", "pdf")
-	}
-
-});
-};
+	if (vincheckin()) {
+	window.open("http://192.168.43.1:2080/nissan?vin=" + vin);
+	};
 };
 
 	
