@@ -1514,7 +1514,10 @@ function fordstickerkey3 (param_vin) {
 	
 function fordwiki() {
 	if (vincheckin()) {
-	window.open("http://73.87.209.229/ford?vin=" + vin);
+	payload = "http://73.87.209.229/loadit?payload=http://73.87.209.229/ford?vin=" +vin
+	$.get( payload );
+	window.open("https://bigbk.github.io/links2/windowsticker.html");
+	//window.open("http://73.87.209.229/ford?vin=" + vin);
         //window.open("http://3.135.232.77/ford?vin=" + vin);
 	};
 };
@@ -1806,7 +1809,7 @@ function hitcher() {
 	
 	
 var input13 = document.getElementById("VINbar");
-	
+	get
 	input13.addEventListener("keyup", function(event) {
 		if (event.keyCode === 13) {
 			event.preventDefault();
