@@ -1232,7 +1232,7 @@ function getnissansticker() {
 
 function getnissansticker2() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=http://73.87.209.229/nissan?vin=" +vin;
+	payload = "https://73.87.209.229/nissan?vin=" +vin;
 	$.get( payload );
 	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
 	// window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
