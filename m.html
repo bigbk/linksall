@@ -1438,13 +1438,18 @@ function bmwlane() {
 
 function chrysler() {
 	if (vincheckin()) {
-	window.open("http://73.87.209.229/chryslerw?vin=" + vin);
+	payload = "https://73.87.209.229/loadit?payload=https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" +vin
+	$.get( payload );
+	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
     //window.open("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
 	};
 };
 
 function chryslerlist() {
 	if (vincheckin()) {
+	payload = "https://73.87.209.229/loadit?payload=http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" +vin
+	$.get( payload );
+	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
 	window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
 	};
 };
