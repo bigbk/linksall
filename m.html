@@ -1516,7 +1516,8 @@ function fordwiki() {
 	if (vincheckin()) {
 	payload = "https://73.87.209.229/loadit?payload=http://73.87.209.229/ford?vin=" +vin
 	$.get( payload );
-	window.open("https://bigbk.github.io/links2/windowsticker.html");
+	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 2000);
+	
 	//window.open("http://73.87.209.229/ford?vin=" + vin);
         //window.open("http://3.135.232.77/ford?vin=" + vin);
 	};
