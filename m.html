@@ -1232,8 +1232,11 @@ function getnissansticker() {
 
 function getnissansticker2() {
 	if (vincheckin()) {
+	payload = "https://73.87.209.229/loadit?payload=http://73.87.209.229/nissan?vin=" +vin;
+	$.get( payload );
+	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
 	// window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
-	window.open("http://73.87.209.229/nissan?vin=" + vin);	
+	//window.open("http://73.87.209.229/nissan?vin=" + vin);	
 	};
 };
 
@@ -1438,7 +1441,7 @@ function bmwlane() {
 
 function chrysler() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" +vin
+	payload = "https://73.87.209.229/loadit?payload=https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" +vin;
 	$.get( payload );
 	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
     //window.open("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
@@ -1447,10 +1450,10 @@ function chrysler() {
 
 function chryslerlist() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" +vin
+	payload = "https://73.87.209.229/loadit?payload=http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" +vin;
 	$.get( payload );
 	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
-	window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
+	//window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
 	};
 };
 
@@ -1519,7 +1522,7 @@ function fordstickerkey3 (param_vin) {
 	
 function fordwiki() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=http://73.87.209.229/ford?vin=" +vin
+	payload = "https://73.87.209.229/loadit?payload=http://3.135.232.77/ford?vin=" +vin;
 	$.get( payload );
 	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
 	
@@ -1539,10 +1542,13 @@ function honda() {
 	window.open(" https://owners.honda.com/validation/validatevin?vin=" + vin);
 	};
 };
-
+///---________->>>>>>
 function hyunwiki() {
 	if (vincheckin()) {
-	window.open("http://73.87.209.229/hyundai?vin=" + vin);	
+	payload = "https://73.87.209.229/loadit?payload=http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" +vin;
+	$.get( payload );
+	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
+	//window.open("http://73.87.209.229/hyundai?vin=" + vin);	
     //window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
 	};
 };
@@ -1569,7 +1575,10 @@ function infinititrm() {
 
 function kiabtn2() {
 	if (vincheckin()) {
-	window.open("http://73.87.209.229/kia?vin=" + vin);	
+	payload = "https://73.87.209.229/loadit?payload=https://www.kia.com/us/en/data/dealerinventory/windowsticker/" +vin;
+	$.get( payload );
+	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
+	//window.open("http://73.87.209.229/kia?vin=" + vin);	
     //window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
 	};
 };
@@ -1624,7 +1633,10 @@ function miniog() {
 	
 function mitsbtn() {
 	if (vincheckin()) {
-	window.open("http://73.87.209.229/mits?vin=" + vin);	
+	payload = "https://73.87.209.229/loadit?payload=https://bigbk.github.io/links2/windowsticker.html" +vin
+	$.get( payload );
+	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
+	//window.open("http://73.87.209.229/mits?vin=" + vin);	
     //window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
 	};
 };
@@ -1647,7 +1659,10 @@ function nissantrm() {
 	
 function porwiki() {
 	if (vincheckin()) {
-	window.open("http://73.87.209.229/por?vin=" + vin);	
+	payload = "https://73.87.209.229/loadit?payload=https://vinanalytics.com/car/" +vin +".pdf";
+	$.get( payload );
+	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
+	//window.open("http://73.87.209.229/por?vin=" + vin);	
     //window.open("https://vinanalytics.com/car/" + vin + "/" + vin +".pdf");
 	};
 
@@ -1784,7 +1799,10 @@ function teslam() {
 	
 function vwaudilane() {
 	if (vincheckin()) {
-  window.open("http://73.87.209.229/mits?vin=" + vin);  
+	payload = "https://73.87.209.229/loadit?payload=http://windowsticker-prod.aws.manheim.com/windowsticker/" +vin +"/4905414";
+	$.get( payload );
+	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
+	//window.open("http://73.87.209.229/mits?vin=" + vin);  
     //window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin+"/4905414");
 	};
 	
