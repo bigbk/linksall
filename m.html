@@ -472,7 +472,7 @@ body {
         <p> Links that are listed here will work for <strong>Infiniti vehicles.</strong></p>
         <br>
         <div class="card-deck">
-          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="infiniti()">
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker2()">
             <div class="card-body">
               <h4 class="card-title">Window Sticker</h4>
               <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
@@ -480,12 +480,10 @@ body {
               <!-- <a href="#" class="card-link">Download</a> --> 
             </div>
           </div>
-          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker2()">
+          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
             <div class="card-body">
-              <h4 class="card-title">Window Sticker IP Search</h4>
-              <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-              <p class="card-text">Available for newer vehicles </p>
-              <!-- <a href="#" class="card-link">Download</a> --> 
+              <h4 class="card-title"></h4>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
             </div>
           </div>
         </div>
@@ -498,12 +496,10 @@ body {
               <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
               <a href="#" title="Enter vin for recall information, which also lists trim the level" class="card-link">Retrieve</a> </div>
           </div>
-          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker()">
+          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
             <div class="card-body">
-              <h4 class="card-title">Window Sticker Local Search</h4>
-              <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-              <p class="card-text">Available for newer vehicles </p>
-              <!-- <a href="#" class="card-link">Download</a> --> 
+              <h4 class="card-title"></h4>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
             </div>
           </div>
         </div>
@@ -662,7 +658,7 @@ body {
         <p> Links that are listed here will work for <strong>Nissan vehicles.</strong></p>
         <br>
         <div class="card-deck">
-          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="nissan()">
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker2()">
             <div class="card-body">
               <h4 class="card-title">Window Sticker</h4>
               <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
@@ -670,12 +666,10 @@ body {
               <!-- <a href="#" class="card-link">Download</a> --> 
             </div>
           </div>
-          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker2()">
+          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
             <div class="card-body">
-              <h4 class="card-title">Window Sticker IP Search</h4>
-              <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-              <p class="card-text">Available for newer vehicles </p>
-              <!-- <a href="#" class="card-link">Download</a> --> 
+              <h4 class="card-title"></h4>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
             </div>
           </div>
         </div>
@@ -688,12 +682,10 @@ body {
               <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
               <a href="#" title="Enter vin for recall information, which also lists trim the level" class="card-link">Retrieve</a> </div>
           </div>
-          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker()">
+          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
             <div class="card-body">
-              <h4 class="card-title">Window Sticker Local Search</h4>
-              <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-              <p class="card-text">Available for newer vehicles </p>
-              <!-- <a href="#" class="card-link">Download</a> --> 
+              <h4 class="card-title"></h4>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
             </div>
           </div>
         </div>
@@ -1415,6 +1407,7 @@ function vincheckin() {
 function trigger(payloadin) {
 $.ajax({ cache: false,
     url: piserv+payloadin,
+
 }).done(function (data) {
     window.open("https://bigbk.github.io/links2/windowsticker.html");
 }).fail(function (jqXHR, textStatus) {
@@ -1467,10 +1460,8 @@ function chrysler() {
 
 function chryslerlist() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" +vin;
-	$.get( payload );
-	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
-	//window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
+	trigger("http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" +vin);
+//window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
 	};
 };
 
@@ -1539,11 +1530,8 @@ function fordstickerkey3 (param_vin) {
 	
 function fordwiki() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=http://3.135.232.77/ford?vin=" +vin;
-	$.get( payload );
-	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
-	
-	//window.open("http://73.87.209.229/ford?vin=" + vin);
+	trigger("http://3.135.232.77/ford?vin=" +vin);
+//window.open("http://73.87.209.229/ford?vin=" + vin);
         //window.open("http://3.135.232.77/ford?vin=" + vin);
 	};
 };
@@ -1562,10 +1550,8 @@ function honda() {
 ///---________->>>>>>
 function hyunwiki() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" +vin;
-	$.get( payload );
-	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
-	//window.open("http://73.87.209.229/hyundai?vin=" + vin);	
+	trigger("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" +vin);
+//window.open("http://73.87.209.229/hyundai?vin=" + vin);	
     //window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
 	};
 };
@@ -1592,10 +1578,8 @@ function infinititrm() {
 
 function kiabtn2() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=https://www.kia.com/us/en/data/dealerinventory/windowsticker/" +vin;
-	$.get( payload );
-	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
-	//window.open("http://73.87.209.229/kia?vin=" + vin);	
+	trigger("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" +vin);
+//window.open("http://73.87.209.229/kia?vin=" + vin);	
     //window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
 	};
 };
@@ -1650,10 +1634,8 @@ function miniog() {
 	
 function mitsbtn() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=https://www.mitsubishicars.com/rs/file/monroney?vin=" +vin
-	$.get( payload );
-	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
-	//window.open("http://73.87.209.229/mits?vin=" + vin);	
+	trigger("https://www.mitsubishicars.com/rs/file/monroney?vin=" +vin);
+//window.open("http://73.87.209.229/mits?vin=" + vin);	
     //window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
 	};
 };
@@ -1676,10 +1658,8 @@ function nissantrm() {
 	
 function porwiki() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=https://vinanalytics.com/car/" +vin +".pdf";
-	$.get( payload );
-	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
-	//window.open("http://73.87.209.229/por?vin=" + vin);	
+	trigger("https://vinanalytics.com/car/" +vin +".pdf");
+//window.open("http://73.87.209.229/por?vin=" + vin);	
     //window.open("https://vinanalytics.com/car/" + vin + "/" + vin +".pdf");
 	};
 
@@ -1816,10 +1796,8 @@ function teslam() {
 	
 function vwaudilane() {
 	if (vincheckin()) {
-	payload = "https://73.87.209.229/loadit?payload=http://windowsticker-prod.aws.manheim.com/windowsticker/" +vin +"/4905414";
-	$.get( payload );
-	setTimeout(function(){ window.open("https://bigbk.github.io/links2/windowsticker.html"); }, 3000);
-	//window.open("http://73.87.209.229/mits?vin=" + vin);  
+	trigger("http://windowsticker-prod.aws.manheim.com/windowsticker/" +vin +"/4905414");
+//window.open("http://73.87.209.229/mits?vin=" + vin);  
     //window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin+"/4905414");
 	};
 	
