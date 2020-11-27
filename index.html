@@ -1637,12 +1637,15 @@ function mitsbtn() {
 
 function nissan() {
 	if (vincheckin()) {
-	//window.open("https://www.nissanusa.com/recalls-vin/#/#/Results/" + vin);
-	window.open("https://www.oemstickers.com/WindowSticker.php?vin=" + vin);	
-	setTimeout(function() {
-	window.open("https://www.oemstickers.com/WindowSticker.php?vin=" + vin);
-	}, 1500);
-	};
+	$.ajax({ cache: false,
+    		url: "https://www.oemstickers.com/WindowSticker.php?vin=" + vin,
+
+	}).done(function (data) {
+    		window.open("https://www.oemstickers.com/WindowSticker.php?vin=" + vin);
+	}).fail(function (jqXHR, textStatus) {
+    		return;
+	});
+	};	
 };
 
 function nissantrm() {
