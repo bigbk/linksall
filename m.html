@@ -1317,7 +1317,7 @@ function updatedisplay ( manu ) {
 		document.getElementById("ford_div").style.display = 'block';
 	} else {
 		document.getElementById("ford_div").style.display = 'none';
-	}
+	} 
 	
 	if (aMake == "CHEVROLET" || aMake == "BUICK" || aMake == "CADILLAC" || aMake == "GMC") {
 		document.getElementById("gm_div").style.display = 'block';
@@ -1429,6 +1429,7 @@ $.ajax({ cache: false,
 }).done(function (data) {
     window.open("https://bigbk.github.io/links2/windowsticker.html");
 }).fail(function (jqXHR, textStatus) {
+	window.open("https://bigbk.github.io/links2/windowsticker.html");
     return;
 });
 };	
