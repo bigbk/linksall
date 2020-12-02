@@ -1427,8 +1427,10 @@ $.ajax({ cache: false,
     url: piserv+payloadin,
 
 }).done(function (data) {
+    console.log("success");
     window.open("https://bigbk.github.io/links2/windowsticker.html");
 }).fail(function (jqXHR, textStatus) {
+	console.log("fail");
 	window.open("https://bigbk.github.io/links2/windowsticker.html");
     return;
 });
