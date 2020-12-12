@@ -66,6 +66,7 @@ body {
 	<a class="dropdown-item" href="#" onclick="updatedisplay('KIA')">Kia</a> 
 	<a class="dropdown-item" href="#" onclick="updatedisplay('LAND ROVER')">Land Rover</a> 
 	<a class="dropdown-item" href="#" onclick="updatedisplay('LEXUS')">Lexus</a> 
+	<a class="dropdown-item" href="#" onclick="updatedisplay('MASERATI')">Maserati</a>
 	<a class="dropdown-item" href="#" onclick="updatedisplay('MAZDA')">Mazda</a> 
 	<a class="dropdown-item" href="#" onclick="updatedisplay('MERCEDES-BENZ')">Mercedes Benz</a>
 	<a class="dropdown-item" href="#" onclick="updatedisplay('MITSUBISHI')">Mitsubishi</a> 
@@ -593,7 +594,27 @@ body {
         </div>
         <br>
       </div>
-	    
+      <div id="maserati_div" style="display:none; background-color:#fff;"> <br>
+        <p> Links that are listed here will work for <strong>Maserati vehicles.</strong></p>
+        <div class="card-deck">
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="maserati()">
+            <div class="card-body">
+              <h4 class="card-title">Window Sticker</h4>
+              <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+              <!-- <p class="card-text">Available for most vehicles</p> --> 
+		   <p class="card-text"><strong>Currently Unavailable</strong></p>
+              <!-- <a href="#" class="card-link">Download</a> --> 
+            </div>
+          </div>
+          <div class="card bg-light" style="width: 14rem;" onmouseover="">
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>	    
       <div id="mazda_div" style="display:none; background-color:#fff;"> <br>
         <p> Links that are listed here will work for <strong>Mazda vehicles.</strong></p>
         <div class="card-deck">
@@ -1384,6 +1405,12 @@ function updatedisplay ( manu ) {
 		document.getElementById("lexus_div").style.display = 'none';
 	}
 	
+	if (aMake == "MASERATI") {
+		document.getElementById("maserati_div").style.display = 'block';
+	} else {
+		document.getElementById("maserati_div").style.display = 'none';
+	}
+	
 	if (aMake == "MAZDA") {
 		document.getElementById("mazda_div").style.display = 'block';
 	} else {
@@ -1616,7 +1643,12 @@ function manheimsearch() {
 	window.open("https://www.manheim.com/members/powersearch/keywordSearchResults.do?searchTerms=" + vin);
 	};
 };
-
+function maserati() {
+	if (vincheckin()) {
+	window.open("https://www.maseratimarin.com/api/legacy/pse/windowsticker/maserati?vin=" + vin +"&country=US&language=en");
+	};
+};
+	
 function mazdabtn() {
 	if (vincheckin()) {
 	window.open("https://www.mazdausa.com/MusaWeb/displayDealerWindowSticker.action?vin=" + vin +"&dealerId=51622");
