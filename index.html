@@ -885,6 +885,23 @@ body {
               <p class="card-text">Manheim MMR search for VIN</p>
             </div>
           </div>
+		
+	  <div class="card-deck">
+          <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="wclutch()">
+            <div class="card-body">
+              <h4 class="card-title">PDF</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+              <p class="card-text">withclutch sticker</p>
+              </div>
+          </div>
+          <div class="card bg-light" style="width: 14rem;" onmouseover="" >
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+            </div>
+          </div>
+        </div>
+		
         </div>
         <br>
         <a href="#" id="siriusbutton" onclick="siriusxm()" role="button" aria-pressed="true"> Check Sirius XM Radio</a> <a href="#" id="decoderzbutton" onclick="decoderz()" role="button" aria-pressed="true"> Vin Decoderz. Daily search limit per IP. Use caution with options</a> <a href="#" id="hitchbutton" onclick="hitcher()" role="button" aria-pressed="true"> e-Trailer direct link for tow hitch info</a> </div>
@@ -1294,7 +1311,12 @@ function getnissansticker2() {
 	window.open( piserv+"/nissan?vin=" + vin);	
 	};
 };
-
+function wclutch() {
+	if (vincheckin()) {
+	// window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+	window.open( piserv+"/clutch?vin=" + vin);	
+	};
+};
 	
 function updatedisplay ( manu ) {
 	
