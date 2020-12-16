@@ -892,9 +892,9 @@ body {
 	  <div class="card-deck">
           <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="wclutch()">
             <div class="card-body">
-              <h4 class="card-title">PDF</h4>
-              <h6 class="card-subtitle mb-2 text-muted">Info</h6>
-              <p class="card-text">withclutch sticker</p>
+              <h4 class="card-title">Window Sticker</h4>
+              <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+              <p class="card-text">Monroneylabels info via withclutch.</p>
               </div>
           </div>
           <div class="card bg-light" style="width: 14rem;" onmouseover="" >
@@ -951,6 +951,7 @@ body {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
 <script>
 	var piserv = "http://73.87.209.229";
+	var awsserv = "http://3.15.39.214";
 	var vin = "";
 	var aYear;
 	var aMake;
@@ -1317,7 +1318,7 @@ function getnissansticker2() {
 function wclutch() {
 	if (vincheckin()) {
 	// window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
-	window.open( piserv+"/clutch?vin=" + vin);	
+	window.open( awsserv+"/clutch?vin=" + vin);	
 	};
 };
 	
