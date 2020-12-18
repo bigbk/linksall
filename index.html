@@ -1146,10 +1146,11 @@
                                     <p class="card-text">Manheim MMR search for VIN</p>
                                 </div>
                             </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
+                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="hclutch()">
                                 <div class="card-body">
-                                    <h4 class="card-title"></h4>
-                                    <h6 class="card-subtitle mb-2 text-muted"></h6>
+                                    <h4 class="card-title">CARFAX Data</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted">CARFAX</h6>
+                                    <p class="card-text">Shows if anything reported on CARFAX</p>
                                 </div>
                             </div>
                         </div>
@@ -3554,6 +3555,11 @@ function Call() {
             function wclutch() {
                 if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
                     window.open(awsserv + "/clutch?vin=" + vin);
+                };
+            };
+            function hclutch() {
+                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                    window.open(awsserv + "/hclutch?vin=" + vin);
                 };
             };
 
