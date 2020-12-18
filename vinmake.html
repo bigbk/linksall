@@ -3121,22 +3121,11 @@
  }
 ];
 
-                // var $loading = $('#loading').hide();
-                // $( document ).ajaxStart(function() {
-                // console.log("loading");
-                //    $( "#loading" ).show();
-                // });
 
-                // $( document ).ajaxStop(function() {
-                // console.log("loaded");
-                //    $( "#loading" ).hide();
-                // });
 
                 function copyToClipboard(text) {
                     var dummy = document.createElement("textarea");
-                    // to avoid breaking orgain page when copying more words
-                    // cant copy when adding below this code
-                    // dummy.style.display = 'none'
+
                     document.body.appendChild(dummy);
                     // Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
                     dummy.value = text;
@@ -3157,16 +3146,9 @@
                     if (vin.length === 17) {
 
                         copyToClipboard(vin);
-                        /* copy to clipboard*/
-                        var copyText = document.getElementById("VINbar");
-                        // copyText.select();
-                        // copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-                        // document.execCommand("copy");
 
-                        // var outfocus =document.getElementById("iyear");
-                        // outfocus.focus();
-                        // outfocus.select();
-                        // outfocus.setSelectionRange(0, 99999);
+                        var copyText = document.getElementById("VINbar");
+
                         copyText.focus();
 
                         getNHTSADataByVIN(vin);
@@ -3203,8 +3185,15 @@
                         console.log(secondmake);
                         console.log(onetwomake);
                         console.log(onethree);
-
-                        
+			    
+			var wmisearch = onethree;
+                        for (var i = 0; i < wmidata.length; i++){
+  				// look for the entry with a matching `code` value
+  				if (obj[i].WMI == wmisearch){
+     				// we found it
+    				aMake = obj[i].Manufacturer 
+  				}
+			}
 
                         console.log("typed " + aMake);
                         updatedisplay();
