@@ -909,6 +909,56 @@
                         </div>
                         <br>
                     </div>
+			
+                   <div id="nissaninfiniti_div" style="display:none; background-color:#fff;">
+                        <br>
+                        <p>
+                            Links that are listed here will work for
+                            <strong>Nissan and Infiniti vehicles.</strong>
+                        </p>
+                        <br>
+                        <div class="card-deck">
+
+                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker2()">
+                                <div class="card-body">
+                                    <h4 class="card-title">Window Sticker</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                                    <p class="card-text">Available for newer vehicles
+                                    </p>
+                                    <!-- <a href="#" class="card-link">Download</a> -->
+                                </div>
+                            </div>
+                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="nissan()">
+                                <div class="card-body">
+                                    <h4 class="card-title">Window Sticker</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                                    <p class="card-text">Available for newer vehicles. You may have to click reload.
+                                    </p>
+                                    <!-- <a href="#" class="card-link">Download</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-deck">
+                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="nissantrm()">
+                                <div class="card-body">
+                                    <h4 class="card-title">Trim Level</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+                                    <p class="card-text">For Nissan vehicles. Enter vin for recall information, which also lists trim the level</p>
+                                    <a href="#" title="Enter vin for recall information, which also lists trim the level" class="card-link">Retrieve</a>
+                                </div>
+                            </div>
+                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="infinititrm()">
+                                <div class="card-body">
+                                    <h4 class="card-title">Trim Level</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+                                    <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
+                                    <a href="#" title="For Infiniti vehicles. Enter vin for recall information, which also lists trim the level" class="card-link">Retrieve</a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
 
                     <div id="porsche_div" style="display:none; background-color:#fff;">
                         <br>
@@ -3592,9 +3642,9 @@ function Call() {
                 }
 
                 if (aMake == "INFINITI" || aMake == "INNIS") {
-                    document.getElementById("infiniti_div").style.display = 'block';
+                    document.getElementById("nissaninfiniti_div").style.display = 'block';
                 } else {
-                    document.getElementById("infiniti_div").style.display = 'none';
+                    document.getElementById("nissaninfiniti_div").style.display = 'none';
                 }
 
                 if (aMake == "KIA" || aMake == "HYUK") {
@@ -3640,9 +3690,9 @@ function Call() {
                 }
 
                 if (aMake == "NISSAN" || aMake == "INNIS") {
-                    document.getElementById("nissan_div").style.display = 'block';
+                    document.getElementById("nissaninfiniti_div").style.display = 'block';
                 } else {
-                    document.getElementById("nissan_div").style.display = 'none';
+                    document.getElementById("nissaninfiniti_div").style.display = 'none';
                 }
 
                 if (aMake == "PORSCHE") {
