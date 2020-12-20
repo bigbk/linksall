@@ -562,12 +562,11 @@
                         </p>
                         <br>
                         <div class="card-deck">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="honda()">
+                           <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="honda2()">
                                 <div class="card-body">
                                     <h4 class="card-title">Trim Level</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
-                                    <p class="card-text">Trim level information includes NAV and Entertainment System. Requires free account.</p>
-                                    <a href="#" title="Requires Honda Owner Account. jasib123 sl.." class="card-link">Retrieve</a>
+                                    <h6 class="card-subtitle mb-2 text-muted">JSON</h6>
+                                    <p class="card-text">Trim level information includes NAV and Entertainment System.</p>
                                 </div>
                             </div>
                             <div class="card bg-light" style="width: 14rem;" onmouseover="">
@@ -4029,6 +4028,11 @@ function Call() {
 
 
                     window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode=" + vin);
+                };
+            };
+            function honda2() {
+                if (vincheckin()) {
+			window.open(awsserv + "/honda?vin=" + vin);
                 };
             };
             function subaru2() {
