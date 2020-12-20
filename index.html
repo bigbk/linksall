@@ -1225,6 +1225,8 @@
                             <span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
                                 <strong>Blackbook</strong>
                             </span>
+			    <a href="#" id="bbbutton" onclick="invoice()" role="button" aria-pressed="true">
+                                BlackBook INVOICE GUIDE</a>
                             <a href="http://www.blackbookportals.com/bb/products/vinpricingxpresshtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true" title="Allows access to invoice guide and more">
                                 BlackBook First Values</a>
                             <a href="http://www.blackbookusa.com/bb/products/usedcarhtmlportal.asp?color=d&companyid=cudirect.com" target="_blank" role="button" aria-pressed="true">
@@ -3560,6 +3562,11 @@ function Call() {
 	    function lxsspecs() {
                 if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
                     window.open(awsserv + "/lexus?vin=" + vin);
+                };
+            };
+	    function invoice() {
+                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                    window.open(awsserv + "/invoice?vin=" + vin);
                 };
             };
             function wclutch() {
