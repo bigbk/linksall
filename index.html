@@ -721,14 +721,14 @@
                         </p>
                         <br>
                         <div class="card-deck">
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
+                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="lxsspecs()">
                                 <div class="card-body">
                                     <h4 class="card-title">Equipment Listing</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
                                     <p class="card-text">Lists most options and packages</p>
-                                    <a href="https://drivers.lexus.com/lexusdrivers/resources/vehicle-specs" target="_blank" class="card-link">Visit</a>
+				    <a href="https://drivers.lexus.com/lexusdrivers/resources/vehicle-specs" target="_blank" class="card-link">Visit</a>
                                 </div>
-                            </div>
+			    </div>
                             <div class="card bg-light" style="width: 14rem;" onmouseover="">
                                 <div class="card-body">
                                     <h4 class="card-title"></h4>
@@ -1095,14 +1095,14 @@
                         </p>
                         <br>
                         <div class="card-deck">
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
+                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="tytspecs()">
                                 <div class="card-body">
                                     <h4 class="card-title">Equipment Listing</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
                                     <p class="card-text">Lists most options and packages</p>
                                     <a href="https://www.toyota.com/owners/vehicle-specification" target="_blank" class="card-link">Visit</a>
                                 </div>
-                            </div>
+			    </div>
                             <div class="card bg-light" style="width: 14rem;" onmouseover="">
                                 <div class="card-body">
                                     <h4 class="card-title">Pricing</h4>
@@ -3550,6 +3550,16 @@ function Call() {
             function getnissansticker2() {
                 if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
                     window.open(piserv + "/nissan?vin=" + vin);
+                };
+            };
+            function tytspecs() {
+                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                    window.open(awsserv + "/toyota?vin=" + vin);
+                };
+            };
+	    function lxsspecs() {
+                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                    window.open(awsserv + "/lexus?vin=" + vin);
                 };
             };
             function wclutch() {
