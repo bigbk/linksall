@@ -13,9 +13,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-        <link href="https://fonts.googleapis.com/css?family=Chivo:400,700,900|Signika+Negative:300,400,600,700" rel="stylesheet">
-        
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+        <link
+        href="https://fonts.googleapis.com/css?family=Chivo:400,700,900|Signika+Negative:300,400,600,700" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154118336-2"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -167,24 +168,9 @@
 
                     <!-- ------------------------------------------------ -->
                 </div>
-                <div
-                    class="col-md-6 order-md-2 order-1 order-sm-1">
-                    <!--<div id="loading" class="shadow p-3 rounded-0" style="z-index: 9; position: absolute; opacity: 1; top: 70px; margin-top: 20px; margin-bottom: 20px; background-color: #FFD51D;width: 100%text-align: center;">
-                                                                                                                                                                                    			<div class="spinner-grow" style="width: 1rem; height: 1rem;" role="status">
-                                                                                                                                                                                    				<span class="sr-only"></span>
-                                                                                                                                                                                    			</div>
-                                                                                                                                                                                    			Please wait while VIN details are being pulled from NHTSA. If their server is down or this process takes longer than 10 seconds, you can use the Manual Selection menu on the upper left corner to retrieve manufacturer specific links. 
-                                                                                                                                                                                    		</div>  -->
+                <div class="col-md-6 order-md-2 order-1 order-sm-1">
 
                     <br>
-                    <!--<p>
-                                                                                                                                                                                    		  <a class="btn btn-primary" data-toggle="collapse" href="#kmxsearch" role="button" aria-expanded="false" aria-controls="kmxsearch">
-                                                                                                                                                                                        	Click here to see CarMax Inventory Search options
-                                                                                                                                                                                      		</a>
-                                                                                                                                                                                    		  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#kmxsearch" aria-expanded="false" aria-controls="kmxsearch">
-                                                                                                                                                                                    		    Click here to see CarMax Inventory Search options
-                                                                                                                                                                                    		  </button>
-                                                                                                                                                                                    		</p>-->
 
                     <div class="accordion" id="accordionsearch">
                         <div class="card">
@@ -1017,10 +1003,7 @@
                             </div>
                         </div>
                         <br>
-                        <!--<div id="subaru_data" style="display:block; background-color:#fff;" align="center"> <br>
-                                                                                                                                                                                                                                <textarea id="subaru_results" rows="6" cols="60" placeholder="Vehicle Data Presented Here"></textarea>
-                                                                                                                                                                                                                        	</div>
-                                                                                                                                                                                                                        	<br> -->
+
                     </div>
 
                     <div id="tesla_div" style="display:none; background-color:#fff;">
@@ -1239,8 +1222,10 @@
                                 Motor Trend for Packages</a>
                             <a href="http://autoweek.com/buyers-guide" target="_blank" role="button" aria-pressed="true">
                                 AutoWeek for Packages</a>
-                            <a href="https://care.siriusxm.com/vinlookup_view.action" target="_blank" role="button" aria-pressed="true">
-                                Satellite Radio VIN Check</a>
+                            <a href="#" id="siriusbutton2" onclick="siriusxm()" role="button" aria-pressed="true">
+                                Check Sirius XM Radio</a>
+                            <!--<a href="https://care.siriusxm.com/vinlookup_view.action" target="_blank" role="button" aria-pressed="true">
+                                                                                        Satellite Radio VIN Check</a> -->
                             <a href="https://propelfuels.com/vehicles" target="_blank" role="button" aria-pressed="true">
                                 Flex Fuel VIN Code Check</a>
                             <a href="http://www.ethanolretailer.com/images/uploads/FFV-2017.pdf" target="_blank" role="button" aria-pressed="true">
@@ -3026,39 +3011,33 @@
 
             };
 
-            function getnissansticker() {
-                if (vincheckin()) {
-                    window.open("http://192.168.43.1:2080/nissan?vin=" + vin);
-                };
-            };
-
             function getnissansticker2() {
-                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                if (vincheckin()) {
                     window.open(piserv + "/nissan?vin=" + vin);
                 };
             };
             function tytspecs() {
-                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                if (vincheckin()) {
                     window.open(awsserv + "/toyota?vin=" + vin);
                 };
             };
             function lxsspecs() {
-                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                if (vincheckin()) {
                     window.open(awsserv + "/lexus?vin=" + vin);
                 };
             };
             function invoice() {
-                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                if (vincheckin()) {
                     window.open(awsserv + "/invoice?vin=" + vin);
                 };
             };
             function wclutch() {
-                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                if (vincheckin()) {
                     window.open(awsserv + "/clutch?vin=" + vin);
                 };
             };
             function hclutch() {
-                if (vincheckin()) { // window.open("http://100.122.42.141:2080/nissan?vin=" + vin);
+                if (vincheckin()) {
                     window.open(awsserv + "/hclutch?vin=" + vin);
                 };
             };
@@ -3239,14 +3218,6 @@
             };
 
 
-            // function audivwwiki() {
-            // if (vincheckin()) {
-            // window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin);
-            // //window.open("http://mclaren722.herokuapp.com/VWvindownload?vin=" + vin);
-            // };
-            //
-            // };
-
             function autobrochures() {
                 if (aMake !== "" && typeof aMake !== 'undefined') {
                     window.open(" http://www.auto-brochures.com/" + aMake + ".html");
@@ -3315,33 +3286,6 @@
                 };
             };
 
-            function fordstickerkey3(param_vin) {
-                $.ajax({
-                    url: "https://imola.adesa.com/auction-engine-web-api/encryptVin.json?cgId=947&sellerOrgId=201721&isRunList=1&vin=",
-                    type: "POST",
-                    data: {
-                        format: "json",
-                        data: param_vin
-                    },
-                    dataType: "json",
-                    success: function (result) {
-                        console.log(result);
-
-
-                        if (result.Results[0].encryptVin !== "") {
-                            window.open("https://windowsticker.concentrix.com/windowsticker/auction_ws/index.htm?sProgramCode=FORD_VR&loginId=1&quic_param=" + result.Results[0].encryptVin);
-                            console.log("pulled " + result.Results[0].encryptVin);
-                        };
-
-                        console.log("pulled " + result);
-
-                    },
-                    error: function (xhr, ajaxOptions, thrownError) {
-                        console.log(xhr.status);
-                        console.log(thrownError);
-                    }
-                });
-            };
 
             function fordwiki() {
                 if (vincheckin()) {
@@ -3355,11 +3299,6 @@
                 };
             };
 
-            function honda() {
-                if (vincheckin()) {
-                    window.open(" https://owners.honda.com/validation/validatevin?vin=" + vin);
-                };
-            };
 
             function hyunwiki() {
                 if (vincheckin()) {
@@ -3368,7 +3307,7 @@
             };
 
             function infiniti() {
-                if (vincheckin()) { // window.open("https://www.infinitiusa.com/recalls-vin/#/#/Results/" + vin);
+                if (vincheckin()) {
                     window.open("https://www.oemstickers.com/WindowSticker.php?vin=" + vin);
                     setTimeout(function () {
                         window.open("https://www.oemstickers.com/WindowSticker.php?vin=" + vin);
@@ -3382,19 +3321,9 @@
                 };
             };
 
-            // function kia() {
-            // window.open(" http://www.kia.com/us/en/data/owners/recalls/search/" + vin);
-            // };
-
             function kiabtn2() {
                 if (vincheckin()) {
                     window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
-                };
-            };
-
-            function lexlist() {
-                if (vincheckin()) {
-                    window.open(" https://drivers.lexus.com/lexusdrivers/resources/viewSpecifications?vin=" + vin);
                 };
             };
 
@@ -3478,39 +3407,7 @@
                 };
             };
             function subaru() {
-                if (vincheckin()) { /*$.ajax({
-    		url: "https://www.subaru.com/services/utility/vindata/",
-    		type: "POST",
-    		data: { format: "json", data: vin },
-    		dataType: "json",
-    		success: function(result)
-    		{
-			console.log(result);
-			console.log("pulled specific " + aMake);
-	    
-    			var subaru_text = "";
-			for (var i = 0; i < result.Results.length; i++) {
-			var resultsub = result.Results[i];
-			for (var prop in resultsub) {
-				if (resultsub.hasOwnProperty(prop) && resultsub[prop] !== "") {
-					subaru_text += prop + ": " + resultsub[prop] + "\n";
-				}
-			}
-		}
-	
-	document.getElementById("subaru_results").value = subaru_text;
-		
-    	},
-    	error: function(xhr, ajaxOptions, thrownError)
-    	{
-        	console.log(xhr.status);
-       		console.log(thrownError);
-    	}
- 	});
-
-	*/
-
-
+                if (vincheckin()) {
                     window.open("https://www.subaru.com/owners/vehicle-resources/equipment.html?modelCode=" + vin);
                 };
             };
@@ -3521,41 +3418,6 @@
             };
             function subaru2() {
                 if (vincheckin()) {
-
-                    /*$.ajax({
-    		url: "https://www.subaru.com/services/utility/vindata/",
-    		type: "POST",
-    		data: { format: "json", data: vin },
-    		dataType: "json",
-    		success: function(result)
-    		{
-			console.log(result);
-			console.log("pulled specific " + aMake);
-	    
-    			var subaru_text = "";
-			for (var i = 0; i < result.Results.length; i++) {
-			var resultsub = result.Results[i];
-			for (var prop in resultsub) {
-				if (resultsub.hasOwnProperty(prop) && resultsub[prop] !== "") {
-					subaru_text += prop + ": " + resultsub[prop] + "\n";
-				}
-			}
-		}
-	
-	document.getElementById("subaru_results").value = subaru_text;
-		
-    	},
-    	error: function(xhr, ajaxOptions, thrownError)
-    	{
-        	console.log(xhr.status);
-       		console.log(thrownError);
-    	}
- 	});
-
-	*/
-
-
-                    /*window.open("https://www.subaru.com/services/utility/vindata?vin=" + vin);*/
                     window.open(awsserv + "/subaru?vin=" + vin);
                 };
             };
