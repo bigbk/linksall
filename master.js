@@ -207,7 +207,8 @@
     };
     function wclutch() {
         if (vincheckin()) {
-            window.open(awsserv + "/clutch?vin=" + vin);
+            window.open(awsserv + "/clutch2?vin=" + vin);
+            //window.open(awsserv + "/clutch2?vin=" + vin);
         };
     };
     function hclutch() {
