@@ -473,6 +473,11 @@
             window.open("https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
         };
     };
+    function gmlink2() {
+        if (vincheckin()) {
+            window.open("https://www.koonswhitemarshchevy.com/api/legacy/pse/windowsticker/gm?bac=113645&vin=" + vin);
+        };
+    };
 
 
     function hyunwiki() {
