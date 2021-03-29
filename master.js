@@ -207,7 +207,7 @@
     };
     function wclutch() {
         if (vincheckin()) {
-            window.open(awsserv + "/clutch2?vin=" + vin);
+            window.open("https://www.withclutch.com//window-stickers");
             //window.open(awsserv + "/clutch2?vin=" + vin);
         };
     };
