@@ -16,7 +16,7 @@
 
     function Call() {
         vin = document.getElementById("VINbar").value;
-        var wmidata = $.getJSON("https://bigbk.github.io/links2/vin.json");
+        var wmidata = $.getJSON("vin.json");
         console.log("wmidata "+ wmidata[0]);
         if (vin.length >= 3) {
 
