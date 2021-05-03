@@ -45,6 +45,7 @@
 
             var wmisearch = onethree;
             for (var i = 0; i < wmidata.length; i++) { // look for the entry with a matching `code` value
+                console.log(i);
                 if (wmidata[i].WMI == wmisearch) { // we found it
                     aMake = wmidata[i].Manufacturer;
                     console.log("found using json data");
