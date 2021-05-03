@@ -17,6 +17,7 @@
     function Call() {
         vin = document.getElementById("VINbar").value;
         var wmidata = $.getJSON("vin.json");
+        console.log(wmidata);
         if (vin.length >= 3) {
 
             vin = vin.replace(/ +/g, "");
