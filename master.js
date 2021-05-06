@@ -672,3 +672,4 @@ function hitcher() {
         window.open("https://www.etrailer.com/hitch-" + aYear + "_" + aMake + "_" + aModel + ".htm");
     };
 };
+ 
