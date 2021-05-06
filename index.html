@@ -1227,7 +1227,7 @@
                             <a href="#" id="siriusbutton2" onclick="siriusxm()" role="button" aria-pressed="true">
                                 Check Sirius XM Radio</a>
                             <!--<a href="https://care.siriusxm.com/vinlookup_view.action" target="_blank" role="button" aria-pressed="true">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Satellite Radio VIN Check</a> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Satellite Radio VIN Check</a> -->
                             <a href="https://propelfuels.com/vehicles" target="_blank" role="button" aria-pressed="true">
                                 Flex Fuel VIN Code Check</a>
                             <a href="http://www.ethanolretailer.com/images/uploads/FFV-2017.pdf" target="_blank" role="button" aria-pressed="true">
@@ -1305,6 +1305,58 @@
             // var wmidata =
             var wmidata = $.getJSON("vin.json");
 
+            function Call() {
+                vin = document.getElementById("VINbar").value;
+                var wmidata = $.getJSON("vin.json");
+                console.log("wmidata " + wmidata[0]);
+                if (vin.length >= 3) {
+
+                    vin = vin.replace(/ +/g, "");
+                    vin = vin.replace(/{/g, "");
+                    vin = vin.replace(/}/g, "");
+
+                    vin = vin.toUpperCase();
+                    document.getElementById("VINbar").value = vin;
+
+
+                    console.log(vin.length);
+
+
+                    document.getElementById("txt_results").value = "Click on Search icon to retrieve details";
+                    document.getElementById("output").innerText = "Click on Search icon to retrieve details. " + "VIN number should be 17 digits long, currently " + vin.length + " digits entered.";
+                    document.getElementById("outputbox").style.display = 'block';
+
+                    var secondmake = vin.substring(1, 2);
+                    var onetwomake = vin.substring(0, 2);
+                    var onethree = vin.substring(0, 3);
+                    var twothree = vin.substring(1, 3);
+                    console.log(secondmake);
+                    console.log(onetwomake);
+                    console.log(onethree);
+
+                    var wmisearch = onethree;
+                    for (var i = 0; i < wmidata.length; i++) { // look for the entry with a matching `code` value
+                        console.log(i);
+                        if (wmidata[i].WMI == wmisearch) { // we found it
+                            aMake = wmidata[i].Manufacturer;
+                            console.log("found using json data");
+                        }
+                    }
+
+                    console.log("typed " + aMake);
+                    updatedisplay();
+                    console.log(vin.length);
+                    if (vin.length === 17) {
+                        copyToClipboard(vin);
+
+                        var copyText = document.getElementById("VINbar");
+
+                        copyText.focus();
+
+                        getNHTSADataByVIN(vin);
+                    };
+                };
+            };
 
             document.getElementById("btn_submit").onclick = function () {
                 vin = document.getElementById("VINbar").value;
