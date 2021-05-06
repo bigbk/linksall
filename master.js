@@ -380,7 +380,7 @@ function updatedisplay(manu) {
     } else {
         document.getElementById("toyota_div").style.display = 'none';
     }
-    if (aMake == "VOLVO" {
+    if (aMake == "VOLVO") {
         document.getElementById("volvo_div").style.display = 'block';
     } else {
         document.getElementById("volvo_div").style.display = 'none';
