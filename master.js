@@ -653,6 +653,11 @@ function teslam() {
     };
 };
 
+function volvosticker() {
+    if (vincheckin()) {
+        window.open(" https://www.beyervolvocarsdulles.com/api/legacy/pse/windowsticker/volvo?vin=" + vin);
+    };
+};
 
 function vwaudilane() {
     if (vincheckin()) {
