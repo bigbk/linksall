@@ -15,12 +15,14 @@ function copyToClipboard(text) {
 function Call() {
     vin = document.getElementById("VINbar").value;
     //var wmidata = $.getJSON("vin.json");
+    var wmidata;
     fetch("vin.json")
         .then(response => response.json()) 
         .then (data => {
-            
             console.log(data);
-            var wmidata = data;
+            wmidata = data;
+            console.log("wmidata " + wmidata[0]);
+
         });
 
     console.log("wmidata " + wmidata[0]);
