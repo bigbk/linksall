@@ -48,7 +48,7 @@ function Call() {
         .then (data => {
             //console.log(data);
             wmidata = data;
-            console.log("wmidata " + wmidata);
+            //console.log("wmidata " + wmidata);
 
 
         var wmisearch = onethree;
@@ -56,7 +56,8 @@ function Call() {
             //console.log(i);
             if (wmidata[i].WMI == wmisearch) { // we found it
                 aMake = wmidata[i].Manufacturer;
-                console.log("found using json data" + aMake);
+                console.log("found using json data " + aMake);
+                updatedisplay();
             }
         }
         });
