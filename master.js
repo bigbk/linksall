@@ -19,7 +19,7 @@ function Call() {
         .then(response => response.json()) 
         .then (data => {
             
-            consolelog(data);
+            console.log(data);
             var wmidata = data;
         });
 
