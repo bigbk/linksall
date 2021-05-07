@@ -16,16 +16,7 @@ function Call() {
     vin = document.getElementById("VINbar").value;
     //var wmidata = $.getJSON("vin.json");
     var wmidata;
-    fetch("vin.json")
-        .then(response => response.json()) 
-        .then (data => {
-            //console.log(data);
-            wmidata = data;
-            console.log("wmidata " + wmidata);
 
-        });
-
-    console.log("wmidata out" + wmidata);
 
     if (vin.length >= 3) {
 
@@ -52,6 +43,14 @@ function Call() {
         console.log(onetwomake);
         console.log(onethree);
 
+        fetch("vin.json")
+        .then(response => response.json()) 
+        .then (data => {
+            //console.log(data);
+            wmidata = data;
+            console.log("wmidata " + wmidata);
+
+
         var wmisearch = onethree;
         for (var i = 0; i < wmidata.length; i++) { // look for the entry with a matching `code` value
             console.log(i);
@@ -60,6 +59,7 @@ function Call() {
                 console.log("found using json data");
             }
         }
+        });
 
         console.log("typed " + aMake);
         updatedisplay();
