@@ -14,7 +14,13 @@ function copyToClipboard(text) {
 
 function Call() {
     vin = document.getElementById("VINbar").value;
-    var wmidata = $.getJSON("vin.json");
+    //var wmidata = $.getJSON("vin.json");
+    fetch("vin.json")
+        .then(response => response.json()) 
+        .then (data => {
+            var wmidata = data;
+        });
+
     console.log("wmidata " + wmidata[0]);
     if (vin.length >= 3) {
 
@@ -672,4 +678,3 @@ function hitcher() {
         window.open("https://www.etrailer.com/hitch-" + aYear + "_" + aMake + "_" + aModel + ".htm");
     };
 };
- 
