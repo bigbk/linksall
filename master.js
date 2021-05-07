@@ -19,13 +19,14 @@ function Call() {
     fetch("vin.json")
         .then(response => response.json()) 
         .then (data => {
-            console.log(data);
+            //console.log(data);
             wmidata = data;
-            console.log("wmidata " + wmidata[0]);
+            console.log("wmidata " + wmidata);
 
         });
 
-    console.log("wmidata " + wmidata[0]);
+    console.log("wmidata out" + wmidata);
+
     if (vin.length >= 3) {
 
         vin = vin.replace(/ +/g, "");
