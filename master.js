@@ -14,8 +14,10 @@ function copyToClipboard(text) {
 
 function Call() {
     vin = document.getElementById("VINbar").value;
-    var wmidata = $.getJSON("vin.json");
-    console.log("wmidata " + wmidata[0]);
+    //var wmidata = $.getJSON("vin.json");
+    var wmidata;
+
+
     if (vin.length >= 3) {
 
         vin = vin.replace(/ +/g, "");
@@ -41,6 +43,14 @@ function Call() {
         console.log(onetwomake);
         console.log(onethree);
 
+        fetch("vin.json")
+        .then(response => response.json()) 
+        .then (data => {
+            //console.log(data);
+            wmidata = data;
+            console.log("wmidata " + wmidata);
+
+
         var wmisearch = onethree;
         for (var i = 0; i < wmidata.length; i++) { // look for the entry with a matching `code` value
             //console.log(i);
@@ -49,6 +59,7 @@ function Call() {
                 console.log("found using json data" + aMake);
             }
         }
+        });
 
         console.log("typed " + aMake);
         updatedisplay();
@@ -672,4 +683,3 @@ function hitcher() {
         window.open("https://www.etrailer.com/hitch-" + aYear + "_" + aMake + "_" + aModel + ".htm");
     };
 };
- 
