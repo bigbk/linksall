@@ -18,6 +18,8 @@ function Call() {
     fetch("vin.json")
         .then(response => response.json()) 
         .then (data => {
+            
+            consolelog(data);
             var wmidata = data;
         });
 
