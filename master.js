@@ -519,6 +519,9 @@ function infinititrm() {
 
 function kiabtn2() {
     if (vincheckin()) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "https://www.kia.com", true);
+        xhttp.send();
         window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
     };
 };
