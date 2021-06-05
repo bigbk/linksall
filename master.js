@@ -519,10 +519,15 @@ function infinititrm() {
 
 function kiabtn2() {
     if (vincheckin()) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "https://www.kia.com", true);
-        xhttp.send();
-        window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
+        //var xhttp = new XMLHttpRequest();
+        //xhttp.open("GET", "https://www.kia.com", true);
+        //xhttp.send();
+        
+        var winkia = window.open("https://www.kia.com", '_blank');
+        setTimeout(function () {
+            winkia.close();
+            window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin);
+        }, 2000);
     };
 };
 
