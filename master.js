@@ -527,7 +527,7 @@ function kiabtn2() {
         setTimeout(function () {
             winkia.close();
             window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin);
-        }, 2000);
+        }, 3000);
     };
 };
 
