@@ -1304,7 +1304,21 @@
             var manu = "";
             // var wmidata =
             var wmidata = $.getJSON("vin.json");
- 
+            
+            
+ $.ajax({url: piserv,
+        type: "HEAD",
+        timeout:1000,
+        statusCode: {
+            400: function (response) {
+                alert('Pi server is currently offline or connection denied. Some functionality may not be available. Please notify. ');
+            },
+            0: function (response) {
+                alert('Pi server is currently offline or connection denied. Some functionality may not be available. Please notify.');
+            }              
+        }
+ });
+            
             document.getElementById("btn_submit").onclick = function () {
                 vin = document.getElementById("VINbar").value;
                 vin = vin.replace(/ +/g, "");
