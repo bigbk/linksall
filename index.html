@@ -1306,18 +1306,16 @@
             var wmidata = $.getJSON("vin.json");
             
             
- $.ajax({url: piserv + "bktest/windowsticker.html",
+            
+$.ajax({url: piserv,
         type: "HEAD",
         timeout:1000,
-        statusCode: {
-            400: function (response) {
-                alert('Pi server is currently offline or connection denied. Some functionality may not be available. Please notify. ');
-            },
-            0: function (response) {
-                alert('Pi server is currently offline or connection denied. Some functionality may not be available. Please notify.');
-            }              
-        }
- });
+}).done(function (data) {
+    //test
+}).fail(function (jqXHR, textStatus, errorThrown) {
+    alert('Pi server is currently offline or connection is denied. Some functionality may not be available. Please notify.');
+    console.log(errorThrown);
+});
             
             document.getElementById("btn_submit").onclick = function () {
                 vin = document.getElementById("VINbar").value;
