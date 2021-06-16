@@ -1308,15 +1308,15 @@
             
             
             
-$.ajax({url: piservs,
-        type: "HEAD",
-        timeout:1000,
-}).done(function (data) {
-    //test
-}).fail(function (jqXHR, textStatus, errorThrown) {
-    alert('Pi server is currently offline or connection is denied. Some functionality may not be available. Please notify.');
-    console.log(errorThrown);
-});
+//$.ajax({url: piservs,
+//        type: "HEAD",
+//        timeout:1000,
+//}).done(function (data) {
+//    //test
+//}).fail(function (jqXHR, textStatus, errorThrown) {
+//    alert('Pi server is currently offline or connection is denied. Some functionality may not be available. Please notify.');
+//    console.log(errorThrown);
+//});
             
             document.getElementById("btn_submit").onclick = function () {
                 vin = document.getElementById("VINbar").value;
