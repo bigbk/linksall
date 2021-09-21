@@ -207,13 +207,13 @@ function getnissansticker2() {
 
 function toyotasticker() {
     if (vincheckin()) {
-        window.open("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
+        window.open("https://api.toyotainventory.com/VEHICLES/" + vin + "/monroney");
     };
 };
 
 function tytspecs() {
     if (vincheckin()) {
-        window.open("https://api.toyotainventory.com/VEHICLES/" + vin + "/monroney");
+        window.open(awsserv + "/toyota?vin=" + vin);
     };
 };
 function lxsspecs() {
