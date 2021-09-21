@@ -205,6 +205,12 @@ function getnissansticker2() {
     };
 };
 
+function getnissansticker3() {
+    if (vincheckin()) {
+        window.open("https://www.autonationnissanchandler.com/api/legacy/pse/windowsticker/nissan?vin=" + vin);
+    };
+};
+
 function toyotasticker() {
     if (vincheckin()) {
         window.open("https://api.toyotainventory.com/VEHICLES/" + vin + "/monroney");
