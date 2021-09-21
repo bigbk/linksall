@@ -204,9 +204,16 @@ function getnissansticker2() {
         window.open(piserv + "/nissan?vin=" + vin);
     };
 };
+
+function toyotasticker() {
+    if (vincheckin()) {
+        window.open("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
+    };
+};
+
 function tytspecs() {
     if (vincheckin()) {
-        window.open(awsserv + "/toyota?vin=" + vin);
+        window.open("https://api.toyotainventory.com/VEHICLES/" + vin + "/monroney");
     };
 };
 function lxsspecs() {
