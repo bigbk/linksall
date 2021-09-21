@@ -532,6 +532,12 @@ function infinititrm() {
 
 function kiabtn2() {
     if (vincheckin()) {
+        window.open("https://www.kia.com/us/services/us/windowsticker/load/" + vin);
+    };
+};
+
+function kiabtn3() {
+    if (vincheckin()) {
         //var xhttp = new XMLHttpRequest();
         //xhttp.open("GET", "https://www.kia.com", true);
         //xhttp.send();
