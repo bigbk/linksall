@@ -438,7 +438,7 @@ function bimmerbtn() {
 
 function bmwlane() {
     if (vincheckin()) {
-        window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/BMW/" + vin);
+        window.open("http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/BMW/" + vin);
     };
 };
 
@@ -700,7 +700,8 @@ function volvosticker() {
 
 function vwaudilane() {
     if (vincheckin()) {
-        window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin + "/4905414");
+        //window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin + "/4905414");
+        window.open("http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/" + vin + "/4905414");
     };
 
 };
