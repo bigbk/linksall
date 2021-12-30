@@ -666,7 +666,8 @@ function tesla() {
 };
 function tesla2() {
     if (vincheckin()) {
-        window.open("https://tesla-info.com/car/US-" + vin);
+        window.open("https://tesla-info.com/inventory.php?country=US&state=&sale=All&min=&max=9999999&milemin=&milemax=&ap=All&model=All&variant=All&title=undefined&minyear=2008&maxyear=2022&colour=All&interior=All&seats=All&wheels=0&titlestat=All&minrange=&search=" + vin);
+        //window.open("https://tesla-info.com/car/US-" + vin);
     };
 };
 function teslam() {
