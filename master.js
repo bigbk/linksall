@@ -450,7 +450,7 @@ function chrysler() {
 
 function chryslerlist() {
     if (vincheckin()) {
-        window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
+        window.open(" http://www.jeep.com/webselfservice/BuildSheetServlet?vin=" + vin);
     };
 };
 
