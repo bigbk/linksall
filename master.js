@@ -460,6 +460,12 @@ function chryslerlist2() {
     };
 };
 
+function chryslerlist3() {
+    if (vincheckin()) {
+        window.open(" http://www.dodge.com/webselfservice/BuildSheetServlet?vin=" + vin);
+    };
+};
+
 function decoderz() {
     if (vincheckin()) {
         window.open("https://www.vindecoderz.com/EN/check-lookup/" + vin);
