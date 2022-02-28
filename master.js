@@ -454,6 +454,12 @@ function chryslerlist() {
     };
 };
 
+function chryslerlist2() {
+    if (vincheckin()) {
+        window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
+    };
+};
+
 function decoderz() {
     if (vincheckin()) {
         window.open("https://www.vindecoderz.com/EN/check-lookup/" + vin);
