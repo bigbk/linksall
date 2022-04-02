@@ -217,6 +217,12 @@ function toyotasticker() {
     };
 };
 
+function toyotasticker3() {
+    if (vincheckin()) {
+        window.open("https://windowsticker.velocityengage.com/vin/" + vin + "/account/lenstolerlexusowingmills?source=Velocity%20Engage");
+    };
+};
+
 function tytspecs() {
     if (vincheckin()) {
         window.open(awsserv + "/toyota?vin=" + vin);
