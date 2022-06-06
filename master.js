@@ -219,7 +219,7 @@ function toyotasticker() {
 
 function toyotasticker3() {
     if (vincheckin()) {
-        window.open("https://windowsticker.velocityengage.com/vin/" + vin + "/account/jlraustin");
+        window.open("https://windowsticker.velocityengage.com/vin/" + vin + "/account/Murdock");
     };
 };
 
