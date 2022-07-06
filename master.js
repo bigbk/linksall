@@ -551,7 +551,8 @@ function infinititrm() {
 function kiabtn2() {
     if (vincheckin()) {
         // window.open("https://www.kia.com/us/services/us/windowsticker/load/" + vin);
-        window.open("https://www.commonwealthkia.com/Api/api/pdf/kia-oem-windows-sticker?accountid=56177&vin=" + vin);
+        //window.open("https://www.commonwealthkia.com/Api/api/pdf/kia-oem-windows-sticker?accountid=56177&vin=" + vin);
+        window.open("https://www.ourismankia.com/api/legacy/pse/windowsticker/kia?vin=" + vin);
     };
 };
 
