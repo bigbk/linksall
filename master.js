@@ -619,7 +619,8 @@ function miniog() {
 
 function mitsbtn() {
     if (vincheckin()) {
-        window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
+        window.open("https://www.fitzgeraldmitsubishi.com/api/legacy/pse/windowsticker/mitsubishi?vin=" + vin);
+        //window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
     };
 };
 
