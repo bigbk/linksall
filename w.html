@@ -150,8 +150,10 @@ document.getElementById("btn_submit2").onclick = function () {
 stocknum = document.getElementById("LINKbar").value;
 stocknum = stocknum.replace("https:", "");
 stocknum = stocknum.replace(/\//g, "");
-stocknum = stocknum.replace("connect.carmax.localappraisalonlinesystemsimageapiimgvehicles", "");
-stocknum = stocknum.replace("1.jpg?cs=0&width=135", "");
+//stocknum = stocknum.replace("connect.carmax.localappraisalonlinesystemsimageapiimgvehicles", "");
+stocknum = stocknum.replace("img2.carmax.comimgvehicles", "");	
+//stocknum = stocknum.replace("1.jpg?cs=0&width=135", "");
+stocknum = stocknum.replace("1.jpg?width=400&ratio=43", "");	
 countimg = 1;
 document.getElementById("VINbar").value = stocknum;
 prvs();
