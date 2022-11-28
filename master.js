@@ -584,7 +584,8 @@ function manheimsearch() {
 };
 function maserati() {
     if (vincheckin()) {
-        window.open("https://www.maseratimarin.com/api/legacy/pse/windowsticker/maserati?vin=" + vin + "&country=US&language=en");
+        //window.open("https://www.maseratimarin.com/api/legacy/pse/windowsticker/maserati?vin=" + vin + "&country=US&language=en");
+        window.open("https://www.herbchambers.com/api/legacy/pse/windowsticker/maserati?country=US&language=en&vin=" + vin );
     };
 };
 
