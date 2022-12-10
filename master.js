@@ -208,6 +208,7 @@ function getnissansticker2() {
 function getnissansticker3() {
     if (vincheckin()) {
         window.open("https://www.carsonnissan.com/api/legacy/pse/windowsticker/nissan?vin=" + vin);
+        //This one still works -> window.open("https://nissan-services.web-aws.dealersocket.com/production/sticker/" + vin);
         //window.open("https://www.autonationnissanchandler.com/api/legacy/pse/windowsticker/nissan?vin=" + vin);
     };
 };
