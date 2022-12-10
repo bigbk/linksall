@@ -213,6 +213,14 @@ function getnissansticker3() {
     };
 };
 
+function getnissansticker4() {
+    if (vincheckin()) {
+        //window.open("https://www.carsonnissan.com/api/legacy/pse/windowsticker/nissan?vin=" + vin);
+        window.open("https://nissan-services.web-aws.dealersocket.com/production/sticker/" + vin);
+        //window.open("https://www.autonationnissanchandler.com/api/legacy/pse/windowsticker/nissan?vin=" + vin);
+    };
+};
+
 function toyotasticker() {
     if (vincheckin()) {
         window.open("https://api.toyotainventory.com/VEHICLES/" + vin + "/monroney");
