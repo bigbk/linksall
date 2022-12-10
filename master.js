@@ -220,7 +220,7 @@ function toyotasticker() {
 
 function toyotasticker3() {
     if (vincheckin()) {
-        window.open("https://windowsticker.velocityengage.com/vin/" + vin + "/account/Murdock");
+        window.open("https://api-windowsticker.web-aws.dealersocket.com/toyota/" + vin);
     };
 };
 
