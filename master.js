@@ -530,7 +530,8 @@ function gmlink2() {
 
 function hyunwiki() {
     if (vincheckin()) {
-        window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
+        //window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
+        window.open("https://hyundai-sticker.dealerfire.com/new/" + vin);
     };
 };
 
