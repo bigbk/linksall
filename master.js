@@ -233,6 +233,13 @@ function toyotasticker3() {
     };
 };
 
+function velocitysticker() {
+    if (vincheckin()) {
+        window.open("https://windowsticker.velocityengage.com/vin/" + vin + "/account/murdock");
+    };
+};
+
+
 function tytspecs() {
     if (vincheckin()) {
         window.open(awsserv + "/toyota?vin=" + vin);
