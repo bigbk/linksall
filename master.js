@@ -339,7 +339,7 @@ function updatedisplay(manu) {
         document.getElementById("gm_div").style.display = 'none';
     }
 
-    if (aMake == "HONDA") {
+    if (aMake == "HONDA" || aMake == "ACURA") {
         document.getElementById("honda_div").style.display = 'block';
     } else {
         document.getElementById("honda_div").style.display = 'none';
