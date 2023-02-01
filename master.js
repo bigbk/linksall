@@ -166,7 +166,7 @@ function getNHTSADataByVIN(param_vin) {
             };
 
 
-            document.getElementById("output").innerText = aYear + " " + aMake + " " + aModel + " " + aSeries + " " + aTrim + ", " + aDisp + " " + aFuel + ", " + aCyl + " \n " + aDoor + aCab + " " + aBody + ", " + aDrive + " \r\n " + "(This information is provided by NHTSA. Do not solely rely on trim data)";
+            document.getElementById("output").innerText = aYear + " " + aMake + " " + aModel + " " + aSeries + " " + aTrim + ", " + aDisp + " " + aFuel + ", " + aCyl + " \n " + aDoor + aCab + " " + aBody + ", " + aDrive + " \r\n " + "(Please note that this information is sourced from NHTSA and should not be relied upon as the sole source of trim data.)";
             document.getElementById("outputbox").style.display = 'block';
 
             displayNHTSAResults(result);
