@@ -680,6 +680,11 @@ function honda2() {
         window.open(awsserv + "/honda?vin=" + vin);
     };
 };
+function acura() {
+    if (vincheckin()) {
+        window.open(awsserv + "/acura?vin=" + vin);
+    };
+};
 function subaru2() {
     if (vincheckin()) {
         window.open(awsserv + "/subaru?vin=" + vin);
