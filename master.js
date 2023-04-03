@@ -741,7 +741,8 @@ function teslam() {
 
 function volvosticker() {
     if (vincheckin()) {
-        window.open("https://www.koonsvolvocarswhitemarsh.com/api/legacy/pse/windowsticker/volvo?vin=" + vin);
+        //window.open("https://www.koonsvolvocarswhitemarsh.com/api/legacy/pse/windowsticker/volvo?vin=" + vin);
+        window.open("https://volvocars.niello.com/api/legacy/pse/windowsticker/volvo?vin=" + vin);
     };
 };
 
