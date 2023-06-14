@@ -235,7 +235,7 @@ function toyotasticker3() {
 
 function velocitysticker() {
     if (vincheckin()) {
-        window.open("https://windowsticker.velocityengage.com/vin/" + vin + "/account/murdock");
+        window.open("https://windowsticker.velocityengage.com/vin/" + vin + "/account/landmarkmotors");
     };
 };
 
