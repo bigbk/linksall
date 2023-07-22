@@ -500,6 +500,12 @@ function siriusxm() {
     };
 };
 
+function bidhistory() {
+    if (vincheckin()) {
+        window.open("https://en.bidhistory.org/search/?search=" + vin);
+    };
+};
+
 function ford() {
     if (vincheckin()) {
         window.open("https://www.etis.ford.com/selectedVehicleDetails.do#vin=" + vin);
