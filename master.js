@@ -554,7 +554,8 @@ function gmlink2() {
 function hyunwiki() {
     if (vincheckin()) {
         //window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
-        window.open("https://hyundai-sticker.dealerfire.com/new/" + vin);
+        //window.open("https://hyundai-sticker.dealerfire.com/new/" + vin);
+        window.open("https://www.nashuahyundai.com/services/hyundai/windowSticker.do?make=Hyundai&cs:o=%27windowsticker%27&vin=" + vin);
     };
 };
 
