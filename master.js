@@ -579,7 +579,8 @@ function kiabtn2() {
         // window.open("https://www.kia.com/us/services/us/windowsticker/load/" + vin);
         //window.open("https://www.commonwealthkia.com/Api/api/pdf/kia-oem-windows-sticker?accountid=56177&vin=" + vin);
         //window.open("https://www.ourismankia.com/api/legacy/pse/windowsticker/kia?vin=" + vin);
-        window.open("https://www.lehightonkia.com/api/pdf/kia-oem-windows-sticker?accountid=43339&vin=" + vin);
+        //window.open("https://www.lehightonkia.com/api/pdf/kia-oem-windows-sticker?accountid=43339&vin=" + vin);
+        window.open("https://www.paramountkia.com/api/pdf/kia-oem-windows-sticker?accountid=43885&vin=" + vin);
     };
 };
 
