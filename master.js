@@ -554,8 +554,8 @@ function gmlink2() {
 function hyunwiki() {
     if (vincheckin()) {
         //window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
-        //window.open("https://hyundai-sticker.dealerfire.com/new/" + vin);
-        window.open("https://www.nashuahyundai.com/services/hyundai/windowSticker.do?make=Hyundai&cs:o=%27windowsticker%27&vin=" + vin);
+        window.open("https://hyundai-sticker.dealerfire.com/new/" + vin);
+        //window.open("https://www.nashuahyundai.com/services/hyundai/windowSticker.do?make=Hyundai&cs:o=%27windowsticker%27&vin=" + vin);
     };
 };
 
@@ -580,7 +580,7 @@ function kiabtn2() {
         //window.open("https://www.commonwealthkia.com/Api/api/pdf/kia-oem-windows-sticker?accountid=56177&vin=" + vin);
         //window.open("https://www.ourismankia.com/api/legacy/pse/windowsticker/kia?vin=" + vin);
         //window.open("https://www.lehightonkia.com/api/pdf/kia-oem-windows-sticker?accountid=43339&vin=" + vin);
-        window.open("https://www.paramountkia.com/api/pdf/kia-oem-windows-sticker?vin=" + vin + "&accountid=43885");
+        window.open("https://www.freedomkia.net/Api/api/pdf/kia-oem-windows-sticker?vin=" + vin + "&accountid=37593");
     };
 };
 
