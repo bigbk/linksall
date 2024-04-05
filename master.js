@@ -16,7 +16,7 @@ function Call() {
     vin = document.getElementById("VINbar").value;
     //var wmidata = $.getJSON("vin.json");
     var wmidata;
-
+    aMake = ""
 
     if (vin.length >= 3) {
 
