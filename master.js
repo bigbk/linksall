@@ -440,8 +440,6 @@ function isAuthorized() {
     try {
         const isAuthorizedResponse = $.ajax({
             url: awsserv,
-            method: 'POST', // Change to POST
-            dataType: 'json',
             async: false, // Make the request synchronous
         });
 
@@ -463,7 +461,7 @@ function vincheckin() {
                     return true;
                 } else {
                     alert("Please Login");
-                    window.open(awsserv  + "/sms");
+                    window.open(awsserv);
                 }
         
     } else {
