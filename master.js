@@ -436,17 +436,18 @@ function updatedisplay(manu) {
 
 // <!-- MANUFACTURER LINKS  -->
 
-async function isauthorised() {
+function isAuthorized() {
     try {
-        const isauthorisedresponse = await $.ajax({
-            url: awsserv, 
-            method: 'GET',
-            dataType: 'json', 
+        const isAuthorizedResponse = $.ajax({
+            url: awsserv,
+            method: 'POST', // Change to POST
+            dataType: 'json',
+            async: false, // Make the request synchronous
         });
 
-        const isauthorisedstatus = isauthorisedresponse.status;
+        const isAuthorizedStatus = isAuthorizedResponse.status;
 
-        if (isauthorisedstatus === 401) {
+        if (isAuthorizedStatus === 401) {
             return false;
         } else {
             return true;
