@@ -435,15 +435,30 @@ function updatedisplay(manu) {
     }};
 
 // <!-- MANUFACTURER LINKS  -->
-function vincheckin() {
-    if (vin.length === 17) {
-        const isauthorisedresponse = await fetch(awsserv);
-        const isauthorisedstatus = isauthorisedresponse.status;
-                if (isauthrorisedstatus === 401) {
-                    alert("Please Login");
-                    window.open(awsserv  + "/sms");
+
+async function isauthorised() {
+
+            try {
+                const isauthorisedresponse = await fetch(awsserv);
+                const isauthorisedstatus = isauthorisedresponse.status;
+
+                if (isauthorisedstatus === 401) {
+                    return false;
                 } else {
                     return true;
+                }
+            } catch (error) {
+                console.error('Error fetching URL:', error);
+            }
+}
+
+function vincheckin() {
+    if (vin.length === 17) {
+                if (isauthrorised()) {
+                    return true;
+                } else {
+                    alert("Please Login");
+                    window.open(awsserv  + "/sms");
                 }
         
     } else {
