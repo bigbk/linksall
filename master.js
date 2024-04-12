@@ -454,7 +454,7 @@ async function isauthorised() {
 
 function vincheckin() {
     if (vin.length === 17) {
-                if (isauthrorised()) {
+                if (isauthorised()) {
                     return true;
                 } else {
                     alert("Please Login");
