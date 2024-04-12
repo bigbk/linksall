@@ -457,7 +457,7 @@ function isAuthorized() {
 
 function vincheckin() {
     if (vin.length === 17) {
-                if (isauthorised()) {
+                if (isAuthorized()) {
                     return true;
                 } else {
                     alert("Please Login");
