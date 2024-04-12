@@ -458,12 +458,12 @@ async function isauthorised() {
 
 function vincheckin() {
     if (vin.length === 17) {
-                //if (isauthorised()) {
+                if (isauthorised()) {
                     return true;
-                //} else {
-                //    alert("Please Login");
-                //    window.open(awsserv  + "/sms");
-                //}
+                } else {
+                    alert("Please Login");
+                    window.open(awsserv  + "/sms");
+                }
         
     } else {
         alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
