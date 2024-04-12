@@ -437,7 +437,15 @@ function updatedisplay(manu) {
 // <!-- MANUFACTURER LINKS  -->
 function vincheckin() {
     if (vin.length === 17) {
-        return true;
+        const isauthorisedresponse = await fetch(awsserv);
+        const isauthorisedstatus = isauthorisedresponse.status;
+                if (isauthrorisedstatus === 401) {
+                    alert("Please Login");
+                    window.open(awsserv  + "/sms");
+                } else {
+                    return true;
+                }
+        
     } else {
         alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
         return false;
