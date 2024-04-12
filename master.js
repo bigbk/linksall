@@ -437,19 +437,23 @@ function updatedisplay(manu) {
 // <!-- MANUFACTURER LINKS  -->
 
 async function isauthorised() {
+    try {
+        const isauthorisedresponse = await $.ajax({
+            url: awsserv, 
+            method: 'GET',
+            dataType: 'json', 
+        });
 
-            try {
-                const isauthorisedresponse = await fetch(awsserv);
-                const isauthorisedstatus = isauthorisedresponse.status;
+        const isauthorisedstatus = isauthorisedresponse.status;
 
-                if (isauthorisedstatus === 401) {
-                    return false;
-                } else {
-                    return true;
-                }
-            } catch (error) {
-                console.error('Error fetching URL:', error);
-            }
+        if (isauthorisedstatus === 401) {
+            return false;
+        } else {
+            return true;
+        }
+    } catch (error) {
+        console.error('Error fetching URL:', error);
+    }
 }
 
 function vincheckin() {
