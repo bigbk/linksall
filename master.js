@@ -599,7 +599,7 @@ function fordwiki() {
 
 function gmlink() {
     if (vincheckin()) {
-        window.open("/ps?url=" + "https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
+        window.open("https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
     };
 };
 function gmlink2() {
