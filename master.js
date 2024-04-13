@@ -483,9 +483,9 @@ function isAuthorized() {
         } else {
             return true;
         }
-    } catch (error) {
-        console.error('Error fetching URL:', error);
-    }
+    //} catch (error) {
+    //    console.error('Error fetching URL:', error);
+    //}
 }
 
 function vincheckin() {
