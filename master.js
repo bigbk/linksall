@@ -520,7 +520,7 @@ function bimmerbtn() {
 
 function bmwlane() {
     if (vincheckin()) {
-        window.open("http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/BMW/" + vin);
+        window.open(awsserv + "/ps?url=" + "http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/BMW/" + vin);
     };
 };
 
@@ -555,7 +555,7 @@ function decoderz() {
 };
 function siriusxm() {
     if (vincheckin()) {
-        window.open("https://care.siriusxm.com/vinlookup_findVin.action?vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "https://care.siriusxm.com/vinlookup_findVin.action?vin=" + vin);
     };
 };
 
@@ -573,20 +573,20 @@ function ford() {
 
 function fordsticker() {
     if (vincheckin()) {
-        window.open("http://www.windowsticker.forddirect.com/windowsticker.pdf?vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "http://www.windowsticker.forddirect.com/windowsticker.pdf?vin=" + vin);
     };
 };
 
 function fordstickerkey() {
     if (vincheckin()) {
-        window.open("https://imola.adesa.com/auction-engine-web-api/encryptVin.json?cgId=947&sellerOrgId=201721&isRunList=1&vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "https://imola.adesa.com/auction-engine-web-api/encryptVin.json?cgId=947&sellerOrgId=201721&isRunList=1&vin=" + vin);
     };
 };
 
 function fordstickerkey2() {
     if (document.getElementById("mkey").value !== "") {
         var keyme = document.getElementById("mkey").value;
-        window.open("https://windowsticker.concentrix.com/windowsticker/auction_ws/index.htm?sProgramCode=FORD_VR&loginId=1&quic_param=" + keyme);
+        window.open(awsserv + "/ps?url=" + "https://windowsticker.concentrix.com/windowsticker/auction_ws/index.htm?sProgramCode=FORD_VR&loginId=1&quic_param=" + keyme);
     };
 };
 
@@ -599,13 +599,13 @@ function fordwiki() {
 
 function gmlink() {
     if (vincheckin()) {
-        window.open("https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
     };
 };
 function gmlink2() {
     if (vincheckin()) {
         //window.open("https://www.koonswhitemarshchevy.com/api/legacy/pse/windowsticker/gm?bac=113645&vin=" + vin);
-        window.open("https://www.henrybrowngmc.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "https://www.henrybrowngmc.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
     };
 };
 
@@ -671,7 +671,7 @@ function manheimsearch() {
 function maserati() {
     if (vincheckin()) {
         //window.open("https://www.maseratimarin.com/api/legacy/pse/windowsticker/maserati?vin=" + vin + "&country=US&language=en");
-        window.open("https://www.herbchambers.com/api/legacy/pse/windowsticker/maserati?country=US&language=en&vin=" + vin );
+        window.open(awsserv + "/ps?url=" + "https://www.herbchambers.com/api/legacy/pse/windowsticker/maserati?country=US&language=en&vin=" + vin );
     };
 };
 
