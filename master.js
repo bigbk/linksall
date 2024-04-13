@@ -439,7 +439,7 @@ function updatedisplay(manu) {
 function isAuthorized() {
     try {
         const isAuthorizedResponse = $.ajax({
-            url: awsserv,
+            url: awsserv + "/auth",
             async: false, // Make the request synchronous
         });
 
