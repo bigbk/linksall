@@ -216,7 +216,7 @@ function getnissansticker3() {
 function getnissansticker4() {
     if (vincheckin()) {
         //window.open("https://www.carsonnissan.com/api/legacy/pse/windowsticker/nissan?vin=" + vin);
-        window.open("https://nissan-services.web-aws.dealersocket.com/production/sticker/" + vin);
+        window.open(awsserv + "/ps?url=" + "https://nissan-services.web-aws.dealersocket.com/production/sticker/" + vin);
         //window.open("https://www.autonationnissanchandler.com/api/legacy/pse/windowsticker/nissan?vin=" + vin);
     };
 };
@@ -526,25 +526,25 @@ function bmwlane() {
 
 function chrysler() {
     if (vincheckin()) {
-        window.open("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
     };
 };
 
 function chryslerlist() {
     if (vincheckin()) {
-        window.open(" http://www.jeep.com/webselfservice/BuildSheetServlet?vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "http://www.jeep.com/webselfservice/BuildSheetServlet?vin=" + vin);
     };
 };
 
 function chryslerlist2() {
     if (vincheckin()) {
-        window.open(" http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
     };
 };
 
 function chryslerlist3() {
     if (vincheckin()) {
-        window.open(" http://www.dodge.com/webselfservice/BuildSheetServlet?vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "http://www.dodge.com/webselfservice/BuildSheetServlet?vin=" + vin);
     };
 };
 
@@ -599,13 +599,13 @@ function fordwiki() {
 
 function gmlink() {
     if (vincheckin()) {
-        window.open("https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
     };
 };
 function gmlink2() {
     if (vincheckin()) {
         //window.open("https://www.koonswhitemarshchevy.com/api/legacy/pse/windowsticker/gm?bac=113645&vin=" + vin);
-        window.open("https://www.henrybrowngmc.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "https://www.henrybrowngmc.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
     };
 };
 
@@ -613,7 +613,7 @@ function gmlink2() {
 function hyunwiki() {
     if (vincheckin()) {
         //window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
-        window.open("https://hyundai-sticker.dealerfire.com/new/" + vin);
+        window.open(awsserv + "/ps?url=" + "https://hyundai-sticker.dealerfire.com/new/" + vin);
         //window.open("https://www.nashuahyundai.com/services/hyundai/windowSticker.do?make=Hyundai&cs:o=%27windowsticker%27&vin=" + vin);
     };
 };
@@ -639,7 +639,7 @@ function kiabtn2() {
         //window.open("https://www.commonwealthkia.com/Api/api/pdf/kia-oem-windows-sticker?accountid=56177&vin=" + vin);
         //window.open("https://www.ourismankia.com/api/legacy/pse/windowsticker/kia?vin=" + vin);
         //window.open("https://www.lehightonkia.com/api/pdf/kia-oem-windows-sticker?accountid=43339&vin=" + vin);
-        window.open("https://www.freedomkia.net/Api/api/pdf/kia-oem-windows-sticker?vin=" + vin + "&accountid=37593");
+        window.open(awsserv + "/ps?url=" + "https://www.freedomkia.net/Api/api/pdf/kia-oem-windows-sticker?vin=" + vin + "&accountid=37593");
     };
 };
 
@@ -671,7 +671,7 @@ function manheimsearch() {
 function maserati() {
     if (vincheckin()) {
         //window.open("https://www.maseratimarin.com/api/legacy/pse/windowsticker/maserati?vin=" + vin + "&country=US&language=en");
-        window.open("https://www.herbchambers.com/api/legacy/pse/windowsticker/maserati?country=US&language=en&vin=" + vin );
+        window.open(awsserv + "/ps?url=" + "https://www.herbchambers.com/api/legacy/pse/windowsticker/maserati?country=US&language=en&vin=" + vin );
     };
 };
 
@@ -707,7 +707,7 @@ function miniog() {
 
 function mitsbtn() {
     if (vincheckin()) {
-        window.open("https://www.yorkmitsubishi.com/api/OEMProgramsCommon/MitsubishiWindowStickerUrl?vin=" + vin);
+        window.open(awsserv + "/ps?url=" + "https://www.yorkmitsubishi.com/api/OEMProgramsCommon/MitsubishiWindowStickerUrl?vin=" + vin);
         //window.open("https://www.fitzgeraldmitsubishi.com/api/legacy/pse/windowsticker/mitsubishi?vin=" + vin);
         //window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
     };
@@ -818,7 +818,7 @@ function volvosticker() {
 function vwaudilane() {
     if (vincheckin()) {
         //window.open("http://windowsticker-prod.aws.manheim.com/windowsticker/" + vin + "/4905414");
-        window.open("http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/" + vin + "/4905414");
+        window.open(awsserv + "/ps?url=" + "http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/" + vin + "/4905414");
     };
 
 };
