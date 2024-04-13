@@ -476,7 +476,7 @@ function isAuthorized() {
 
    //     const isAuthorizedStatus = isAuthorizedResponse.status;
 
-    const isAuthrozideStatus = checkAuthentication(awsserv + "/auth");
+    const isAuthorizedStatus = checkAuthentication(awsserv + "/auth");
     
         if (isAuthorizedStatus === 401) {
             return false;
