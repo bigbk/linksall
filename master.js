@@ -436,15 +436,48 @@ function updatedisplay(manu) {
 
 // <!-- MANUFACTURER LINKS  -->
 
+// Function to check if the browser is authenticated
+function checkAuthentication(url) {
+  // Create a new XMLHttpRequest
+  var xhr = new XMLHttpRequest();
+
+  // Define the type of request and the URL of the server endpoint
+  xhr.open('GET', url, true);
+
+  // Set up a function that is called when the request status changes
+  xhr.onreadystatechange = function() {
+    // Check if the request is complete
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      // If the status code is 200, the browser is authenticated
+      if (xhr.status === 200) {
+        console.log('Browser is authenticated.');
+        // Handle the case where the browser is authenticated
+      } else {
+        console.log('Browser is not authenticated.');
+        // Handle the case where the browser is not authenticated
+      }
+    }
+  };
+
+  // Send the request
+  xhr.send();
+}
+
+// Example usage
+//checkAuthentication('https://your-apache-server.com/protected-resource');
+
+
 function isAuthorized() {
-    try {
-        const isAuthorizedResponse = $.ajax({
-            url: awsserv + "/auth",
-            async: false, // Make the request synchronous
-        });
+    //try {
+    //    const isAuthorizedResponse = $.ajax({
+    //        url: awsserv + "/auth",
+    //        async: false, // Make the request synchronous
+    //    });
 
-        const isAuthorizedStatus = isAuthorizedResponse.status;
+   //     const isAuthorizedStatus = isAuthorizedResponse.status;
 
+    const isAuthrozideStatus = checkAuthentication(awsserv + "/auth");
+    
         if (isAuthorizedStatus === 401) {
             return false;
         } else {
