@@ -599,13 +599,13 @@ function fordwiki() {
 
 function gmlink() {
     if (vincheckin()) {
-        window.open(awsserv + "/ps?url=" + "https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
+        window.open("/ps?url=" + "https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
     };
 };
 function gmlink2() {
     if (vincheckin()) {
         //window.open("https://www.koonswhitemarshchevy.com/api/legacy/pse/windowsticker/gm?bac=113645&vin=" + vin);
-        window.open(awsserv + "/ps?url=" + "https://www.henrybrowngmc.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
+        window.open("/ps?url=" + "https://www.henrybrowngmc.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
     };
 };
 
@@ -639,7 +639,7 @@ function kiabtn2() {
         //window.open("https://www.commonwealthkia.com/Api/api/pdf/kia-oem-windows-sticker?accountid=56177&vin=" + vin);
         //window.open("https://www.ourismankia.com/api/legacy/pse/windowsticker/kia?vin=" + vin);
         //window.open("https://www.lehightonkia.com/api/pdf/kia-oem-windows-sticker?accountid=43339&vin=" + vin);
-        window.open(awsserv + "/ps?url=" + "https://www.freedomkia.net/Api/api/pdf/kia-oem-windows-sticker?vin=" + vin + "&accountid=37593");
+        window.open("https://www.freedomkia.net/Api/api/pdf/kia-oem-windows-sticker?vin=" + vin + "&accountid=37593");
     };
 };
 
@@ -671,7 +671,7 @@ function manheimsearch() {
 function maserati() {
     if (vincheckin()) {
         //window.open("https://www.maseratimarin.com/api/legacy/pse/windowsticker/maserati?vin=" + vin + "&country=US&language=en");
-        window.open(awsserv + "/ps?url=" + "https://www.herbchambers.com/api/legacy/pse/windowsticker/maserati?country=US&language=en&vin=" + vin );
+        window.open("https://www.herbchambers.com/api/legacy/pse/windowsticker/maserati?country=US&language=en&vin=" + vin );
     };
 };
 
