@@ -274,6 +274,10 @@ function hclutch() {
     };
 };
 
+
+
+// Function to show or hide divs based on the car make
+function displayDivsForMake(aMake) {
 // Define an object mapping car makes to their corresponding div IDs
 const makeDivMap = {
     "HYUK": ["hyundai_div", "kia_div"],
@@ -321,9 +325,6 @@ const makeDivMap = {
     "TOYOTA": ["toyota_div"],
     "VOLVO": ["volvo_div"]
 };
-
-// Function to show or hide divs based on the car make
-function displayDivsForMake(aMake) {
     // Always display common_div
     document.getElementById("common_div").classList.remove('d-none');
 
