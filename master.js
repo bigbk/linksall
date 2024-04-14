@@ -308,7 +308,7 @@ const makeDivMap = {
     "GENESIS": ["hyundai_div"],
     "INFINITI": ["nissaninfiniti_div"],
     "NISSAN": ["nissaninfiniti_div"],
-    "KIA": ["kia_div"]
+    "KIA": ["kia_div"],
     "LAND ROVER": ["lr_div"],
     "JAGUAR": ["lr_div"],
     "LEXUS": ["lexus_div"],
