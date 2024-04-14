@@ -274,6 +274,75 @@ function hclutch() {
     };
 };
 
+// Define an object mapping car makes to their corresponding div IDs
+const makeDivMap = {
+    "HYUK": ["hyundai_div", "kia_div"],
+    "INNIS": ["infiniti_div", "nissan_div"],
+    "LETOY": ["lexus_div", "toyota_div"],
+    "AUDI": ["audi_div"],
+    "VOLKSWAGEN": ["audi_div"],
+    "BENTLEY": ["audi_div"],
+    "BMW": ["bmw_div"],
+    "MINI": ["bmw_div"],
+    "ALPINA": ["bmw_div"],
+    "CHRYSLER": ["chrysler_div"],
+    "DODGE": ["chrysler_div"],
+    "JEEP": ["chrysler_div"],
+    "RAM": ["chrysler_div"],
+    "ALFA ROMEO": ["chrysler_div"],
+    "FIAT": ["chrysler_div"],
+    "FORD": ["ford_div"],
+    "LINCOLN": ["ford_div"],
+    "MERCURY": ["ford_div"],
+    "CHEVROLET": ["gm_div"],
+    "BUICK": ["gm_div"],
+    "CADILLAC": ["gm_div"],
+    "GMC": ["gm_div"],
+    "HONDA": ["honda_div"],
+    "ACURA": ["honda_div"],
+    "HYUNDAI": ["hyundai_div"],
+    "GENESIS": ["hyundai_div"],
+    "INFINITI": ["nissaninfiniti_div"],
+    "NISSAN": ["nissaninfiniti_div"],
+    "KIA": ["kia_div"]
+    "LAND ROVER": ["lr_div"],
+    "JAGUAR": ["lr_div"],
+    "LEXUS": ["lexus_div"],
+    "LETOY": ["lexus_div", "toyota_div"],
+    "MASERATI": ["maserati_div"],
+    "MAZDA": ["mazda_div"],
+    "MERCEDES-BENZ": ["mb_div"],
+    "SMART": ["mb_div"],
+    "MITSUBISHI": ["mitsubishi_div"],
+    "SUZUKI": ["mitsubishi_div"],
+    "PORSCHE": ["porsche_div"],
+    "SUBARU": ["subaru_div"],
+    "TESLA": ["tesla_div"],
+    "TOYOTA": ["toyota_div"],
+    "VOLVO": ["volvo_div"]
+};
+
+// Function to show or hide divs based on the car make
+function displayDivsForMake(aMake) {
+    // Always display common_div
+    document.getElementById("common_div").classList.remove('d-none');
+
+    // Hide all divs first
+    Object.values(makeDivMap).flat().forEach(divId => {
+        if (divId !== "common_div") { // Skip hiding common_div
+            document.getElementById(divId).classList.add('d-none');
+        }
+    });
+
+    // Show divs for the selected make
+    if (makeDivMap[aMake]) {
+        makeDivMap[aMake].forEach(divId => {
+            document.getElementById(divId).classList.remove('d-none');
+        });
+    }
+}
+
+
 function updatedisplay(manu) {
 
     if (manu !== "" && typeof manu !== 'undefined') {
@@ -283,163 +352,9 @@ function updatedisplay(manu) {
     };
 
     console.log("updating divs " + aMake);
-    if (aMake !== "") {
-        document.getElementById("common_div").style.display = 'block';
-        // document.getElementById("kmxsearch").style.display = 'block';
-    } else {
-        document.getElementById("common_div").style.display = 'none';
-        // document.getElementById("kmxsearch").style.display = 'none';
-    }
-
-    if (aMake == "HYUK") {
-        document.getElementById("hyundai_div").style.display = 'block';
-        document.getElementById("kia_div").style.display = 'block';
-    } else {
-        document.getElementById("hyundai_div").style.display = 'none';
-        document.getElementById("kia_div").style.display = 'none';
-    }
-
-    if (aMake == "INNIS") {
-        document.getElementById("infiniti_div").style.display = 'block';
-        document.getElementById("nissan_div").style.display = 'block';
-    } else {
-        document.getElementById("infiniti_div").style.display = 'none';
-        document.getElementById("nissan_div").style.display = 'none';
-    }
-
-    if (aMake == "LETOY") {
-        document.getElementById("lexus_div").style.display = 'block';
-        document.getElementById("toyota_div").style.display = 'block';
-    } else {
-        document.getElementById("lexus_div").style.display = 'none';
-        document.getElementById("toyota_div").style.display = 'none';
-    }
-
-
-    if (aMake == "AUDI" || aMake == "VOLKSWAGEN" || aMake == "BENTLEY") {
-        document.getElementById("audi_div").style.display = 'block';
-    } else {
-        document.getElementById("audi_div").style.display = 'none';
-    }
-
-    if (aMake == "BMW" || aMake == "MINI" || aMake == "ALPINA") {
-        document.getElementById("bmw_div").style.display = 'block';
-    } else {
-        document.getElementById("bmw_div").style.display = 'none';
-    }
-
-    if (aMake == "CHRYSLER" || aMake == "DODGE" || aMake == "JEEP" || aMake == "RAM" || aMake == "ALFA ROMEO" || aMake == "FIAT") {
-        document.getElementById("chrysler_div").style.display = 'block';
-    } else {
-        document.getElementById("chrysler_div").style.display = 'none';
-    }
-
-    if (aMake == "FORD" || aMake == "LINCOLN" || aMake == "MERCURY") {
-        document.getElementById("ford_div").style.display = 'block';
-    } else {
-        document.getElementById("ford_div").style.display = 'none';
-    }
-
-    if (aMake == "CHEVROLET" || aMake == "BUICK" || aMake == "CADILLAC" || aMake == "GMC") {
-        document.getElementById("gm_div").style.display = 'block';
-    } else {
-        document.getElementById("gm_div").style.display = 'none';
-    }
-
-    if (aMake == "HONDA" || aMake == "ACURA") {
-        document.getElementById("honda_div").style.display = 'block';
-    } else {
-        document.getElementById("honda_div").style.display = 'none';
-    }
-
-    if (aMake == "HYUNDAI" || aMake == "GENESIS" || aMake == "HYUK") {
-        document.getElementById("hyundai_div").style.display = 'block';
-    } else {
-        document.getElementById("hyundai_div").style.display = 'none';
-    }
-
-    if (aMake == "INFINITI" || aMake == "INNIS" || aMake == "NISSAN") {
-        document.getElementById("nissaninfiniti_div").style.display = 'block';
-    } else {
-        document.getElementById("nissaninfiniti_div").style.display = 'none';
-    }
-
-    if (aMake == "KIA" || aMake == "HYUK") {
-        document.getElementById("kia_div").style.display = 'block';
-    } else {
-        document.getElementById("kia_div").style.display = 'none';
-    }
-
-    if (aMake == "LAND ROVER" || aMake == "JAGUAR") {
-        document.getElementById("lr_div").style.display = 'block';
-    } else {
-        document.getElementById("lr_div").style.display = 'none';
-    }
-
-    if (aMake == "LEXUS" || aMake == "LETOY") {
-        document.getElementById("lexus_div").style.display = 'block';
-    } else {
-        document.getElementById("lexus_div").style.display = 'none';
-    }
-
-    if (aMake == "MASERATI") {
-        document.getElementById("maserati_div").style.display = 'block';
-    } else {
-        document.getElementById("maserati_div").style.display = 'none';
-    }
-
-    if (aMake == "MAZDA") {
-        document.getElementById("mazda_div").style.display = 'block';
-    } else {
-        document.getElementById("mazda_div").style.display = 'none';
-    }
-
-    if (aMake == "MERCEDES-BENZ" || aMake == "SMART") {
-        document.getElementById("mb_div").style.display = 'block';
-    } else {
-        document.getElementById("mb_div").style.display = 'none';
-    }
-
-    if (aMake == "MITSUBISHI" || aMake == "SUZUKI") {
-        document.getElementById("mitsubishi_div").style.display = 'block';
-    } else {
-        document.getElementById("mitsubishi_div").style.display = 'none';
-    }
-
-    //                if (aMake == "NISSAN" || aMake == "INNIS") {
-    //                    document.getElementById("nissaninfiniti_div").style.display = 'block';
-    //                } else {
-    //                    document.getElementById("nissaninfiniti_div").style.display = 'none';
-    //                }
-
-    if (aMake == "PORSCHE") {
-        document.getElementById("porsche_div").style.display = 'block';
-    } else {
-        document.getElementById("porsche_div").style.display = 'none';
-    }
-
-    if (aMake == "SUBARU") {
-        document.getElementById("subaru_div").style.display = 'block';
-    } else {
-        document.getElementById("subaru_div").style.display = 'none';
-    }
-
-    if (aMake == "TESLA") {
-        document.getElementById("tesla_div").style.display = 'block';
-    } else {
-        document.getElementById("tesla_div").style.display = 'none';
-    }
-
-    if (aMake == "TOYOTA" || aMake == "LETOY") {
-        document.getElementById("toyota_div").style.display = 'block';
-    } else {
-        document.getElementById("toyota_div").style.display = 'none';
-    }
-    if (aMake == "VOLVO") {
-        document.getElementById("volvo_div").style.display = 'block';
-    } else {
-        document.getElementById("volvo_div").style.display = 'none';
-    }};
+// Call the function with the current make
+    displayDivsForMake(aMake);
+};
 
 // <!-- MANUFACTURER LINKS  -->
 
