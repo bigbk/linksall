@@ -1380,17 +1380,10 @@
 
                     copyToClipboard(vin);
                     /* copy to clipboard*/
-                    var copyText = document.getElementById("VINbar");
-                    // copyText.select();
-                    // copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-                    // document.execCommand("copy");
-
-                    // var outfocus =document.getElementById("iyear");
-                    // outfocus.focus();
-                    // outfocus.select();
-                    // outfocus.setSelectionRange(0, 99999);
-                    copyText.focus();
-
+                    // var copyText = document.getElementById("VINbar");
+                    // copyText.focus();
+                    document.getElementById("VINbar").focus();
+                    
                     getNHTSADataByVIN(vin);
 
                 } else {
