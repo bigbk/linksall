@@ -302,88 +302,96 @@
 
                     <!-- ---new links inserted here -->
 
-                    <div id="audi_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Audi, Volkswagen and Bentley vehicles.</strong>
-                        </p>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="vwaudilane()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for most vehicles</p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title">VW Trim Level</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
-                                    <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
-                                    <a href="https://www.vw.com/owners-recalls/" target="_blank" class="card-link">Visit</a>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
-                    <div id="bmw_div" style="display:none; background-color:#fff;">
-                        <br>
-
-                        <p>
-                            Links that are listed here will work for
-                            <strong>BMW and MINI vehicles.</strong>
-                            These sites are no longer functional and will be removed in future.
-                        </p>
-
-                        <div class="row">
-
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title">Datacard 1</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">List</h6>
-                                    <p class="card-text">Equipment listing from bimmer.work. Try datacard 2 button if site is down.
-                                    </p>
-                                    <a href="http://bimmer.work" target="_blank" class="card-link">bimmer.work</a>
-                                    <a href="https://bimmercat.com/bmw/en/vin/decoder" target="_blank" class="card-link">backup(Bimmercat)</a>
-                                    <a href="https://decoder.bvzine.com/" target="_blank" class="card-link">backup(bvzine)</a>
-                                </div>
-                            </div>
-                            
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="bimmerbtn()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Datacard 2</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">List</h6>
-                                    <p class="card-text">Equipment listing from mdecoder
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="bmwlane()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">List</h6>
-                                    <p class="card-text">Available for some BMW lane vehicles from NADE</p>
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title">Packages</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">List</h6>
-                                    <p class="card-text">Search vin on BlackBook New Car and check "Optional Equipment" under "Category". Click on "description" for full package information</p>
-                                    <a href="http://www.blackbookportals.com/bb/products/newcarhtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" class="card-link">Visit</a>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
-                            <strong>Order and Pricing guides</strong>
-                        </span>
-                        These provide detailed information on packages available.
-                        <br>
+<div id="audi_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p>
+                Links that are listed here will work for
+                <strong>Audi, Volkswagen, and Bentley vehicles.</strong>
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="vwaudilane()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for most vehicles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">VW Trim Level</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+                        <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
+                        <a href="https://www.vw.com/owners-recalls/" target="_blank" class="card-link">Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    
+<div id="bmw_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p>
+                Links that are listed here will work for
+                <strong>BMW and MINI vehicles.</strong> These sites are no longer functional and will be removed in future.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Datacard 1</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">List</h6>
+                        <p class="card-text">Equipment listing from bimmer.work. Try datacard 2 button if site is down.</p>
+                        <a href="http://bimmer.work" target="_blank" class="card-link">bimmer.work</a>
+                        <a href="https://bimmercat.com/bmw/en/vin/decoder" target="_blank" class="card-link">backup(Bimmercat)</a>
+                        <a href="https://decoder.bvzine.com/" target="_blank" class="card-link">backup(bvzine)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="bimmerbtn()">
+                    <div class="card-body">
+                        <h4 class="card-title">Datacard 2</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">List</h6>
+                        <p class="card-text">Equipment listing from mdecoder.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="bmwlane()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">List</h6>
+                        <p class="card-text">Available for some BMW lane vehicles from NADE.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Packages</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">List</h6>
+                        <p class="card-text">Search vin on BlackBook New Car and check "Optional Equipment" under "Category". Click on "description" for full package information.</p>
+                        <a href="http://www.blackbookportals.com/bb/products/newcarhtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" class="card-link">Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-3">
+            <span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
+                <strong>Order and Pricing guides</strong>
+            </span>
+            <p>These provide detailed information on packages available.</p>
+            <!-- Links to the order and pricing guides -->
                         <a href="https://f30.bimmerpost.com/forums/showthread.php?t=1505215" target="_blank">2019/2020 BMW ALL Links</a>
                         <a href="http://www.bimmerfest.com/forums/showthread.php?t=983787" target="_blank">2018 BMW ALL Links</a>
                         <a href="http://www.bimmerfest.com/forums/showthread.php?t=916818" target="_blank">2017 BMW ALL Links</a>
@@ -400,12 +408,15 @@
                         <br>
                         <a href="https://www.autoevolution.com/mini/" target="_blank">MINI Production Models</a>
                         <br>
-                        <span align="left">
-                            <input size="4" placeholder="Year" id="myear" type="text">
-                            <input size="12" placeholder="Model" id="mmodel" type="text"></span>
-                        <a class="btn " style="background-color:#ffd51d; color:#003366;" onclick="miniog()">
-                            MINI Guide Search</a>
-                        <br></div>
+        </div>
+        <div class="pt-3 text-left">
+            <input size="4" placeholder="Year" id="myear" type="text" class="mb-2">
+            <input size="12" placeholder="Model" id="mmodel" type="text" class="mb-2">
+            <a class="btn" style="background-color:#ffd51d; color:#003366;" onclick="miniog()">MINI Guide Search</a>
+        </div>
+    </div>
+</div>
+
 <div id="chrysler_div" class="d-none" style="background-color:#fff;">
     <div class="container">
         <div class="pt-3">
@@ -415,7 +426,7 @@
             </p>
         </div>
         <div class="row">
-            <div class="col-md-6 col-lg-4 mb-3">
+            <div class="col-md-6 col-lg-6 mb-3">
                 <div class="card bg-light h-100" onclick="chrysler()">
                     <div class="card-body">
                         <h4 class="card-title">Window Sticker</h4>
@@ -424,7 +435,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 mb-3">
+            <div class="col-md-6 col-lg-6 mb-3">
                 <div class="card bg-light h-100" onclick="chryslerlist()">
                     <div class="card-body">
                         <h4 class="card-title">Build Sheet</h4>
@@ -435,7 +446,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-lg-4 mb-3">
+            <div class="col-md-6 col-lg-6 mb-3">
                 <div class="card bg-light h-100" onclick="chryslerlist2()">
                     <div class="card-body">
                         <h4 class="card-title">Build Sheet 2</h4>
@@ -444,7 +455,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 mb-3">
+            <div class="col-md-6 col-lg-6 mb-3">
                 <div class="card bg-light h-100" onclick="chryslerlist3()">
                     <div class="card-body">
                         <h4 class="card-title">Build Sheet 3</h4>
@@ -456,407 +467,407 @@
         </div>
     </div>
 </div>
-                    <div id="ford_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Ford, Lincoln, Mercury vehicles.</strong>
-                        </p>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="fordwiki()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">NEW. Please report any server outage.
-                                    </p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" title="jas..23 s..9" onclick="ford()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Detailed information with login. Free registration as Independent Operator</p>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="fordsticker()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for dealer inventory only</p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="fordstickerkey()">
-                                <div class="card-body">
-                                    <h4 class="card-title">VIN Key Request</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">JSON</h6>
-                                    <p class="card-text">Requires Login</p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <span align="left">
-                            <input size="4" placeholder="concentrix key" id="mkey" type="text"></span>
-                        <a class="btn " style="background-color:#ffd51d; color:#003366;" onclick="fordstickerkey2()">
-                            Concentrix
-                        </a>
-                        <!-- <a href="https://windowsticker.concentrix.com/windowsticker/auction_ws/index.htm?sProgramCode=FORD_VR&loginId=1&quic_param=bf6a22c5587f5072d16863c047f3d1f5bbbf666f1ff42ad1c4a8199a70d34e3b51d225f07d48d5d5" target="_blank" role="button" aria-pressed="true"> Concentrix</a> -->
+
+<div id="ford_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p>
+                Links that are listed here will work for
+                <strong>Ford, Lincoln, Mercury vehicles.</strong>
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="fordwiki()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">NEW. Please report any server outage.</p>
                     </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="ford()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Detailed information with login. Free registration as Independent Operator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="fordsticker()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for dealer inventory only</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="fordstickerkey()">
+                    <div class="card-body">
+                        <h4 class="card-title">VIN Key Request</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">JSON</h6>
+                        <p class="card-text">Requires Login</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-3 text-left">
+            <input size="4" placeholder="concentrix key" id="mkey" type="text" class="mb-2">
+            <a class="btn" style="background-color:#ffd51d; color:#003366;" onclick="fordstickerkey2()">Concentrix</a>
+        </div>
+    </div>
+</div>
 
-                    <div id="gm_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>GM vehicles.</strong>
-                        </p>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="gmlink2()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for 2020+ GM vehicles and some 2019</p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="gmlink()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for some GM Remarketing vehicles including Bel Air Auction</p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
+<div id="gm_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p>
+                Links that are listed here will work for
+                <strong>GM vehicles.</strong>
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="gmlink2()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for 2020+ GM vehicles and some 2019</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="gmlink()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for some GM Remarketing vehicles including Bel Air Auction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                        </div>
-                        <br></div>
+<div id="honda_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p>
+                Links that are listed here will work for
+                <strong>Honda vehicles.</strong>
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="honda2()">
+                    <div class="card-body">
+                        <h4 class="card-title">Honda Trim Level</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">JSON</h6>
+                        <p class="card-text">Trim level information includes NAV and Entertainment System.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="acura()">
+                    <div class="card-body">
+                        <h4 class="card-title">Acura Trim Level</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">JSON</h6>
+                        <p class="card-text">Trim level information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                    <div id="honda_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Honda vehicles.</strong>
-                        </p>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="honda2()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Honda Trim Level</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">JSON</h6>
-                                    <p class="card-text">Trim level information includes NAV and Entertainment System.</p>
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="acura()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Acura Trim Level</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">JSON</h6>
-                                    <p class="card-text">Trim level information.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
+<div id="hyundai_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p> Links that are listed here will work for <strong>Hyundai and Genesis vehicles.</strong> </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="hyunwiki()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for 2014 and newer vehicles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Trim Level</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+                        <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
+                        <a href="https://autoservice.hyundaiusa.com/campaignhome" target="_blank" class="card-link">Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                    <div id="hyundai_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Hyundai and Genesis vehicles.</strong>
-                        </p>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="hyunwiki()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for 2014 and newer vehicles
-                                    </p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title">Trim Level</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
-                                    <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
-                                    <a href="https://autoservice.hyundaiusa.com/campaignhome" target="_blank" class="card-link">Visit</a>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
+ <!-- Infiniti Div -->
+<div id="infiniti_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p> Links that are listed here will work for <strong>Infiniti vehicles.</strong> </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="getnissansticker4()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for newer vehicles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="infiniti()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for newer vehicles. You may have to click reload.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="infinititrm()">
+                    <div class="card-body">
+                        <h4 class="card-title">Trim Level</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+                        <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
+                        <a href="#" title="Enter vin for recall information, which also lists trim the level" class="card-link">Retrieve</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Placeholder for future content -->
+            <div class="col-md-6 col-lg-6 mb-3"></div>
+        </div>
+    </div>
+</div>
 
-                    <div id="infiniti_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Infiniti vehicles.</strong>
-                        </p>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="getnissansticker4()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for newer vehicles
-                                    </p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
+<!-- Kia Div -->
+<div id="kia_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p> Links that are listed here will work for <strong>Kia vehicles.</strong> </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="kiabtn2()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for 2012 and newer vehicles. If Access Denied, visit www.kia.com and try again.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Trim Level</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+                        <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
+                        <a href="https://owners.kia.com/content/owners/en/recalls.html/" target="_blank" class="card-link">Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="infiniti()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for newer vehicles. You may have to click reload.
-                                    </p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
+<!-- Land Rover and Jaguar Div -->
+<div id="lr_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p> Links that are listed here will work for <strong>Land Rover and Jaguar vehicles.</strong> </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Equipment Listing</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Info</h6>
+                        <p class="card-text">Lists most options. Requires free Independent Operator account.</p>
+                        <a href="https://topix.landrover.jlrext.com/topix/vehicle/lookupForm" target="_blank" class="card-link">Visit</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Placeholder for future content -->
+            <div class="col-md-6 col-lg-6 mb-3"></div>
+        </div>
+    </div>
+</div>
 
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="infinititrm()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Trim Level</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
-                                    <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
-                                    <a href="#" title="Enter vin for recall information, which also lists trim the level" class="card-link">Retrieve</a>
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title"></h4>
-                                    <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
+<!-- Lexus Div -->
+<div id="lexus_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p> Links that are listed here will work for <strong>Lexus vehicles.</strong> </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="toyotasticker()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for most newer vehicles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="toyotasticker3()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Through DealerSocket/DealerFire. Available for newer vehicles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Placeholder for future content -->
+            <div class="col-md-6 col-lg-6 mb-3"></div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Equipment Listing</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Lists most options and packages</p>
+                        <a href="https://drivers.lexus.com/lexusdrivers/resources/vehicle-specs" target="_blank" class="card-link">Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                    <div id="kia_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Kia vehicles.</strong>
-                        </p>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="kiabtn2()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for 2012 and newer vehicles. If Access Denied, visit www.kia.com and try again. 
-                                    </p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title">Trim Level</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
-                                    <p class="card-text">Enter vin for recall information, which also lists trim the level</p>
-                                    <a href="https://owners.kia.com/content/owners/en/recalls.html/" target="_blank" class="card-link">Visit</a>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
+<!-- Maserati Div -->
+<div id="maserati_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p> Links that are listed here will work for <strong>Maserati vehicles.</strong> </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="maserati()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for newer inventory</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Placeholder for future content -->
+            <div class="col-md-6 col-lg-6 mb-3"></div>
+        </div>
+    </div>
+</div>
+<!-- Mazda Div -->
+<div id="mazda_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p> Links that are listed here will work for <strong>Mazda vehicles.</strong> </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="mazdabtn2()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text"><strong>Currently Unavailable</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="mazdabtn()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for dealer inventory only</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                    <div id="lr_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Land Rover and Jaguar vehicles.</strong>
-                        </p>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title">Equipment Listing</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Info</h6>
-                                    <p class="card-text">Lists most options. Requires free Independent Operator account.</p>
-                                    <a href="https://topix.landrover.jlrext.com/topix/vehicle/lookupForm" title="jas...1.. sl-06" target="_blank" class="card-link">Visit</a>
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title"></h4>
-                                    <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
+<!-- Mercedes Benz Div -->
+<div id="mb_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p> Links that are listed here will work for <strong>Mercedes Benz vehicles.</strong> </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Datacard</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">List</h6>
+                        <p class="card-text">Equipment listing from "lastvin"</p>
+                        <a href="https://www.lastvin.com/" target="_blank" class="card-link">Visit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Datacard</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">List</h6>
+                        <p class="card-text">Equipment listing from "mb.vin"</p>
+                        <a href="http://mb.vin/" target="_blank" class="card-link">Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="decoderz()">
+                    <div class="card-body">
+                        <h4 class="card-title">Datacard</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">List</h6>
+                        <p class="card-text">Equipment listing from "Vin Decoderz"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Placeholder for future content -->
+            <div class="col-md-6 col-lg-6 mb-3"></div>
+        </div>
+    </div>
+</div>
 
-                    <div id="lexus_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Lexus vehicles.</strong>
-                        </p>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="toyotasticker()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for most newer vehicles</p>
-                                    <a href=" " target="_blank" class="card-link"> </a>
-                                </div>
-                            </div>
-                            <!-- <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="lxsspecs()"> -->
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="toyotasticker3()">  
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Through DealerSocket/DealerFire. Available for newer vehicles</p>
-                                    <a href=" " target="_blank" class="card-link"> </a>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="">
-                                <div class="card-body">
-                                    <h4 class="card-title"> </h4>
-                                    <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                    <p class="card-text"> </p>
-                                    <a href="" target="_blank" class="card-link"> </a>
-                                </div>
-                            </div>
-                            <!-- <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="lxsspecs()"> -->
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="">    
-                                <div class="card-body">
-                                    <h4 class="card-title">Equipment Listing</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Lists most options and packages</p>
-                                    <a href="https://drivers.lexus.com/lexusdrivers/resources/vehicle-specs" target="_blank" class="card-link">Visit</a>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
-                    <div id="maserati_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Maserati vehicles.</strong>
-                        </p>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="maserati()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <!-- <p class="card-text">Available for most vehicles</p> -->
-                                    <p class="card-text">Available for newer inventory</p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title"></h4>
-                                    <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
-                    <div id="mazda_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Mazda vehicles.</strong>
-                        </p>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="mazdabtn2()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <!-- <p class="card-text">Available for most vehicles</p> -->
-                                    <p class="card-text">
-                                        <strong>Currently Unavailable</strong>
-                                    </p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="mazdabtn()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for dealer inventory only</p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
-
-                    <div id="mb_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Mercedes Benz vehicles.</strong>
-                        </p>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title">Datacard</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">List</h6>
-                                    <p class="card-text">Equipment listing from "lastvin"</p>
-                                    <a href="https://www.lastvin.com/" target="_blank" class="card-link">Visit</a>
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title">Datacard</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">List</h6>
-                                    <p class="card-text">Equipment listing from "mb.vin"</p>
-                                    <a href="http://mb.vin/" target="_blank" class="card-link">Visit</a>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="decoderz()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Datacard</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">List</h6>
-                                    <p class="card-text">Equipment listing from "Vin Decoderz"</p>
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title"></h4>
-                                    <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
-
-                    <div id="mitsubishi_div" style="display:none; background-color:#fff;">
-                        <br>
-                        <p>
-                            Links that are listed here will work for
-                            <strong>Mitsubishi vehicles.</strong>
-                        </p>
-                        <br>
-                        <div class="row">
-                            <div class="card bg-light" style="width: 14rem; cursor: pointer;" onmouseover="" onclick="mitsbtn()">
-                                <div class="card-body">
-                                    <h4 class="card-title">Window Sticker</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
-                                    <p class="card-text">Available for 2013 and newer vehicles.</p>
-                                    <!-- <a href="#" class="card-link">Download</a> -->
-                                </div>
-                            </div>
-                            <div class="card bg-light" style="width: 14rem;" onmouseover="">
-                                <div class="card-body">
-                                    <h4 class="card-title"></h4>
-                                    <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <br></div>
-
+<!-- Mitsubishi Div -->
+<div id="mitsubishi_div" class="d-none" style="background-color:#fff;">
+    <div class="container">
+        <div class="pt-3">
+            <p> Links that are listed here will work for <strong>Mitsubishi vehicles.</strong> </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card bg-light h-100" onclick="mitsbtn()">
+                    <div class="card-body">
+                        <h4 class="card-title">Window Sticker</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PDF</h6>
+                        <p class="card-text">Available for 2013 and newer vehicles.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Placeholder for future content -->
+            <div class="col-md-6 col-lg-6 mb-3"></div>
+        </div>
+    </div>
+</div>
                     <div id="nissan_div" style="display:none; background-color:#fff;">
                         <br>
                         <p>
