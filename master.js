@@ -64,89 +64,71 @@ function Call() {
     }
 }
 
-
-/**
- * Retrieves vehicle data from the NHTSA API based on the provided VIN.
- * @param {string} param_vin - The VIN number to decode.
- */
 function getNHTSADataByVIN(param_vin) {
+    if (!param_vin) {
+        console.error('No VIN provided');
+        return;
+    }
+
     $.ajax({
         url: "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/",
         type: "POST",
         data: { format: "json", data: param_vin },
         dataType: "json",
         success: function (result) {
-            // Log the entire result for debugging
-            console.log('NHTSA Data:', result);
-
-            // Extract vehicle details from the result
-            const vehicleDetails = result.Results[0];
-            const details = {
-                aYear: vehicleDetails.ModelYear || "",
-                aMake: vehicleDetails.Make || "",
-                aModel: vehicleDetails.Model || "",
-                aSeries: vehicleDetails.Series || "",
-                aTrim: vehicleDetails.Trim || "",
-                aDisp: vehicleDetails.DisplacementL ? `${parseFloat(vehicleDetails.DisplacementL).toFixed(1)}L` : "",
-                aFuel: vehicleDetails.FuelTypePrimary || "",
-                aCyl: vehicleDetails.EngineCylinders ? `${vehicleDetails.EngineCylinders}cyl` : "",
-                aDrive: vehicleDetails.DriveType || "",
-                aDoor: vehicleDetails.Doors ? `${vehicleDetails.Doors}D` : "",
-                aCab: vehicleDetails.BodyCabType || "",
-                aBody: vehicleDetails.BodyClass || ""
+            console.log(result);
+            var vehicleData = result.Results[0];
+            var displayData = {
+                aYear: vehicleData.ModelYear || "",
+                aMake: vehicleData.Make || "",
+                aModel: vehicleData.Model || "",
+                aSeries: vehicleData.Series || "",
+                aTrim: vehicleData.Trim || "",
+                aDisp: vehicleData.DisplacementL ? parseFloat(vehicleData.DisplacementL).toFixed(1) + "L" : "",
+                aFuel: vehicleData.FuelTypePrimary || "",
+                aCyl: vehicleData.EngineCylinders ? vehicleData.EngineCylinders + "cyl" : "",
+                aDrive: vehicleData.DriveType || "",
+                aDoor: vehicleData.Doors ? vehicleData.Doors + "D" : "",
+                aCab: vehicleData.BodyCabType || "",
+                aBody: vehicleData.BodyClass || ""
             };
 
-            // Log the make for debugging
-            console.log('Vehicle Make:', details.aMake);
-
-            // Update the form fields with the vehicle details
-            Object.entries(details).forEach(([key, value]) => {
-                document.getElementById(`i${key}`).value = value;
-            });
-
-            // Update the output text
-            const outputText = `${details.aYear} ${details.aMake} ${details.aModel} ${details.aSeries} ${details.aTrim}, ${details.aDisp} ${details.aFuel}, ${details.aCyl} \n ${details.aDoor}${details.aCab} ${details.aBody}, ${details.aDrive} \r\n (Please note that this information is sourced from NHTSA and should not be relied upon as the sole source of trim data.)`;
-            document.getElementById("output").innerText = outputText;
+            console.log("pulled " + displayData.aMake);
+            updateInputFields(displayData);
+            document.getElementById("output").innerText = formatOutputText(displayData);
             document.getElementById("outputbox").style.display = 'block';
-
-            // Call a function to handle the display of NHTSA results
             displayNHTSAResults(result);
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            // Log the error status and message for debugging
-            console.error('NHTSA API Error:', xhr.status, thrownError);
+            console.error('Error fetching data: ' + xhr.status);
+            console.error(thrownError);
         }
     });
 }
 
-    
-/**
- * Displays the NHTSA vehicle data results in a formatted text output.
- * @param {object} param_data - The data object containing NHTSA results.
- */
-function displayNHTSAResults(param_data) {
-    // Initialize an empty string to hold the formatted output text
-    let output_text = "";
+function updateInputFields(data) {
+    document.getElementById("iyear").value = data.aYear;
+    document.getElementById("imake").value = data.aMake;
+    document.getElementById("imodel").value = data.aModel;
+    document.getElementById("icyl").value = data.aCyl || "";
+}
 
-    // Iterate over the results array
-    param_data.Results.forEach(result => {
-        // Iterate over each property in the result object
-        for (let prop in result) {
-            // Check if the property is own property and not an inherited one, and it's not an empty string
+function formatOutputText(data) {
+    return `${data.aYear} ${data.aMake} ${data.aModel} ${data.aSeries} ${data.aTrim}, ${data.aDisp} ${data.aFuel}, ${data.aCyl} \n ${data.aDoor}${data.aCab} ${data.aBody}, ${data.aDrive} \r\n (Please note that this information is sourced from NHTSA and should not be relied upon as the sole source of trim data.)`;
+}
+
+function displayNHTSAResults(param_data) {
+    var output_text = "";
+    param_data.Results.forEach(function(result) {
+        for (var prop in result) {
             if (result.hasOwnProperty(prop) && result[prop] !== "") {
-                // Append the property and its value to the output text
                 output_text += `${prop}: ${result[prop]}\n`;
             }
         }
     });
 
-    // Set the formatted output text to the 'txt_results' element's value
     document.getElementById("txt_results").value = output_text;
-
-    // Display the 'nhtsa_data' element
     document.getElementById("nhtsa_data").style.display = 'block';
-
-    // Call the updatedisplay function to update the display with the new results
     updateDisplay();
 }
 
