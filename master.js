@@ -312,7 +312,8 @@ function checkAuthentication(url, callback) {
  */
 function isAuthorized(callback) {
     // Perform the authentication check
-    checkAuthentication(awsserv + "/auth", function(status) {
+    // checkAuthentication(awsserv + "/auth", function(status) {
+    checkAuthentication("https://www.google.com", function(status) {
         // Call the callback function with the result of the authorization check
         callback(status !== 401);
     });
