@@ -8,6 +8,33 @@
     font-family: Montserrat, 'Trebuchet MS', Helvetica, sans-serif;
 }
 
+/* Input Group Style */
+.input-group.md-form.form-sm.form-2 {
+    display: flex;
+    border: 1px solid #ffca28; /* Amber border for the whole group */
+}
+
+/* Input Field Style */
+.input-group.md-form.form-sm.form-2 .form-control {
+    flex: 1; /* Allows input to fill the space */
+    margin-bottom: 0; /* Aligns with the button */
+    height: 38px; /* Adjust height as needed */
+}
+
+/* Button Style */
+.input-group.md-form.form-sm.form-2 .input-group-append .input-group-text {
+    margin-bottom: 0; /* Aligns with the input field */
+    height: 38px; /* Match input field height */
+    background-color: #ffd51d; /* Amber background */
+    border: none; /* Removes border between input and button */
+}
+
+/* Icon Style */
+.input-group.md-form.form-sm.form-2 .input-group-text .fas {
+    color: #003366; /* Text color for the icon */
+}
+
+
 /* Existing Styles */
 .special-decoration {
     display: inline-flex;
