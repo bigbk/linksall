@@ -3,6 +3,36 @@ var countimg = 1;
 var stocknum;
 var stocknumchk;
 
+function thumbbtn ( ordern ) { 
+	countimg = countimg + ordern - 1;
+	nxt();
+}
+	
+function prvs() { 
+	if (stocknum !== "" && typeof stocknum !== 'undefined') {
+	if (countimg > 1) {
+		countimg = countimg - 1;
+		countimg1 = countimg + 1;
+		countimg2 = countimg1 + 1;
+		countimg3 = countimg2 + 1;
+		countimg4 = countimg3 + 1;
+
+	};
+		displayimg();
+	};
+};
+
+function nxt() {
+	if (stocknum !== "" && typeof stocknum !== 'undefined') {
+	countimg = countimg + 1;
+	countimg1 = countimg + 1;
+	countimg2 = countimg1 + 1;
+	countimg3 = countimg2 + 1;
+	countimg4 = countimg3 + 1;
+
+	displayimg();
+	};
+};
 function updateImageCounters() {
   for (var i = 1; i <= 8; i++) {
     window['countimg' + i] = countimg + i;
