@@ -142,37 +142,37 @@ function openWindowWithVin(url) {
 }
 
 // Refactored functions using openWindowWithVin
-function getNissanSticker2() {
+function getnissansticker2() {
     openWindowWithVin(`${piserv}/nissan?vin=${vin}`);
 }
 
-function getNissanSticker3() {
+function getnissansticker3() {
     openWindowWithVin(`https://www.carsonnissan.com/api/legacy/pse/windowsticker/nissan?vin=${vin}`);
 }
 
-function getNissanSticker4() {
+function getnissansticker4() {
     openWindowWithVin(`${awsserv}/ps?url=https://nissan-services.web-aws.dealersocket.com/production/sticker/${vin}`);
     //This one still works -> window.open("https://nissan-services.web-aws.dealersocket.com/production/sticker/" + vin);
     //window.open("https://www.autonationnissanchandler.com/api/legacy/pse/windowsticker/nissan?vin=" + vin);
 }
 
-function toyotaSticker() {
+function toyotasticker() {
     openWindowWithVin(`https://api.toyotainventory.com/VEHICLES/${vin}/monroney`);
 }
 
-function toyotaSticker3() {
+function toyotasticker3() {
     openWindowWithVin(`https://api-windowsticker.web-aws.dealersocket.com/toyota/${vin}`);
 }
 
-function velocitySticker() {
+function velocitysticker() {
     openWindowWithVin(`https://windowsticker.velocityengage.com/vin/${vin}/account/landmarkmotors`);
 }
 
-function tytSpecs() {
+function tytspecs() {
     openWindowWithVin(`${awsserv}/toyota?vin=${vin}`);
 }
 
-function lxsSpecs() {
+function lxsspecs() {
     openWindowWithVin(`${awsserv}/lexus?vin=${vin}`);
 }
 
@@ -180,11 +180,11 @@ function invoice() {
     openWindowWithVin(`${awsserv}/invoice?vin=${vin}`);
 }
 
-function wClutch() {
+function wclutch() {
     openWindowWithVin(`https://www.withclutch.com/window-stickers`);
 }
 
-function hClutch() {
+function hclutch() {
     openWindowWithVin(`${awsserv}/hclutch?vin=${vin}`);
 }
     
