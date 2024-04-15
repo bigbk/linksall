@@ -30,7 +30,7 @@ function updateDisplay(manufacturer) {
  */
 function Call() {
     // Retrieve the VIN number entered by the user
-    let vin = document.getElementById("VINbar").value.trim().toUpperCase().replace(/[{}]/g, "");
+    vin = document.getElementById("VINbar").value.trim().toUpperCase().replace(/[{}]/g, "");
     document.getElementById("VINbar").value = vin;
 
     // Display a message to click on the search icon to retrieve details
