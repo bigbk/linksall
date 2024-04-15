@@ -347,6 +347,7 @@ function vincheckin(callback) {
             }
         });
     } else {
+        console.log(`VIN length: ${vin.length}`);
         alert("VIN number should be 17 digits long, currently " + vin.length + " digits entered.");
         callback(false); // Call the callback with false since the VIN is not valid
     }
