@@ -68,6 +68,13 @@ function displayimg() {
   console.log(countimg);
   document.getElementById("instructions").style.display = 'none';
   var x = document.getElementById("dispframe");
+  var klink = document.getElementById("kmxlink");
+  	
+  klink.setAttribute("href", "https://www.carmax.com/car/"  + stocknum);
+  if (stocknumchk !== stocknum) {
+    stocknumchk = stocknum;
+    klink2.setAttribute("src", "https://www.carmax.com/car/"  + stocknum);
+  };
   x.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
   x.setAttribute("alt", countimg);
   x.setAttribute("object-fit", "cover");
