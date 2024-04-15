@@ -80,5 +80,74 @@
             <iframe id="kmxfrm" class="embed-responsive-item" src="" allowfullscreen></iframe>
         </div>
     </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@latest/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!-- Script for Image Navigation -->
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        let countimg = 1;
+        let stocknum;
+        let stocknumchk;
+    
+        // Simplified getElement function to reduce repetition
+        const getElement = (id) => document.getElementById(id);
+    
+        // Function to navigate to the previous image
+    
+        // Event listeners for the search buttons
+        const btnSubmit = getElement("btn_submit");
+        const VINbar = getElement("VINbar");
+        const LINKbar = getElement("LINKbar");
+    
+        btnSubmit.addEventListener("click", () => {
+          stocknum = VINbar.value;
+          if (stocknum.length === 8) {
+            countimg = 1;
+            displayimg();
+          } else {
+            alert("Stock number should be 8 digits long, currently " + stocknum.length + " digits entered.");
+          }
+        });
+    
+        // Extract stock number from URL
+        function extractStockNumber(url) {
+          const matches = url.match(/\/vehicles\/(\d+)\/\d+\.jpg/);
+          return matches ? matches[1] : '';
+        }
+    
+        // Global function assignments
+        window.prvs = prvs;
+        window.nxt = nxt;
+        window.thumbbtn = thumbbtn;
+    
+        // Additional event listener for the second submit button
+        const btnSubmit2 = getElement("btn_submit2");
+        btnSubmit2.addEventListener("click", () => {
+          stocknum = extractStockNumber(LINKbar.value);
+          if (stocknum) {
+            countimg = 1;
+            VINbar.value = stocknum;
+            displayimg();
+          } else {
+            alert("Please enter a valid CarMax image URL.");
+          }
+        });
+    
+        // Enter key event listeners
+        VINbar.addEventListener("keyup", (event) => {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            btnSubmit.click();
+          }
+        });
+    
+        LINKbar.addEventListener("keyup", (event) => {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            btnSubmit2.click();
+          }
+        });
+      });
+    </script>
 </body>
 </html>
