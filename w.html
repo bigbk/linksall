@@ -16,104 +16,74 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color:#003366;">
-	
-	<div class="modal fade" tabindex="-1" role="dialog">
-   		 <div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
-        		<span class="fa fa-spinner fa-spin fa-3x"></span>
-    		</div>
-	</div>
-	
-<div class="container shadow p-3 rounded-0" style="background-color: #fff; opacity: 0.98;">
-  <div class="row" style="padding-left: 0px; padding-top: 5px; padding-bottom: 5px; background-color:#003366;">
-
-      <div class="input-group md-form form-sm form-2 pl-0 w-50">
-        <input name="VIN" id="VINbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="Stock# - 8 Digits" aria-label="Search" >
-        <div class="input-group-append">
-          <button class="input-group-text amber lighten-3" style="background: #ffd51d;" id="btn_submit"><i class="fa fa-search text-grey" aria-hidden="true"></i></button>
+<body class="bg-primary">
+    <!-- Spinner Modal -->
+    <div class="modal fade" id="spinnerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered justify-content-center">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span class="fa fa-spinner fa-spin fa-3x"></span>
+                </div>
+            </div>
         </div>
-      </div>
-	  
-      <div class="input-group md-form form-sm form-2 pl-0 w-50">
-        <input name="LINK" id="LINKbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="Copy image address and paste link here" aria-label="Search" >
-        <div class="input-group-append">
-          <button class="input-group-text amber lighten-3" style="background: #ffd51d;" id="btn_submit2"><i class="fa fa-search text-grey" aria-hidden="true"></i></button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container shadow p-3 mb-5 bg-body rounded">
+        <!-- Search Row -->
+        <div class="row bg-primary text-white py-2">
+            <!-- VIN Search -->
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input name="VIN" id="VINbar" class="form-control" type="text" placeholder="Stock# - 8 Digits" aria-label="Search">
+                    <button class="btn btn-warning" id="btn_submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Link Search -->
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input name="LINK" id="LINKbar" class="form-control" type="text" placeholder="Copy image address and paste link here" aria-label="Search">
+                    <button class="btn btn-warning" id="btn_submit2">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-  </div>
-	
-<div class="row">
-    <div class="col-md-12"> 
-      
-		<nav aria-label="Photo Navigation">
-		<ul class="pagination">
-    		<li class="page-item">
-	    	<a class="page-link" href="#" onclick="prvs()">PREVIOUS</a>
-			</li>
-			<li class="page-item">
-	    	<a class="page-link" href="#" onclick="nxt()">NEXT</a>
-			</li>
-			<li class="page-item" >
-	    	<a id="kmxlink" class="page-link" href="#" target="_blank">CarMax Page</a>
-			</li>
-  		</ul>
-		</nav>
-		
-	   
-	    <div id="instructions" class="col-md-12" style="display:block;"> 
-	    	<p><strong> Search Tool.
-			<br><br>
-			  Navigate using Previous and Next buttons or jump to the image in the thumbnails below. </strong></p>
-			
 
-	    </div> 
-	    
-	    <br>
-		<!-- <p> (Images may be slow to load at times.) </p>
-		<br> -->
-		<img src="1.png" id="dispframe" alt="." class="img-fluid">
-	    <br>
-	    <br>
-	    <div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal">
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb1" alt="." onclick="thumbbtn(1)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb2" alt="." onclick="thumbbtn(2)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb3" alt="." onclick="thumbbtn(3)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb4" alt="." onclick="thumbbtn(4)" style="cursor: pointer;">
-  			</div>
-	    </div>
-		
-	    <br>
-		
-	    <div class="row" id="gallery2" data-toggle="modal" data-target="#exampleModal">
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb5" alt="." onclick="thumbbtn(5)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb6" alt="." onclick="thumbbtn(6)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb7" alt="." onclick="thumbbtn(7)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb8" alt="." onclick="thumbbtn(8)" style="cursor: pointer;">
-  			</div>
-	    </div>
+        <!-- Navigation and Instructions -->
+        <div class="row my-3">
+            <div class="col-md-12">
+                <nav aria-label="Photo Navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#" onclick="prvs()">PREVIOUS</a></li>
+                        <li class="page-item"><a class="page-link" href="#" onclick="nxt()">NEXT</a></li>
+                        <li class="page-item"><a id="kmxlink" class="page-link" href="#" target="_blank">CarMax Page</a></li>
+                    </ul>
+                </nav>
+                <div id="instructions">
+                    <p><strong>Search Tool.<br>Navigate using Previous and Next buttons or jump to the image in the thumbnails below.</strong></p>
+                </div>
+                <img src="1.png" id="dispframe" alt="Display Frame" class="img-fluid my-3">
+            </div>
+        </div>
 
-	</div>
-</div>
-	  <br>
-			<div id="kmxpg" class="embed-responsive embed-responsive-16by9" style="display:none;">
-  				<iframe id="kmxfrm" class="embed-responsive-item" src="" allowfullscreen></iframe>
-			</div>
-</div>
-	
+        <!-- Gallery -->
+        <div class="row" id="gallery" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <!-- Thumbnails -->
+            <!-- Repeat this block for each thumbnail -->
+            <div class="col-6 col-md-4 col-lg-3 mb-3">
+                <img class="w-100" src="1.png" id="thumb1" alt="Thumbnail 1" onclick="thumbbtn(1)" style="cursor: pointer;">
+            </div>
+            <!-- ... other thumbnails ... -->
+        </div>
+
+        <!-- CarMax Page Iframe -->
+        <div id="kmxpg" class="embed-responsive embed-responsive-16by9" style="display:none;">
+            <iframe id="kmxfrm" class="embed-responsive-item" src="" allowfullscreen></iframe>
+        </div>
+    </div>	
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@latest/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
