@@ -103,7 +103,7 @@
           stocknum = VINbar.value;
           if (stocknum.length === 8) {
             countimg = 1;
-            displayimg();
+            displayimg(stocknum);
           } else {
             alert("Stock number should be 8 digits long, currently " + stocknum.length + " digits entered.");
           }
@@ -127,7 +127,7 @@
           if (stocknum) {
             countimg = 1;
             VINbar.value = stocknum;
-            displayimg();
+            displayimg(stocknum);
           } else {
             alert("Please enter a valid CarMax image URL.");
           }
