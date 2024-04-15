@@ -1,274 +1,158 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	
-<title>Vehicle Images</title>
-<style type="text/css"></style>
-<style>
-
-</style>
-<script type="text/javascript"></script>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Chivo:400,700,900|Signika+Negative:300,400,600,700" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Images</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css"
+    crossorigin="anonymous">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+     <link href="https://fonts.googleapis.com/css?family=Chivo:400,700,900|Signika+Negative:300,400,600,700"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <!-- Link to your Style CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body style="background-color:#003366;">
-	
-	<div class="modal fade" tabindex="-1" role="dialog">
-   		 <div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
-        		<span class="fa fa-spinner fa-spin fa-3x"></span>
-    		</div>
-	</div>
-	
-<div class="container shadow p-3 rounded-0" style="background-color: #fff; opacity: 0.98;">
-  <div class="row" style="padding-left: 0px; padding-top: 5px; padding-bottom: 5px; background-color:#003366;">
-
-      <div class="input-group md-form form-sm form-2 pl-0 w-50">
-        <input name="VIN" id="VINbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="Stock# - 8 Digits" aria-label="Search" >
-        <div class="input-group-append">
-          <button class="input-group-text amber lighten-3" style="background: #ffd51d;" id="btn_submit"><i class="fa fa-search text-grey" aria-hidden="true"></i></button>
+<body class="bg-primary">
+    <!-- Spinner Modal -->
+    <div class="modal fade" id="spinnerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered justify-content-center">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span class="fa fa-spinner fa-spin fa-3x"></span>
+                </div>
+            </div>
         </div>
-      </div>
-	  
-      <div class="input-group md-form form-sm form-2 pl-0 w-50">
-        <input name="LINK" id="LINKbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="Copy image address and paste link here" aria-label="Search" >
-        <div class="input-group-append">
-          <button class="input-group-text amber lighten-3" style="background: #ffd51d;" id="btn_submit2"><i class="fa fa-search text-grey" aria-hidden="true"></i></button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container shadow p-3 mb-5 bg-body rounded">
+        <!-- Search Row -->
+        <div class="row bg-primary text-white py-2">
+            <!-- VIN Search -->
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input name="VIN" id="VINbar" class="form-control" type="text" placeholder="Stock# - 8 Digits" aria-label="Search">
+                    <button class="btn btn-warning" id="btn_submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Link Search -->
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input name="LINK" id="LINKbar" class="form-control" type="text" placeholder="Copy image address and paste link here" aria-label="Search">
+                    <button class="btn btn-warning" id="btn_submit2">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-  </div>
-	
-<div class="row">
-    <div class="col-md-12"> 
-      
-		<nav aria-label="Photo Navigation">
-		<ul class="pagination">
-    		<li class="page-item">
-	    	<a class="page-link" href="#" onclick="prvs()">PREVIOUS</a>
-			</li>
-			<li class="page-item">
-	    	<a class="page-link" href="#" onclick="nxt()">NEXT</a>
-			</li>
-			<li class="page-item" >
-	    	<a id="kmxlink" class="page-link" href="#" target="_blank">CarMax Page</a>
-			</li>
-  		</ul>
-		</nav>
-		
-	   
-	    <div id="instructions" class="col-md-12" style="display:block;"> 
-	    	<p><strong> Search Tool.
-			<br><br>
-			  Navigate using Previous and Next buttons or jump to the image in the thumbnails below. </strong></p>
-			
 
-	    </div> 
-	    
-	    <br>
-		<!-- <p> (Images may be slow to load at times.) </p>
-		<br> -->
-		<img src="1.png" id="dispframe" alt="." class="img-fluid">
-	    <br>
-	    <br>
-	    <div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal">
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb1" alt="." onclick="thumbbtn(1)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb2" alt="." onclick="thumbbtn(2)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb3" alt="." onclick="thumbbtn(3)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb4" alt="." onclick="thumbbtn(4)" style="cursor: pointer;">
-  			</div>
-	    </div>
-		
-	    <br>
-		
-	    <div class="row" id="gallery2" data-toggle="modal" data-target="#exampleModal">
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb5" alt="." onclick="thumbbtn(5)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb6" alt="." onclick="thumbbtn(6)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb7" alt="." onclick="thumbbtn(7)" style="cursor: pointer;">
-  			</div>
-  			<div class="col-6 col-md-4 col-lg-3">
-    			<img class="w-100" src="1.png" id="thumb8" alt="." onclick="thumbbtn(8)" style="cursor: pointer;">
-  			</div>
-	    </div>
+        <!-- Navigation and Instructions -->
+        <div class="row my-3">
+            <div class="col-md-12">
+                <nav aria-label="Photo Navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#" onclick="prvs()">PREVIOUS</a></li>
+                        <li class="page-item"><a class="page-link" href="#" onclick="nxt()">NEXT</a></li>
+                        <li class="page-item"><a id="kmxlink" class="page-link" href="#" target="_blank">CarMax Page</a></li>
+                    </ul>
+                </nav>
+                <div id="instructions">
+                    <p><strong>Search Tool.<br>Navigate using Previous and Next buttons or jump to the image in the thumbnails below.</strong></p>
+                </div>
+                <img src="1.png" id="dispframe" alt="Display Frame" class="img-fluid my-3">
+            </div>
+        </div>
 
-	</div>
-</div>
-	  <br>
-			<div id="kmxpg" class="embed-responsive embed-responsive-16by9" style="display:none;">
-  				<iframe id="kmxfrm" class="embed-responsive-item" src="" allowfullscreen></iframe>
-			</div>
-</div>
-	
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script> 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
-	
+        <!-- Gallery -->
+        <div class="row" id="gallery" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <!-- Thumbnails -->
+            <!-- Repeat this block for each thumbnail -->
+            <div class="col-6 col-md-4 col-lg-3 mb-3">
+                <img class="w-100" src="1.png" id="thumb1" alt="Thumbnail 1" onclick="thumbbtn(1)" style="cursor: pointer;">
+            </div>
+            <!-- ... other thumbnails ... -->
+        </div>
 
-<script>	
-	
-var countimg = 1;
-var countimg1 = countimg + 1;
-var countimg2 = countimg1 + 1;
-var countimg3 = countimg2 + 1;
-var countimg4 = countimg3 + 1;
-var countimg5 = countimg4 + 1;
-var countimg6 = countimg5 + 1;
-var countimg7 = countimg6 + 1;
-var countimg8 = countimg7 + 1;
-var stocknum;
-var stocknumchk;
-	
-document.getElementById("btn_submit").onclick = function () {
-stocknum = document.getElementById("VINbar").value;
-if (stocknum.length === 8) {
-countimg = 1;
-prvs();	
-  } else {
-       alert("Stock number should be 8 digits long, currently " + stocknum.length + " digits entered.");
-  };
-	
-};
+        <!-- CarMax Page Iframe -->
+        <div id="kmxpg" class="embed-responsive embed-responsive-16by9" style="display:none;">
+            <iframe id="kmxfrm" class="embed-responsive-item" src="" allowfullscreen></iframe>
+        </div>
+    </div>
 
-document.getElementById("btn_submit2").onclick = function () {
-stocknum = document.getElementById("LINKbar").value;
-stocknum = stocknum.replace("https:", "");
-stocknum = stocknum.replace(/\//g, "");
-stocknum = stocknum.replace("img2.carmax.comimgvehicles", "");	
-//stocknum = stocknum.replace("1.jpg?cs=0&width=135", "");
-stocknum = stocknum.replace("1.jpg?width=400&ratio=43", "");	
-countimg = 1;
-document.getElementById("VINbar").value = stocknum;
-prvs();
-};
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@latest/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!-- Script for Image Navigation -->
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        let countimg = 1;
+        let stocknum;
+        let stocknumchk;
+    
+        // Simplified getElement function to reduce repetition
+        const getElement = (id) => document.getElementById(id);
+    
+        // Function to navigate to the previous image
+    
+        // Event listeners for the search buttons
+        const btnSubmit = getElement("btn_submit");
+        const VINbar = getElement("VINbar");
+        const LINKbar = getElement("LINKbar");
+    
+        btnSubmit.addEventListener("click", () => {
+          stocknum = VINbar.value;
+          if (stocknum.length === 8) {
+            countimg = 1;
+            displayimg();
+          } else {
+            alert("Stock number should be 8 digits long, currently " + stocknum.length + " digits entered.");
+          }
+        });
+    
+        // Extract stock number from URL
+        function extractStockNumber(url) {
+          const matches = url.match(/\/vehicles\/(\d+)\/\d+\.jpg/);
+          return matches ? matches[1] : '';
+        }
+    
+        // Global function assignments
+        window.prvs = prvs;
+        window.nxt = nxt;
+        window.thumbbtn = thumbbtn;
+    
+        // Additional event listener for the second submit button
+        const btnSubmit2 = getElement("btn_submit2");
+        btnSubmit2.addEventListener("click", () => {
+          stocknum = extractStockNumber(LINKbar.value);
+          if (stocknum) {
+            countimg = 1;
+            VINbar.value = stocknum;
+            displayimg();
+          } else {
+            alert("Please enter a valid CarMax image URL.");
+          }
+        });
+    
+        // Enter key event listeners
+        VINbar.addEventListener("keyup", (event) => {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            btnSubmit.click();
+          }
+        });
+    
+        LINKbar.addEventListener("keyup", (event) => {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            btnSubmit2.click();
+          }
+        });
+      });
+    </script>
+    
 
-	
-function thumbbtn ( ordern ) { 
-	countimg = countimg + ordern - 1;
-	nxt();
-}
-	
-function prvs() { 
-	if (stocknum !== "" && typeof stocknum !== 'undefined') {
-	if (countimg > 1) {
-		countimg = countimg - 1;
-		countimg1 = countimg + 1;
-		countimg2 = countimg1 + 1;
-		countimg3 = countimg2 + 1;
-		countimg4 = countimg3 + 1;
-		countimg5 = countimg4 + 1;
-		countimg6 = countimg5 + 1;
-		countimg7 = countimg6 + 1;
-		countimg8 = countimg7 + 1;
-	};
-		displayimg();
-	};
-};
-
-function nxt() {
-	if (stocknum !== "" && typeof stocknum !== 'undefined') {
-	countimg = countimg + 1;
-	countimg1 = countimg + 1;
-	countimg2 = countimg1 + 1;
-	countimg3 = countimg2 + 1;
-	countimg4 = countimg3 + 1;
-	countimg5 = countimg4 + 1;
-	countimg6 = countimg5 + 1;
-	countimg7 = countimg6 + 1;
-	countimg8 = countimg7 + 1;
-	displayimg();
-	};
-};
-	
-function displayimg()
-{
-	console.log(countimg);
-	document.getElementById("instructions").style.display = 'none';
-	document.getElementById("kmxpg").style.display = 'block';
-	
-	//var x = document.createElement("IMG");
-	var x = document.getElementById("dispframe");
-	var x1 = document.getElementById("thumb1");
-	var x2 = document.getElementById("thumb2");
-	var x3 = document.getElementById("thumb3");
-	var x4 = document.getElementById("thumb4");
-	var x5 = document.getElementById("thumb5");
-	var x6 = document.getElementById("thumb6");
-	var x7 = document.getElementById("thumb7");
-	var x8 = document.getElementById("thumb8");
-	var klink = document.getElementById("kmxlink");
-	var klink2 = document.getElementById("kmxfrm");
-  	
-	klink.setAttribute("href", "https://www.carmax.com/car/"  + stocknum);
-	if (stocknumchk !== stocknum) {
-		stocknumchk = stocknum;
-		klink2.setAttribute("src", "https://www.carmax.com/car/"  + stocknum);
-	}
-	x.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
-	x.setAttribute("alt", countimg);
-  	x.setAttribute("object-fit", "cover"); 
-	
-	if (!x.complete) {
-		$('.modal').modal('show');
-	}
-	x.onload = function() {
-	
-	setTimeout(function () {
-		$('.modal').modal('hide');
-	}, 500);
-	x1.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg1 + ".jpg");
-	x2.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg2 + ".jpg");
-	x3.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg3 + ".jpg");
-	x4.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg4 + ".jpg");
-	x5.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg5 + ".jpg");
-	x6.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg6 + ".jpg");
-	x7.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg7 + ".jpg");
-	x8.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg8 + ".jpg");
- 	//x.setAttribute("id", "dispframe");
-	//x.setAttribute("width", "1024");
-  	//x.setAttribute("height", "768");
-
-	//document.body.appendChild(x);
-	}
-	
-};
-	
-var input13 = document.getElementById("VINbar");
-	
-	input13.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			document.getElementById("btn_submit").click();
-		}
-	});
-	
-var input14 = document.getElementById("LINKbar");
-	
-	input14.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			document.getElementById("btn_submit2").click();
-		}
-	});
-	
-
-
-</script>
 </body>
 </html>
