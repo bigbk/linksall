@@ -1,66 +1,67 @@
-// Improved JavaScript code for image navigation
-function nxt() {
-    if (stocknum) {
-      countimg++;
-      displayimg();
-    }
+// script.js
+var countimg = 1;
+var stocknum;
+var stocknumchk;
+
+function updateImageCounters() {
+  for (var i = 1; i <= 8; i++) {
+    window['countimg' + i] = countimg + i;
   }
-  
-  function prvs() {
-    if (stocknum && countimg > 1) {
-      countimg--;
-      displayimg();
-    }
+}
+
+document.getElementById("btn_submit").onclick = function () {
+  stocknum = document.getElementById("VINbar").value;
+  if (stocknum.length === 8) {
+    countimg = 1;
+    updateImageCounters();
+    displayimg();
+  } else {
+    alert("Stock number should be 8 digits long, currently " + stocknum.length + " digits entered.");
   }
-  
-  function thumbbtn(ordern) {
-    // Directly display the image corresponding to the thumbnail clicked
-    if (stocknum && ordern >= 1) {
-      countimg = ordern;
-      displayimg();
-    }
+};
+
+document.getElementById("btn_submit2").onclick = function () {
+  stocknum = document.getElementById("LINKbar").value;
+  stocknum = stocknum.replace("https:", "").replace(/\//g, "").replace("img2.carmax.comimgvehicles", "").replace("1.jpg?width=400&ratio=43", "");
+  countimg = 1;
+  document.getElementById("VINbar").value = stocknum;
+  updateImageCounters();
+  displayimg();
+};
+
+function thumbbtn(ordern) {
+  countimg += ordern - 1;
+  displayimg();
+}
+
+function displayimg() {
+  console.log(countimg);
+  document.getElementById("instructions").style.display = 'none';
+  var x = document.getElementById("dispframe");
+  x.setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + countimg + ".jpg");
+  x.setAttribute("alt", countimg);
+  x.setAttribute("object-fit", "cover");
+
+  if (!x.complete) {
+    $('.modal').modal('show');
   }
-  
-  function displayimg() {
-    // Exit early if stocknum is not set
-    if (!stocknum) return;
-  
-    // Simplify element selection using a helper function
-    const getElement = (id) => document.getElementById(id);
-  
-    console.log(countimg);
-    getElement("instructions").style.display = 'none';
-    getElement("kmxpg").style.display = 'block';
-  
-    // Update main image
-    const mainImage = getElement("dispframe");
-    mainImage.src = `https://img2.carmax.com/img/vehicles/${stocknum}/${countimg}.jpg`;
-    mainImage.alt = `Image ${countimg}`;
-    mainImage.style.objectFit = 'cover';
-  
-    // Show spinner modal while loading the main image
-    if (!mainImage.complete) {
-      $('#spinnerModal').modal('show');
+
+  x.onload = function() {
+    setTimeout(function () { $('.modal').modal('hide'); }, 500);
+    for (var i = 1; i <= 4; i++) {
+      document.getElementById("thumb" + i).setAttribute("src", "https://img2.carmax.com/img/vehicles/" + stocknum + "/" + window['countimg' + (i + 1)] + ".jpg");
     }
-  
-    mainImage.onload = function() {
-      // Hide spinner modal after the main image has loaded
-      setTimeout(() => $('#spinnerModal').modal('hide'), 500);
-  
-      // Update thumbnails
-      for (let i = 1; i <= 8; i++) {
-        const thumb = getElement(`thumb${i}`);
-        thumb.src = `https://img2.carmax.com/img/vehicles/${stocknum}/${countimg + i}.jpg`;
-      }
-    };
-  
-    // Update links only if stocknum has changed
-    const carMaxLink = getElement("kmxlink");
-    const carMaxFrame = getElement("kmxfrm");
-    if (typeof stocknumchk === 'undefined' || stocknumchk !== stocknum) {
-      stocknumchk = stocknum;
-      carMaxLink.href = `https://www.carmax.com/car/${stocknum}`;
-      carMaxFrame.src = `https://www.carmax.com/car/${stocknum}`;
+  };
+}
+
+// Event listeners for Enter key on input fields
+var inputFields = ["VINbar", "LINKbar"];
+inputFields.forEach(function(fieldId) {
+  var input = document.getElementById(fieldId);
+  input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      document.getElementById(fieldId === "VINbar" ? "btn_submit" : "btn_submit2").click();
     }
-  }
-  
+  });
+});
