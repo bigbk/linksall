@@ -14,6 +14,15 @@ function copyToClipboard(text) {
         });
 }
 
+/**
+ * Updates the display with the manufacturer information.
+ * @param {string} manufacturer - The manufacturer name to display.
+ */
+function updateDisplay(manufacturer) {
+    // Update the display with the manufacturer information
+    console.log(`Display updated with: ${manufacturer}`);
+    // Add additional display update logic here
+}
     
     
  /**
@@ -43,7 +52,7 @@ function Call() {
             // Log the manufacturer found and update the display
             if (aMake) {
                 console.log(`Manufacturer found using JSON data: ${aMake}`);
-                updatedisplay(aMake);
+                updateDisplay(aMake);
             }
         });
 
@@ -138,7 +147,7 @@ function displayNHTSAResults(param_data) {
     document.getElementById("nhtsa_data").style.display = 'block';
 
     // Call the updatedisplay function to update the display with the new results
-    updatedisplay();
+    updateDisplay();
 }
 
 // Function to open a window with the vehicle sticker or specs
