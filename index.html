@@ -16,260 +16,283 @@
 </head>
     
     <body>
-      <div class="container shadow p-3" style="background-color: #fff; opacity: 0.98;">
-        <div class="row">
-            <div class="col-md-4">
-                <h1 class="font-weight-bold">
-                    <span style="color:#003366">VIN</span>
-                    <span style="color:#003366"> RESEARCH
-                        <span class="special-decoration" style="background-color:#003366; color: #fff;">Hub</span>
-                    </span>
-                </h1>
+        <div class="container shadow p-3 rounded-0" style="background-color: #fff; opacity: 0.98;">
+            <div class="container shadow p-3" style="background-color: #fff; opacity: 0.98;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1 class="font-weight-bold">
+                            <span style="color:#003366">VIN</span>
+                            <span style="color:#003366"> RESEARCH
+                                <span class="special-decoration" style="background-color:#003366; color: #fff;">Hub</span>
+                            </span>
+                        </h1>
+                    </div>
+                    <div class="col-md-8 text-right">
+                        <img id="dancebkstatic" src="./walking.gif" alt="Animated figure walking" width="20" height="20">
+                        <span style="font-size: 2em; color: #ffd51d; font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', sans-serif;">bigBK;)</span>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-8 text-right">
-                <img id="dancebkstatic" src="./walking.gif" alt="Animated figure walking" width="20" height="20">
-                <span style="font-size: 2em; color: #ffd51d; font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', sans-serif;">bigBK;)</span>
+            <div class="row" style="padding-left: 0px; padding-top: 5px; padding-bottom: 5px; background-color:#003366;">
+                <div class="col-3 order-1 order-sm-1" style="padding-left: 0px;">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" style="background-color:#ffd51d; color:#003366;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manual Selection</button>
+                        <div
+                            class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <!-- <a class="dropdown-item" href="#">OTHERS</a> -->
+
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('AUDI')">Audi/Volkswagen/Bentley</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('BMW')">BMW/MINI</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('CHRYSLER')">Chrysler/Jeep/Fiat</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('FORD')">Ford/Lincoln/Mercury</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('CHEVROLET')">GM</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('HONDA')">Honda/Acura</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('HYUNDAI')">Hyundai/Genesis</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('INFINITI')">Infiniti</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('JAGUAR')">Jaguar</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('KIA')">Kia</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('LAND ROVER')">Land Rover</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('LEXUS')">Lexus</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('MASERATI')">Maserati</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('MAZDA')">Mazda</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('MERCEDES-BENZ')">Mercedes Benz</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('MITSUBISHI')">Mitsubishi</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('NISSAN')">Nissan</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('PORSCHE')">Porsche</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('SUBARU')">Subaru</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('TESLA')">Tesla</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('TOYOTA')">Toyota</a>
+                            <a class="dropdown-item" href="#" onclick="updatedisplay('VOLVO')">Volvo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 order-2 order-sm-2" align="right" style="padding-right: 0px;">
+                    <div class="input-group md-form form-sm form-2 pl-0 w-50">
+                        <input name="VIN" id="VINbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="VIN - 17 Digits" aria-label="Search" oninput="Call()">
+                        <div class="input-group-append">
+                            <button class="input-group-text amber lighten-3" style="background: #ffd51d;" id="btn_submit">
+                                <i class="fa fa-search text-grey" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row" style="background-color:#003366; padding-top: 5px; padding-bottom: 5px;">
-      <div class="col-md-3">
-          <div class="dropdown">
-              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#ffd51d; color:#003366;">
-                  Manual Selection
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <!-- <li><a class="dropdown-item" href="#">OTHERS</a></li> -->
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('AUDI')">Audi/Volkswagen/Bentley</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('BMW')">BMW/MINI</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('CHRYSLER')">Chrysler/Jeep/Fiat</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('FORD')">Ford/Lincoln/Mercury</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('CHEVROLET')">GM</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('HONDA')">Honda/Acura</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('HYUNDAI')">Hyundai/Genesis</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('INFINITI')">Infiniti</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('JAGUAR')">Jaguar</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('KIA')">Kia</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('LAND ROVER')">Land Rover</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('LEXUS')">Lexus</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('MASERATI')">Maserati</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('MAZDA')">Mazda</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('MERCEDES-BENZ')">Mercedes Benz</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('MITSUBISHI')">Mitsubishi</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('NISSAN')">Nissan</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('PORSCHE')">Porsche</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('SUBARU')">Subaru</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('TESLA')">Tesla</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('TOYOTA')">Toyota</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="updatedisplay('VOLVO')">Volvo</a></li>
-              </ul>
-          </div>
-      </div>
-      <div class="col-md-9 text-right">
-          <div class="input-group md-form form-sm form-2 pl-0">
-              <input name="VIN" id="VINbar" class="form-control my-0 py-1 amber-border" type="text" placeholder="VIN - 17 Digits" aria-label="Search" oninput="Call()">
-              <div class="input-group-append">
-                  <button class="input-group-text amber lighten-3" id="btn_submit" style="background: #ffd51d;">
-                      <i class="fas fa-search text-grey" aria-hidden="true"></i>
-                  </button>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-        <div id="inventory_div" class="link-section">
-            <h2 class="section-title">Inventory Research</h2>
-            <ul class="list-unstyled">
-                <li><a href="http://www.nadaguides.com/Cars/Manufacturers" target="_blank">NADA Guides</a></li>
-                <li><a href="https://www.cargurus.com/" target="_blank">CarGurus</a></li>
-                <li><a href="https://www.carmax.com/cars" target="_blank">CarMax Search</a></li>
-                <li><a href="https://www.carvana.com/cars/filters/" target="_blank">Carvana Search</a></li>
-                <li><a href="https://www.autonation.com/cars-for-sale" target="_blank">AutoNation Search</a></li>
-                <li><a href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117" target="_blank">eBay Search</a></li>
-                <li><a href="https://www.truecar.com/" target="_blank">TrueCar New Car Search</a></li>
-                <li><a href="https://www.carsdirect.com/" target="_blank">CarsDirect Search</a></li>
-                <li><a href="./w.html" target="_blank">Photos</a></li>
-            </ul>
-        </div>
-        <div id="special_div" class="link-section">
-            <h2 class="section-title">Specialty Inventory</h2>
-            <ul class="list-unstyled">
-                <li><a href="https://www.hagerty.com/apps/valuationtools/search/vin" target="_blank">Hagerty Valuation Tool</a></li>
-                <li><a href="https://www.commercialtrucktrader.com/" target="_blank">Commercial Truck Trader</a></li>
-                <li><a href="http://www.blvd.com/" target="_blank">Wheelchair Vans</a></li>
-                <li><a href="https://conversionvanland.com/used-vans/" target="_blank">Conversion Vans</a></li>
-            </ul>
-        </div>
-        <div id="mech_div" class="link-section">
-            <h2 class="section-title">Mechanical and Structural</h2>
-            <ul class="list-unstyled">
-                <li><a href="https://mic.mymitchell.com/" target="_blank">Mitchell Repair Guide</a></li>
-                <li><a href="http://www.owgonline.com/index.php" target="_blank">Official Warranty Guide</a></li>
-                <li><a href="https://repairpal.com/estimator" target="_blank">RepairPal Estimates</a></li>
-                <li><a href="https://www.motorreviewer.com/" target="_blank">Motor Reviewer Common Issues</a></li>
-                <li><a href="https://www.carcomplaints.com/" target="_blank">Car Complaints</a></li>
-            </ul>
-        </div>
-        <div id="tow_div" class="link-section">
-          <h2 class="section-title">Tow Hitch Info</h2>
-          <ul class="list-unstyled">
-              <li><a href="https://www.etrailer.com/fitguide.htm" target="_blank">e-Trailer Fit Guide</a></li>
-              <li><a href="https://www.uhaul.com/Trailer-Hitches/" target="_blank">U-Haul Trailer Hitches</a></li>
-              <li><a href="https://www.exploreusa.com/tow-guides" target="_blank">Towing Capacity Search</a></li>
-          </ul>
-      </div>
-      
-    </div>
-</div>
-<div class="col-md-6">
-  <div class="accordion" id="accordionsearch">
-      <div class="card">
-          <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      View/Hide CarMax Inventory Search
-                  </button>
-              </h5>
-          </div>
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionsearch">
-              <div class="card-body">
-                  <div id="kmxsearch" class="search-form">
-                      <input name="iyear" id="iyear" class="form-control" type="text" placeholder="Year">
-                      <input name="imake" id="imake" class="form-control" type="text" placeholder="Make">
-                      <input name="imodel" id="imodel" class="form-control" type="text" placeholder="Model">
-                      <input name="itrim" id="itrim" class="form-control" type="text" placeholder="Trim">
-                      <input name="icyl" id="icyl" class="form-control" type="text" placeholder="Cylinder Count">
-                      <form>
-                          <div class="options">
-                              <label>
-                                <input type="checkbox" value="navigation-system" name="options">
-                                Navigation</label>
-                            <label>
-                                <input type="checkbox" value="no-navigation-system" name="options">
-                                No Navigation</label>
-                            <label>
-                                <input type="checkbox" value="dvd-video-system" name="options">
-                                DVD</label>
-                            <label>
-                                <input type="checkbox" value="no-dvd-video-system" name="options">
-                                No DVD</label>
-                            <label>
-                                <input type="checkbox" value="blu-ray-video-system" name="options">
-                                Blu-Ray</label>
-                            <label>
-                                <input type="checkbox" value="premium-sound" name="options">
-                                Premium Sound</label>
-                            <br>
-                            <br>
-                            <label>
-                                <input type="checkbox" value="sunroof(s)" name="options">
-                                Sunroof</label>
-                            <label>
-                                <input type="checkbox" value="no-sunroof(s)" name="options">
-                                No Sunroof</label>
-                            <label>
-                                <input type="checkbox" value="panoramic-sunroof" name="options">
-                                Panoramic Sunroof</label>
-                            <label>
-                                <input type="checkbox" value="no-panoramic-sunroof" name="options">
-                                No Panoramic Sunroof</label>
-                            <label>
-                                <input type="checkbox" value="skylight(s)" name="options">
-                                Skylight</label>
-                            <label>
-                                <input type="checkbox" value="alloy-wheels" name="options">
-                                Alloy Wheels</label>
-                            <label>
-                                <input type="checkbox" value="no-alloy-wheels" name="options">
-                                Steel Wheels</label>
-                            <label>
-                                <input type="checkbox" value="20-inch-plus-wheels" name="options">
-                                20"+ Wheels</label>
-                            <label>
-                                <input type="checkbox" value="no-20-inch-plus-wheels" name="options">
-                                No 20" Wheels</label>
-                            <label>
-                                <input type="checkbox" value="soft-top" name="options">
-                                Soft Top</label>
-                            <label>
-                                <input type="checkbox" value="hard-top" name="options">
-                                Hard Top</label>
-                            <br>
-                            <br>
-                            <label>
-                                <input type="checkbox" value="2wd" name="options">
-                                2WD</label>
-                            <label>
-                                <input type="checkbox" value="4wdawd" name="options">
-                                4WD/AWD</label>
-                            <label>
-                                <input type="checkbox" value="manual-transmission" name="options">
-                                Manual Transmission</label>
-                            <label>
-                                <input type="checkbox" value="automatic-transmission" name="options">
-                                Automatic Transmission</label>
-                            <label>
-                                <input type="checkbox" value="diesel-engine" name="options">
-                                Diesel Engine</label>
-                            <label>
-                                <input type="checkbox" value="turbo-charged-engine" name="options">
-                                Turbo Charged Engine</label>
-                            <br>
-                            <br>
-                            <label>
-                                <input type="checkbox" value="3rd-rear-seat" name="options">
-                                3rd Row Seats</label>
-                            <label>
-                                <input type="checkbox" value="cloth-seats" name="options">
-                                Cloth Seats</label>
-                            <label>
-                                <input type="checkbox" value="leatherette-seats" name="options">
-                                Leatherette Seats</label>
-                            <label>
-                                <input type="checkbox" value="leatherette-&-cloth" name="options">
-                                Leatherette & Cloth Seats</label>
-                            <label>
-                                <input type="checkbox" value="leather-seats" name="options">
-                                Leather Seats</label>
-                            <label>
-                                <input type="checkbox" value="leather-&-suede-seats" name="options">
-                                Leather & Suede Seats</label>
-                            <br>
-                            <br>
-                            <label>
-                                <input type="checkbox" value="2d-coupe" name="options">
-                                2D Coupe</label>
-                            <label>
-                                <input type="checkbox" value="2d-convertible" name="options">
-                                2D Convertible</label>
-                            <label>
-                                <input type="checkbox" value="2d-regular-cab" name="options">
-                                2D Regular Cab</label>
-                            <label>
-                                <input type="checkbox" value="2d-extended-cab" name="options">
-                                2D Extended Cab</label>
-                            <label>
-                                <input type="checkbox" value="4d-extended-cab" name="options">
-                                4D Extended Cab</label>
-                            <label>
-                                <input type="checkbox" value="4d-crew-cab" name="options">
-                                4D Crew Cab</label>
-                            <label>
-                                <input type="checkbox" value="4d-extended-crew-cab" name="options">
-                                4D Extended Crew Cab</label>
-                          </div>
-                          <button id="kmxbutton" type="button" class="btn btn-primary">CarMax Search</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div id="outputbox" class="output-box">
-      <output name="output" id="output"></output>
-  </div>
-</div>
+            <div class="row">
+                <div
+                    class="col-md-3 order-md-1 order-3 order-sm-3">
+
+                    <!-- ---new links inserted here ... -->
+
+                    <div id="inventory_div" style="display:block; background-color:#fff;">
+                        <br>
+                        <p>
+                            <span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
+                                <strong>Inventory Research</strong>
+                            </span>
+                            <a href="http://www.nadaguides.com/Cars/Manufacturers" target="_blank" role="button" aria-pressed="true">NADA Guides</a>
+                            <a href="https://www.cargurus.com/Cars/inventorylisting/viewDetailsFilterViewInventoryListing.action?sourceContext=forSaleTab_false_0&newSearchFromOverviewPage=true&inventorySearchWidgetType=AUTO&entitySelectingHelper.selectedEntity=&entitySelectingHelper.selectedEntity2=&zip=21162&distance=500&searchChanged=true&modelChanged=true&filtersModified=true" target="_blank" role="button" aria-pressed="true">CarGurus</a>
+                            <a href="https://www.carmax.com/cars?zip=21162&sort=4&distance=all" target="_blank" role="button" aria-pressed="true">CarMax Search</a>
+                            <a href="https://www.carvana.com/cars/filters/?cvnaid=eyJmaWx0ZXJzIjp7fSwic29ydEJ5IjoiTG93ZXN0TWlsZWFnZSJ9" target="_blank" role="button" aria-pressed="true">Carvana Search</a>
+                            <a href="https://www.autonation.com/cars-for-sale?sortby=mileage&sortdirection=0&pagesize=72" target="_blank" role="button" aria-pressed="true">AutoNation Search</a>
+                            <a href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?_from=R40&_nkw=&_trksid=m570.l1313" target="_blank" role="button" aria-pressed="true">ebay Search</a>
+                            <a href="https://www.truecar.com/" target="_blank" role="button" aria-pressed="true">TrueCar New Car Search</a>
+                            <a href="https://www.carsdirect.com/" target="_blank" role="button" aria-pressed="true">CarsDirect Search</a>
+                            <a href="./w.html" target="_blank" role="button" aria-pressed="true">Photos</a>
+                        </p>
+                    </div>
+                    <div id="special_div" style="display:block; background-color:#fff;">
+                        <p>
+                            <span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
+                                <strong>Specialty Inventory</strong>
+                            </span>
+                            <a href="https://www.hagerty.com/apps/valuationtools/search/vin" title="jas...1..@ Sl-01" target="_blank" role="button" aria-pressed="true">
+                                Hagerty Valuation Tool</a>
+                            <a href="https://www.commercialtrucktrader.com/" target="_blank" role="button" aria-pressed="true">
+                                Commercial Truck Trader</a>
+                            <a href="http://www.blvd.com/" target="_blank" role="button" aria-pressed="true">
+                                Wheelchair Vans</a>
+                            <a href="https://conversionvanland.com/used-vans/" target="_blank" role="button" aria-pressed="true">
+                                Conversion Vans</a>
+                        </p>
+                    </div>
+                    <div id="mech_div" style="display:block; background-color:#fff;">
+                        <p>
+                            <span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
+                                <strong>Mechanical and Structural</strong>
+                            </span>
+                            <a href="https://mic.mymitchell.com/" target="_blank" role="button" aria-pressed="true" title="(PY kmxXXXX)">
+                                Mitchell Repair Guide</a>
+                            <a href="http://www.owgonline.com/index.php" target="_blank" role="button" aria-pressed="true" title="(Intranet Only)">
+                                Official Warranty Guide</a>
+                            <a href="https://repairpal.com/estimator?trk_loc=nav" target="_blank" role="button" aria-pressed="true">
+                                RepairPal Estimates</a>
+                            <a href="https://www.motorreviewer.com/" target="_blank" role="button" aria-pressed="true">
+                                Motor Reviewer Common Issues</a>
+                            <a href="https://www.carcomplaints.com/" target="_blank" role="button" aria-pressed="true">
+                                Car Complaints</a>
+                        </p>
+                    </div>
+                    <div id="tow_div" style="display:block; background-color:#fff;">
+                        <p>
+                            <span style="font-size: 16px; background-color:#fdde58; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
+                                <strong>Tow Hitch Info</strong>
+                            </span>
+                            <a href="https://www.etrailer.com/fitguide.htm" target="_blank" role="button" aria-pressed="true">
+                                e-Trailer</a>
+                            <a href="https://www.uhaul.com/Trailer-Hitches/" target="_blank" role="button" aria-pressed="true">
+                                UHaul</a>
+                            <a href="https://www.exploreusa.com/tow-guides" target="_blank" role="button" aria-pressed="true">
+                                Towing Capacity Search</a>
+                            <br></p>
+                    </div>
+
+                    <!-- ------------------------------------------------ -->
+                </div>
+                <div class="col-md-6 order-md-2 order-1 order-sm-1">
+
+                    <br>
+
+                    <div class="accordion" id="accordionsearch">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        View/Hide CarMax Inventory Search
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionsearch">
+                                <div class="card-body">
+                                    <div id="kmxsearch" style="display:block; background-color:#fff;">
+                                        <input name="iyear" id="iyear" class="form-control my-0 py-1 amber-border" type="text" placeholder="Year">
+                                        <input name="imake" id="imake" class="form-control my-0 py-1 amber-border" type="text" placeholder="Make">
+                                        <input name="imodel" id="imodel" class="form-control my-0 py-1 amber-border" type="text" placeholder="Model">
+                                        <input name="itrim" id="itrim" class="form-control my-0 py-1 amber-border" type="text" placeholder="Trim">
+                                        <input name="icyl" id="icyl" class="form-control my-0 py-1 amber-border" type="text" placeholder="Cylinder Count">
+                                        <form>
+                                            <label>
+                                                <input type="checkbox" value="navigation-system" name="options">
+                                                Navigation</label>
+                                            <label>
+                                                <input type="checkbox" value="no-navigation-system" name="options">
+                                                No Navigation</label>
+                                            <label>
+                                                <input type="checkbox" value="dvd-video-system" name="options">
+                                                DVD</label>
+                                            <label>
+                                                <input type="checkbox" value="no-dvd-video-system" name="options">
+                                                No DVD</label>
+                                            <label>
+                                                <input type="checkbox" value="blu-ray-video-system" name="options">
+                                                Blu-Ray</label>
+                                            <label>
+                                                <input type="checkbox" value="premium-sound" name="options">
+                                                Premium Sound</label>
+                                            <br>
+                                            <br>
+                                            <label>
+                                                <input type="checkbox" value="sunroof(s)" name="options">
+                                                Sunroof</label>
+                                            <label>
+                                                <input type="checkbox" value="no-sunroof(s)" name="options">
+                                                No Sunroof</label>
+                                            <label>
+                                                <input type="checkbox" value="panoramic-sunroof" name="options">
+                                                Panoramic Sunroof</label>
+                                            <label>
+                                                <input type="checkbox" value="no-panoramic-sunroof" name="options">
+                                                No Panoramic Sunroof</label>
+                                            <label>
+                                                <input type="checkbox" value="skylight(s)" name="options">
+                                                Skylight</label>
+                                            <label>
+                                                <input type="checkbox" value="alloy-wheels" name="options">
+                                                Alloy Wheels</label>
+                                            <label>
+                                                <input type="checkbox" value="no-alloy-wheels" name="options">
+                                                Steel Wheels</label>
+                                            <label>
+                                                <input type="checkbox" value="20-inch-plus-wheels" name="options">
+                                                20"+ Wheels</label>
+                                            <label>
+                                                <input type="checkbox" value="no-20-inch-plus-wheels" name="options">
+                                                No 20" Wheels</label>
+                                            <label>
+                                                <input type="checkbox" value="soft-top" name="options">
+                                                Soft Top</label>
+                                            <label>
+                                                <input type="checkbox" value="hard-top" name="options">
+                                                Hard Top</label>
+                                            <br>
+                                            <br>
+                                            <label>
+                                                <input type="checkbox" value="2wd" name="options">
+                                                2WD</label>
+                                            <label>
+                                                <input type="checkbox" value="4wdawd" name="options">
+                                                4WD/AWD</label>
+                                            <label>
+                                                <input type="checkbox" value="manual-transmission" name="options">
+                                                Manual Transmission</label>
+                                            <label>
+                                                <input type="checkbox" value="automatic-transmission" name="options">
+                                                Automatic Transmission</label>
+                                            <label>
+                                                <input type="checkbox" value="diesel-engine" name="options">
+                                                Diesel Engine</label>
+                                            <label>
+                                                <input type="checkbox" value="turbo-charged-engine" name="options">
+                                                Turbo Charged Engine</label>
+                                            <br>
+                                            <br>
+                                            <label>
+                                                <input type="checkbox" value="3rd-rear-seat" name="options">
+                                                3rd Row Seats</label>
+                                            <label>
+                                                <input type="checkbox" value="cloth-seats" name="options">
+                                                Cloth Seats</label>
+                                            <label>
+                                                <input type="checkbox" value="leatherette-seats" name="options">
+                                                Leatherette Seats</label>
+                                            <label>
+                                                <input type="checkbox" value="leatherette-&-cloth" name="options">
+                                                Leatherette & Cloth Seats</label>
+                                            <label>
+                                                <input type="checkbox" value="leather-seats" name="options">
+                                                Leather Seats</label>
+                                            <label>
+                                                <input type="checkbox" value="leather-&-suede-seats" name="options">
+                                                Leather & Suede Seats</label>
+                                            <br>
+                                            <br>
+                                            <label>
+                                                <input type="checkbox" value="2d-coupe" name="options">
+                                                2D Coupe</label>
+                                            <label>
+                                                <input type="checkbox" value="2d-convertible" name="options">
+                                                2D Convertible</label>
+                                            <label>
+                                                <input type="checkbox" value="2d-regular-cab" name="options">
+                                                2D Regular Cab</label>
+                                            <label>
+                                                <input type="checkbox" value="2d-extended-cab" name="options">
+                                                2D Extended Cab</label>
+                                            <label>
+                                                <input type="checkbox" value="4d-extended-cab" name="options">
+                                                4D Extended Cab</label>
+                                            <label>
+                                                <input type="checkbox" value="4d-crew-cab" name="options">
+                                                4D Crew Cab</label>
+                                            <label>
+                                                <input type="checkbox" value="4d-extended-crew-cab" name="options">
+                                                4D Extended Crew Cab</label>
+                                        </form>
+                                        <button id="kmxbutton" type="button" class="btn btn-sm btn-primary">Carmax Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="outputbox" class="shadow p-3 rounded-0" style="display:none;   background-color:#77c2e6; width: 100%; text-align: center;">
                         <output name="output" id="output"></output>
                     </div>
@@ -1136,130 +1159,165 @@
         </div>
         <!-- Links -->
         <div class="pt-3 pb-3">
-          <a href="#" id="siriusbutton" onclick="siriusxm()">Check Sirius XM Radio</a>
-          <a href="#" id="decoderzbutton" onclick="decoderz()">Vin Decoderz. Daily search limit per IP. Use caution with options</a>
-          <a href="#" id="hitchbutton" onclick="hitcher()">e-Trailer direct link for tow hitch info</a>
-      </div>
-      
+            <a href="#" id="siriusbutton" onclick="siriusxm()" role="button" aria-pressed="true">Check Sirius XM Radio</a>
+            <a href="#" id="decoderzbutton" onclick="decoderz()" role="button" aria-pressed="true">Vin Decoderz. Daily search limit per IP. Use caution with options</a>
+            <a href="#" id="hitchbutton" onclick="hitcher()" role="button" aria-pressed="true">e-Trailer direct link for tow hitch info</a>
+        </div>
     </div>
 </div>
 
-<div id="visible_div" style="background-color:#fff;">
-  <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="manualsmenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#ffd51d; color:#003366;">
-          OWNER'S MANUALS
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="manualsmenu">
-          <li><a class="dropdown-item" href="http://owners.acura.com/" target="_blank">Acura</a></li>
-          <li><a class="dropdown-item" href="http://ownersmanual.audiusa.com/" target="_blank">Audi</a></li>
-          <li><a class="dropdown-item" href="http://www.bmwusa.com/standard/content/owner/dgh.aspx" target="_blank">BMW</a></li>
-          <li><a class="dropdown-item" href="https://my.buick.com/web/portal/_knowmyvehicle" target="_blank">Buick</a></li>
-          <li><a class="dropdown-item" href="http://www.cadillac.com/owners/auto-owners-manuals.html" target="_blank">Cadillac</a></li>
-          <li><a class="dropdown-item" href="https://my.chevrolet.com/learn" target="_blank">Chevrolet</a></li>
-          <li><a class="dropdown-item" href="http://www.chrysler.com/en/owners/manuals/" target="_blank">Chrysler</a></li>
-          <li><a class="dropdown-item" href="http://www.chrysler.com/en/owners/manuals/" target="_blank">Dodge</a></li>
-          <li><a class="dropdown-item" href="http://www.fiatusa.com/en/owners/manuals/index.html" target="_blank">Fiat</a></li>
-          <li><a class="dropdown-item" href="https://owner.ford.com/servlet/ContentServer?pagename=Owner/Page/OwnerGuidePageVehicleLookup&BackToLogin=Owner/Page/OwnerGuidePage&ord=23587283" target="_blank">Ford</a></li>
-          <li><a class="dropdown-item" href="https://my.chevrolet.com/learn" target="_blank">GMC</a></li>
-          <li><a class="dropdown-item" href="http://owners.honda.com/vehicles/warranty" target="_blank">Honda</a></li>
-          <li><a class="dropdown-item" href="https://my.gm.com/home?evar18=gm_hu_manage_account" target="_blank">Hummer</a></li>
-          <li><a class="dropdown-item" href="https://owners.hyundaiusa.com/us/en/resources/manuals-warranties.html" target="_blank">Hyundai</a></li>
-          <li><a class="dropdown-item" href="https://owners.infinitiusa.com/iowners/navigation/manualsAndGuides" target="_blank">Infiniti</a></li>
-          <li><a class="dropdown-item" href="http://www.ownerinfo.jaguar.com/" target="_blank">Jaguar</a></li>
-          <li><a class="dropdown-item" href="http://www.jeep.com/en/owners/manuals/" target="_blank">Jeep</a></li>
-          <li><a class="dropdown-item" href="https://www.kia.com/us/en/content/owners/landing-page" target="_blank">Kia</a></li>
-          <li><a class="dropdown-item" href="http://www.ownerinfo.landrover.com/" target="_blank">Land Rover</a></li>
-          <li><a class="dropdown-item" href="http://drivers.lexus.com/lexusdrivers/resources/manuals-warranty" target="_blank">Lexus</a></li>
-          <li><a class="dropdown-item" href="https://owner.lincoln.com/tools/account/how-tos/owner-manuals.html" target="_blank">Lincoln</a></li>
-          <li><a class="dropdown-item" href="http://www.mazdausa.com/MusaWeb/displayManualsByModelAndYearHome.action" target="_blank">Mazda</a></li>
-          <li><a class="dropdown-item" href="http://www.mbusa.com/mercedes/#/servPrtsOwnersManuals/" target="_blank">Mercedes-Benz</a></li>
-          <li><a class="dropdown-item" href="https://owner.ford.com/servlet/ContentServer?pagename=Owner/Page/OwnerGuidePageVehicleLookup&BackToLogin=Owner/Page/OwnerGuidePage&ord=23587283" target="_blank">Mercury</a></li>
-          <li><a class="dropdown-item" href="http://www.miniusa.com/content/miniusa/en/owners/tools-support/owner-manuals.html" target="_blank">Mini</a></li>
-          <li><a class="dropdown-item" href="http://www.mitsubishicars.com/MMNA/jsp/owners-site/index.do" target="_blank">Mitsubishi</a></li>
-          <li><a class="dropdown-item" href="http://www.nissanusa.com/apps/techpublications" target="_blank">Nissan</a></li>
-          <li><a class="dropdown-item" href="https://my.gm.com/learn?evar18=gm_olds_owner_learn" target="_blank">Oldsmobile</a></li>
-          <li><a class="dropdown-item" href="https://my.gm.com/learn?evar18=gm_olds_owner_learn" target="_blank">Pontiac</a></li>
-          <li><a class="dropdown-item" href="http://www.porscheownersmanuals.com/" target="_blank">Porsche</a></li>
-          <li><a class="dropdown-item" href="http://www.ramtrucks.com/en/owners/manuals/" target="_blank">Ram</a></li>
-          <li><a class="dropdown-item" href="https://my.gm.com/learn?evar18=gm_olds_owner_learn" target="_blank">Saturn</a></li>
-          <li><a class="dropdown-item" href="https://www.toyota.com/owners/resources/owners-manuals" target="_blank">Scion</a></li>
-          <li><a class="dropdown-item" href="http://owners.smartusa.com/My_Manuals.aspx" target="_blank">Smart</a></li>
-          <li><a class="dropdown-item" href="https://www.subaru.com/owners/vehicle-resources.html" target="_blank">Subaru</a></li>
-          <li><a class="dropdown-item" href="http://suzukipitstopplus.com/Category/5-suzuki-owners-manuals.aspx" target="_blank">Suzuki</a></li>
-          <li><a class="dropdown-item" href="https://www.toyota.com/owners/home" target="_blank">Toyota</a></li>
-          <li><a class="dropdown-item" href="https://www.vwserviceandparts.com/digital-resources/online-owners-manual/" target="_blank">Volkswagen</a></li>
-          <li><a class="dropdown-item" href="http://volvo.custhelp.com/app/homeV3" target="_blank">Volvo</a></li>
-      </ul>
-  </div>
-</div>
-
-
-
-
-                    
+                    <div id="visible_div" style="display:block; background-color:#fff;">
+                        <div class="dropdown">
+                            <br>
+                            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" style="background-color:#ffd51d; color:#003366;" type="button" id="manualsmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">OWNER'S MANUALS</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="http://owners.acura.com/" target="_blank">Acura</a>
+                                <a class="dropdown-item" href="http://ownersmanual.audiusa.com/" target="_blank">Audi</a>
+                                <a class="dropdown-item" href="http://www.bmwusa.com/standard/content/owner/dgh.aspx" target="_blank">BMW</a>
+                                <a class="dropdown-item" href="https://my.buick.com/web/portal/_knowmyvehicle" target="_blank">Buick</a>
+                                <a class="dropdown-item" href="http://www.cadillac.com/owners/auto-owners-manuals.html" target="_blank">Cadillac</a>
+                                <a class="dropdown-item" href="https://my.chevrolet.com/learn" target="_blank">Chevrolet</a>
+                                <a class="dropdown-item" href="http://www.chrysler.com/en/owners/manuals/" target="_blank">Chrysler</a>
+                                <a class="dropdown-item" href="http://www.chrysler.com/en/owners/manuals/" target="_blank">Dodge</a>
+                                <a class="dropdown-item" href="http://www.fiatusa.com/en/owners/manuals/index.html" target="_blank">Fiat</a>
+                                <a class="dropdown-item" href="https://owner.ford.com/servlet/ContentServer?pagename=Owner/Page/OwnerGuidePageVehicleLookup&BackToLogin=Owner/Page/OwnerGuidePage&ord=23587283" target="_blank">Ford</a>
+                                <a class="dropdown-item" href="https://my.chevrolet.com/learn" target="_blank">GMC</a>
+                                <a class="dropdown-item" href="http://owners.honda.com/vehicles/warranty" target="_blank">Honda</a>
+                                <a class="dropdown-item" href="https://my.gm.com/home?evar18=gm_hu_manage_account" target="_blank">Hummer</a>
+                                <a class="dropdown-item" href="https://owners.hyundaiusa.com/us/en/resources/manuals-warranties.html" target="_blank">Hyundai</a>
+                                <a class="dropdown-item" href="https://owners.infinitiusa.com/iowners/navigation/manualsAndGuides" target="_blank">Infiniti</a>
+                                <a class="dropdown-item" href="http://www.ownerinfo.jaguar.com/" target="_blank">Jaguar</a>
+                                <a class="dropdown-item" href="http://www.jeep.com/en/owners/manuals/" target="_blank">Jeep</a>
+                                <a class="dropdown-item" href="https://www.kia.com/us/en/content/owners/landing-page" target="_blank">Kia</a>
+                                <a class="dropdown-item" href="http://www.ownerinfo.landrover.com/" target="_blank">Land Rover</a>
+                                <a class="dropdown-item" href="http://drivers.lexus.com/lexusdrivers/resources/manuals-warranty" target="_blank">Lexus</a>
+                                <a class="dropdown-item" href="https://owner.lincoln.com/tools/account/how-tos/owner-manuals.html" target="_blank">Lincoln</a>
+                                <a class="dropdown-item" href="http://www.mazdausa.com/MusaWeb/displayManualsByModelAndYearHome.action" target="_blank">Mazda</a>
+                                <a class="dropdown-item" href="http://www.mbusa.com/mercedes/#/servPrtsOwnersManuals/" target="_blank">Mercedes-Benz</a>
+                                <a class="dropdown-item" href="https://owner.ford.com/servlet/ContentServer?pagename=Owner/Page/OwnerGuidePageVehicleLookup&BackToLogin=Owner/Page/OwnerGuidePage&ord=23587283" target="_blank">Mercury</a>
+                                <a class="dropdown-item" href="http://www.miniusa.com/content/miniusa/en/owners/tools-support/owner-manuals.html" target="_blank">Mini</a>
+                                <a class="dropdown-item" href="http://www.mitsubishicars.com/MMNA/jsp/owners-site/index.do" target="_blank">Mitsubishi</a>
+                                <a class="dropdown-item" href="http://www.nissanusa.com/apps/techpublications" target="_blank">Nissan</a>
+                                <a class="dropdown-item" href="https://my.gm.com/learn?evar18=gm_olds_owner_learn" target="_blank">Oldsmobile</a>
+                                <a class="dropdown-item" href="https://my.gm.com/learn?evar18=gm_olds_owner_learn" target="_blank">Pontiac</a>
+                                <a class="dropdown-item" href="http://www.porscheownersmanuals.com/" target="_blank">Porsche</a>
+                                <a class="dropdown-item" href="http://www.ramtrucks.com/en/owners/manuals/" target="_blank">Ram</a>
+                                <a class="dropdown-item" href="https://my.gm.com/learn?evar18=gm_olds_owner_learn" target="_blank">Saturn</a>
+                                <a class="dropdown-item" href="https://www.toyota.com/owners/resources/owners-manuals" target="_blank">Scion</a>
+                                <a class="dropdown-item" href="http://owners.smartusa.com/My_Manuals.aspx" target="_blank">Smart</a>
+                                <a class="dropdown-item" href="https://www.subaru.com/owners/vehicle-resources.html" target="_blank">Subaru</a>
+                                <a class="dropdown-item" href="http://suzukipitstopplus.com/Category/5-suzuki-owners-manuals.aspx" target="_blank">Suzuki</a>
+                                <a class="dropdown-item" href="https://www.toyota.com/owners/home" target="_blank">Toyota</a>
+                                <a class="dropdown-item" href="https://www.vwserviceandparts.com/digital-resources/online-owners-manual/" target="_blank">Volkswagen</a>
+                                <a class="dropdown-item" href="http://volvo.custhelp.com/app/homeV3" target="_blank">Volvo</a>
+                            </div>
+                            <br></div>
+                    </div>
 
                     <!-- -------------------------------------------------- -->
 
                 </div>
-                <div class="col-md-3">
-                  <div id="blackbook_div" class="link-section">
-                      <h2 class="section-title">Blackbook</h2>
-                      <ul class="list-unstyled">
-                          <li><a href="#" id="bbbutton" onclick="invoice()">INVOICE GUIDE</a></li>
-                          <li><a href="http://www.blackbookportals.com/bb/products/vinpricingxpresshtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank">BlackBook First Values</a></li>
-                          <li><a href="http://www.blackbookusa.com/bb/products/usedcarhtmlportal.asp?color=d&companyid=cudirect.com" target="_blank">BlackBook Used Car Values</a></li>
-                          <li><a href="http://www.blackbookportals.com/bb/products/newcarhtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank">BlackBook New Car Info</a></li>
-                          <li><a href="http://www.blackbookportals.com/bb/products/cycleshtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank">BlackBook Recreational</a></li>
-                      </ul>
-                  </div>
-                  <div id="research_div" class="link-section">
-                      <h2 class="section-title">Other Research</h2>
-                      <ul class="list-unstyled">
-                          <li><a href="#" id="bidbutton" onclick="bidhistory()">Copart/Bidhistory Search</a></li>
-                          <li><a href="http://www.auto-brochures.com" target="_blank">Auto Brochures</a></li>
-                          <li><a href="http://www.motortrend.com/cars/" target="_blank">Motor Trend for Packages</a></li>
-                          <li><a href="http://autoweek.com/buyers-guide" target="_blank">AutoWeek for Packages</a></li>
-                          <li><a href="#" id="siriusbutton2" onclick="siriusxm()">Check Sirius XM Radio</a></li>
-                          <li><a href="https://propelfuels.com/vehicles" target="_blank">Flex Fuel VIN Code Check</a></li>
-                          <li><a href="http://www.ethanolretailer.com/images/uploads/FFV-2017.pdf" target="_blank">Flex Fuel 2017 PDF List</a></li>
-                          <li><a href="https://www.goodyear.com/en-US/tire-guide/find-tire-size" target="_blank">Tire Sizes VIN/License Plate</a></li>
-                          <li><a href="https://www.vehiclehistory.com/license-plate-search.php" target="_blank">License Plate Search for VIN</a></li>
-                          <li><a href="http://www.vinwiz.com/" target="_blank">1960-1980 VIN Decoder</a></li>
-                      </ul>
-                  </div>
-                  <div id="auction_div" class="link-section">
-                      <h2 class="section-title">Auction Links</h2>
-                      <ul class="list-unstyled">
-                          <li><a href="https://mmr.manheim.com" target="_blank">MMR Search</a></li>
-                          <li><a href="#" id="manheimbutton" onclick="manheimsearch()">Manheim Inventory & CR</a></li>
-                          <li><a href="http://www.bscamerica.com/bel-air-auction/run-list/#/" target="_blank">Bel Air Auto Auction Run List</a></li>
-                          <li><a href="https://www.manheim.com/members/marketreport/control/MarketReportMain?auctionID=MAA" target="_blank">Manheim Post Sale Results</a></li>
-                          <li><a href="https://www.manheim.com/sales_schedule?id[]=&max_records=25&sort=saledatetime&sort_order=asc&id[]=177" target="_blank">Manheim NJ Sale</a></li>
-                          <li><a href="https://manheim-nade.cox2m.com/vehicles" target="_blank">Manheim NJ Lot Vision</a></li>
-                          <li><a href="https://simulcast.manheim.com/simulcast/showBuyerSales.do?auctionFilter=NADE&auctionName=Manheim%20New%20Jersey#/" target="_blank">Manheim NJ Simulcast</a></li>
-                          <li><a href="https://www.manheim.com/sales_schedule?id[]=&max_records=25&sort=saledatetime&sort_order=asc&id[]=165" target="_blank">Manheim PA Sale</a></li>
-                          <li><a href="https://manheim-maa.cox2m.com/vehicles" target="_blank">Manheim PA Lot Vision</a></li>
-                          <li><a href="https://simulcast.manheim.com/simulcast/showBuyerSales.do?auctionFilter=MAA&auctionName=Manheim%20Pennsylvania#/" target="_blank">Manheim PA Simulcast</a></li>
-                          <li><a href="https://www.smartauctioninspections.com/viw/aspx/general/DealerInspectionReport.aspx" target="_blank">SmartAuction Inspections</a></li>
-                          <li><a href="https://buy.adesa.com" target="_blank">ADESA</a></li>
-                          <li><a href="https://cox.service-now.com/covid_access" target="_blank">Manheim Covid Access</a></li>
-                      </ul>
-                  </div>
-              </div>
-             
+                <div
+                    class="col-md-3 order-md-3 order-2 order-sm-2">
 
-
+                    <!-- ---new links inserted here -->
+                    <div id="blackbook_div" style="display:block; background-color:#fff;">
+                        <p>
+                            <br>
+                            <span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
+                                <strong>Blackbook</strong>
+                            </span>
+                            <a href="#" id="bbbutton" onclick="invoice()" role="button" aria-pressed="true">
+                                INVOICE GUIDE</a>
+                            <a href="http://www.blackbookportals.com/bb/products/vinpricingxpresshtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true" title="Allows access to invoice guide and more">
+                                BlackBook First Values</a>
+                            <a href="http://www.blackbookusa.com/bb/products/usedcarhtmlportal.asp?color=d&companyid=cudirect.com" target="_blank" role="button" aria-pressed="true">
+                                BlackBook Used Car Values</a>
+                            <a href="http://www.blackbookportals.com/bb/products/newcarhtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true">
+                                BlackBook New Car Info
+                            </a>
+                            <a href="http://www.blackbookportals.com/bb/products/cycleshtmlportal.asp?color=o&companyid=thinkbank.COM" target="_blank" role="button" aria-pressed="true">
+                                BlackBook Recreational</a>
+                            <!--<a href="https://www.blackbookpricepoint.com/PDF/2017160camaro.pdf" target="_blank" role="button" aria-pressed="true"> BlackBook guide UVC(7)+model</a> -->
+                        </p>
+                    </div>
+                    <div id="research_div" style="display:block; background-color:#fff;">
+                        <p>
+                            <span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
+                                <strong>Other Research</strong>
+                            </span>
+                            <a href="#" id="bidbutton" onclick="bidhistory()" role="button" aria-pressed="true">
+                                Copart/Bidhistory Search</a>
+                            <a href="http://www.auto-brochures.com" target="_blank" role="button" aria-pressed="true">
+                                Auto Brochures</a>
+                            <a href="http://www.motortrend.com/cars/" target="_blank" role="button" aria-pressed="true">
+                                Motor Trend for Packages</a>
+                            <a href="http://autoweek.com/buyers-guide" target="_blank" role="button" aria-pressed="true">
+                                AutoWeek for Packages</a>
+                            <a href="#" id="siriusbutton2" onclick="siriusxm()" role="button" aria-pressed="true">
+                                Check Sirius XM Radio</a>
+                            <!--<a href="https://care.siriusxm.com/vinlookup_view.action" target="_blank" role="button" aria-pressed="true">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Satellite Radio VIN Check</a> -->
+                            <a href="https://propelfuels.com/vehicles" target="_blank" role="button" aria-pressed="true">
+                                Flex Fuel VIN Code Check</a>
+                            <a href="http://www.ethanolretailer.com/images/uploads/FFV-2017.pdf" target="_blank" role="button" aria-pressed="true">
+                                Flex Fuel 2017 PDF List</a>
+                            <a href="https://www.goodyear.com/en-US/tire-guide/find-tire-size" target="_blank" role="button" aria-pressed="true">
+                                Tire Sizes VIN/License Plate</a>
+                            <a href="https://www.vehiclehistory.com/license-plate-search.php" target="_blank" role="button" aria-pressed="true">
+                                License Plate Search for VIN</a>
+                            <a href="http://www.vinwiz.com/" target="_blank" role="button" aria-pressed="true">
+                                1960-1980 VIN Decoder</a>
+                        </p>
+                    </div>
+                    <div id="auction_div" style="display:block; background-color:#fff;">
+                        <p>
+                            <span style="font-size: 16px; background-color:#ffd51d; color: #036; font-family: Montserrat,'Trebuchet MS',Helvetica,sans-serif;">
+                                <strong>Auction Links</strong>
+                            </span>
+                            <a href="https://mmr.manheim.com" target="_blank" role="button" aria-pressed="true">
+                                MMR Search</a>
+                            <a href="#" id="manheimbutton" onclick="manheimsearch()" role="button" aria-pressed="true">
+                                Manheim Inventory &amp; CR
+                            </a>
+                            <a href="http://www.bscamerica.com/bel-air-auction/run-list/#/" target="_blank" role="button" aria-pressed="true">
+                                Bel Air Auto Auction Run List</a>
+                            <a href="https://www.manheim.com/members/marketreport/control/MarketReportMain?auctionID=MAA" target="_blank" role="button" aria-pressed="true">
+                                Manheim Post Sale Results</a>
+                            <a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=177" target="_blank" role="button" aria-pressed="true">
+                                Manheim NJ Sale</a>
+                            <a href="https://manheim-nade.cox2m.com/vehicles" target="_blank" role="button" aria-pressed="true">
+                                Manheim NJ Lot Vision</a>
+                            <a href="https://simulcast.manheim.com/simulcast/showBuyerSales.do?auctionFilter=NADE&auctionName=Manheim%20New%20Jersey#/" target="_blank" role="button" aria-pressed="true">
+                                Manheim NJ Simulcast</a>
+                            <a href="https://www.manheim.com/sales_schedule?id[]=&amp=&max_records=25&amp=&sort=saledatetime&amp=&sort_order=asc&id[]=165" target="_blank" role="button" aria-pressed="true">
+                                Manheim PA Sale</a>
+                            <a href="https://manheim-maa.cox2m.com/vehicles" target="_blank" role="button" aria-pressed="true">
+                                Manheim PA Lot Vision</a>
+                            <a href="https://simulcast.manheim.com/simulcast/showBuyerSales.do?auctionFilter=MAA&auctionName=Manheim%20Pennsylvania#/" target="_blank" role="button" aria-pressed="true">
+                                Manheim PA Simulcast</a>
+                            <a href="https://www.smartauctioninspections.com/viw/aspx/general/DealerInspectionReport.aspx" target="_blank" role="button" aria-pressed="true">
+                                SmartAuction Inspections</a>
+                            <a href="https://buy.adesa.com" target="_blank" role="button" aria-pressed="true">
+                                ADESA
+                            </a>
+                            <a href="https://cox.service-now.com/covid_access" target="_blank" role="button" aria-pressed="true">
+                                Manheim Covid Access
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-6">
-                  <div id="nhtsa_data" class="data-display-area text-center">
-                      <textarea id="txt_results" rows="6" cols="60" placeholder="Vehicle Data Presented Here"></textarea>
-                  </div>
-              </div>
-              <div class="col-md-3"></div>
-          </div>
-          
+                <div class="col-md-3 order-md-1 order-3 order-sm-3"></div>
+                <div class="col-md-6 order-md-2 order-1 order-sm-1">
+                    <div id="nhtsa_data" style="display:none; background-color:#fff;" align="center">
+                        <br>
+                        <textarea id="txt_results" rows="6" cols="60" placeholder="Vehicle Data Presented Here"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-3 order-md-3 order-2 order-sm-2"></div>
+            </div>
         </div>
     
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@latest/dist/umd/popper.min.js"
