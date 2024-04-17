@@ -100,6 +100,7 @@ function getNHTSADataByVIN(param_vin) {
             if (aMake) {
                 console.log(`Manufacturer found using NHTSA data: ${aMake}`);
                 updateDisplay(aMake);
+            };
             displayNHTSAResults(result);
         },
         error: function (xhr, ajaxOptions, thrownError) {
