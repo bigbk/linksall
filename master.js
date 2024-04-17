@@ -144,9 +144,14 @@ function openWindowWithVin(url) {
 function openWindowWithVin2(url) {
     vincheckin(function(isValidAndAuthorized) {
         if (isValidAndAuthorized) {
-            // Encode the URL component before opening the window
-            var encodedUrl = encodeURIComponent(url);
-            window.open(awsserv + "/ps?url=" + encodedUrl);
+            // Encode the VIN
+            var encodedURL = encodeURIComponent(url);
+            // Obfuscate the encoded VIN
+            var obfuscatedURL = btoa(encodedURL); // Base64 encode
+            // Construct the URL with the obfuscated VIN
+            var finalurl = awsserv + "/ps?url=" + obfuscatedURL;
+            // Open the window with the obfuscated URL
+            window.open(finalurl);
         }
     });
 }
