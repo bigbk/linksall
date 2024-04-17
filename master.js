@@ -290,8 +290,8 @@ function updateDisplay(manu) {
         aMake = manu;
 
         // Update the text results and output elements with a message to search VIN
-        document.getElementById("txt_results").value = "Search VIN to retrieve details";
-        document.getElementById("output").innerText = "Search VIN to retrieve details";
+//        document.getElementById("txt_results").value = "Search VIN to retrieve details";
+//        document.getElementById("output").innerText = "Search VIN to retrieve details";
 
         // Log the update action with the manufacturer's name
         console.log(`Updating divs with manufacturer: ${aMake}`);
