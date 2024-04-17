@@ -145,7 +145,7 @@ function openWindowWithVin2(url) {
     vincheckin(function(isValidAndAuthorized) {
         if (isValidAndAuthorized) {
             // Encode the VIN
-            var encodedURL = encodeURIComponent(url);
+            var encodedURL = encodedURL //encodeURIComponent(url);
             // Obfuscate the encoded VIN
             var obfuscatedURL = btoa(encodedURL); // Base64 encode
             // Construct the URL with the obfuscated VIN
