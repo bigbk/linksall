@@ -18,8 +18,8 @@ function copyToClipboard(text) {
  * Updates the display with the manufacturer information.
  * @param {string} manufacturer - The manufacturer name to display.
  */
-function updateDisplay(manufacturer) {
-    // Update the display with the manufacturer information
+function updateDisplaynew(manufacturer) {
+   // Update the display with the manufacturer information
     console.log(`Display updated with: ${manufacturer}`);
     // Add additional display update logic here
 }
