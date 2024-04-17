@@ -394,23 +394,23 @@ function bimmerbtn() {
 }
 
 function bmwlane() {
-    openWindowWithVin(awsserv + "/ps?url=http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/BMW/" + vin);
+    openWindowWithVin2("http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/BMW/" + vin);
 }
 
 function chrysler() {
-    openWindowWithVin(awsserv + "/ps?url=https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
+    openWindowWithVin2("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
 }
 
 function chryslerlist() {
-    openWindowWithVin(awsserv + "/ps?url=http://www.jeep.com/webselfservice/BuildSheetServlet?vin=" + vin);
+    openWindowWithVin2("http://www.jeep.com/webselfservice/BuildSheetServlet?vin=" + vin);
 }
 
 function chryslerlist2() {
-    openWindowWithVin(awsserv + "/ps?url=http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
+    openWindowWithVin2("http://www.chrysler.com/webselfservice/BuildSheetServlet?vin=" + vin);
 }
 
 function chryslerlist3() {
-    openWindowWithVin(awsserv + "/ps?url=http://www.dodge.com/webselfservice/BuildSheetServlet?vin=" + vin);
+    openWindowWithVin2("http://www.dodge.com/webselfservice/BuildSheetServlet?vin=" + vin);
 }
 
 function decoderz() {
@@ -418,7 +418,7 @@ function decoderz() {
 }
 
 function siriusxm() {
-    openWindowWithVin(awsserv + "/ps?url=https://care.siriusxm.com/vinlookup_findVin.action?vin=" + vin);
+    openWindowWithVin2("https://care.siriusxm.com/vinlookup_findVin.action?vin=" + vin);
 }
 
 function bidhistory() {
@@ -430,17 +430,17 @@ function ford() {
 }
 
 function fordsticker() {
-    openWindowWithVin(awsserv + "/ps?url=http://www.windowsticker.forddirect.com/windowsticker.pdf?vin=" + vin);
+    openWindowWithVin2("http://www.windowsticker.forddirect.com/windowsticker.pdf?vin=" + vin);
 }
 
 function fordstickerkey() {
-    openWindowWithVin(awsserv + "/ps?url=https://imola.adesa.com/auction-engine-web-api/encryptVin.json?cgId=947&sellerOrgId=201721&isRunList=1&vin=" + vin);
+    openWindowWithVin2("https://imola.adesa.com/auction-engine-web-api/encryptVin.json?cgId=947&sellerOrgId=201721&isRunList=1&vin=" + vin);
 }
 
 function fordstickerkey2() {
     var keyme = document.getElementById("mkey").value;
     if (keyme !== "") {
-        openWindowWithVin(awsserv + "/ps?url=https://windowsticker.concentrix.com/windowsticker/auction_ws/index.htm?sProgramCode=FORD_VR&loginId=1&quic_param=" + keyme);
+        openWindowWithVin2("https://windowsticker.concentrix.com/windowsticker/auction_ws/index.htm?sProgramCode=FORD_VR&loginId=1&quic_param=" + keyme);
     }
 }
 
@@ -449,16 +449,16 @@ function fordwiki() {
 }
 
 function gmlink() {
-    openWindowWithVin(awsserv + "/ps?url=https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
+    openWindowWithVin2("https://windowsticker-prod.aws.manheim.com/showGmWs?auctionID=&workOrderNumber=7055030&sblu=11546249&vin=" + vin);
 }
 
 function gmlink2() {
-    openWindowWithVin(awsserv + "/ps?url=https://www.henrybrowngmc.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
+    openWindowWithVin2("https://www.henrybrowngmc.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
     //window.open("https://www.koonswhitemarshchevy.com/api/legacy/pse/windowsticker/gm?bac=113645&vin=" + vin);
 }
 
 function hyunwiki() {
-    openWindowWithVin(awsserv + "/ps?url=https://hyundai-sticker.dealerfire.com/new/" + vin);
+    openWindowWithVin2("https://hyundai-sticker.dealerfire.com/new/" + vin);
     //window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
     //window.open("https://www.nashuahyundai.com/services/hyundai/windowSticker.do?make=Hyundai&cs:o=%27windowsticker%27&vin=" + vin);
 }
@@ -483,7 +483,7 @@ function kiabtn2() {
     // window.open("https://www.commonwealthkia.com/Api/api/pdf/kia-oem-windows-sticker?accountid=56177&vin=" + vin);
     // window.open("https://www.ourismankia.com/api/legacy/pse/windowsticker/kia?vin=" + vin);
     // window.open("https://www.lehightonkia.com/api/pdf/kia-oem-windows-sticker?accountid=43339&vin=" + vin);
-    openWindowWithVin(awsserv + "/ps?url=" + "https://www.freedomkia.net/Api/api/pdf/kia-oem-windows-sticker?vin=" + vin + "&accountid=37593");
+    openWindowWithVin2("" + "https://www.freedomkia.net/Api/api/pdf/kia-oem-windows-sticker?vin=" + vin + "&accountid=37593");
 }
 
 function kiabtn3() {
@@ -508,7 +508,7 @@ function manheimsearch() {
 
 function maserati() {
     // window.open("https://www.maseratimarin.com/api/legacy/pse/windowsticker/maserati?vin=" + vin + "&country=US&language=en");
-    openWindowWithVin(awsserv + "/ps?url=" + "https://www.herbchambers.com/api/legacy/pse/windowsticker/maserati?country=US&language=en&vin=" + vin);
+    openWindowWithVin2("https://www.herbchambers.com/api/legacy/pse/windowsticker/maserati?country=US&language=en&vin=" + vin);
 }
 
 function mazdabtn() {
@@ -542,7 +542,7 @@ function miniog() {
 function mitsbtn() {
     // window.open("https://www.fitzgeraldmitsubishi.com/api/legacy/pse/windowsticker/mitsubishi?vin=" + vin);
     // window.open("https://www.mitsubishicars.com/rs/file/monroney?vin=" + vin);
-    openWindowWithVin(awsserv + "/ps?url=" + "https://www.yorkmitsubishi.com/api/OEMProgramsCommon/MitsubishiWindowStickerUrl?vin=" + vin);
+    openWindowWithVin2("https://www.yorkmitsubishi.com/api/OEMProgramsCommon/MitsubishiWindowStickerUrl?vin=" + vin);
 }
 
 function nissan() {
@@ -654,7 +654,7 @@ function volvosticker() {
 }
 
 function vwaudilane() {
-    openWindowWithVin(awsserv + "/ps?url=http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/" + vin + "/4905414");
+    openWindowWithVin2("http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/" + vin + "/4905414");
 }
 
 function hitcher(aYear, aMake, aModel) {
