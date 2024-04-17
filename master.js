@@ -94,6 +94,7 @@ function getNHTSADataByVIN(param_vin) {
             };
 
             console.log("pulled " + displayData.aMake);
+            console.log('full data ' + formatOutputText(displayData))
             updateInputFields(displayData);
             document.getElementById("output").innerText = formatOutputText(displayData);
             document.getElementById("outputbox").style.display = 'block';
