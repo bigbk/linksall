@@ -94,7 +94,7 @@ function getNHTSADataByVIN(param_vin) {
             };
 
             console.log("pulled " + displayData.aMake);
-            console.log('full data ' + formatOutputText(displayData))
+            console.log('full data: ' + formatOutputText(displayData))
             updateInputFields(displayData);
             document.getElementById("output").innerText = formatOutputText(displayData);
             document.getElementById("outputbox").style.display = 'block';
@@ -136,7 +136,7 @@ function displayNHTSAResults(param_data) {
     document.getElementById("nhtsa_data").style.display = 'block';
 //    updateDisplay(aMake);
     console.log(`Manufacturer found using NHTSA data: ` + param_data.Results[0].Make);
-    updateDisplay(param_data.Results[0].Make)
+    updateDisplay(param_data.Results[0].Make);
 }
 
 // Function to open a window with the vehicle sticker or specs
