@@ -141,6 +141,16 @@ function openWindowWithVin(url) {
     });
 }
 
+function openWindowWithVin2(url) {
+    vincheckin(function(isValidAndAuthorized) {
+        if (isValidAndAuthorized) {
+            // Encode the URL component before opening the window
+            var encodedUrl = encodeURIComponent(url);
+            window.open(awsserv + "/ps?url=" + encodedUrl);
+        }
+    });
+}
+
 // Refactored functions using openWindowWithVin
 function getnissansticker2() {
     openWindowWithVin(`${piserv}/nissan?vin=${vin}`);
@@ -151,7 +161,7 @@ function getnissansticker3() {
 }
 
 function getnissansticker4() {
-    openWindowWithVin(`${awsserv}/ps?url=https://nissan-services.web-aws.dealersocket.com/production/sticker/${vin}`);
+    openWindowWithVin2(`https://nissan-services.web-aws.dealersocket.com/production/sticker/${vin}`);
     //This one still works -> window.open("https://nissan-services.web-aws.dealersocket.com/production/sticker/" + vin);
     //window.open("https://www.autonationnissanchandler.com/api/legacy/pse/windowsticker/nissan?vin=" + vin);
 }
