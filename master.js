@@ -129,7 +129,7 @@ function displayNHTSAResults(param_data) {
 
     document.getElementById("txt_results").value = output_text;
     document.getElementById("nhtsa_data").style.display = 'block';
-    updateDisplay();
+    updateDisplay(aMake);
 }
 
 // Function to open a window with the vehicle sticker or specs
