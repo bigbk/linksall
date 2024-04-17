@@ -162,7 +162,7 @@ function getnissansticker2() {
 }
 
 function getnissansticker3() {
-    openWindowWithVin(`https://www.carsonnissan.com/api/legacy/pse/windowsticker/nissan?vin=${vin}`);
+    openwindowwithvin2(`https://www.carsonnissan.com/api/legacy/pse/windowsticker/nissan?vin=${vin}`);
 }
 
 function getnissansticker4() {
@@ -172,15 +172,15 @@ function getnissansticker4() {
 }
 
 function toyotasticker() {
-    openWindowWithVin(`https://api.toyotainventory.com/VEHICLES/${vin}/monroney`);
+    openwindowwithvin2(`https://api.toyotainventory.com/VEHICLES/${vin}/monroney`);
 }
 
 function toyotasticker3() {
-    openWindowWithVin(`https://api-windowsticker.web-aws.dealersocket.com/toyota/${vin}`);
+    openwindowwithvin2(`https://api-windowsticker.web-aws.dealersocket.com/toyota/${vin}`);
 }
 
 function velocitysticker() {
-    openWindowWithVin(`https://windowsticker.velocityengage.com/vin/${vin}/account/landmarkmotors`);
+    openwindowwithvin2(`https://windowsticker.velocityengage.com/vin/${vin}/account/landmarkmotors`);
 }
 
 function tytspecs() {
@@ -196,7 +196,7 @@ function invoice() {
 }
 
 function wclutch() {
-    openWindowWithVin(`https://www.withclutch.com/window-stickers`);
+    openwindowwithvin2(`https://www.withclutch.com/window-stickers`);
 }
 
 function hclutch() {
