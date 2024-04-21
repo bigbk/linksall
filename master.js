@@ -665,6 +665,9 @@ function vwaudilane() {
 }
 
 function hitcher() {
+    aYear = document.getElementById("iyear").value;
+    aMake = document.getElementById("imake").value;
+    aModel = document.getElementById("imodel").value;
     if (aModel !== "" && typeof aModel !== 'undefined') {
         console.log("pulling hitch");
         window.open("https://www.etrailer.com/hitch-" + aYear + "_" + aMake + "_" + aModel + ".htm");
