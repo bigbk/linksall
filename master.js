@@ -664,7 +664,7 @@ function vwaudilane() {
     openWindowWithVin2("http://windowsticker-prod.awsmdotcom.manheim.com/windowsticker/" + vin + "/4905414");
 }
 
-function hitcher(aYear, aMake, aModel) {
+function hitcher() {
     if (aModel !== "" && typeof aModel !== 'undefined') {
         console.log("pulling hitch");
         window.open("https://www.etrailer.com/hitch-" + aYear + "_" + aMake + "_" + aModel + ".htm");
