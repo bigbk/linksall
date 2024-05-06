@@ -405,7 +405,7 @@ function bmwlane() {
 }
 
 function chrysler() {
-    openWindowWithVin2("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?vin=" + vin);
+    openWindowWithVin2("https://www.chrysler.com/hostd/windowsticker/getWindowStickerPdf.do?_ga=2.123817667.856222938.1715011172-964708610.1715011172&vin=" + vin);
 }
 
 function chryslerlist() {
