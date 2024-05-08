@@ -573,7 +573,8 @@ function porwiki() {
 }
 
 function subarusticker() {
-    openWindowWithVin("https://www.wilkinssubaru.com/api/legacy/pse/windowsticker/subaru?vin=" + vin);
+    //openWindowWithVin("https://www.wilkinssubaru.com/api/legacy/pse/windowsticker/subaru?vin=" + vin);
+    openWindowWithVin2(`https://windowsticker.subaru.com/customerMonroneyLabel/pdf?vin=${vin}&jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Nzg1MzYwMDEsImlzcyI6InN1YmFydSIsImF1ZCI6InNob3dtYXgiLCJlbnYiOiJwcm9kIiwid3MiOiJ3aW5kb3dTdGlja2VyL3IifQ.i6582N-cIJqcTGswegYQZUFCQLA_OlXUoI6E9ATcIdM`);
 }
 
 function subaru() {
