@@ -179,7 +179,8 @@ function getnissansticker4() {
 }
 
 function toyotasticker() {
-    openWindowWithVin2(`https://api.toyotainventory.com/VEHICLES/${vin}/monroney`);
+    //openWindowWithVin2(`https://api.toyotainventory.com/VEHICLES/${vin}/monroney`);
+    openWindowWithVin2(`https://www.royalsouthtoyota.com/api/OEMProgramsCommon/ToyotaDDOAWindowSticker?vin=${vin}`);
 }
 
 function toyotasticker3() {
