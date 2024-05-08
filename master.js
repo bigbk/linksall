@@ -467,6 +467,9 @@ function gmlink2() {
 
 function hyunwiki() {
     openWindowWithVin2("https://hyundai-sticker.dealerfire.com/new/" + vin);
+    // works    openWindowWithVin2(`https://www.nashuahyundai.com/services/hyundai/windowSticker.do?vin=${vin}&make=Hyundai&cs:o=%27windowsticker%27`);
+
+    
     //window.open("http://www.mikemillerhyundai.com/services/hyundai/windowSticker.do?vin=" + vin);
     //window.open("https://www.nashuahyundai.com/services/hyundai/windowSticker.do?make=Hyundai&cs:o=%27windowsticker%27&vin=" + vin);
 }
