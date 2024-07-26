@@ -189,7 +189,7 @@ function toyotasticker3() {
 
 function velocitysticker() {
     //openWindowWithVin2(`https://windowsticker.velocityengage.com/vin/${vin}/lenstolerlexusowingmills?source=Velocity%20Engage`);
-    openWindowWithVin2(`https://windowsticker.velocityengage.com/vin/${vin}/lenstolerlexusowingmills?source=Velocity%20Engage`);
+    openWindowWithVin2(`https://app.velocityautomotive.com/windowsticker/vin/${vin}/account/lenstolerlexusowingmills?source=Velocity Engage`);
 }
 
 function tytspecs() {
