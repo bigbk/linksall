@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Images</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Chivo:400,700,900|Signika+Negative:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@latest/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <style>
+        #zoomImage {
+            transition: transform 0.2s;
+            cursor: zoom-in;
+        }
+        #zoomImage.zoomed {
+            transform: scale(2);
+            cursor: zoom-out;
+        }
+    </style>
+</head>
+
+<body class="bg-primary">
+    <div class="container shadow p-3 mb-5 bg-body rounded">
+        <div class="row bg-primary text-white py-2">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input name="VIN" id="VINbar" class="form-control" type="text" placeholder="Stock# - 8 Digits" aria-label="Search">
+                    <button class="btn btn-warning" id="btn_submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-md-6 text-center">
+                <img src="" id="dispframe" alt="UV Image" class="img-fluid my-3" style="display:none;" onclick="openZoom()">
+                <h5 class="text-white">UV Image</h5>
+                <nav aria-label="UV Navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#" onclick="prvsUV()">PREVIOUS UV</a></li>
+                        <li class="page-item"><a class="page-link" href="#" onclick="nxtUV()">NEXT UV</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="" id="dispframeRegular" alt="Regular Image" class="img-fluid my-3" style="display:none;" onclick="openZoomRegular()">
+                <h5 class="text-white">Regular Image</h5>
+                <nav aria-label="Regular Navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#" onclick="prvsRegular()">PREVIOUS REGULAR</a></li>
+                        <li class="page-item"><a class="page-link" href="#" onclick="nxtRegular()">NEXT REGULAR</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <h5 class="text-white">UV Thumbnails</h5>
+            <div id="uvThumbnails" class="row"></div>
+        </div>
+
+        <div class="row">
+            <h5 class="text-white">Regular Thumbnails</h5>
+            <div id="regularThumbnails" class="row"></div>
+        </div>
+    </div>	
+
+    <!-- Zoom Modal -->
+    <div class="modal fade" id="zoomModal" tabindex="-1" aria-labelledby="zoomModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img id="zoomImage" src="" alt="Zoomed Image" class="img-fluid" 
+                         onmouseover="this.style.cursor='zoom-out'" 
+                         onmouseout="this.style.cursor='zoom-in'" 
+                         onclick="toggleZoom()">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var uvCountImg = 1; // Start from UV1
+        var regularCountImg = 10; // Start from 10.jpg
+        var stocknum;
+        var maxUVImages = 40; // Maximum UV images to check
+        var maxRegularImages = 20; // Maximum regular images to check
+
+        document.getElementById("btn_submit").onclick = function () {
+            stocknum = document.getElementById("VINbar").value;
+            if (stocknum.length === 8) {
+                uvCountImg = 1; // Reset to UV1
+                regularCountImg = 10; // Reset to 10.jpg
+                displayUVImage();
+                displayRegularImage();
+            } else {
+                alert("Stock number should be 8 digits long, currently " + stocknum.length + " digits entered.");
+            }
+        };
+
+        function displayUVImage() {
+            var imageUrl = `https://img2.carmax.com/assets/${stocknum}/image/UV${uvCountImg}.jpg`;
+            var x = document.getElementById("dispframe");
+
+            fetch(imageUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    if (blob.size < 50 * 1024) {
+                        console.log("UV image too small, stopping.");
+                        handleUVImageError();
+                        return; // Stop if image is smaller than 50KB
+                    }
+                    x.setAttribute("src", imageUrl);
+                    x.style.display = 'block';
+                    updateUVThumbnails();
+                })
+                .catch(() => {
+                    console.log("UV image not found or network error");
+                    handleUVImageError();
+                });
+        }
+
+        function displayRegularImage() {
+            var imageUrl = `https://img2.carmax.com/assets/${stocknum}/image/${regularCountImg}.jpg`;
+            var x = document.getElementById("dispframeRegular");
+
+            fetch(imageUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    if (blob.size < 50 * 1024) {
+                        console.log("Regular image too small, stopping.");
+                        handleRegularImageError();
+                        return; // Stop if image is smaller than 50KB
+                    }
+                    x.setAttribute("src", imageUrl);
+                    x.style.display = 'block';
+                    updateRegularThumbnails();
+                })
+                .catch(() => {
+                    console.log("Regular image not found or network error");
+                    handleRegularImageError();
+                });
+        }
+
+        function handleUVImageError() {
+            if (uvCountImg < maxUVImages) {
+                uvCountImg++; // Move to the next UV image
+                displayUVImage();
+            } else {
+                console.log("Reached maximum UV image limit.");
+            }
+        }
+
+        function handleRegularImageError() {
+            if (regularCountImg < maxRegularImages) {
+                regularCountImg++; // Move to the next regular image
+                displayRegularImage();
+            } else {
+                console.log("Reached maximum regular image limit.");
+            }
+        }
+
+        function updateUVThumbnails() {
+            const gallery = document.getElementById("uvThumbnails");
+            gallery.innerHTML = ""; // Clear previous thumbnails
+
+            for (let i = 0; i < 12; i++) {
+                let imgIndex = uvCountImg + i;
+                let thumbnail = document.createElement("div");
+                thumbnail.className = "col-6 col-md-3 mb-3"; // Change to 3 for 4 thumbnails per row
+                thumbnail.innerHTML = `
+                    <img class="w-100" src="https://img2.carmax.com/assets/${stocknum}/image/UV${imgIndex}.jpg" 
+                         id="uvThumb${i + 1}" alt="Thumbnail UV ${i + 1}" 
+                         onclick="displayUVImageByIndex(${imgIndex})" style="cursor: pointer;">
+                `;
+                gallery.appendChild(thumbnail);
+            }
+        }
+
+        function updateRegularThumbnails() {
+            const gallery = document.getElementById("regularThumbnails");
+            gallery.innerHTML = ""; // Clear previous thumbnails
+
+            for (let i = 0; i < 12; i++) {
+                let imgIndex = regularCountImg + i;
+                let thumbnail = document.createElement("div");
+                thumbnail.className = "col-6 col-md-3 mb-3"; // Change to 3 for 4 thumbnails per row
+                thumbnail.innerHTML = `
+                    <img class="w-100" src="https://img2.carmax.com/assets/${stocknum}/image/${imgIndex}.jpg" 
+                         id="regThumb${i + 1}" alt="Thumbnail Regular ${i + 1}" 
+                         onclick="displayRegularImageByIndex(${imgIndex})" style="cursor: pointer;">
+                `;
+                gallery.appendChild(thumbnail);
+            }
+        }
+
+        function displayUVImageByIndex(imgIndex) {
+            uvCountImg = imgIndex; // Set current index for UV
+            displayUVImage(); // Update main UV image
+        }
+
+        function displayRegularImageByIndex(imgIndex) {
+            regularCountImg = imgIndex; // Set current index for Regular
+            displayRegularImage(); // Update main Regular image
+        }
+
+        function openZoom() {
+            var x = document.getElementById("dispframe").src;
+            document.getElementById("zoomImage").src = x; // Set the source for the zoom image
+            $('#zoomModal').modal('show'); // Show the zoom modal
+        }
+
+        function openZoomRegular() {
+            var x = document.getElementById("dispframeRegular").src;
+            document.getElementById("zoomImage").src = x; // Set the source for the zoom image
+            $('#zoomModal').modal('show'); // Show the zoom modal
+        }
+
+        function toggleZoom() {
+            var zoomImg = document.getElementById("zoomImage");
+            zoomImg.classList.toggle("zoomed"); // Toggle zoomed class
+        }
+
+        function prvsUV() {
+            if (uvCountImg > 1) {
+                uvCountImg--;
+                displayUVImage();
+            }
+        }
+
+        function nxtUV() {
+            uvCountImg++;
+            displayUVImage();
+        }
+
+        function prvsRegular() {
+            if (regularCountImg > 10) { // Start from 10
+                regularCountImg--;
+                displayRegularImage();
+            }
+        }
+
+        function nxtRegular() {
+            regularCountImg++;
+            displayRegularImage();
+        }
+
+        // Event listeners for Enter key on input fields
+        document.getElementById("VINbar").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("btn_submit").click();
+            }
+        });
+    </script>
+</body>
+</html>
