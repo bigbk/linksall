@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Cache Viewer</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* A little vertical centering */
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #4285F4; /* Google Blue */
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 80%; /* Adjust as needed */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            font-size: 1rem;
+        }
+        button {
+            background-color: #34A853; /* Google Green */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2E8B57; /* Darker Green */
+        }
+        #errorMessage {
+            color: #EA4335; /* Google Red */
+            margin-top: 15px;
+            min-height: 1em; /* Reserve space to prevent layout shifts */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>View Google Cache</h1>
+
+        <label for="urlInput">Enter the URL you wish to view the cache for:</label>
+        <input type="text" id="urlInput" placeholder="e.g., https://www.example.com">
+
+        <button id="viewCacheButton">View Cache</button>
+
+        <div id="errorMessage"></div>
+    </div>
+
+    <script>
+        document.getElementById('viewCacheButton').addEventListener('click', function() {
+            const urlInput = document.getElementById('urlInput');
+            const errorMessage = document.getElementById('errorMessage');
+            const originalUrl = urlInput.value.trim();
+
+            // Clear previous error messages
+            errorMessage.textContent = '';
+
+            if (!originalUrl) {
+                errorMessage.textContent = 'Please enter a URL.';
+                return; // Stop if no URL is entered
+            }
+
+            // Simple check if it looks like a URL (can be more robust)
+            // This regex is basic but helps prevent constructing invalid cache URLs
+            const urlPattern = /^(https?:\/\/|www\.)/i;
+            if (!urlPattern.test(originalUrl)) {
+                 errorMessage.textContent = 'Please enter a valid URL starting with http://, https://, or www.';
+                 return;
+            }
+
+
+            // Construct the Google Cache URL
+            // The format is generally: https://webcache.googleusercontent.com/search?q=cache: + [original URL]
+            const googleCacheBase = 'https://webcache.googleusercontent.com/search?q=cache:';
+            const cacheUrl = googleCacheBase + encodeURIComponent(originalUrl); // Use encodeURIComponent for safety
+
+            // Open the cache URL in a new tab
+            window.open(cacheUrl, '_blank');
+
+            // Optionally, clear the input field after opening
+            // urlInput.value = '';
+        });
+    </script>
+
+</body>
+</html>
