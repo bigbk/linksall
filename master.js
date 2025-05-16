@@ -465,7 +465,7 @@ function gmlink2() {
     //openWindowWithVin2("https://www.castlechevycars.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
     //window.open("https://www.koonswhitemarshchevy.com/api/legacy/pse/windowsticker/gm?bac=113645&vin=" + vin);
     console.log("Original VIN:", vin); // DEBUG: Should include the 1
-
+    vin = vin.slice(1);
     const modifiedVin = "\x01" + vin;
     console.log("Modified VIN (with control char):", modifiedVin); // DEBUG
 
