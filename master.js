@@ -487,7 +487,7 @@ const modifiedVin = "\x01" + vin;
 
     const urlnew = "https://www.walkerjoneschevy.com/api/vhcliaa/inventory/28622/window-sticker?sv=" + urlEncodedVin + "&make=Chevrolet&dealerCode=114772";
 
-    openWindowWithVin2(urlnew);
+    openWindowWithVin(urlnew);
     
 }
 
