@@ -480,7 +480,7 @@ const modifiedVin = "\x01" + vin;
     const base64Vin = btoa(String.fromCharCode(...utf16leBytes));
     const urlEncodedVin = encodeURIComponent(base64Vin);
 
-    const url = "https://www.castlechevycars.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + urlEncodedVin;
+    const url = "https://www.walkerjoneschevy.com/api/vhcliaa/inventory/28622/window-sticker?sv=" + urlEncodedVin + "&make=Chevrolet&dealerCode=114772";
 
     // Print it for debugging
     console.log("Encoded VIN:", urlEncodedVin);
