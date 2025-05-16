@@ -464,10 +464,9 @@ function gmlink() {
 function gmlink2() {
     //openWindowWithVin2("https://www.castlechevycars.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
     //window.open("https://www.koonswhitemarshchevy.com/api/legacy/pse/windowsticker/gm?bac=113645&vin=" + vin);
-    const trimmedVin = vin.slice(1);             // Step 1: Remove first character
-    const modifiedVin = "\x01" + trimmedVin;     // Step 2: Prepend control character
+const modifiedVin = "\x01" + vin;
 
-    // Step 3: Encode as UTF-16LE
+    // Encode to UTF-16LE
     function encodeUTF16LE(str) {
         const buf = new ArrayBuffer(str.length * 2);
         const view = new DataView(buf);
@@ -479,11 +478,12 @@ function gmlink2() {
 
     const utf16leBytes = encodeUTF16LE(modifiedVin);
 
-    // Step 4: Base64 encode
+    // Base64 encode
     const base64Vin = btoa(String.fromCharCode(...utf16leBytes));
 
-    // Step 5: URL encode
+    // URL encode the base64 result
     const urlEncodedVin = encodeURIComponent(base64Vin);
+
 
     const urlnew = "https://www.walkerjoneschevy.com/api/vhcliaa/inventory/28622/window-sticker?sv=" + urlEncodedVin + "&make=Chevrolet&dealerCode=114772";
 
