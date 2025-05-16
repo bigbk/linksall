@@ -464,29 +464,34 @@ function gmlink() {
 function gmlink2() {
     //openWindowWithVin2("https://www.castlechevycars.com/services/gm/windowSticker.do?dealerCode=210275&cs:o=%window_sticker%&cs:o=%27WindowSticker%27&vin=" + vin);
     //window.open("https://www.koonswhitemarshchevy.com/api/legacy/pse/windowsticker/gm?bac=113645&vin=" + vin);
-const modifiedVin = "\x01" + vin;
+    console.log("Original VIN:", vin); // DEBUG: Should include the 1
 
-    // UTF-16LE encoder
+    const modifiedVin = "\x01" + vin;
+    console.log("Modified VIN (with control char):", modifiedVin); // DEBUG
+
     function encodeUTF16LE(str) {
         const buf = new ArrayBuffer(str.length * 2);
         const view = new DataView(buf);
         for (let i = 0; i < str.length; i++) {
-            view.setUint16(i * 2, str.charCodeAt(i), true); // true = little-endian
+            view.setUint16(i * 2, str.charCodeAt(i), true); // little-endian
         }
         return new Uint8Array(buf);
     }
 
     const utf16leBytes = encodeUTF16LE(modifiedVin);
-    const base64Vin = btoa(String.fromCharCode(...utf16leBytes));
-    const urlEncodedVin = encodeURIComponent(base64Vin);
 
+    const base64Vin = btoa(String.fromCharCode(...utf16leBytes));
+    console.log("Base64 encoded:", base64Vin); // Should be: MQBHAEMARwBU...
+
+    const urlEncodedVin = encodeURIComponent(base64Vin);
+    console.log("URL encoded VIN:", urlEncodedVin);
+    
     const url = "https://www.walkerjoneschevy.com/api/vhcliaa/inventory/28622/window-sticker?sv=" + urlEncodedVin + "&make=Chevrolet&dealerCode=114772";
 
     // Print it for debugging
-    console.log("Encoded VIN:", urlEncodedVin);
-    console.log("Full URL:", url);
+    console.log("Final URL:", url); // Final check
 
-    openWindowWithVin2(url);
+    openWindowWithVin(url);
     //openWindowWithVin(urlnew);
     
 }
