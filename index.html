@@ -1310,5 +1310,20 @@ $(document).mousemove(function (e) {
 $("#dancebk").stop().animate({ left: e.pageX + 8, top: e.pageY + 15 });
 });
 </script>
+        
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/linksall/sw.js') // Adjust path to your service worker file
+        .then(registration => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch(err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+  }
+</script>
+        
     </body>
 </html>
