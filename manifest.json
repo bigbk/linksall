@@ -1,0 +1,27 @@
+{
+  "name": "VIN RESEARCH HUB", // The full name of your app
+  "short_name": "VIN RH",    // A shorter name for the app, used on home screens
+  "description": "A collection of research links.", // Description of your app
+  "start_url": "/linksall/",   // The page that loads when the app starts. Adjust if your main page is index.html or similar.
+                             // For GitHub Pages, if your repo is 'linksall' and it's at bigbk.github.io/linksall/,
+                             // then "/linksall/" is likely correct for the root of this PWA.
+                             // If your main HTML file is `index.html` at the root of the `linksall` directory,
+                             // then "/linksall/index.html" or just "/linksall/" should work.
+  "display": "standalone",     // How the app is displayed (standalone, fullscreen, minimal-ui, browser)
+                             // 'standalone' makes it look like a native app.
+  "background_color": "#ffffff", // Background color for the splash screen
+  "theme_color": "#000000",      // Theme color for the app (affects OS UI like the title bar)
+  "icons": [
+    {
+      "src": "icon-192x192.png", // Path relative to manifest.json
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png", // Path relative to manifest.json
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+    // Add more icon sizes if you wish (e.g., 48x48, 72x72, 96x96, 128x128, 144x144, 152x152)
+  ]
+}
