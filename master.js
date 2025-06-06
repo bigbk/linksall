@@ -497,7 +497,8 @@ function gmlink2() {
 }
 
 function hyunwiki() {
-    openWindowWithVin("https://www.hyundaiusa.com/var/hyundai/services/inventory/monroney.pdf?model=Venue&vin=" + vin);
+    openWindowWithVin(awsserv + "/hyundai/?model=Venue&vin=" + vin);
+    //openWindowWithVin("https://www.hyundaiusa.com/var/hyundai/services/inventory/monroney.pdf?model=Venue&vin=" + vin);
     //openWindowWithVin2("https://hyundai-sticker.dealerfire.com/new/" + vin);
     // works    openWindowWithVin2(`https://www.nashuahyundai.com/services/hyundai/windowSticker.do?vin=${vin}&make=Hyundai&cs:o=%27windowsticker%27`);
 
